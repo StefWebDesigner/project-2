@@ -84,7 +84,7 @@ useEffect(() => {
     <NavbarMain/>
     <div className="MatchingGame">
       <h1>Matching Game</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <button className="MatchingGameBtn" onClick={shuffleCards}>New Game</button>
 
       <div className="card-grid">
         {cards.map(card => (
