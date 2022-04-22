@@ -22,9 +22,9 @@ const ExperimentalNav = () => {
                             <Link className="activites-link" to="/">Activites</Link>
                         </div>
                     </Col>
-                    <Col className="background-activities">
+                    <Col className="background-events">
                         <div className="link-container">
-                            <Link className="activites-link" to="/">Events</Link>
+                            <Link className="link-events" to="/">Events</Link>
                         </div>
                     </Col>
                     <Col className="background-activities">
