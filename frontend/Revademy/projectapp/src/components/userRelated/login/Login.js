@@ -1,6 +1,9 @@
 import { useContext, useState } from 'react';
 import axios from "axios";
 import DataStore from "../../../dataStore/dataStore";
+import LoginStepTwo from "./LoginStepTwo";
+import LoginStepOne from "./LoginStepOne";
+import LoginFinal from "./LoginFinal";
 
 function Login() {
 
@@ -10,10 +13,9 @@ function Login() {
     return (
 
         <>
-
-
-
-
+            <LoginStepOne/>
+            <LoginStepTwo/>
+            <LoginFinal/>
 
         </>
     )
