@@ -7,19 +7,29 @@ const ExperimentalNav = () => {
         <>
             <section>
                 <Row>
-                    <Col className="background-one">
+                    <Col className="background-home">
                         <div className="link-container">
-                            <Link className="link-one" to="/">Home</Link>
+                            <Link className="home-link" to="/">Home</Link>
                         </div>
                     </Col>
-                    <Col className="background-two">
+                    <Col className="background-credentials">
                         <div className="link-container">
-                            <Link className="link-two" to="/">Login/Register</Link>
+                            <Link className="credentials-link" to="/">Login/Register</Link>
                         </div>
                     </Col>
-                    <Col className="background-three">
+                    <Col className="background-activities">
                         <div className="link-container">
-                            <Link className="link-three" to="/">About US</Link>
+                            <Link className="activites-link" to="/">Activites</Link>
+                        </div>
+                    </Col>
+                    <Col className="background-activities">
+                        <div className="link-container">
+                            <Link className="activites-link" to="/">Events</Link>
+                        </div>
+                    </Col>
+                    <Col className="background-activities">
+                        <div className="link-container">
+                            <Link className="activites-link" to="/">Learning Portal</Link>
                         </div>
                     </Col>
                 </Row>
