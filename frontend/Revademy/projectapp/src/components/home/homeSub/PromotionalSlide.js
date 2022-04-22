@@ -29,7 +29,6 @@ const PromotionalSlide = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-
         </>
     );
 };
