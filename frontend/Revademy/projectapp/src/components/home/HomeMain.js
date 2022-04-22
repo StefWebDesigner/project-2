@@ -8,7 +8,7 @@ const HomeMain = () => {
     return (
         <>
 
-                <HomeHeader/>
+                {/*<HomeHeader/>*/}
 
             <section>
                 <PromotionalSlide/>
