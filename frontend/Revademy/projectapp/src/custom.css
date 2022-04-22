@@ -38,6 +38,16 @@
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* EXPERIMENTAL STUFF*/
 
 /* FOR GENERAL ELEMENT OF NAV */
@@ -334,6 +344,34 @@
     );
 }
 
+
+
+/*  GENERAL ANIMATIONS   */
+
+.fade-in-animation {
+    animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: .50;
+    }
+    75% {
+        opacity: .75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
 
 
 

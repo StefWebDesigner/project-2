@@ -33,16 +33,6 @@ const ExperimentalNav = () => {
                             </div>
                         </Col>
 
-                    {/*GOING TO MAKE THIS IN THE LOGIN*/}
-                        <Col className="background-credentials">
-                             <div className="link-container">
-                                 <Link className="credentials-link" to="/">Register</Link>
-                             </div>
-                        </Col>
-
-
-
-
                     <Col className="background-activities">
                         <div className="link-container">
                             <Link className="activites-link" to="/">Activites</Link>
@@ -54,11 +44,6 @@ const ExperimentalNav = () => {
                         </div>
                     </Col>
 
-                    {/*<Col className="background-activities">*/}
-                    {/*    <div className="link-container">*/}
-                    {/*        <Link className="activites-link" to="/">Learning Portal</Link>*/}
-                    {/*    </div>*/}
-                    {/*</Col>*/}
                 </Row>
             </section>
         </>

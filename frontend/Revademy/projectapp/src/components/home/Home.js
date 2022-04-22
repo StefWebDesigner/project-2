@@ -7,11 +7,12 @@ import HomeHeader from "./HomeHeader";
 
 const Home = () => {
     return (
-        <>
-            <ExperimentalNav/>
-            <HomeHeader/>
-            {/*<Header/>*/}
-            <HomeMain/>
+        <>  <section className="fade-in-animation">
+                <ExperimentalNav/>
+                <HomeHeader/>
+                {/*<Header/>*/}
+                <HomeMain/>
+            </section>
         </>
     );
 };

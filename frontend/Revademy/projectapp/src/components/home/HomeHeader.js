@@ -15,6 +15,10 @@ const HomeHeader = () => {
                 <Row>
                     <h1 className="home-header-title">Welcome to Revedamy!</h1>
                 </Row>
+
+                    <Row>
+                        Logo
+                    </Row>
                 <Row>
                     {  user ? <h2 className="home-header-user">Welcome {user} </h2> : ""}
                 </Row>
