@@ -6,9 +6,31 @@
 
 .home-header-title,
 .home-header-title-subtitle,
-.home-header-user {
+.home-header-user,
+.home-header-values-1,
+.home-header-values-2,
+.home-header-values-3{
     text-align: center;
 }
+
+.home-header-values-1 {
+    border-left: solid blue 3px;
+    border-radius: 5%;
+    /*height: 100%;*/
+}
+
+.home-header-values-2 {
+    border-left: solid red 3px;
+    border-radius: 5%;
+    /*height: 100%;*/
+}
+
+.home-header-values-3 {
+    border-left: solid green 3px;
+    border-radius: 5%;
+    /*height: 100%;*/
+}
+
 
 /* HOME ANOUNCEMENTS */
 
