@@ -6,12 +6,16 @@ import {useState} from "react";
 
 //ALL IMPORTED COMPONENTS
 import Home from "./components/home/Home";
-import Login from "./components/userRelated/Login";
+import Login from "./components/userRelated/login/Login";
 import RegisterUser from "./components/userRelated/RegisterUser";
 import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
+
 import MatchingGame from './components/games/matchingGame/MatchingGame';
 import Hangman from './components/games/hangman/Hangman';
+
+import LearningPortal from "./components/learningPortal/LearningPortal";
+
 
 function App() {
 
@@ -29,6 +33,7 @@ function App() {
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/register" element={<RegisterUser/>}/>
                   <Route path="/activites" element={<Activities/>}/>
+                  <Route path="/learningportal" element={<LearningPortal/>}/>
                   <Route path="/events" element={<Events/>}/>
                   {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>
