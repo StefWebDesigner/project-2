@@ -1,5 +1,5 @@
 import React from "react";
 
-const DataStore = React.createContext(null);
+const DataContext = React.createContext(null);
 
-export default DataStore;
+export default DataContext;
