@@ -12,6 +12,7 @@ import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
 import MatchingGame from './components/games/MatchingGame';
 import Hangman from './components/games/Hangman';
+import LearningPortal from "./components/learningPortal/LearningPortal";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/register" element={<RegisterUser/>}/>
                   <Route path="/activites" element={<Activities/>}/>
+                  <Route path="/learningportal" element={<LearningPortal/>}/>
                   <Route path="/events" element={<Events/>}/>
                   //GAME ROUTES
                   <Route path="/matchingGame" element={<MatchingGame/>}/>

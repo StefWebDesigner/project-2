@@ -3,12 +3,14 @@ import HomeMain from "./HomeMain";
 import NavbarMain from "../navbar/NavbarMain";
 import Header from "../navbar/Header";
 import ExperimentalNav from "../navbar/ExperimentalNav";
+import HomeHeader from "./HomeHeader";
 
 const Home = () => {
     return (
         <>
-            <Header/>
             <ExperimentalNav/>
+            <HomeHeader/>
+            {/*<Header/>*/}
             <HomeMain/>
         </>
     );
