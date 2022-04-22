@@ -2,10 +2,12 @@
     font-family: "Bungee", cursive;
 }
 
-/*HEADER*/
+/* HOME HEADER*/
 
-.headerItem {
-    color: orange;
+.home-header-title,
+.home-header-title-subtitle,
+.home-header-user {
+    text-align: center;
 }
 
 

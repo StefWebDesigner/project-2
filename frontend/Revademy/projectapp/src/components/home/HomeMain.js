@@ -7,8 +7,8 @@ import HomeHeader from "./HomeHeader";
 const HomeMain = () => {
     return (
         <>
-            <h1>Home page</h1>
-            <HomeHeader/>
+
+                <HomeHeader/>
 
             <section>
                 <PromotionalSlide/>
