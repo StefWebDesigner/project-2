@@ -31,6 +31,7 @@ let Album = () => {
                 <Container>
                     <h2 className="text-center">Album</h2>
                     <p className="text-center">Waiting to add picture and get pictures from the database</p>
+                    <p className="text-center">Will be infinitely scrolling and load</p>
 
                     {/*<InfiniteScroll*/}
                     {/*    next={() => fetchImages(5)}*/}

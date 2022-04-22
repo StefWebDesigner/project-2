@@ -6,7 +6,7 @@ import {useState} from "react";
 
 //ALL IMPORTED COMPONENTS
 import Home from "./components/home/Home";
-import Login from "./components/userRelated/Login";
+import Login from "./components/userRelated/login/Login";
 import RegisterUser from "./components/userRelated/RegisterUser";
 import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
