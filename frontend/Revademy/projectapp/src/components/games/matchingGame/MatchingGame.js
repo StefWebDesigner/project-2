@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './MatchingGame.css'
 import SingleCard from './SingleCard'
-import NavbarMain from "../navbar/NavbarMain";
+import NavbarMain from "../../navbar/NavbarMain";
 
 const cardImages=[
   {"src": "/img/apple.png", matched: false, pair: 1 },
@@ -18,12 +18,15 @@ const cardImages=[
   {"src": "/img/car-1.png", matched: false, pair: 6 },
 ]
 
+let allPairsMatched = (cardImages.length)/2;
+
 export default function MatchingGame() {
   const [cards, setCards] = useState([])
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
+  const [pairs, setPairs] = useState(0)
 
   //shuffle cards
   const shuffleCards = () => {
@@ -35,6 +38,7 @@ export default function MatchingGame() {
      setChoiceTwo(null)
      setCards(shuffledCards)
      setTurns(0)
+     setPairs(0)
   }
 
  //handle a choice
@@ -47,6 +51,7 @@ export default function MatchingGame() {
   if (choiceOne && choiceTwo) {
     setDisabled(true)
     if (choiceOne.pair === choiceTwo.pair) {
+      setPairs(prevPairs => prevPairs +1)
       setCards(prevCards => {
         return prevCards.map(card => {
           if (card.pair === choiceOne.pair){
@@ -98,6 +103,7 @@ useEffect(() => {
         ))}
       </div>
       <p>Turns: {turns}</p>
+      <p>{pairs===allPairsMatched ? "You Won! 😃" : ""}</p>
     </div>
     </>
   );

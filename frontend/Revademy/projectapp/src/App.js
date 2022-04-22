@@ -10,8 +10,8 @@ import Login from "./components/userRelated/Login";
 import RegisterUser from "./components/userRelated/RegisterUser";
 import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
-import MatchingGame from './components/games/MatchingGame';
-import Hangman from './components/games/Hangman';
+import MatchingGame from './components/games/matchingGame/MatchingGame';
+import Hangman from './components/games/hangman/Hangman';
 
 function App() {
 
@@ -24,13 +24,13 @@ function App() {
           <Router>
               <Routes>
 
-                  //ALL MAIN NAV ROUTES
+                  {/* ALL MAIN NAV ROUTES */}
                   <Route path="/" element={<Home/>}/>
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/register" element={<RegisterUser/>}/>
                   <Route path="/activites" element={<Activities/>}/>
                   <Route path="/events" element={<Events/>}/>
-                  //GAME ROUTES
+                  {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>
                   <Route path="/hangman" element={<Hangman/>}/>
 
