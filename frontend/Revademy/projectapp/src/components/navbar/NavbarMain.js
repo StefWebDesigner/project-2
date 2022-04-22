@@ -2,59 +2,100 @@ import React, {Fragment, useState} from 'react';
 import {Link, Route} from "react-router-dom";
 import {ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarContent, SidebarFooter} from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
-import Activities from "../games/Activities";
-import {FiArrowLeftCircle, FiArrowRightCircle} from "react-icons/fi";
+import 'react-pro-sidebar/dist/css/styles.css';
+
+import {
+    FiHome,
+    FiLogOut,
+    FiArrowLeftCircle,
+    FiArrowRightCircle
+} from "react-icons/fi";
+import {
+    FaJava,
+    FaReact,
+    FaTable
+} from "react-icons/fa";
+import { RiAdminLine } from "react-icons/ri";
+import { BiCog } from "react-icons/bi";
+import { IoLogoJavascript } from 'react-icons/io';
 
 
 
 const NavbarMain = () => {
 
-    const [menuCollaspe, setMenuCollapse] = useState(false);
+    const [menuCollapse, setMenuCollapse] = useState(false);
 
     const menuIconClick = () => {
-        menuCollaspe ? setMenuCollapse(false) : setMenuCollapse(true);
+        menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
     }
+
+    //ADD PADDING TO THE NAV
 
     return (
         <>
-            <ProSidebar collapsed={menuCollaspe}>
-                <SidebarHeader>
-                    <div className="">
-                        Logo Here
-                    </div>
-                    <div
-                        className="closeMenu"
-                        onClick={menuIconClick}
-                    >
-                        {menuCollaspe ?
-                            <FiArrowLeftCircle/>
-                            :
-                            <FiArrowRightCircle/>
-                        }
-                    </div>
-                    <Menu>
-                        <MenuItem>
-                            <Link to="/">Home</Link>
-                            <Link to="/login">Login</Link>
-                            <Link to="/register">Register</Link>
-                        </MenuItem>
-                    </Menu>
-                </SidebarHeader>
+            <section className="header">
+                <ProSidebar collapsed={menuCollapse}>
 
-                <SidebarContent>
-                    <Menu>
-                        <MenuItem>
-                            <Link to="/activites">Activities</Link>
-                            <Link to="/events">Events</Link>
-                        </MenuItem>
-                    </Menu>
-                </SidebarContent>
+                    {/*CONTAINS HEADER & RESPONSIVE LOGO*/}
+                    <SidebarHeader>
+                        <div className="logotext">
+                            logo here
+                        </div>
+                        <div className="closemenu" onClick={menuIconClick}>
+                            {menuCollapse ? <FiArrowRightCircle /> :
+                                <FiArrowLeftCircle />}
+                        </div>
 
-                <SidebarFooter>
+                        {/*CHANGE MENU ICON SHAPE*/}
 
-                </SidebarFooter>
+                        <Menu >
+                            <MenuItem active={true} icon={<FiHome />}>
+                                <Link to="/">Home</Link>
+                            </MenuItem>
 
-            </ProSidebar>
+                            {/* conditionally show the admin portal */}
+                                <MenuItem icon={<RiAdminLine />}>
+                                    <Link to="/admin">Admin Portal</Link>
+                                </MenuItem>
+
+                        </Menu>
+                    </SidebarHeader>
+
+                    {/*CONTAIN MAIN NAV CONTENT*/}
+
+                    <SidebarContent>
+                        <Menu iconShape="square">
+                            <MenuItem icon={<FaJava/>}>
+                                <Link to="/java">Java</Link>
+                            </MenuItem>
+                            <MenuItem icon={<FaReact/>}>
+                                <Link to="/react">React</Link>
+                            </MenuItem>
+                            <MenuItem icon={<FaTable />}>
+                                <Link to="/sql">SQL</Link>
+                            </MenuItem>
+                            <MenuItem icon={<IoLogoJavascript />}>
+                                <Link to="/javascript">JavaScript</Link>
+                            </MenuItem>
+
+                        </Menu>
+                    </SidebarContent>
+
+                    {/*FOOTER SECTION*/}
+                    <SidebarFooter>
+                        <Menu iconShape="square">
+
+                            <MenuItem icon={<BiCog/>}>
+                                <Link to="/account">Account</Link>
+                            </MenuItem>
+
+                            <MenuItem icon={<FiLogOut/>}>
+                                {/*<Link to="/" onClick={() => logout()}>Logout</Link>*/}
+                            </MenuItem>
+                        </Menu>
+                    </SidebarFooter>
+                </ProSidebar>
+            </section>
 
         </>
     );
