@@ -126,7 +126,7 @@ const restartGame = () => {
   return (
       <>
       {/* <NavbarMain/> */}
-    <div className = "color-quiz">
+    <div className = "color-quiz fade-in-animation">
         
         <h1>Color Quiz</h1>
         
