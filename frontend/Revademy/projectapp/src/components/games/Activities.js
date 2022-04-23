@@ -6,11 +6,14 @@ const Activities = () => {
 
     return (
         <>
-            <NavbarMain/>
+            {/* <NavbarMain/> */}
             <h1>Games</h1>
             <Link to="/matchingGame">Matching Game</Link>
             <p>------------------------------------</p>
             <Link to="/hangman">Hangman</Link>
+            <p>------------------------------------</p>
+            <Link to="/quizzes">Quizzes</Link>
+            <p>------------------------------------</p>
 
         </>
     );

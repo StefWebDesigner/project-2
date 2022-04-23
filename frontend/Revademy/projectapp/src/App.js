@@ -13,8 +13,11 @@ import Events from "./components/events/Events";
 
 import MatchingGame from './components/games/matchingGame/MatchingGame';
 import Hangman from './components/games/hangman/Hangman';
+import Quizzes from './components/games/quizzes/Quizzes';
+import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 
 import LearningPortal from "./components/learningPortal/LearningPortal";
+
 
 
 function App() {
@@ -38,6 +41,8 @@ function App() {
                   {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>
                   <Route path="/hangman" element={<Hangman/>}/>
+                  <Route path="/quizzes" element={<Quizzes/>}/>
+                  <Route path="/colorQuiz" element={<ColorQuiz/>}/>
 
 
               </Routes>

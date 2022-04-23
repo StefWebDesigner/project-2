@@ -86,8 +86,8 @@ useEffect(() => {
 
   return (
     <>
-    <NavbarMain/>
-    <div className="MatchingGame">
+    {/* <NavbarMain/> */}
+    <div className="MatchingGame fade-in-animation">
       <h1>Matching Game</h1>
       <button className="MatchingGameBtn" onClick={shuffleCards}>New Game</button>
 

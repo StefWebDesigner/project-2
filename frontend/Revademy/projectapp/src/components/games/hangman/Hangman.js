@@ -58,8 +58,8 @@ function playAgain(){
 
     return(
         <>
-        <NavbarMain/>
-        <div className="hangman-body">
+        {/* <NavbarMain/> */}
+        <div className="hangman-body fade-in-animation">
         <Header/>
         <div className="game-container">
             <Figure wrongLetters={wrongLetters}/>
