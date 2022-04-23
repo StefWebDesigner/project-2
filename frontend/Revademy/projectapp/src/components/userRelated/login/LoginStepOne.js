@@ -72,9 +72,6 @@ const LoginStepOne = ({nextStep, handleFormData, values}) => {
                     </Card.Body>
                 </Card>
             </section>
-
-
-
         </>
 
 

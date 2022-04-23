@@ -12,9 +12,13 @@ const Login = () => {
     const [formData, setFormData] = useState({
         firstName : "",
         lastName : "",
+        account : "",
         age : "",
         email : "",
-        password : ""
+        password : "",
+        user: "",
+        admin: "",
+        teacher: ""
     })
 
     //FUNCTION WILL GO TO THE NEXT STEP
