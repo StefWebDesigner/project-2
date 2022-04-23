@@ -1,68 +1,84 @@
-// import React, {useState} from 'react';
-// import {Col, Container, Row} from "react-bootstrap";
-//
-// const LoginStepOne = () => {
-//
-//     //STATE FOR THE STEPS
-//     const [step, setStep] = useState(1);
-//     //STATE FOR THE FORMS
-//     const [formData, setFormData] = useState({
-//         firstName : "",
-//         lastName : "",
-//         age : "",
-//         email : "",
-//         password : ""
-//     })
-//
-//     //FUNCTION WILL GO TO THE NEXT STEP
-//     const nextStep = () => {
-//         setStep(step + 1);
-//     }
-//
-//     //FOR GOING BACK A STEP
-//     const prevStep = () => {
-//         setStep(step - 1);
-//     }
-//
-//     //HANDLING THE DATA INFO
-//     const loginHandler = input => e => {
-//         const {value} = e.target;
-//
-//         //UPDATING DATA STATES WHEN GOING BACK AND THEN ADDING NEW VARIABLES
-//         setFormData(prevState => ({
-//             ...prevState,
-//                 [input]: value
-//         }));
-//     }
-//
-//
-//             switch(step) {
-//
-//                case 1:
-//                    return (
-//                      <section>
-//                          <Container>
-//                              <Row>
-//                                  <Col>
-//                                      <LoginStepOne nextStep={nextStep} loginHandler={loginHandler} values={formData}/>
-//                                  </Col>
-//                              </Row>
-//                          </Container>
-//                      </section>
-//                     );
-//                 case 2:
-//                     return (
-//                         <section>
-//                             <Container>
-//                                 <Row>
-//
-//
-//                                 </Row>
-//                             </Container>
-//                         </section>
-//                     )
-//             }
-//
-// };
-//
-// export default LoginStepOne;
+import React, {useState} from 'react';
+import {Button, Card, Form, } from "react-bootstrap";
+import validator from "validator";
+
+const LoginStepOne = ({nextStep, handleFormData, values}) => {
+
+    //CREATING THE ERROR STATE FORM THE VALIDATION
+    const [error, setError] = useState(false);
+
+    //FORM USING THE FORM VALIDATION
+    const submitFormData = (e) => {
+        e.preventDefault();
+
+        if(
+            validator.isEmpty(values.firstName) ||
+            validator.isEmpty(values.lastName)
+        ) {
+            setError(true)
+        } else {
+            nextStep();
+        }
+    };
+
+    return (
+        <>
+            <section>
+                <Card>
+                    <Card.Body>
+                        <Form onSubmit={submitFormData}>
+                            {/*SECTION FOR FIRSNAME*/}
+                            <Form.Group className="mb-3">
+                                <Form.Label>First Name</Form.Label>
+                                <Form.Control
+                                    style={{border: error ? "2px solid red" : ""}}
+                                    name="firstName"
+                                    defaultValue={values.firstName}
+                                    type="text"
+                                    placeholder="Firstname"
+                                    onChange={handleFormData("firstName")}
+                                />
+                            {/* ERROR MESSAGE   */}
+                                {
+                                    error ? (
+                                        <Form.text style={{color: "red"}}>
+                                            This is a required field
+                                        </Form.text>
+                                    ) : (
+                                        ""
+                                    )
+                                }
+                            </Form.Group>
+                            {/*SECTION FOR LASTNAME*/}
+                            <Form.Group>
+                                <Form.Label>Last Name</Form.Label>
+                                <Form.Control
+                                    style={{border: error ? "2px solid red" : ""}}
+                                    name="lastName"
+                                    type="text"
+                                    defaultValue={values.lastName}
+                                    placeholder="Last name"
+                                    onChange={handleFormData("lastName")}
+                                />
+                            </Form.Group>
+                        {/* BUTTON SECTION */}
+                            <Button
+                                variant="primary"
+                                type="submit"
+                            >
+                                Continue
+                            </Button>
+                        </Form>
+                    </Card.Body>
+                </Card>
+            </section>
+
+
+
+        </>
+
+
+    )
+}
+
+export default LoginStepOne;

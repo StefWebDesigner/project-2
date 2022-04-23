@@ -50,7 +50,8 @@ const NavbarMain = () => {
 
                         <Menu >
                             <MenuItem active={true} icon={<FiHome />}>
-                                <Link to="/">Home</Link>
+
+
                             </MenuItem>
 
                             {/* conditionally show the admin portal */}
