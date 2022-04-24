@@ -1,11 +1,12 @@
 import React from 'react';
-import {Card, Col, Row} from "react-bootstrap";
+import {Card, Col, Container, Row} from "react-bootstrap";
 
 const OurTechinque = () => {
     return (
         <>
 
             <section>
+                <Container>
                 <Card>
 
                     <Card.Header className="custom-backgound">
@@ -55,6 +56,7 @@ const OurTechinque = () => {
                     <Card.Footer className="custom-backgound">
                     </Card.Footer>
                 </Card>
+                </Container>
             </section>
 
 

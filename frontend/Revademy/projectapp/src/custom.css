@@ -2,6 +2,49 @@
     font-family: "Bungee", cursive;
 }
 
+/*   custom  background animations*/
+
+.custom-backgound {
+    /*https://colorhunt.co/palette/a85cf95534a54b7be56fdfdf*/
+    /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+    background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
+
+    background-size: 400% 400%;
+    animation: background-animation 15s ease infinite;
+}
+@keyframes background-animation {
+    0% {
+        background-ground-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+.custom-testomonies-backgound {
+    /*https://colorhunt.co/palette/e9efc0b4e19783bd754e944f*/
+    background: linear-gradient(-45deg, #4E944F, #83BD75, #B4E197, #E9EFC0);
+
+    background-size: 400% 400%;
+    animation: background-testimonies-animation 15s ease infinite;
+}
+@keyframes background-testimonies-animation {
+    0% {
+        background-ground-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
 
 
 
@@ -43,8 +86,6 @@
 }
 
 /* -- Our Technique Section -- */
-
-
 .tecnique-item,
 .techinque-title {
     text-align: center;
@@ -58,29 +99,50 @@
 /*    height: 25%;*/
 /*}*/
 
+/* Testimonies section  */
 
-/*.custom-backgound {*/
-/*backgrond: conic-gradient(purple, mediumpurple, rebeccapurple);*/
-/*backgrond : conic-gradient(red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg);*/
-/*}*/
-
-.custom-backgound {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: background-animation 15s ease infinite;
+.testimony-card {
+    margin-bottom: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-    @keyframes background-animation {
-        0% {
-            background-ground-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-
+.testimony-card:hover {
+    animation: testimony-body 1s ease-in-out;
 }
+
+.testimony-body {
+    text-align: center;
+}
+
+
+.testimony-body:hover {
+    border-left: solid 2px #4E944F;
+    border-right: solid 2px #4E944F;
+    background: rgb(221,221,221);
+    background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(232,232,232,1) 35%, rgba(247,247,247,1) 100%);
+/*    make the card pop up*/
+    animation: testimony-body 1s ease-in-out;
+}
+
+@keyframes testimony-body {
+    From {
+        -webkit-transform: scale(1.0);
+    }
+    To {
+        -webkit-transform: scale(1.2);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* EXPERIMENTAL STUFF*/
