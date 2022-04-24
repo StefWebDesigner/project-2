@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import NavbarMain from '../../../navbar/NavbarMain'
+import ExperimentalNav from '../../../navbar/ExperimentalNav';
 import './ColorQuiz.css'
 
 function ColorQuiz() {
@@ -125,7 +125,7 @@ const restartGame = () => {
 
   return (
       <>
-      {/* <NavbarMain/> */}
+      <ExperimentalNav/>
     <div className = "color-quiz fade-in-animation">
         
         <h1>Color Quiz</h1>
@@ -141,6 +141,16 @@ const restartGame = () => {
                 {score} out of {questions.length} correct!{score>4 ? " 😃": ""}
             </h2>
             <button className="color-quiz-btn" onClick={() => restartGame()}>Restart Game</button>
+            <h3>Answers</h3>
+            <ul className='color-quiz-ul'>
+                {questions.map((x,index) =>{
+                    return(
+                        <li className='color-quiz-li' key={index}>{index + 1}.{questions[index].color}</li>
+                    ) 
+                })}
+                
+                    
+            </ul>
         </div>
 
         ):(

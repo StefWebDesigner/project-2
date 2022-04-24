@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import NavbarMain from "../../navbar/NavbarMain";
 import Header from "./Header";
 import Figure from "./Figure";
 import WrongLetters from "./WrongLetters";
@@ -7,6 +6,7 @@ import Word from "./Word";
 import Popup from "./Popup";
 
 import './Hangman.css'
+import ExperimentalNav from "../../navbar/ExperimentalNav";
 
 const words = ['cat', 'apple', 'banana', 'airplane', 'dog', 'red', 'yellow', 'blue', 'orange', 'green', 'purple'];
 
@@ -58,7 +58,7 @@ function playAgain(){
 
     return(
         <>
-        {/* <NavbarMain/> */}
+        <ExperimentalNav/>
         <div className="hangman-body fade-in-animation">
         <Header/>
         <div className="game-container">
