@@ -1,12 +1,12 @@
 import React from 'react';
-import NavbarMain from '../../navbar/NavbarMain';
 import {Link} from "react-router-dom";
+import ExperimentalNav from '../../navbar/ExperimentalNav';
 
 const Quizzes = () => {
 
     return (
         <>
-            {/* <NavbarMain/> */}
+            <ExperimentalNav/>
             <h1>Quizzes</h1>
             <Link to="/colorQuiz">Color Quiz</Link>
             

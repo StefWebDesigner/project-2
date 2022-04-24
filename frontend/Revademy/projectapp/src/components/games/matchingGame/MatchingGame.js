@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './MatchingGame.css'
 import SingleCard from './SingleCard'
-import NavbarMain from "../../navbar/NavbarMain";
+import ExperimentalNav from '../../navbar/ExperimentalNav';
 
 const cardImages=[
   {"src": "/img/apple.png", matched: false, pair: 1 },
@@ -86,7 +86,7 @@ useEffect(() => {
 
   return (
     <>
-    {/* <NavbarMain/> */}
+    <ExperimentalNav/>
     <div className="MatchingGame fade-in-animation">
       <h1>Matching Game</h1>
       <button className="MatchingGameBtn" onClick={shuffleCards}>New Game</button>
