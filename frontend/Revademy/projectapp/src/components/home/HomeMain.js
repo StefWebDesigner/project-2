@@ -6,6 +6,7 @@ import HomeHeader from "./HomeHeader";
 import OurTechinque from "./homeSub/OurTechinque";
 import MeetTheTeam from "./homeSub/MeetTheTeam";
 import Testimonies from "./homeSub/Testimonies";
+import FeaturesOffered from "./homeSub/FeaturesOffered";
 
 const HomeMain = () => {
     return (
@@ -17,6 +18,11 @@ const HomeMain = () => {
             <section className="mt-5">
                 <OurTechinque/>
             </section>
+
+            <section className="mt-5">
+                <FeaturesOffered/>
+            </section>
+
 
             <section className="mt-5">
                 <MeetTheTeam/>

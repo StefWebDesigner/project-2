@@ -4,7 +4,7 @@ const MeetTheTeam = () => {
     return (
         <>
 
-            <h1>Meet The Team</h1>
+            <h1 className="text-center">Meet The Team</h1>
 
         </>
     );
