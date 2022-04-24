@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Container} from "react-bootstrap";
+import {Card, Col, Container, Row} from "react-bootstrap";
 
 const Testimonies = () => {
 
@@ -14,7 +14,10 @@ const Testimonies = () => {
                 <Container>
                     <h1 className="text-center">Testimonies</h1>
 
+                    <Row>
+
                     {/*TESTIMONY #1*/}
+                <Col xs={12} sm={6} md={4}>
                     <Card className="testimony-card">
                         <Card.Header className="custom-testomonies-backgound">
                         </Card.Header>
@@ -25,7 +28,9 @@ const Testimonies = () => {
                         <Card.Footer className="custom-testomonies-backgound">
                         </Card.Footer>
                     </Card>
+                </Col>
 
+                <Col xs={12} sm={6} md={4}>
                     {/*TESTIMONY #2*/}
                     <Card className="testimony-card">
                         <Card.Header className="custom-testomonies-backgound">
@@ -37,7 +42,9 @@ const Testimonies = () => {
                         <Card.Footer className="custom-testomonies-backgound">
                         </Card.Footer>
                     </Card>
+                </Col>
 
+                <Col xs={12} sm={6} md={4}>
                     {/*TESTIMONY #3*/}
                     <Card className="testimony-card">
                         <Card.Header className="custom-testomonies-backgound">
@@ -49,8 +56,10 @@ const Testimonies = () => {
                         <Card.Footer className="custom-testomonies-backgound">
                         </Card.Footer>
                     </Card>
+                </Col>
 
-                    <Card className="testimony-card">
+                <Col xs={12} sm={6} md={4}>
+                        <Card className="testimony-card">
                         <Card.Header className="custom-testomonies-backgound">
                         </Card.Header>
                         <Card.Body className="testimony-body">
@@ -60,6 +69,11 @@ const Testimonies = () => {
                         <Card.Footer className="custom-testomonies-backgound">
                         </Card.Footer>
                     </Card>
+                </Col>
+
+
+
+                    </Row>
                 </Container>
 
             </section>
