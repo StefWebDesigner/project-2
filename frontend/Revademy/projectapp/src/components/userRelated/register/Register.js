@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
-import LoginStepTwo from "./LoginStepTwo";
-import LoginFinal from "./LoginFinal";
-import LoginStepOne from "./LoginStepOne";
+import RegisterStepTwo from "./RegisterStepTwo";
+import LoginFinal from "./RegisterFinal";
+import RegisterStepOne from "./RegisterStepOne";
+import RegisterStepThree from "./RegisterStepThree";
+import RegisterFinal from "./RegisterFinal";
 
-const Login = () => {
+const Register = () => {
 
     //STATE FOR THE STEPS
     const [step, setStep] = useState(1);
@@ -18,7 +20,9 @@ const Login = () => {
         password : "",
         user: "",
         admin: "",
-        teacher: ""
+        teacher: "",
+        overAge: "",
+        underAge: ""
     })
 
     //FUNCTION WILL GO TO THE NEXT STEP
@@ -51,7 +55,7 @@ const Login = () => {
                     <Container>
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
-                                <LoginStepOne nextStep={nextStep} loginHandler={loginHandler} values={formData}/>
+                                <RegisterStepOne nextStep={nextStep} handleFormData={loginHandler} values={formData}/>
                             </Col>
                         </Row>
                     </Container>
@@ -63,7 +67,7 @@ const Login = () => {
                     <Container>
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
-                                <LoginStepTwo nextStep={nextStep} loginHandler={loginHandler} values={formData}/>
+                                <RegisterStepTwo nextStep={nextStep} prevStep={prevStep} handleFormData={loginHandler} values={formData}/>
                             </Col>
                         </Row>
                     </Container>
@@ -75,7 +79,19 @@ const Login = () => {
                     <Container>
                         <Row>
                             <Col md={{span: 6,offset: 3}}>
-                                <LoginFinal values={formData}/>
+                                <RegisterStepThree nextStep={nextStep} prevStep={prevStep} handleFormData={loginHandler} values={formData}/>
+                            </Col>
+                        </Row>
+                    </Container>
+                </section>
+            );
+        case 4:
+            return (
+                <section>
+                    <Container>
+                        <Row>
+                            <Col md={{span: 6,offset: 3}}>
+                                <RegisterFinal prevStep={prevStep} values={formData}/>
                             </Col>
                         </Row>
                     </Container>
@@ -89,4 +105,4 @@ const Login = () => {
     }
 }
 
-export default Login;
+export default Register;

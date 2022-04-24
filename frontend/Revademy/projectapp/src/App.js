@@ -6,8 +6,8 @@ import {useState} from "react";
 
 //ALL IMPORTED COMPONENTS
 import Home from "./components/home/Home";
-import Login from "./components/userRelated/login/Login";
-import RegisterUser from "./components/userRelated/RegisterUser";
+import Register from "./components/userRelated/register/Register";
+import LoginUser from "./components/userRelated/LoginUser";
 import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
 
@@ -30,8 +30,8 @@ function App() {
 
                   {/* ALL MAIN NAV ROUTES */}
                   <Route path="/" element={<Home/>}/>
-                  <Route path="/login" element={<Login/>}/>
-                  <Route path="/register" element={<RegisterUser/>}/>
+                  <Route path="/login" element={<Register/>}/>
+                  <Route path="/register" element={<LoginUser/>}/>
                   <Route path="/activites" element={<Activities/>}/>
                   <Route path="/learningportal" element={<LearningPortal/>}/>
                   <Route path="/events" element={<Events/>}/>

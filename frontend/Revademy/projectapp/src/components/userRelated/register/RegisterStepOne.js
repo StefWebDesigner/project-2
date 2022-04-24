@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Button, Card, Form, } from "react-bootstrap";
 import validator from "validator";
 
-const LoginStepOne = ({nextStep, handleFormData, values}) => {
+const RegisterStepOne = ({nextStep, handleFormData, values}) => {
 
     //CREATING THE ERROR STATE FORM THE VALIDATION
     const [error, setError] = useState(false);
@@ -78,4 +78,4 @@ const LoginStepOne = ({nextStep, handleFormData, values}) => {
     )
 }
 
-export default LoginStepOne;
+export default RegisterStepOne;
