@@ -38,9 +38,17 @@
     text-align: center;
 }
 
+/* -- Our Technique Section -- */
 
 
+.tecnique-item,
+.techinque-title {
+    text-align: center;
+}
 
+.techinque-images {
+    height: 25%;
+}
 
 
 
