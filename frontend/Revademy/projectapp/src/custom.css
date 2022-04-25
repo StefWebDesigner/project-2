@@ -14,7 +14,7 @@
 }
 @keyframes background-animation {
     0% {
-        background-ground-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
         background-position: 100% 50%;
@@ -381,6 +381,99 @@
 /*1) square*/
 /*2) smaller square*/
 
+/*.link-events {*/
+/*    color: #53d9d1;*/
+/*    transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);*/
+/*    line-height: 1em;*/
+/*}*/
+
+/*.link-events:hover {*/
+/*    color: #111;*/
+/*    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);*/
+/*}*/
+
+/*.link-events::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    background-color: #53d9d1;*/
+/*    clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);*/
+/*    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);*/
+/*}*/
+
+/*.link-events:hover::before {*/
+/*    clip-path: circle(100% at 50% 50%);*/
+/*}*/
+
+/*.link-events::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    background-color: #151515;*/
+
+/*    !*clip-path: polygon(*!*/
+/*    !*        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%*!*/
+/*    !*);*!*/
+
+/*    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);*/
+/*}*/
+
+/*.link-events:hover::after {*/
+
+
+/*    clip-path: polygon(*/
+/*            40% 0%,*/
+/*            60% 0%,*/
+/*            60% 0%,*/
+/*            40% 0%,*/
+/*            40% 100%,*/
+/*            60% 100%,*/
+/*            60% 100%,*/
+/*            40% 100%*/
+/*    );*/
+/*}*/
+
+
+
+/*!*  GENERAL ANIMATIONS   *!*/
+
+/*.fade-in-animation {*/
+/*    animation: fade-in 1s ease-in-out;*/
+/*}*/
+
+/*@keyframes fade-in {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
+/*    25% {*/
+/*        opacity: 0.25;*/
+/*    }*/
+
+/*    50% {*/
+/*        opacity: .50;*/
+/*    }*/
+/*    75% {*/
+/*        opacity: .75;*/
+/*    }*/
+
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+
+/*}*/
+
+
+
+/*HOME LINK*/
+
 .link-events {
     color: #53d9d1;
     transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
@@ -401,7 +494,8 @@
     top: 0;
     right: 0;
     background-color: #53d9d1;
-    clip-path: polygon(10% 10%, 90% 10%, 90% 90%, 10% 90%);
+    clip-path: polygon(
+            50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -419,55 +513,17 @@
     right: 0;
     background-color: #151515;
 
-    /*clip-path: polygon(*/
-    /*        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%*/
-    /*);*/
+    clip-path: polygon(
+            50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
 
     transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .link-events:hover::after {
 
-
     clip-path: polygon(
-            40% 0%,
-            60% 0%,
-            60% 0%,
-            40% 0%,
-            40% 100%,
-            60% 100%,
-            60% 100%,
-            40% 100%
-    );
-}
-
-
-
-/*  GENERAL ANIMATIONS   */
-
-.fade-in-animation {
-    animation: fade-in 1s ease-in-out;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-
-    50% {
-        opacity: .50;
-    }
-    75% {
-        opacity: .75;
-    }
-
-    100% {
-        opacity: 1;
-    }
-
+            50% 10%, 61% 45%, 98% 45%, 68% 67%, 79% 99%, 50% 80%, 21% 99%, 32% 67%, 2% 45%, 39% 45%);
 }
 
 

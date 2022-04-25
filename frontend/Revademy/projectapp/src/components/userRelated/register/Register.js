@@ -18,11 +18,11 @@ const Register = () => {
         age : "",
         email : "",
         password : "",
-        user: "",
-        admin: "",
-        teacher: "",
-        overAge: "",
-        underAge: ""
+        // user: "",
+        // admin: "",
+        // teacher: "",
+        // overAge: "",
+        // underAge: ""
     })
 
     //FUNCTION WILL GO TO THE NEXT STEP
@@ -37,6 +37,7 @@ const Register = () => {
 
     //HANDLING THE DATA INFO
     const loginHandler = input => e => {
+        console.log("Entering loginHandler")
         const {value} = e.target;
 
         //UPDATING DATA STATES WHEN GOING BACK AND THEN ADDING NEW VARIABLES
@@ -45,6 +46,7 @@ const Register = () => {
             [input]: value
         }));
     }
+    console.log(step)
 
 
     switch(step) {

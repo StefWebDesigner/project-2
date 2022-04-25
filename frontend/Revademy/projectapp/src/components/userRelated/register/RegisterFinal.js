@@ -1,7 +1,11 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom"
 import {Button, Card} from "react-bootstrap";
+import LoginUser from "../LoginUser";
 
 const RegisterFinal = ({values, prevStep}) => {
+
+   const navigate = useNavigate();
 
     const {
         firstName,
@@ -9,16 +13,22 @@ const RegisterFinal = ({values, prevStep}) => {
         account,
         age,
         email,
-        password,
-        user,
-        admin,
-        teacher,
-        overAge,
-        underAge } = values;
+        password} = values;
+
+
+    const registerUserFinalSubmit = (e) => {
+        e.preventDefault();
+
+        //To navigate to login page
+        navigate("/login")
+    }
 
     return (
         <>
             <section>
+
+
+
                 <Card style={{ marginTop: 100, textAlign: "left" }}>
                     <Card.Body>
                         <p>
@@ -29,14 +39,13 @@ const RegisterFinal = ({values, prevStep}) => {
                         </p>
                         <p>
                             <strong> Account : </strong>
-                            {values ? {user} : ""}{ " "}
-                            {values ? {teacher} : ""}{ " "}
-                            {values ? {admin} : ""}{ " "}
+                            {account}
+
                         </p>
                         <p>
                             <strong> Age : </strong>
-                            {values ? {overAge} : ""}{ " "}
-                            {values ? {underAge} : ""}{ " "}
+                            {age}
+
                         </p>
                         <p>
                             <strong> Email : </strong> {email}{" "}
@@ -49,7 +58,7 @@ const RegisterFinal = ({values, prevStep}) => {
                                 Previous
                             </Button>
 
-                            <Button variant="primary" type="submit">
+                            <Button variant="primary" type="submit" onClick={registerUserFinalSubmit}>
                                 Submit
                             </Button>
                         </div>

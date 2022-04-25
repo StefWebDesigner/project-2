@@ -33,8 +33,8 @@ function App() {
 
                   {/* ALL MAIN NAV ROUTES */}
                   <Route path="/" element={<Home/>}/>
-                  <Route path="/login" element={<Register/>}/>
-                  <Route path="/register" element={<LoginUser/>}/>
+                  <Route path="/login" element={<LoginUser/>}/>
+                  <Route path="/register" element={<Register/>}/>
                   <Route path="/activites" element={<Activities/>}/>
                   <Route path="/learningportal" element={<LearningPortal/>}/>
                   <Route path="/events" element={<Events/>}/>
