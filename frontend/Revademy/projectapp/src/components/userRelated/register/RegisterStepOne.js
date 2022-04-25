@@ -19,6 +19,7 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
         } else {
             nextStep();
         }
+
     };
 
     return (

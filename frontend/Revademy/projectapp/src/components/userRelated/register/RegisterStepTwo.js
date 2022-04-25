@@ -9,15 +9,18 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
     const submitFormData = (e) => {
         e.preventDefault();
 
-        if(
-            validator.isEmpty(values.account) ||
-            validator.isEmpty(values.age) ||
-            validator.isEmpty(values.email)
-        ) {
-            setError(true)
-        } else {
-            nextStep();
-        }
+        // if(
+        //     validator.isEmpty(values.account) ||
+        //     validator.isEmpty(values.age) ||
+        //     validator.isEmpty(values.email)
+        // ) {
+        //     setError(true)
+        // } else {
+        //     nextStep();
+        // }
+        console.log("From stepTwo")
+        console.log(values)
+        nextStep()
     }
 
     return (
@@ -25,7 +28,9 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
             <section>
                 <Card style={{ marginTop: 100 }}>
                     <Card.Body>
-                        <Form onSubmit={submitFormData}>
+                        <Form>
+
+                        {/*<Form onSubmit={submitFormData}>*/}
                             {/*FOR ACCOUNT*/}
                             <Form.Group>
                                 <Form.Label>
@@ -34,11 +39,13 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
                                     size="lg"
+                                    name="account"
+                                    onChange={handleFormData("account")}
                                 >
-                                    <option>Open this select menu</option>
-                                    <option defaultValue={values.user}>User</option>
-                                    <option defaultValue={values.admin}>Admin</option>
-                                    <option defaultValue={values.teacher}>Teacher</option>
+                                    <option value="">Open this select menu</option>
+                                    <option value="user">User</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="teacher">Teacher</option>
                                 </Form.Select>
                             {/* ERROR SECTION    */}
                                 {
@@ -55,10 +62,12 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
                                     size="lg"
+                                    name="age"
+                                    onChange={handleFormData("age")}
                                 >
-                                    <option>Open this select menu</option>
-                                    <option defaultValue={values.overAge}>Above 18</option>
-                                    <option defaultValue={values.underAge}>Under 18</option>
+                                    <option value="">Open this select menu</option>
+                                    <option value="overAge">Above 18</option>
+                                    <option value="underAge">Under 18</option>
                                 </Form.Select>
                                 {/* ERROR SECTION    */}
                                 {
@@ -77,7 +86,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="lastName"
                                     type="text"
-                                    defaultValue={values.email}
+                                    value={values.email}
                                     placeholder="Email"
                                     onChange={handleFormData("email")}
                                 />
@@ -97,6 +106,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 <Button
                                     variant="primary"
                                     type="submit"
+                                    onClick={submitFormData}
                                 >
                                     Continue
                                 </Button>
