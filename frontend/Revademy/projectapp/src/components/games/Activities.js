@@ -1,12 +1,12 @@
 import React from 'react';
-import NavbarMain from "../navbar/NavbarMain";
 import {Link} from "react-router-dom";
+import ExperimentalNav from '../navbar/ExperimentalNav';
 
 const Activities = () => {
 
     return (
         <>
-            {/* <NavbarMain/> */}
+            <ExperimentalNav/>
             <h1>Games</h1>
             <Link to="/matchingGame">Matching Game</Link>
             <p>------------------------------------</p>

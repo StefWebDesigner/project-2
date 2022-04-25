@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './MatchingGame.css'
 import SingleCard from './SingleCard'
-import NavbarMain from "../../navbar/NavbarMain";
+import ExperimentalNav from '../../navbar/ExperimentalNav';
+import Confetti from 'react-confetti';
 
 const cardImages=[
   {"src": "/img/apple.png", matched: false, pair: 1 },
@@ -27,6 +28,9 @@ export default function MatchingGame() {
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
   const [pairs, setPairs] = useState(0)
+  const[height, setHeight] = useState(null)
+  const[width, setWidth] = useState(null)
+  const confettiRef = useRef(null)
 
   //shuffle cards
   const shuffleCards = () => {
@@ -84,14 +88,23 @@ useEffect(() => {
   shuffleCards()
 }, [])
 
+//Confetti
+useEffect(() => {
+  setHeight(1000);
+  setWidth(confettiRef.current.clientWidth);
+}, [])
+
+
   return (
     <>
-    {/* <NavbarMain/> */}
-    <div className="MatchingGame fade-in-animation">
+    <div ref={confettiRef}>
+    <ExperimentalNav/>
+    
+    <div className="MatchingGame fade-in-animation" ref={confettiRef} >
       <h1>Matching Game</h1>
       <button className="MatchingGameBtn" onClick={shuffleCards}>New Game</button>
-
-      <div className="card-grid">
+      
+      <div className="card-grid" ref={confettiRef}>
         {cards.map(card => (
           <SingleCard 
            key={card.id} 
@@ -104,6 +117,16 @@ useEffect(() => {
       </div>
       <p>Turns: {turns}</p>
       <p>{pairs===allPairsMatched ? "You Won! 😃" : ""}</p>
+    </div>
+    {pairs===allPairsMatched ?
+    <Confetti
+      numberOfPieces={200}
+      width={width}
+      height={height}
+     />
+    :
+     ""
+    } 
     </div>
     </>
   );
