@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {FaSmileBeam} from "react-icons/fa";
 import DataStore from "../../dataStore/dataStore";
 import {Card, Col, Container, Row} from "react-bootstrap";
+import Logo from "./homeSub/Logo";
 
 
 const HomeHeader = () => {
@@ -17,7 +18,9 @@ const HomeHeader = () => {
                 </Row>
 
                     <Row>
-                        Logo
+                    {/*    LOGO    */}
+                        <Logo/>
+
                     </Row>
                 <Row>
                     {  user ? <h2 className="home-header-user">Welcome {user} </h2> : ""}

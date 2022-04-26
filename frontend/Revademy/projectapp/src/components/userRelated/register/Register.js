@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import RegisterStepTwo from "./RegisterStepTwo";
-import LoginFinal from "./RegisterFinal";
 import RegisterStepOne from "./RegisterStepOne";
 import RegisterStepThree from "./RegisterStepThree";
 import RegisterFinal from "./RegisterFinal";
@@ -17,12 +16,7 @@ const Register = () => {
         account : "",
         age : "",
         email : "",
-        password : "",
-        // user: "",
-        // admin: "",
-        // teacher: "",
-        // overAge: "",
-        // underAge: ""
+        password : ""
     })
 
     //FUNCTION WILL GO TO THE NEXT STEP

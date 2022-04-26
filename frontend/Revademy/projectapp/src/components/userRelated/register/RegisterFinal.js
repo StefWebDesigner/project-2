@@ -1,7 +1,6 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom"
 import {Button, Card} from "react-bootstrap";
-import LoginUser from "../LoginUser";
 
 const RegisterFinal = ({values, prevStep}) => {
 
@@ -32,10 +31,10 @@ const RegisterFinal = ({values, prevStep}) => {
                 <Card style={{ marginTop: 100, textAlign: "left" }}>
                     <Card.Body>
                         <p>
-                            <strong> First Name : </strong> {firstName}{" "}
+                            <strong> First Name : </strong> {JSON.stringify(firstName)}
                         </p>
                         <p>
-                            <strong> Last Name : </strong> {lastName}{" "}
+                            <strong> Last Name : </strong> {lastName}
                         </p>
                         <p>
                             <strong> Account : </strong>
@@ -48,10 +47,10 @@ const RegisterFinal = ({values, prevStep}) => {
 
                         </p>
                         <p>
-                            <strong> Email : </strong> {email}{" "}
+                            <strong> Email : </strong> {email}
                         </p>
                         <p>
-                            <strong> Password : </strong> {password}{" "}
+                            <strong> Password : </strong> {password}
                         </p>
                         <div style={{ display: "flex", justifyContent: "space-around" }}>
                             <Button variant="primary" onClick={prevStep}>

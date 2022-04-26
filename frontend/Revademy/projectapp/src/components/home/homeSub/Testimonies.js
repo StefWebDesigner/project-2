@@ -12,7 +12,10 @@ const Testimonies = () => {
         <>
             <section>
                 <Container>
-                    <h1 className="text-center">Testimonies</h1>
+                    {/*<Card>*/}
+                    {/*<h1 className="text-center">Testimonies</h1>*/}
+                    {/*</Card>*/}
+
 
                     <Row>
 

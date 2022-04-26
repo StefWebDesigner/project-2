@@ -9,15 +9,15 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
     const submitFormData = (e) => {
         e.preventDefault();
 
-        // if(
-        //     validator.isEmpty(values.account) ||
-        //     validator.isEmpty(values.age) ||
-        //     validator.isEmpty(values.email)
-        // ) {
-        //     setError(true)
-        // } else {
-        //     nextStep();
-        // }
+        if(
+            validator.isEmpty(values.account) ||
+            validator.isEmpty(values.age) ||
+            validator.isEmpty(values.email)
+        ) {
+            setError(true)
+        } else {
+            nextStep();
+        }
         console.log("From stepTwo")
         console.log(values)
         nextStep()

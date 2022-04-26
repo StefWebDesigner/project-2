@@ -107,7 +107,8 @@
     margin-right: 10%;
 }
 .testimony-card:hover {
-    animation: testimony-body 1s ease-in-out;
+    /*border: solid 2px #4E944F;*/
+    box-shadow: #4E944F 4px 4px 10px;
 }
 
 .testimony-body {
@@ -115,23 +116,14 @@
 }
 
 
-.testimony-body:hover {
-    border-left: solid 2px #4E944F;
-    border-right: solid 2px #4E944F;
-    background: rgb(221,221,221);
-    background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(232,232,232,1) 35%, rgba(247,247,247,1) 100%);
-/*    make the card pop up*/
-    animation: testimony-body 1s ease-in-out;
-}
-
-@keyframes testimony-body {
-    From {
-        -webkit-transform: scale(1.0);
-    }
-    To {
-        -webkit-transform: scale(1.2);
-    }
-}
+/*@keyframes testimony-body {*/
+/*    From {*/
+/*        -webkit-transform: scale(1.0);*/
+/*    }*/
+/*    To {*/
+/*        -webkit-transform: scale(1.2);*/
+/*    }*/
+/*}*/
 
 
 
