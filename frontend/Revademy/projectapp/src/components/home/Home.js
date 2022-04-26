@@ -10,8 +10,6 @@ const Home = () => {
     return (
         <>  <section className="fade-in-animation">
                 <ExperimentalNav/>
-                <HomeHeader/>
-                {/*<Header/>*/}
                 <HomeMain/>
                 <HeaderFooter/>
             </section>

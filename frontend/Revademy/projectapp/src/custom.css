@@ -8,11 +8,122 @@
     /*https://colorhunt.co/palette/a85cf95534a54b7be56fdfdf*/
     /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
     background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
-
     background-size: 400% 400%;
     animation: background-animation 15s ease infinite;
 }
+
 @keyframes background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.home-main-card-shadow {
+    box-shadow: 0 4px 1rem -4px #000;
+}
+
+
+/*  Welcome & Search*/
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-search-button {
+    border: black 1px solid;
+}
+
+.searchIcon {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+/* HOME HEADER*/
+
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    /*border: white 1px solid;*/
+
+}
+
+.background-header-image {
+    background-image: url("../src/kid_images/space_web_page_length.svg");
+}
+
+.home-header-title,
+.home-header-title-subtitle,
+.home-header-user,
+.home-header-values-1,
+.home-header-values-2,
+.home-header-values-3{
+    text-align: center;
+}
+
+.home-header-title,
+.home-header-title-subtitle {
+    color: white;
+    text-shadow: #4B7BE5 2px 5px 2px;
+}
+
+
+
+.home-header-card-values-1,
+.home-header-card-values-3{
+    margin-top: 10%;
+}
+
+.home-header-card-values-1 {
+    margin-left: 5%;
+}
+.home-header-card-values-3 {
+    margin-right: 5%;
+}
+
+.home-header-card-values-2 {
+    margin-top: 16%;
+    margin-bottom: 10%;
+}
+
+.home-header-values-1 {
+    border-radius: 5%;
+    /*height: 100%;*/
+}
+
+.home-header-values-2 {
+    border-radius: 5%;
+    /*height: 100%;*/
+}
+
+.home-header-values-3 {
+    border-radius: 5%;
+    /*height: 100%;*/
+}
+
+.values-backgound {
+    /*https://colorhunt.co/palette/f4f9f9ccf2f4a4ebf3aaaaaa*/
+    background: linear-gradient(-45deg, #F4F9F9, #CCF2F4, #A4EBF3, #AAAAAA);
+
+    background-size: 400% 400%;
+    animation: values-animation 15s ease infinite;
+}
+@keyframes values-animation {
     0% {
         background-position: 0% 50%;
     }
@@ -25,14 +136,22 @@
 
 }
 
-.custom-testomonies-backgound {
+
+/* HOME ANOUNCEMENTS */
+
+.announce-title {
+    text-align: center;
+    color: white;
+}
+
+.accouncment-backgound {
     /*https://colorhunt.co/palette/e9efc0b4e19783bd754e944f*/
     background: linear-gradient(-45deg, #4E944F, #83BD75, #B4E197, #E9EFC0);
 
     background-size: 400% 400%;
-    animation: background-testimonies-animation 15s ease infinite;
+    animation: accouncment-animation 15s ease infinite;
 }
-@keyframes background-testimonies-animation {
+@keyframes accouncment-animation {
     0% {
         background-ground-position: 0% 50%;
     }
@@ -46,45 +165,6 @@
 }
 
 
-
-
-
-/* HOME HEADER*/
-
-.home-header-title,
-.home-header-title-subtitle,
-.home-header-user,
-.home-header-values-1,
-.home-header-values-2,
-.home-header-values-3{
-    text-align: center;
-}
-
-.home-header-values-1 {
-    border-left: solid blue 3px;
-    border-radius: 5%;
-    /*height: 100%;*/
-}
-
-.home-header-values-2 {
-    border-left: solid red 3px;
-    border-radius: 5%;
-    /*height: 100%;*/
-}
-
-.home-header-values-3 {
-    border-left: solid green 3px;
-    border-radius: 5%;
-    /*height: 100%;*/
-}
-
-
-/* HOME ANOUNCEMENTS */
-
-.announce-title {
-    text-align: center;
-}
-
 /* -- Our Technique Section -- */
 .tecnique-item,
 .techinque-title {
@@ -95,52 +175,95 @@
     color: white;
 }
 
-/*.techinque-images {*/
-/*    height: 25%;*/
-/*}*/
 
-/* Testimonies section  */
+
+/*Testimony*/
 
 .testimony-card {
     margin-bottom: 5px;
     margin-left: 10%;
     margin-right: 10%;
+    transition: all 250ms ease-in-out;
+
 }
 .testimony-card:hover {
-    animation: testimony-body 1s ease-in-out;
+    /*border: solid 2px #4E944F;*/
+    /*box-shadow: #4E944F 4px 4px 10px;*/
+    box-shadow: 0 4px 1rem -4px #000;
+    transform: translateY(-3px);
 }
 
 .testimony-body {
     text-align: center;
 }
 
+.testimony-backgound {
+    /*https://colorhunt.co/palette/f7f7f7ffbc97ff7800ffe300*/
+    background: linear-gradient(-45deg, #F7F7F7, #FFBC97, #FF7800, #FFE300);
 
-.testimony-body:hover {
-    border-left: solid 2px #4E944F;
-    border-right: solid 2px #4E944F;
-    background: rgb(221,221,221);
-    background: linear-gradient(90deg, rgba(221,221,221,1) 0%, rgba(232,232,232,1) 35%, rgba(247,247,247,1) 100%);
-/*    make the card pop up*/
-    animation: testimony-body 1s ease-in-out;
-}
-
-@keyframes testimony-body {
-    From {
-        -webkit-transform: scale(1.0);
-    }
-    To {
-        -webkit-transform: scale(1.2);
-    }
+    background-size: 400% 400%;
+    animation: accouncement-animation 15s ease infinite;
 }
 
 
+@keyframes accouncement-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* Offer Classes Sections*/
+
+.offer-title {
+    text-align: center;
+    color: white;
+}
+
+.offer-card-items {
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+/*.offer-container {*/
+/*    padding-left: 2%;*/
+/*    padding-right: 2;*/
+/*}*/
+
+.offer-backgound {
+    /*https://colorhunt.co/palette/f7f7f7ffbc97ff7800ffe300*/
+    background: linear-gradient(-45deg, #F6E7D8, #F68989, #C65D7B, #874356);
+
+    background-size: 400% 400%;
+    animation: offer-animation 15s ease infinite;
+}
 
 
+@keyframes offer-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 
+}
 
+/*HOME FOOTER*/
 
-
-
+.home-footer  {
+    text-align: center;
+}
 
 
 

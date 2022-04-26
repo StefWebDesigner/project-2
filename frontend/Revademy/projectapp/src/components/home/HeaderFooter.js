@@ -4,8 +4,8 @@ const HeaderFooter = () => {
     return (
         <>
 
-            <section>
-                <cite className="text-center"> Copy @ Revatue</cite>
+            <section className="home-footer">
+                <cite > Copy @ Revatue</cite>
             </section>
 
         </>

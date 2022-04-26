@@ -6,19 +6,20 @@ import {useState} from "react";
 
 //ALL IMPORTED COMPONENTS
 import Home from "./components/home/Home";
-import Register from "./components/userRelated/register/Register";
-import LoginUser from "./components/userRelated/LoginUser";
+
 import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
-
+import Register from "./components/userRelated/register/Register";
+import LoginUser from "./components/userRelated/LoginUser";
 import MatchingGame from './components/games/matchingGame/MatchingGame';
 import Hangman from './components/games/hangman/Hangman';
 import Quizzes from './components/games/quizzes/Quizzes';
 import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 
-import LearningPortal from "./components/learningPortal/LearningPortal";
 
-
+function SearchResult() {
+    return null;
+}
 
 function App() {
 
@@ -33,12 +34,11 @@ function App() {
 
                   {/* ALL MAIN NAV ROUTES */}
                   <Route path="/" element={<Home/>}/>
-
-                  <Route path="/login" element={<Register/>}/>
-                  <Route path="/register" element={<LoginUser/>}/>
+                  <Route path="/search" element={<SearchResult/>}/>
+                  <Route path="/login" element={<LoginUser/>}/>
+                  <Route path="/register" element={<Register/>}/>
                   <Route path="/activities" element={<Activities/>}/>
 
-                  <Route path="/learningportal" element={<LearningPortal/>}/>
                   <Route path="/events" element={<Events/>}/>
                   {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>
