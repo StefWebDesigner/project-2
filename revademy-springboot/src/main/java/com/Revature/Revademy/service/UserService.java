@@ -1,5 +1,6 @@
 package com.Revature.Revademy.service;
 
+import com.Revature.Revademy.entities.AccountTypes;
 import com.Revature.Revademy.entities.User;
 import com.Revature.Revademy.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class UserService {
     }
 
 
-//  REGISTER A NEW USER
+    //REGISTER A NEW USER
     public User registerUser(User user) {
         return userRepository.save(user);
     }
@@ -32,5 +33,25 @@ public class UserService {
             }
         }
         return null;
+    }
+
+    //i'M TOO TRIED TO WORK ON THIS ->> TO BE RESUMED
+    public User deleteUser(Integer id, AccountTypes accountTypes) {
+        Optional <User> userModel = userRepository.findById(id);
+        if(userModel.isPresent()) {
+            if(userModel.get().getAccountTypes() == AccountTypes.ADMIN) {
+                Optional <User> user = userRepository.findById(id) {
+                    if(user.isPresent()) {
+                        userRepository.delete(user.get());
+                        return "Successfully deleted user";
+                    } else {
+                        return "No user was matched with id";
+                    }
+                } else {
+                    return "Need admin permissions";
+                }
+            } else {
+                return "No user matched with ID";
+            }
     }
 }
