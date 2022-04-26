@@ -1,6 +1,6 @@
 package com.Revature.Revademy.service;
 
-import com.Revature.Revademy.entities.Users;
+import com.Revature.Revademy.entities.User;
 import com.Revature.Revademy.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,9 +18,19 @@ public class UserService {
     }
 
 
-    public Users registerUser(Users users) {
-        //CREATE A CHECK FOR AGE => for later
+//  REGISTER A NEW USER
+    public User registerUser(User user) {
+        return userRepository.save(user);
+    }
 
-       return userRepository.save(users);
+    //LOGIN AN EXISITING USER
+    public User loginUser(String username, String password) {
+        Optional<User> user = userRepository.findByUsername(username);
+        if (user.isPresent()) {
+            if (user.get().getPassword().equals(password)) {
+                return user.get();
+            }
+        }
+        return null;
     }
 }

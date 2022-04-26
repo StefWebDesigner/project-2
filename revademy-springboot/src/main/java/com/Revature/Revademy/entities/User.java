@@ -1,25 +1,39 @@
 package com.Revature.Revademy.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Time;
 import java.time.LocalDate;
 
 @Entity
-public class Users {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+    @Column
     private String firstname;
+    @Column
     private String lastname;
+    @Column
     private AccountTypes accountTypes;
+    @Column
     private AgeType ageType;
+    @Column
     private String email;
+    @Column
     private String password;
-    private LocalDate dateCreated;
-    private Time lifetimeOnline;
+    @Column
+    private LocalDate createdDate;
+    @Column
+    private Time lifetime;
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getFirstname() {
         return firstname;
@@ -69,19 +83,19 @@ public class Users {
         this.password = password;
     }
 
-    public LocalDate getDateCreated() {
-        return dateCreated;
+    public LocalDate getCreatedDate() {
+        return createdDate;
     }
 
-    public void setDateCreated(LocalDate dateCreated) {
-        this.dateCreated = dateCreated;
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
     }
 
-    public Time getLifetimeOnline() {
-        return lifetimeOnline;
+    public Time getLifetime() {
+        return lifetime;
     }
 
-    public void setLifetimeOnline(Time lifetimeOnline) {
-        this.lifetimeOnline = lifetimeOnline;
+    public void setLifetime(Time lifetime) {
+        this.lifetime = lifetime;
     }
 }
