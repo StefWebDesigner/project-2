@@ -12,7 +12,7 @@ const HomeHeader = () => {
     return (
         <>
             <section>
-                <Container>
+                <Container className="background-header-image">
                 <Row>
                     <h1 className="home-header-title">Welcome to Revedamy!</h1>
                 </Row>
@@ -20,7 +20,6 @@ const HomeHeader = () => {
                     <Row>
                     {/*    LOGO    */}
                         <Logo/>
-
                     </Row>
                 <Row>
                     {  user ? <h2 className="home-header-user">Welcome {user} </h2> : ""}
@@ -31,18 +30,24 @@ const HomeHeader = () => {
                 <Row>
 
                     <Col>
-                        <Card>
+                        <Card className="home-header-card-values-1">
                             <h5 className="home-header-values-1">Tailor English Classes</h5>
+                            <Card.Footer className="values-backgound">
+                            </Card.Footer>
                         </Card>
                     </Col>
                     <Col>
-                        <Card>
+                        <Card className="home-header-card-values-2">
                             <h5 className="home-header-values-2">Dynamic English Learning</h5>
+                            <Card.Footer className="values-backgound">
+                            </Card.Footer>
                         </Card>
                     </Col>
                     <Col>
-                        <Card>
+                        <Card className="home-header-card-values-3">
                             <h5 className="home-header-values-3">Fun & Interactive</h5>
+                            <Card.Footer className="values-backgound">
+                            </Card.Footer>
                         </Card>
                     </Col>
 

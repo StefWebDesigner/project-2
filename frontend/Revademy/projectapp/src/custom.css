@@ -58,6 +58,10 @@
     margin: auto;
 }
 
+.background-header-image {
+    background-image: url("../src/kid_images/space_background_tall.svg");
+}
+
 .home-header-title,
 .home-header-title-subtitle,
 .home-header-user,
@@ -67,23 +71,61 @@
     text-align: center;
 }
 
+.home-header-title,
+.home-header-title-subtitle {
+    color: white;
+}
+
+
+
+.home-header-card-values-1,
+.home-header-card-values-3{
+    margin-top: 10%;
+}
+
+.home-header-card-values-2 {
+    margin-top: 16%;
+}
+
 .home-header-values-1 {
-    border-left: solid blue 3px;
     border-radius: 5%;
     /*height: 100%;*/
 }
 
 .home-header-values-2 {
-    border-left: solid red 3px;
     border-radius: 5%;
     /*height: 100%;*/
 }
 
 .home-header-values-3 {
-    border-left: solid green 3px;
     border-radius: 5%;
     /*height: 100%;*/
 }
+
+.values-backgound {
+    /*https://colorhunt.co/palette/630606890f0de83a14d9ce3f*/
+    background: linear-gradient(-45deg, #D9CE3F, #E83A14, #890F0D, #630606);
+
+    background-size: 400% 400%;
+    animation: values-animation 15s ease infinite;
+}
+@keyframes values-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+
+
+
 
 
 /* HOME ANOUNCEMENTS */
@@ -102,20 +144,44 @@
     color: white;
 }
 
-/*.techinque-images {*/
-/*    height: 25%;*/
-/*}*/
+.values-backgound {
+    /*https://colorhunt.co/palette/630606890f0de83a14d9ce3f*/
+    background: linear-gradient(-45deg, #D9CE3F, #E83A14, #890F0D, #630606);
 
-/* Testimonies section  */
+    background-size: 400% 400%;
+    animation: values-animation 15s ease infinite;
+}
+@keyframes values-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+
+
+
+/*Testimony*/
 
 .testimony-card {
     margin-bottom: 5px;
     margin-left: 10%;
     margin-right: 10%;
+    transition: all 250ms ease-in-out;
+
 }
 .testimony-card:hover {
     /*border: solid 2px #4E944F;*/
-    box-shadow: #4E944F 4px 4px 10px;
+    /*box-shadow: #4E944F 4px 4px 10px;*/
+    box-shadow: 0 4px 1rem -4px #000;
+    transform: translateY(-3px);
 }
 
 .testimony-body {
