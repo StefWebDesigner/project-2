@@ -11,7 +11,6 @@ const Testimonies = () => {
     return (
         <>
             <section>
-                <Container>
                     {/*<Card>*/}
                     {/*<h1 className="text-center">Testimonies</h1>*/}
                     {/*</Card>*/}
@@ -77,7 +76,6 @@ const Testimonies = () => {
 
 
                     </Row>
-                </Container>
 
             </section>
 

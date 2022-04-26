@@ -26,6 +26,32 @@
 }
 
 
+.home-main-card-shadow {
+    box-shadow: 0 4px 1rem -4px #000;
+}
+
+
+
+/*  Welcome & Search*/
+
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.top-search-button {
+    border: black 1px solid;
+
+}
+
+
+
+
+
 /* HOME HEADER*/
 
 .logo{

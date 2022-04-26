@@ -5,8 +5,7 @@ import gameIcon from '../../../kid_images/gamer_bot_badge.svg'
 const FeaturesOffered = () => {
     return (
         <>
-            <section>
-                <Container className="offer-container">
+            <section className="offer-container">
             {/*<h1 className="text-center"> Class Selection</h1>*/}
                     <Card >
                         <Row>
@@ -46,7 +45,6 @@ const FeaturesOffered = () => {
                         </Row>
 
                     </Card>
-                </Container>
             </section>
 
         </>

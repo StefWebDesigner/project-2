@@ -6,7 +6,6 @@ const OurTechinque = () => {
         <>
 
             <section>
-                <Container>
                 <Card>
 
                     <Card.Header className="custom-backgound">
@@ -56,7 +55,6 @@ const OurTechinque = () => {
                     <Card.Footer className="custom-backgound">
                     </Card.Footer>
                 </Card>
-                </Container>
             </section>
 
 

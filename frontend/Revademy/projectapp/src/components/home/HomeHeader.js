@@ -11,8 +11,8 @@ const HomeHeader = () => {
 
     return (
         <>
-            <section>
-                <Container className="background-header-image">
+            <section className="background-header-image">
+                {/*<Container className="background-header-image">*/}
                 <Row>
                     <h1 className="home-header-title">Welcome to Revedamy!</h1>
                 </Row>
@@ -62,7 +62,7 @@ const HomeHeader = () => {
                 {/*<Row>*/}
                 {/*    <p className="home-header-title-subtitle"><FaSmileBeam/> Where learning is FUN!<FaSmileBeam/></p>*/}
                 {/*</Row>*/}
-                </Container>
+                {/*</Container>*/}
             </section>
 
         </>

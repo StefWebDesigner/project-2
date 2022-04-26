@@ -4,19 +4,29 @@ import OurTechinque from "./homeSub/OurTechinque";
 import MeetTheTeam from "./homeSub/MeetTheTeam";
 import Testimonies from "./homeSub/Testimonies";
 import FeaturesOffered from "./homeSub/FeaturesOffered";
+import HomeHeader from "./HomeHeader";
+import WelcomeAndSearchBar from "./homeSub/WelcomeAndSearchBar";
 
 const HomeMain = () => {
     return (
         <>
-            <section className="mt-2">
+            <section>
+                <WelcomeAndSearchBar/>
+            </section>
+
+            <section className="mt-4">
+                <HomeHeader/>
+            </section>
+
+            <section className="mt-4 home-main-card-shadow">
                 <Announcement/>
             </section>
 
-            <section className="mt-5">
+            <section className="mt-4 home-main-card-shadow">
                 <OurTechinque/>
             </section>
 
-            <section className="mt-5">
+            <section className="mt-4 home-main-card-shadow">
                 <FeaturesOffered/>
             </section>
 
@@ -24,7 +34,7 @@ const HomeMain = () => {
             {/*    <MeetTheTeam/>*/}
             {/*</section>*/}
 
-            <section className="mt-5">
+            <section className="mt-4 ">
                 <Testimonies/>
             </section>
 

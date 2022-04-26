@@ -7,8 +7,8 @@ const Announcement = () => {
     return (
         <>
             <section>
-                <Container>
                     <Card>
+
                         <Card.Header className="accouncment-backgound">
                             <h2 className="announce-title">Announcement</h2>
                         </Card.Header>
@@ -27,8 +27,8 @@ const Announcement = () => {
                         <Card.Footer className="accouncment-backgound">
 
                         </Card.Footer>
+
                     </Card>
-                </Container>
             </section>
         </>
     );
