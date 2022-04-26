@@ -25,25 +25,7 @@
 
 }
 
-.custom-testomonies-backgound {
-    /*https://colorhunt.co/palette/e9efc0b4e19783bd754e944f*/
-    background: linear-gradient(-45deg, #4E944F, #83BD75, #B4E197, #E9EFC0);
 
-    background-size: 400% 400%;
-    animation: background-testimonies-animation 15s ease infinite;
-}
-@keyframes background-testimonies-animation {
-    0% {
-        background-ground-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-
-}
 
 
 
@@ -138,6 +120,31 @@
     color: white;
 }
 
+.accouncment-backgound {
+    /*https://colorhunt.co/palette/e9efc0b4e19783bd754e944f*/
+    background: linear-gradient(-45deg, #4E944F, #83BD75, #B4E197, #E9EFC0);
+
+    background-size: 400% 400%;
+    animation: accouncment-animation 15s ease infinite;
+}
+@keyframes accouncment-animation {
+    0% {
+        background-ground-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+
+
+
+
 /* -- Our Technique Section -- */
 .tecnique-item,
 .techinque-title {
@@ -148,25 +155,6 @@
     color: white;
 }
 
-.accouncement-backgound {
-    /*https://colorhunt.co/palette/630606890f0de83a14d9ce3f*/
-    background: linear-gradient(-45deg, #D9CE3F, #E83A14, #890F0D, #630606);
-
-    background-size: 400% 400%;
-    animation: accouncement-backgound 15s ease infinite;
-}
-@keyframes accouncement-backgound {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-
-}
 
 
 
@@ -192,15 +180,27 @@
     text-align: center;
 }
 
+.testimony-backgound {
+    /*https://colorhunt.co/palette/f7f7f7ffbc97ff7800ffe300*/
+    background: linear-gradient(-45deg, #F7F7F7, #FFBC97, #FF7800, #FFE300);
 
-/*@keyframes testimony-body {*/
-/*    From {*/
-/*        -webkit-transform: scale(1.0);*/
-/*    }*/
-/*    To {*/
-/*        -webkit-transform: scale(1.2);*/
-/*    }*/
-/*}*/
+    background-size: 400% 400%;
+    animation: accouncement-animation 15s ease infinite;
+}
+
+
+@keyframes accouncement-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
 
 
 
