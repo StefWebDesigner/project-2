@@ -32,8 +32,8 @@ const SearchResult = () => {
 
     return (
         <>
-            {/*<ExperimentalNav/>*/}
-            {/*<h1>Result Page</h1>*/}
+            <ExperimentalNav/>
+            <h1>Result Page</h1>
 
             {/*<input.Group>*/}
             {/*    <Form.Select>*/}

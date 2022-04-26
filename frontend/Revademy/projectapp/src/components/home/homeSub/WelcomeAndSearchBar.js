@@ -11,9 +11,12 @@ const WelcomeAndSearchBar = () => {
 
                     <div className="weclome-subcontainer">
                         <h2> Welcome User</h2>
+                    </div>
+
+                    <div className="weclome-subcontainer">
 
                             <aside className="top-search-button">
-                                <BsSearch/>
+                                <BsSearch className="searchIcon"/>
                             </aside>
                     </div>
                 </Container>

@@ -8,10 +8,10 @@
     /*https://colorhunt.co/palette/a85cf95534a54b7be56fdfdf*/
     /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
     background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
-
     background-size: 400% 400%;
     animation: background-animation 15s ease infinite;
 }
+
 @keyframes background-animation {
     0% {
         background-position: 0% 50%;
@@ -22,7 +22,6 @@
     100% {
         background-position: 0% 50%;
     }
-
 }
 
 
@@ -31,21 +30,22 @@
 }
 
 
-
 /*  Welcome & Search*/
-
 
 .welcome-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
 .top-search-button {
     border: black 1px solid;
+}
 
+.searchIcon {
+    width: 25px;
+    height: 25px;
 }
 
 
@@ -87,6 +87,13 @@
 .home-header-card-values-1,
 .home-header-card-values-3{
     margin-top: 10%;
+}
+
+.home-header-card-values-1 {
+    margin-left: 5%;
+}
+.home-header-card-values-3 {
+    margin-right: 5%;
 }
 
 .home-header-card-values-2 {
@@ -257,13 +264,6 @@
 .home-footer  {
     text-align: center;
 }
-
-
-
-
-
-
-
 
 
 
