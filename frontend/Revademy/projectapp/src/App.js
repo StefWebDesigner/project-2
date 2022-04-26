@@ -17,6 +17,9 @@ import Quizzes from './components/games/quizzes/Quizzes';
 import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 
 
+function SearchResult() {
+    return null;
+}
 
 function App() {
 
@@ -31,7 +34,7 @@ function App() {
 
                   {/* ALL MAIN NAV ROUTES */}
                   <Route path="/" element={<Home/>}/>
-
+                  <Route path="/search" element={<SearchResult/>}/>
                   <Route path="/login" element={<LoginUser/>}/>
                   <Route path="/register" element={<Register/>}/>
                   <Route path="/activities" element={<Activities/>}/>

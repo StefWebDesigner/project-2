@@ -130,11 +130,6 @@
 }
 
 
-
-
-
-
-
 /* HOME ANOUNCEMENTS */
 
 .announce-title {
@@ -163,10 +158,6 @@
 }
 
 
-
-
-
-
 /* -- Our Technique Section -- */
 .tecnique-item,
 .techinque-title {
@@ -176,9 +167,6 @@
 .techinque-title {
     color: white;
 }
-
-
-
 
 
 
@@ -262,6 +250,12 @@
         background-position: 0% 50%;
     }
 
+}
+
+/*HOME FOOTER*/
+
+.home-footer  {
+    text-align: center;
 }
 
 

@@ -9,15 +9,13 @@ const WelcomeAndSearchBar = () => {
             <section>
                 <Container className="welcome-container">
 
-                    <Fragment className="weclome-subcontainer">
+                    <div className="weclome-subcontainer">
                         <h2> Welcome User</h2>
 
-                        {/*<Link>*/}
                             <aside className="top-search-button">
                                 <BsSearch/>
                             </aside>
-                        {/*</Link>*/}
-                    </Fragment>
+                    </div>
                 </Container>
             </section>
 
