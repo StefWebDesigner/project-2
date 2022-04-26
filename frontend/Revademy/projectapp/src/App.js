@@ -15,6 +15,8 @@ import MatchingGame from './components/games/matchingGame/MatchingGame';
 import Hangman from './components/games/hangman/Hangman';
 import Quizzes from './components/games/quizzes/Quizzes';
 import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
+import SoundQuiz from './components/games/quizzes/sound/SoundQuiz';
+import AnimalQuiz from './components/games/quizzes/animals/AnimalQuiz';
 
 
 function SearchResult() {
@@ -45,6 +47,8 @@ function App() {
                   <Route path="/hangman" element={<Hangman/>}/>
                   <Route path="/quizzes" element={<Quizzes/>}/>
                   <Route path="/colorQuiz" element={<ColorQuiz/>}/>
+                  <Route path="/animalQuiz" element={<AnimalQuiz/>}/>
+                  <Route path="/soundQuiz" element={<SoundQuiz/>}/>
 
 
               </Routes>

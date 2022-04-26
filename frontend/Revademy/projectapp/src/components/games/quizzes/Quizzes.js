@@ -9,6 +9,10 @@ const Quizzes = () => {
             <ExperimentalNav/>
             <h1>Quizzes</h1>
             <Link to="/colorQuiz">Color Quiz</Link>
+            <p>---------------------------------------</p>
+            <Link to="/animalQuiz">Animal Quiz</Link>
+            <p>---------------------------------------</p>
+            <Link to="/soundQuiz">Sound Quiz</Link>
             
 
         </>
