@@ -6,7 +6,7 @@ const LoginUser = () => {
     return (
         <>
 
-            <Link to="/login"> Create an Account</Link>
+            <Link to="/register"> Create an Account</Link>
 
         </>
     );

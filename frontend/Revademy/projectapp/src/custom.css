@@ -26,11 +26,6 @@
 }
 
 
-
-
-
-
-
 /* HOME HEADER*/
 
 .logo{
@@ -58,6 +53,7 @@
 .home-header-title,
 .home-header-title-subtitle {
     color: white;
+    text-shadow: #4B7BE5 2px 5px 2px;
 }
 
 
@@ -202,7 +198,45 @@
 
 }
 
+/* Offer Classes Sections*/
 
+.offer-title {
+    text-align: center;
+    color: white;
+}
+
+.offer-card-items {
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+/*.offer-container {*/
+/*    padding-left: 2%;*/
+/*    padding-right: 2;*/
+/*}*/
+
+.offer-backgound {
+    /*https://colorhunt.co/palette/f7f7f7ffbc97ff7800ffe300*/
+    background: linear-gradient(-45deg, #F6E7D8, #F68989, #C65D7B, #874356);
+
+    background-size: 400% 400%;
+    animation: offer-animation 15s ease infinite;
+}
+
+
+@keyframes offer-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
 
 
 

@@ -20,9 +20,9 @@ const HomeMain = () => {
                 <FeaturesOffered/>
             </section>
 
-            <section className="mt-5">
-                <MeetTheTeam/>
-            </section>
+            {/*<section className="mt-5">*/}
+            {/*    <MeetTheTeam/>*/}
+            {/*</section>*/}
 
             <section className="mt-5">
                 <Testimonies/>
