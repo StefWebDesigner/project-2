@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Time;
+import java.time.LocalDate;
 
 @Entity
 public class Users {
@@ -14,6 +16,9 @@ public class Users {
     private AccountTypes accountTypes;
     private AgeType ageType;
     private String email;
+    private String password;
+    private LocalDate dateCreated;
+    private Time lifetimeOnline;
 
 
     public String getFirstname() {
@@ -54,5 +59,29 @@ public class Users {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public LocalDate getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(LocalDate dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public Time getLifetimeOnline() {
+        return lifetimeOnline;
+    }
+
+    public void setLifetimeOnline(Time lifetimeOnline) {
+        this.lifetimeOnline = lifetimeOnline;
     }
 }
