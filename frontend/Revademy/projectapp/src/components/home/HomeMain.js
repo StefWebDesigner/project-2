@@ -8,7 +8,7 @@ import FeaturesOffered from "./homeSub/FeaturesOffered";
 const HomeMain = () => {
     return (
         <>
-            <section className="mt-5">
+            <section className="mt-2">
                 <Announcement/>
             </section>
 

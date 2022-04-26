@@ -56,10 +56,12 @@
     justify-content: center;
     width: 40%;
     margin: auto;
+    /*border: white 1px solid;*/
+
 }
 
 .background-header-image {
-    background-image: url("../src/kid_images/space_background_tall.svg");
+    background-image: url("../src/kid_images/space_web_page_length.svg");
 }
 
 .home-header-title,
@@ -85,6 +87,7 @@
 
 .home-header-card-values-2 {
     margin-top: 16%;
+    margin-bottom: 10%;
 }
 
 .home-header-values-1 {
@@ -103,8 +106,8 @@
 }
 
 .values-backgound {
-    /*https://colorhunt.co/palette/630606890f0de83a14d9ce3f*/
-    background: linear-gradient(-45deg, #D9CE3F, #E83A14, #890F0D, #630606);
+    /*https://colorhunt.co/palette/f4f9f9ccf2f4a4ebf3aaaaaa*/
+    background: linear-gradient(-45deg, #F4F9F9, #CCF2F4, #A4EBF3, #AAAAAA);
 
     background-size: 400% 400%;
     animation: values-animation 15s ease infinite;
@@ -132,6 +135,7 @@
 
 .announce-title {
     text-align: center;
+    color: white;
 }
 
 /* -- Our Technique Section -- */
@@ -144,14 +148,14 @@
     color: white;
 }
 
-.values-backgound {
+.accouncement-backgound {
     /*https://colorhunt.co/palette/630606890f0de83a14d9ce3f*/
     background: linear-gradient(-45deg, #D9CE3F, #E83A14, #890F0D, #630606);
 
     background-size: 400% 400%;
-    animation: values-animation 15s ease infinite;
+    animation: accouncement-backgound 15s ease infinite;
 }
-@keyframes values-animation {
+@keyframes accouncement-backgound {
     0% {
         background-position: 0% 50%;
     }
