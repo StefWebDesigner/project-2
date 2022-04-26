@@ -51,6 +51,13 @@
 
 /* HOME HEADER*/
 
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+}
+
 .home-header-title,
 .home-header-title-subtitle,
 .home-header-user,
