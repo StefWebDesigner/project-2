@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
-import {Col, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import DataStore from "../../dataStore/dataStore";
 
 const ExperimentalNav = () => {
@@ -10,6 +10,7 @@ const ExperimentalNav = () => {
     return (
         <>
             <section>
+                <Container>
                 <Row>
                     <Col className="background-home">
                         <div className="link-container">
@@ -45,6 +46,7 @@ const ExperimentalNav = () => {
                     </Col>
 
                 </Row>
+                </Container>
             </section>
         </>
     );

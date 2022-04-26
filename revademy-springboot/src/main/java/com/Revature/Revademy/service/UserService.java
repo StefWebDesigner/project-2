@@ -36,6 +36,7 @@ public class UserService {
     }
 
     //i'M TOO TRIED TO WORK ON THIS ->> TO BE RESUMED
+//    think about tracking too
     public User deleteUser(Integer id, AccountTypes accountTypes) {
         Optional <User> userModel = userRepository.findById(id);
         if(userModel.isPresent()) {

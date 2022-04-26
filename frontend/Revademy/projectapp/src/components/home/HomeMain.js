@@ -6,10 +6,12 @@ import Testimonies from "./homeSub/Testimonies";
 import FeaturesOffered from "./homeSub/FeaturesOffered";
 import HomeHeader from "./HomeHeader";
 import WelcomeAndSearchBar from "./homeSub/WelcomeAndSearchBar";
+import {Container} from "react-bootstrap";
 
 const HomeMain = () => {
     return (
         <>
+            <Container>
             <section>
                 <WelcomeAndSearchBar/>
             </section>
@@ -37,6 +39,7 @@ const HomeMain = () => {
             <section className="mt-4 ">
                 <Testimonies/>
             </section>
+            </Container>
 
             {/*<section>*/}
             {/*    <Album/>*/}
