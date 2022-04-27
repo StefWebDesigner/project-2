@@ -1,5 +1,6 @@
 package com.Revature.Revademy.service;
 
+import com.Revature.Revademy.entities.Report;
 import com.Revature.Revademy.repository.ReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,8 @@ public class ReportService {
     }
 
 
-
+    public Report generateReport(Report report) {
+        return reportRepository.save(report);
+    }
 
 }

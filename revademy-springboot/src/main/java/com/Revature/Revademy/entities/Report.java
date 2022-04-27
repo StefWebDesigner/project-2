@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.time.format.DateTimeFormatter;
 
 @Entity
-@Table(name = "tableModel")
+@Table(name = "ReportModel")
 public class Report {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

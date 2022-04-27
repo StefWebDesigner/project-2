@@ -21,7 +21,7 @@ public class UserStatsController {
     }
 
     //ATTEMPT TO TRACK TOTAL TIME ONLINE
-    @RequestMapping(value = "/lifelongTimer")
+    @RequestMapping(value = "/lifelongtimer")
     @CrossOrigin(origins = "http://localHost:3000")
     public ResponseEntity<UserStats> TotalTimeOnlineTimer(){
 
