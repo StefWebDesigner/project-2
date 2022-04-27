@@ -23,18 +23,36 @@ public class UserController {
     }
 
     //REGISTER A NEW USER
+//    http://localhost:8080/user
     @RequestMapping(method = RequestMethod.POST)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<User> registerUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.registerUser(user));
     }
-    
+
 //  LOGIN AN EXISITING USER
+//    http://localhost:8080/user/login?username=Stef&password=admin
     @RequestMapping(value="/login", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> loginUser(@RequestParam String username, @RequestParam String password ) {
         User user = userService.loginUser(username, password);
         return ResponseEntity.ok(user);
+    }
+
+    //DELETE USER
+//    http://localhost:8080/user/delete?id=3
+    @RequestMapping(value="/delete", method=RequestMethod.DELETE)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<String> deleteUser(@RequestParam Integer id) {
+        return ResponseEntity.ok(userService.deleteUser(id));
+    }
+
+    //GET ALL USER
+    //http://localhost:8080/user/all
+    @RequestMapping(value="/all", method=RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity <List<User>> getAllUser() {
+        return ResponseEntity.ok(userService.getAllUser());
     }
 
 

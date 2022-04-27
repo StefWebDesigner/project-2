@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "UserDetails")
+@Table(name = "UserModel")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,8 +29,7 @@ public class User {
     private String password;
     @Column
     private LocalDate createdDate;
-    @Column
-    private LocalTime lifetime;
+
 
 
     public Integer getId() {
@@ -95,14 +94,6 @@ public class User {
 
     public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public LocalTime getLifetime() {
-        return lifetime;
-    }
-
-    public void setLifetime(LocalTime lifetime) {
-        this.lifetime = lifetime;
     }
 
     public String getUsername() {

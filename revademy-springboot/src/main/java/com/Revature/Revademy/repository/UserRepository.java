@@ -11,7 +11,6 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    List<User> findByAgeType(AgeType ageType);
 
     Optional<User> findByUsername(String username);
 }
