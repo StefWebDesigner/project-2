@@ -21,21 +21,29 @@ public class ReportController {
         this.reportService = reportService;
     }
 
-
-
     //TO POST A REPORT
     @RequestMapping(value = "/postreport", method = RequestMethod.POST)
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Report> generateReport(@RequestBody Report report) {
         return ResponseEntity.ok(reportService.generateReport(report));
     }
 
     //TO GET ALL REPORTS
     @RequestMapping(value = "/all", method=RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<List<Report>> getAllReports() {
         return ResponseEntity.ok(reportService.getAllReport());
     }
 
+    //TO GET A REPORT BY ID
+//    @RequestMapping(value = "/caseid")
+//    @CrossOrigin(origins = "http://localhost:3000")
+//    public ResponseEntity<Report> getReportById (@RequestParam Integer caseId) {
+//        return ResponseEntity.ok(reportService.getReportById(caseId));
+//    }
 
+
+    //TO GET DELETE A REPORT
 
 
 }

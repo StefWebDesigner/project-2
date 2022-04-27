@@ -1,12 +1,13 @@
 package com.Revature.Revademy.service;
 
 import com.Revature.Revademy.entities.Report;
+import com.Revature.Revademy.exception.NoReportFoundException;
 import com.Revature.Revademy.repository.ReportRepository;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReportService {
@@ -30,8 +31,15 @@ public class ReportService {
         return reportRepository.findAll();
     }
 
-
-
+//    public Optional<Report> getReportById(Integer caseId) {
+//        Optional<Report> reportModel = reportRepository.findById(caseId);
+//        if(reportModel.isPresent()) {
+//           reportModel = reportRepository.findById(caseId);
+//           return reportModel;
+//        } else {
+//            throw new NoReportFoundException("Can't match and find caseId");
+//        }
+//    }
 
     //TO GET A REPORT BY ID
 

@@ -23,6 +23,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.ok(e.getMessage());
     }
 
+    @ExceptionHandler(NoReportFoundException.class)
+    public ResponseEntity<String> handlerNoReportFoundExceptions(NoReportFoundException e) {
+        return ResponseEntity.ok(e.getMessage());
+    }
+
 
 
 }
