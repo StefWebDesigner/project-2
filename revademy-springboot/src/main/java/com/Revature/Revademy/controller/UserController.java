@@ -47,7 +47,13 @@ public class UserController {
         return ResponseEntity.ok(userService.deleteUser(id));
     }
 
-
+    //GET ALL USER
+    //http://localhost:8080/user/all
+    @RequestMapping(value="/all", method=RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity <List<User>> getAllUser() {
+        return ResponseEntity.ok(userService.getAllUser());
+    }
 
 
 }

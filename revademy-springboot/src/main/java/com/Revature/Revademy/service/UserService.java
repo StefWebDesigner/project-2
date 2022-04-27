@@ -33,7 +33,6 @@ public class UserService {
             throw new UnderAgeException("User is underage. Hence cannot register");
         }
         user.setCreatedDate(LocalDate.now());
-        user.setLifetime(LocalTime.now());
         return userRepository.save(user);
     }
 
@@ -62,6 +61,10 @@ public class UserService {
                 }
     }
 
+    //GET ALL USERS
+    public List<User> getAllUser() {
+        return userRepository.findAll();
+    }
 
 
 

@@ -29,8 +29,7 @@ public class User {
     private String password;
     @Column
     private LocalDate createdDate;
-    @Column
-    private LocalTime lifetime;
+
 
 
     public Integer getId() {
@@ -95,14 +94,6 @@ public class User {
 
     public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
-    }
-
-    public LocalTime getLifetime() {
-        return lifetime;
-    }
-
-    public void setLifetime(LocalTime lifetime) {
-        this.lifetime = lifetime;
     }
 
     public String getUsername() {
