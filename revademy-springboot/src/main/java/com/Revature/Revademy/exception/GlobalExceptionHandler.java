@@ -18,6 +18,11 @@ public class GlobalExceptionHandler {
         return ResponseEntity.ok(e.getMessage());
     }
 
+    @ExceptionHandler(NoUserExistToDeleteException.class)
+    public ResponseEntity<String> handleNoUserExistToDelete(NoUserExistToDeleteException e){
+        return ResponseEntity.ok(e.getMessage());
+    }
+
 
 
 }

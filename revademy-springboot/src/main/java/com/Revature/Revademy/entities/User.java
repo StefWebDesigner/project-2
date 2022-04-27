@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "UserDetails")
+@Table(name = "UserModel")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

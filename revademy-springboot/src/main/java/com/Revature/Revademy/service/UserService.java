@@ -3,11 +3,13 @@ package com.Revature.Revademy.service;
 import com.Revature.Revademy.entities.AccountTypes;
 import com.Revature.Revademy.entities.AgeType;
 import com.Revature.Revademy.entities.User;
+import com.Revature.Revademy.exception.NoUserExistToDeleteException;
 import com.Revature.Revademy.exception.NonExistingUserException;
 import com.Revature.Revademy.exception.UnderAgeException;
 import com.Revature.Revademy.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -27,7 +29,7 @@ public class UserService {
 
     //REGISTER A NEW USER
     public User registerUser(User user) {
-        if(user.getAgeType() == AgeType.UNDERAGE) {
+        if (user.getAgeType() == AgeType.UNDERAGE) {
             throw new UnderAgeException("User is underage. Hence cannot register");
         }
         user.setCreatedDate(LocalDate.now());
@@ -49,7 +51,16 @@ public class UserService {
         throw new NonExistingUserException("User Doesn't Exist.");
     }
 
-//DELETE
+    //DETELE USER
+    public String deleteUser(Integer id) {
+                Optional<User> userOptional = userRepository.findById(id);
+                if (userOptional.isPresent()) {
+                    userRepository.deleteById(id);
+                    return "User Successfully deleted";
+                } else {
+                    throw new NoUserExistToDeleteException("No user to delete");
+                }
+    }
 
 
 
