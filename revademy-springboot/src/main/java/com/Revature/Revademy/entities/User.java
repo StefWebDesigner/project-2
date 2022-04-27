@@ -3,8 +3,10 @@ package com.Revature.Revademy.entities;
 import javax.persistence.*;
 import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
+@Table(name = "UserDetails")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,8 +16,12 @@ public class User {
     @Column
     private String lastname;
     @Column
+    private String username;
+    @Column
+    @Enumerated(EnumType.STRING)
     private AccountTypes accountTypes;
     @Column
+    @Enumerated(EnumType.STRING)
     private AgeType ageType;
     @Column
     private String email;
@@ -24,7 +30,7 @@ public class User {
     @Column
     private LocalDate createdDate;
     @Column
-    private Time lifetime;
+    private LocalTime lifetime;
 
 
     public Integer getId() {
@@ -91,11 +97,19 @@ public class User {
         this.createdDate = createdDate;
     }
 
-    public Time getLifetime() {
+    public LocalTime getLifetime() {
         return lifetime;
     }
 
-    public void setLifetime(Time lifetime) {
+    public void setLifetime(LocalTime lifetime) {
         this.lifetime = lifetime;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
