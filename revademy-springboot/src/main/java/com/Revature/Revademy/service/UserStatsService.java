@@ -1,13 +1,35 @@
 package com.Revature.Revademy.service;
 
-import com.Revature.Revademy.entities.AgeType;
-import com.Revature.Revademy.entities.User;
-import com.Revature.Revademy.exception.UnderAgeException;
+import com.Revature.Revademy.repository.UserStatsRepository;
+import org.hibernate.internal.build.AllowPrintStacktrace;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
+@Service
 public class UserStatsService {
+
+    private final UserStatsRepository userStatsRepository;
+
+    @Autowired
+    public UserStatsService(UserStatsRepository userStatsRepository) {
+        this.userStatsRepository = userStatsRepository;
+    }
+
+
+    public Object TotalTimeOnlineTimer() {
+
+        /*
+        PART 1:
+        - GETTOTTALTIMER & THEN HAVE IT RUN
+
+        PART 2:
+        - SET A TRIGGLE TO STOP IT IT
+            & THEN SETTIMER(DATA)
+         - SETLONGTIMEONEINE(GETOTATL TIEM + SETTIMMER(DATA)
+         */
+
+        return null;
+    }
 
 //
 //    public User registerUser(User user) {
