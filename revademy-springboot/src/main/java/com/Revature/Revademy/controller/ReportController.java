@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(maxAge = 3600, origins = "")
 @RequestMapping("/report")
@@ -21,10 +23,18 @@ public class ReportController {
 
 
 
+    //TO POST A REPORT
     @RequestMapping(value = "/postreport", method = RequestMethod.POST)
     public ResponseEntity<Report> generateReport(@RequestBody Report report) {
         return ResponseEntity.ok(reportService.generateReport(report));
     }
+
+    //TO GET ALL REPORTS
+    @RequestMapping(value = "/all", method=RequestMethod.GET)
+    public ResponseEntity<List<Report>> getAllReports() {
+        return ResponseEntity.ok(reportService.getAllReport());
+    }
+
 
 
 
