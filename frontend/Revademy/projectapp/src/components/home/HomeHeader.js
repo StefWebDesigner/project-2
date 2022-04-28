@@ -22,7 +22,7 @@ const HomeHeader = () => {
                         <Logo/>
                     </Row>
                 <Row>
-                    {  user ? <h2 className="home-header-user">Welcome {user} </h2> : ""}
+                    {  user ? <h2 className="home-header-user">Welcome {user.username} </h2> : ""}
                 </Row>
                 <Row>
                     <h4 className="home-header-title-subtitle"><FaSmileBeam/> Learning so fun you don't even notice!<FaSmileBeam/></h4>

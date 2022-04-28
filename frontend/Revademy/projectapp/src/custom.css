@@ -77,11 +77,11 @@
 }
 
 .home-header-title,
-.home-header-title-subtitle {
+.home-header-title-subtitle,
+.home-header-user {
     color: white;
     text-shadow: #4B7BE5 2px 5px 2px;
 }
-
 
 
 .home-header-card-values-1,

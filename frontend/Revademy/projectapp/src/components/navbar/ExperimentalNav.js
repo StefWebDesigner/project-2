@@ -5,7 +5,12 @@ import DataStore from "../../dataStore/dataStore";
 
 const ExperimentalNav = () => {
 
-    const {user} = useContext(DataStore)
+    const {user, setUser} = useContext(DataStore)
+
+    function logout() {
+        setUser(null);
+        localStorage.removeItem("user");
+    }
 
     return (
         <>
@@ -22,28 +27,56 @@ const ExperimentalNav = () => {
                         IF EXISTING USER IT SHOW UP THE PORTAL
                      */}
 
+                    { user ? (
+                        <Col className="background-credentials">
+                            <div className="link-container">
+                                <li className="credentials-link" onClick={logout}>Logout</li>
+                            </div>
+                        </Col>
+                        ) : (
+
                         <Col className="background-credentials">
                             <div className="link-container">
                                 <Link className="credentials-link" to="/login">Login</Link>
                             </div>
                         </Col>
+                        )}
 
-                        <Col className="background-credentials">
-                            <div className="link-container">
-                                 <Link className="credentials-link" to="/learningportal">Learning Portal</Link>
-                            </div>
-                        </Col>
+                    { user ? (
+
+                            <Col className="background-credentials">
+                        <div className="link-container">
+                            <Link className="activites-link" to="/learningportal">Learning Portal</Link>
+                        </div>
+                    </Col>
+                    ) : (
+
+                        ""
+
+                        )}
 
                     <Col className="background-activities">
                         <div className="link-container">
-                            <Link className="activites-link" to="/activities">Activities</Link>
+                            <Link className="home-link" to="/activities">Activities</Link>
                         </div>
                     </Col>
+
                     <Col className="background-events">
                         <div className="link-container">
-                            <Link className="home-link" to="/">Events</Link>
+                            <Link className="credentials-link" to="/">Events</Link>
                         </div>
                     </Col>
+
+                    {
+                        user && user.accountTypes === 'ADMIN' ? (
+                        <Col className="background-credentials">
+                            <div className="link-container">
+                                <Link className="activites-link" to="/adminportal">Admin</Link>
+                            </div>
+                        </Col>
+                        ) : ""
+                    }
+
 
                 </Row>
                 </Container>
