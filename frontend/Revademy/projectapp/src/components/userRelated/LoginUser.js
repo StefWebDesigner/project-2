@@ -26,7 +26,7 @@ const LoginUser = () => {
                 setUser(data);
                 localStorage.setItem("user", JSON.stringify(data));
                 alert("You login in successfully")
-                // navigate("/");
+                navigate("/");
             })
 
 
