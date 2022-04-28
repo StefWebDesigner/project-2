@@ -46,9 +46,10 @@ const ExperimentalNav = () => {
 
                             <Col className="background-credentials">
                         <div className="link-container">
-                            <Link className="credentials-link" to="/learningportal">Learning Portal</Link>
+                            <Link className="activites-link" to="/learningportal">Learning Portal</Link>
                         </div>
-                    </Col> ) : (
+                    </Col>
+                    ) : (
 
                         ""
 
@@ -56,14 +57,26 @@ const ExperimentalNav = () => {
 
                     <Col className="background-activities">
                         <div className="link-container">
-                            <Link className="activites-link" to="/activities">Activities</Link>
+                            <Link className="home-link" to="/activities">Activities</Link>
                         </div>
                     </Col>
+
                     <Col className="background-events">
                         <div className="link-container">
-                            <Link className="home-link" to="/">Events</Link>
+                            <Link className="credentials-link" to="/">Events</Link>
                         </div>
                     </Col>
+
+                    {
+                        user && user.accountTypes === 'ADMIN' ? (
+                        <Col className="background-credentials">
+                            <div className="link-container">
+                                <Link className="activites-link" to="/adminportal">Admin</Link>
+                            </div>
+                        </Col>
+                        ) : ""
+                    }
+
 
                 </Row>
                 </Container>

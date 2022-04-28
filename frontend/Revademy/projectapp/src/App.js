@@ -17,6 +17,7 @@ import Quizzes from './components/games/quizzes/Quizzes';
 import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 import SoundQuiz from './components/games/quizzes/sound/SoundQuiz';
 import AnimalQuiz from './components/games/quizzes/animals/AnimalQuiz';
+import AdminMain from "./components/admin/AdminMain";
 
 
 function SearchResult() {
@@ -42,6 +43,8 @@ function App() {
                   <Route path="/activities" element={<Activities/>}/>
 
                   <Route path="/events" element={<Events/>}/>
+                  <Route path="/adminportal" element={<AdminMain/>}/>
+
                   {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>
                   <Route path="/hangman" element={<Hangman/>}/>
