@@ -5,6 +5,8 @@ import com.Revature.Revademy.repository.EmailSupportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EmailSupportService {
 
@@ -18,5 +20,9 @@ public class EmailSupportService {
     // CREATE EMAIL
     public EmailSupport createEmail(EmailSupport emailSupport) {
         return emailSupportRepository.save(emailSupport);
+    }
+
+    public List<EmailSupport> getAllEmails() {
+        return emailSupportRepository.findAll();
     }
 }

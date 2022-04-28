@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(origins = "", maxAge = 3600)
 @RequestMapping("/emailsupport")
@@ -25,6 +27,24 @@ public class EmailSupportController {
     public ResponseEntity<EmailSupport> createEmail(@RequestBody EmailSupport emailSupport) {
         return ResponseEntity.ok(emailSupportService.createEmail(emailSupport));
     }
+
+
+    //GET ALL EMAILS
+//    http://localhost:8080/emailsupport/all
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<List<EmailSupport>> getAllEmails() {
+        return ResponseEntity.ok(emailSupportService.getAllEmails());
+}
+
+
+    //TO SELECT EMAIL BY ID
+
+
+    //TO DETELE AN EMAIL
+
+
+    //TO UPDATE A EMAIL
 
 
 }
