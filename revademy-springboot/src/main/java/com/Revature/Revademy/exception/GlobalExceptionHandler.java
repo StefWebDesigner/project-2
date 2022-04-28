@@ -28,4 +28,9 @@ public class GlobalExceptionHandler {
         return ResponseEntity.ok(e.getMessage());
     }
 
+    @ExceptionHandler(NoEmailIdFoundExceptions.class)
+    public ResponseEntity<String> handlerNoEmailIdFoundExceptions(NoEmailIdFoundExceptions e){
+        return ResponseEntity.ok(e.getMessage());
+    }
+
 }

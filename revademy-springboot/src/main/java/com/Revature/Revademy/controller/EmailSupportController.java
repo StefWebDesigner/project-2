@@ -28,7 +28,6 @@ public class EmailSupportController {
         return ResponseEntity.ok(emailSupportService.createEmail(emailSupport));
     }
 
-
     //GET ALL EMAILS
 //    http://localhost:8080/emailsupport/all
     @RequestMapping(value = "/all", method = RequestMethod.GET)
@@ -37,12 +36,16 @@ public class EmailSupportController {
         return ResponseEntity.ok(emailSupportService.getAllEmails());
 }
 
-
     //TO SELECT EMAIL BY ID
 
 
     //TO DETELE AN EMAIL
-
+//    http://localhost:8080/emailsupport/delete?emailId=13
+    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<String> deleteEmail(@RequestParam Integer emailId) {
+        return ResponseEntity.ok(emailSupportService.deleteEmail(emailId));
+    }
 
     //TO UPDATE A EMAIL
 
