@@ -47,7 +47,11 @@ public class EmailSupportController {
         return ResponseEntity.ok(emailSupportService.deleteEmail(emailId));
     }
 
-    //TO UPDATE A EMAIL
-
+    //TO UPDATE A EMAIL * TAG Last Email()
+    @RequestMapping(value="/update", method=RequestMethod.PUT)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<EmailSupport> updateEmail(@RequestBody EmailSupport emailSupport, @RequestParam Integer emailId, @RequestParam Integer id){
+        return ResponseEntity.ok(emailSupportService.updateEmail(emailSupport, emailId, id));
+    }
 
 }
