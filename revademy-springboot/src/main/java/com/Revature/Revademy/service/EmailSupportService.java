@@ -1,5 +1,6 @@
 package com.Revature.Revademy.service;
 
+import com.Revature.Revademy.entities.EmailSupport;
 import com.Revature.Revademy.repository.EmailSupportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,8 @@ public class EmailSupportService {
         this.emailSupportRepository = emailSupportRepository;
     }
 
-
-
+    // CREATE EMAIL
+    public EmailSupport createEmail(EmailSupport emailSupport) {
+        return emailSupportRepository.save(emailSupport);
+    }
 }

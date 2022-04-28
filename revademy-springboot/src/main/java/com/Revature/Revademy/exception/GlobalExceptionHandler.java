@@ -28,6 +28,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.ok(e.getMessage());
     }
 
-
-
 }

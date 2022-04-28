@@ -1,15 +1,12 @@
 package com.Revature.Revademy.controller;
 
 import com.Revature.Revademy.entities.Report;
-import com.Revature.Revademy.exception.NoReportFoundException;
 import com.Revature.Revademy.service.ReportService;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin(maxAge = 3600, origins = "")
