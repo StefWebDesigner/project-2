@@ -5,6 +5,8 @@ import com.Revature.Revademy.exception.NoReportFoundException;
 import com.Revature.Revademy.repository.ReportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,23 +33,23 @@ public class ReportService {
         return reportRepository.findAll();
     }
 
-//    public Optional<Report> getReportById(Integer caseId) {
-//        Optional<Report> reportModel = reportRepository.findById(caseId);
-//        if(reportModel.isPresent()) {
-//           reportModel = reportRepository.findById(caseId);
-//           return reportModel;
-//        } else {
-//            throw new NoReportFoundException("Can't match and find caseId");
-//        }
-//    }
 
     //TO GET A REPORT BY ID
-
+//    public Report getReportById(Integer caseId) {
+//        Optional<Report> report = reportRepository.findById(caseId);
+//            return report.orElse(null);
+//    }
 
 
     //TO GET DELETE A REPORT
-
-
+    public String deleteReport(Integer caseId) {
+        Optional<Report> report = reportRepository.findById(caseId);
+        if(report.isPresent()) {
+            reportRepository.deleteById(caseId);
+            return "Report has been successfully deleted";
+        }
+        throw new NoReportFoundException("Couldn't find the case Id to delete");
+    }
 
 
 }
