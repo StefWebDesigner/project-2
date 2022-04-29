@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom"
 import {Button, Card} from "react-bootstrap";
 import axios from "axios";
 
+
 const RegisterFinal = ({values, prevStep}) => {
 
    const navigate = useNavigate();
@@ -27,8 +28,6 @@ const RegisterFinal = ({values, prevStep}) => {
         //To navigate to login page
         navigate("/login")
     }
-
-
 
     return (
         <>

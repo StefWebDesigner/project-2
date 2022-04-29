@@ -25,8 +25,94 @@
 }
 
 
-.home-main-card-shadow {
+/*BUTTON*/
+
+/*PULSING AND ARROW HOVER ANIAMTION EFFECT*/
+.button-report-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-report {
+    /*THIS IS FOR THE ARROW MOVMENT*/
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 125px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+/* THE PULSING ANIMATIONS   */
+    transform: scale(1);
+    animation: button-pulsing 2s infinite;
+}
+
+@keyframes button-pulsing {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+}
+
+.button-report span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.button-report span:after {
+    content : '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .05s;
+}
+
+.button-report:hover span {
+    padding-right: 25px;
+}
+
+.button-report:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+.home-main-card-shadow, .button-report {
     box-shadow: 0 4px 1rem -4px #000;
+}
+
+
+
+.middown-space-picture {
+    z-index: -5;
+    right: 500px;
+
+    background-image: url("../src/kid_images/astronaut_duck.png");
 }
 
 
@@ -265,6 +351,137 @@
     text-align: center;
 }
 
+/*Login Page*/
+
+.login-container {
+    padding-top: 225px;
+}
+
+.login-form-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.login-title,
+.login-label,
+.login-input-1,
+.login-input,
+.input-label-username {
+    /*color: black;*/
+    color: purple;
+
+}
+
+.login-card {
+    position: absolute;
+}
+
+.login-input-1,
+.login-input {
+    transition: .9s;
+    border: #5534A5 solid 1px;
+}
+
+.login-input-1::placeholder,
+.login-input::placeholder {
+    color: purple;
+}
+
+.login-input-1:hover,
+.login-input:hover {
+    background-color: lightgrey;
+}
+
+.login-input-1:hover::placeholder,
+.login-input:hover::placeholder {
+    color: purple;
+}
+
+
+.login-title {
+    /*margin-top: 50%;*/
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.login-label {
+    margin-top: 5%;
+}
+
+.button-login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-link {
+    margin-bottom: 5%;
+}
+
+.button-login {
+    margin-top: 20%;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 125px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+    /*BACKOROUND ANIMATION*/
+    background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
+    background-size: 400% 400%;
+    animation: login-background-animation 15s ease infinite;
+}
+
+.button-login span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.button-login span:after {
+    content : '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .05s;
+}
+
+.button-login:hover span {
+    padding-right: 25px;
+}
+
+.button-login:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.login-backgound {
+    /*https://colorhunt.co/palette/a85cf95534a54b7be56fdfdf*/
+    /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+    height: 100vh;
+    background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
+    background-size: 400% 400%;
+    animation: login-background-animation 15s ease infinite;
+}
+
+@keyframes login-background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 

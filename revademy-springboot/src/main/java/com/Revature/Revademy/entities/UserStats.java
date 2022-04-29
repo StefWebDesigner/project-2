@@ -10,9 +10,15 @@ public class UserStats {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userStatsId;
+<<<<<<< HEAD
+    private LocalTime lifetime;
+    private LocalTime timeOnlineTracker;
+    @OneToOne
+=======
     private LocalDateTime fromDateTime;
     private LocalDateTime toDateTime;
     @ManyToOne
+>>>>>>> main
     User user;
 
     public Integer getUserStatsId() {

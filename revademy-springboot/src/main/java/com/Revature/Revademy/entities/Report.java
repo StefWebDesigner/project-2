@@ -10,14 +10,10 @@ import java.time.format.DateTimeFormatter;
 public class Report {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
     private Integer caseId;
-    @Column
     @Enumerated(EnumType.STRING)
     private LocationTypes locationTypes;
-    @Column
     private String bugTitle;
-    @Column
     private String bugDescription;
 
     public Integer getCaseId() {

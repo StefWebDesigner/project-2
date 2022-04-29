@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import {Button, Container, Form} from "react-bootstrap";
+import {Button, Card, Container, Form} from "react-bootstrap";
 import axios from "axios";
 import DataContext from "../../dataStore/dataStore";
 
@@ -28,25 +28,24 @@ const LoginUser = () => {
                 alert("You login in successfully")
                 navigate("/");
             })
-
-
     }
-
-
 
     return (
         <>
-            <section className="fade-in-animation">
-                <Container>
-                <Form>
-                        <h2 className="login-title">Login in</h2>
+            <section className="fade-in-animation login-backgound">
+                <Container className="login-container ">
+                    <Card className="login-card">
+                <Form className="login-form-container">
+                        <h1 className="login-title">Login in</h1>
                     <Form.Group>
-                        <Form.Label>
-                            <h3> Enter Username</h3>
+                        <Form.Label className="input-label-username">
+                            <h4> Enter Username</h4>
                         </Form.Label>
                         <Form.Control
+                            className="login-input"
                             name="username"
                             type="text"
+                            placeholder="Username"
                             onChange={(e) => {
                                 setUsername(e.target.value)}
                         }
@@ -54,28 +53,36 @@ const LoginUser = () => {
                         />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>
-                            <h3> Enter Password</h3>
+                        <Form.Label className="login-label">
+                            <h4> Enter Password</h4>
                         </Form.Label>
                         <Form.Control
+                            className="login-input"
                             name="password"
                             type="password"
+                            placeholder="Password"
                             onChange={(e) =>  {
                                 setPassword(e.target.value)}
                             }
                             required
                         />
                     </Form.Group>
-                    <Button className="login-button"
-                        onClick={login}
-                    >
-                        <h4>Sumbit</h4>
-                    </Button>
-
-
+                    <div className="button-login-container">
+                        <button className="button-login"
+                            onClick={login}
+                        >
+                            <span>
+                            <h4>Sumbit</h4>
+                            </span>
+                        </button>
+                    </div>
                 </Form>
-
+            <div className="button-login-container">
                 <Link to="/register" className="login-link"> Create an Account</Link>
+
+            </div>
+                    </Card>
+
                 <Link to="/forgotPassword" className="login-link"> Forgot Password?</Link>
                 </Container>
             </section>

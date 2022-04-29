@@ -9,11 +9,17 @@ public class EmailSupport {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer emailId;
+<<<<<<< HEAD
+    private String emailSubject;
+    private String emailBody;
+    private String recpiantId;
+=======
     private String fromEmail;
     private String recipient;
     private String subject;
     private String body;
     private Integer previousMailId;
+>>>>>>> main
 
     public Integer getPreviousMailId() {
         return previousMailId;
