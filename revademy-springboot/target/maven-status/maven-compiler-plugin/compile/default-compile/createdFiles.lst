@@ -1,0 +1,4 @@
+com\Revature\Revademy\entities\AvatarTypes.class
+com\Revature\Revademy\entities\BackgroundTypes.class
+com\Revature\Revademy\exception\NoEmailIdFoundExceptions.class
+com\Revature\Revademy\entities\KidUsers.class
