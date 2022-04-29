@@ -11,7 +11,7 @@ import {Container} from "react-bootstrap";
 const HomeMain = () => {
     return (
         <>
-            <Container className="middown-space-picture">
+            <Container>
             <section>
                 <WelcomeAndSearchBar/>
             </section>
