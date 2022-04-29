@@ -1,6 +1,7 @@
 package com.Revature.Revademy.entities;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Entity
@@ -9,11 +10,9 @@ public class UserStats {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userStatsId;
-    @Column
-    private LocalTime lifetime;
-    @Column
-    private LocalTime timeOnlineTracker;
-    @OneToOne
+    private LocalDateTime fromDateTime;
+    private LocalDateTime toDateTime;
+    @ManyToOne
     User user;
 
     public Integer getUserStatsId() {
@@ -24,27 +23,27 @@ public class UserStats {
         this.userStatsId = userStatsId;
     }
 
-    public LocalTime getLifetime() {
-        return lifetime;
-    }
-
-    public void setLifetime(LocalTime lifetime) {
-        this.lifetime = lifetime;
-    }
-
-    public LocalTime getTimeOnlineTracker() {
-        return timeOnlineTracker;
-    }
-
-    public void setTimeOnlineTracker(LocalTime timeOnlineTracker) {
-        this.timeOnlineTracker = timeOnlineTracker;
-    }
-
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public LocalDateTime getFromDateTime() {
+        return fromDateTime;
+    }
+
+    public void setFromDateTime(LocalDateTime fromDateTime) {
+        this.fromDateTime = fromDateTime;
+    }
+
+    public LocalDateTime getToDateTime() {
+        return toDateTime;
+    }
+
+    public void setToDateTime(LocalDateTime toDateTime) {
+        this.toDateTime = toDateTime;
     }
 }
