@@ -11,6 +11,7 @@ import Activities from "./components/games/Activities";
 import Events from "./components/events/Events";
 import Register from "./components/userRelated/register/Register";
 import LoginUser from "./components/userRelated/LoginUser";
+import ForgotPassword from './components/userRelated/ForgotPassword';
 import MatchingGame from './components/games/matchingGame/MatchingGame';
 import Hangman from './components/games/hangman/Hangman';
 import Quizzes from './components/games/quizzes/Quizzes';
@@ -18,6 +19,12 @@ import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 import SoundQuiz from './components/games/quizzes/sound/SoundQuiz';
 import AnimalQuiz from './components/games/quizzes/animals/AnimalQuiz';
 import AdminMain from "./components/admin/AdminMain";
+
+import ResetPassword from './components/userRelated/ResetPassword';
+
+import Opening from "./components/opening/Opening";
+import KidPortal from "./components/kidPortal/KidPortal";
+
 
 
 function SearchResult() {
@@ -41,6 +48,8 @@ function App() {
                   <Route path="/login" element={<LoginUser/>}/>
                   <Route path="/register" element={<Register/>}/>
                   <Route path="/activities" element={<Activities/>}/>
+                  <Route path="/forgotPassword" element={<ForgotPassword/>}/>
+                  <Route path="/resetPassword" element={<ResetPassword/>}/>
 
                   <Route path="/events" element={<Events/>}/>
                   <Route path="/adminportal" element={<AdminMain/>}/>
@@ -52,6 +61,10 @@ function App() {
                   <Route path="/colorQuiz" element={<ColorQuiz/>}/>
                   <Route path="/animalQuiz" element={<AnimalQuiz/>}/>
                   <Route path="/soundQuiz" element={<SoundQuiz/>}/>
+
+                  {/* FLOAT IN ANIMATION TEST */}
+                  <Route path="/opening" element={<Opening/>}/>
+                  <Route path="/kidPortal" element={<KidPortal/>}/>
 
 
               </Routes>
