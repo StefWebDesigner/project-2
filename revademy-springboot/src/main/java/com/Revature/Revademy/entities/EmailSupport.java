@@ -9,11 +9,8 @@ public class EmailSupport {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer emailId;
-    @Column
     private String emailSubject;
-    @Column
     private String emailBody;
-    @Column
     private String recpiantId;
 
     @OneToOne

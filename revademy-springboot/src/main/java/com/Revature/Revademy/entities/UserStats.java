@@ -9,9 +9,7 @@ public class UserStats {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userStatsId;
-    @Column
     private LocalTime lifetime;
-    @Column
     private LocalTime timeOnlineTracker;
     @OneToOne
     User user;

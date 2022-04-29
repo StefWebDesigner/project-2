@@ -11,26 +11,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column
     private String firstname;
-    @Column
     private String lastname;
-    @Column
     private String username;
-    @Column
     @Enumerated(EnumType.STRING)
     private AccountTypes accountTypes;
-    @Column
     @Enumerated(EnumType.STRING)
     private AgeType ageType;
-    @Column
     private String email;
-    @Column
     private String password;
-    @Column
     private LocalDate createdDate;
-
-
 
     public Integer getId() {
         return id;

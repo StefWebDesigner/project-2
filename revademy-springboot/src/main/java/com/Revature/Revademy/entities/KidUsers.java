@@ -7,16 +7,10 @@ public class KidUsers {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Integer kidID;
-
-    @Column
     private String kidNickName;
-
     @Enumerated
-    @Column
     private BackgroundTypes backgroundTypes;
-
     @Enumerated
-    @Column
     private AvatarTypes avatarTypes;
 
     @ManyToOne
