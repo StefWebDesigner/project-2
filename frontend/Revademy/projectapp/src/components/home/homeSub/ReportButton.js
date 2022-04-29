@@ -1,12 +1,50 @@
 import React, {useState} from 'react';
 import {Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody, ModalFooter} from "react-bootstrap";
 import useModal from "./reportSection/useModal";
+import axios from "axios";
+import validator from "validator";
 const ReportButton = () => {
+
+    const [reportForm, setReportForm] = useState({
+        bugTitle : "",
+        locationTypes : "",
+        bugDescription : ""
+    })
+    const [error, setError] = useState(false);
     const [showModal, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    async function reportFormSubmit(e) {
+        e.preventDefault();
+
+        if(
+            validator.isEmpty(reportForm.bugTitle) ||
+            validator.isEmpty(reportForm.locationTypes) ||
+            validator.isEmpty(reportForm.bugDescription)
+        ) {
+            setError(true)
+        }
+
+        const data = axios.post("http://localhost:8080/report/postreport", reportForm)
+            .then(data => {
+                setReportForm(data.data)
+            })
+        setReportForm({
+            bugTitle : "",
+            locationTypes : "",
+            bugDescription : ""
+        })
+    }
+
+    const reportFormHandler = (e) => {
+        e.preventDefault()
+        setReportForm({
+            ...reportForm,
+            [e.target.name]: e.target.value,
+        });
+    }
 
     return (
         <>
@@ -27,7 +65,7 @@ const ReportButton = () => {
                 size="md"
                 centered
             >
-                <Form  onSubmit="">
+                <Form  onSubmit={reportFormSubmit}>
                     <Modal.Header>
                         <h3> Report Issue : </h3>
                     </Modal.Header>
@@ -40,10 +78,17 @@ const ReportButton = () => {
                             <Form.Control
                                 type="text"
                                 name="bugTitle"
-                                value=""
+                                value={reportForm.bugTitle}
+                                onChange={reportFormHandler}
                                 placeholder="Issue Subject"
                                 required
                             />
+                            {/* ERROR SECTION    */}
+                            {
+                                error ? (
+                                    <Form.text> This is required</Form.text>
+                                ) : ""
+                            }
                         </Form.Group>
                         {/*ENTER LOCATION SLECTION */}
                         <Form.Group>
@@ -51,9 +96,11 @@ const ReportButton = () => {
                                 Select the location of the issue
                             </Form.Label>
                             <Form.Select
-                                // style={{border: error ? "2px solid red" : ""}}
+                                style={{border: error ? "2px solid red" : ""}}
                                 size="lg"
                                 name="locationTypes"
+                                value={reportForm.locationTypes}
+                                onChange={reportFormHandler}
                                 // onChange={handleFormData("account")}
                             >
                                 <option value="">Open this select menu</option>
@@ -65,11 +112,11 @@ const ReportButton = () => {
                                 <option value="learningportal">Learning Portal</option>
                             </Form.Select>
                             {/* ERROR SECTION    */}
-                            {/*{*/}
-                            {/*    error ? (*/}
-                            {/*        <Form.text> This is required</Form.text>*/}
-                            {/*    ) : ""*/}
-                            {/*}*/}
+                            {
+                                error ? (
+                                    <Form.text> This is required</Form.text>
+                                ) : ""
+                            }
                         </Form.Group>
                         {/* REPORT ISSUE CONTENT*/}
                         <Form.Group>
@@ -79,10 +126,17 @@ const ReportButton = () => {
                             <Form.Control
                                 type="text"
                                 name="bugDescription"
-                                value=""
+                                value={reportForm.bugDescription}
+                                onChange={reportFormHandler}
                                 placeholder="Issue Subject"
                                 required
                             />
+                            {/* ERROR SECTION    */}
+                            {
+                                error ? (
+                                    <Form.text> This is required</Form.text>
+                                ) : ""
+                            }
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
