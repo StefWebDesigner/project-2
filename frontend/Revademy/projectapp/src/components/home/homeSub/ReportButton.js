@@ -2,6 +2,10 @@ import React, {useState} from 'react';
 import {Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody, ModalFooter} from "react-bootstrap";
 import useModal from "./reportSection/useModal";
 const ReportButton = () => {
+    const [showModal, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
 
     return (
@@ -10,18 +14,18 @@ const ReportButton = () => {
                 <div className="button-report-container">
                     <button
                         className="button-report"
-                        data-toggle="modal"
-                        data-target="#ReportModal"
+                        onClick={handleShow}
                     >
                         <span>Report</span>
                     </button>
+
                 </div>
             </section>
 
             <Modal
+                show={showModal} onHide={handleClose}
                 size="md"
                 centered
-                id="ReportModal"
             >
                 <Form  onSubmit="">
                     <Modal.Header>
