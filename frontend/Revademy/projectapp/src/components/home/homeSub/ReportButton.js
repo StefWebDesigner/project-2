@@ -7,9 +7,11 @@ const ReportButton = () => {
     return (
         <>
             <section>
-                <button className="button-report">
-                    <span>Report</span>
-                </button>
+                <div className="button-report-container">
+                    <button className="button-report">
+                        <span>Report</span>
+                    </button>
+                </div>
 
             </section>
 

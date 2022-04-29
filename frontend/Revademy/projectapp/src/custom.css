@@ -27,7 +27,15 @@
 
 /*BUTTON*/
 
+/*PULSING AND ARROW HOVER ANIAMTION EFFECT*/
+.button-report-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .button-report {
+    /*THIS IS FOR THE ARROW MOVMENT*/
     border-radius: 4px;
     background-color: #f4511e;
     border: none;
@@ -39,6 +47,27 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+
+/* THE PULSING ANIMATIONS   */
+    transform: scale(1);
+    animation: button-pulsing 2s infinite;
+}
+
+@keyframes button-pulsing {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
 }
 
 .button-report span {
