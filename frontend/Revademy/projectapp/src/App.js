@@ -19,7 +19,12 @@ import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 import SoundQuiz from './components/games/quizzes/sound/SoundQuiz';
 import AnimalQuiz from './components/games/quizzes/animals/AnimalQuiz';
 import AdminMain from "./components/admin/AdminMain";
+
 import ResetPassword from './components/userRelated/ResetPassword';
+
+import Opening from "./components/opening/Opening";
+import KidPortal from "./components/kidPortal/KidPortal";
+
 
 
 function SearchResult() {
@@ -56,6 +61,10 @@ function App() {
                   <Route path="/colorQuiz" element={<ColorQuiz/>}/>
                   <Route path="/animalQuiz" element={<AnimalQuiz/>}/>
                   <Route path="/soundQuiz" element={<SoundQuiz/>}/>
+
+                  {/* FLOAT IN ANIMATION TEST */}
+                  <Route path="/opening" element={<Opening/>}/>
+                  <Route path="/kidPortal" element={<KidPortal/>}/>
 
 
               </Routes>

@@ -4,6 +4,7 @@ import RegisterStepTwo from "./RegisterStepTwo";
 import RegisterStepOne from "./RegisterStepOne";
 import RegisterStepThree from "./RegisterStepThree";
 import RegisterFinal from "./RegisterFinal";
+import axios from "axios";
 
 const Register = () => {
 
@@ -28,6 +29,8 @@ const Register = () => {
     const prevStep = () => {
         setStep(step - 1);
     }
+
+
 
     //HANDLING THE DATA INFO
     const loginHandler = input => e => {

@@ -1,0 +1,46 @@
+/* .float-in-animation {
+    width: 100vw;
+    height: 100vw;
+} */
+
+.img-space {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+}
+
+.img-astronaut {
+    position: absolute;
+    height: 40vh;
+    background-color: none;
+    top: 350px;
+    left: 800px;
+    animation: slideInRight 4s;
+
+}
+
+.company-name {
+    font-size: 120px;
+    color: red;
+    position: absolute;
+    top: 350px;
+    left: 450px;
+    animation: fadeIn 2s;
+  
+}
+
+.enter-button {
+    font-size: 60px;
+    padding: 5px;;
+    color: black;
+    border: 1px solid rgb(226, 190, 30);
+    background-color: rgb(226, 190, 30);
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: rgb(226, 190, 30);
+    position: absolute;
+    top: 550px;
+    left: 650px;
+    animation: fadeIn 3s;
+}

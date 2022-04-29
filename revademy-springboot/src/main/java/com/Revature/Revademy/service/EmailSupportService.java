@@ -43,27 +43,18 @@ public class EmailSupportService {
         }
     }
 
-    public EmailSupport updateEmail(EmailSupport emailSupport, Integer emailId, Integer id) {
+    //TO UDPATE EMAIL
+    public EmailSupport updateEmail(EmailSupport emailSupport) {
+        Optional<EmailSupport> emailSupportOptional = emailSupportRepository.findById(emailSupport.getPreviousMailId());
+        if(emailSupportOptional.isPresent()) {
+            String oldBody = emailSupportOptional.get().getBody();
+            String newBody = emailSupport.getBody();
 
-        //TARGET AND FIND EMAILID
-            Optional<EmailSupport> emailSupportOptional = emailSupportRepository.findById(emailId);
-            if(emailSupportOptional.isPresent()) {
-                if(emailSupportOptional.get().getEmailId().equals(emailId)) {
-                    //I WANT IT TO RETURN THE PAST EMAIL FROM THE CONVERSATION
-                    emailSupportRepository.findById(emailId);
-                    //I WANT IT TO THEN ALLOW THEM TO SAVE THEIR RESPONSCE
-                    Optional<User> user = userRepository.findById(id);
-                    if(user.isPresent()) {
-                        EmailSupport emailSupportModel = emailSupportRepository.save(emailSupport);
-                        return emailSupportModel;
-                    } else {
-                        throw new NonExistingUserException("No user was found");
-                    }
-                } else {
-                    throw new NoEmailIdFoundExceptions("No email id was found.");
-                }
-            } else {
-                throw new NoEmailIdFoundExceptions("No email id was found.");
-            }
+            String body = newBody + "\n Previous Email : ------------------------ \n" + oldBody;
+            emailSupport.setBody(body);
+           return emailSupportRepository.save(emailSupport);
+        } else {
+            throw  new NoEmailIdFoundExceptions("Invalid email ID");
+        }
     }
 }

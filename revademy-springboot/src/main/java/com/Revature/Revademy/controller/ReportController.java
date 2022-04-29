@@ -37,16 +37,11 @@ public class ReportController {
     }
 
     //TO GET A REPORT BY ID
-//    @RequestMapping(value = "/caseId")
-//    @CrossOrigin(origins = "http://localhost:3000")
-//    public ResponseEntity<Report> getReportById (@PathVariable Integer caseId) {
-//        Optional<Report> report = reportService.getReportById(caseId);
-//            if(report == null) {
-//                    throw new NoReportFoundException("Can't match and find caseId");
-//                }
-//            }
-//        return ResponseEntity.ok(reportService.getReportById(caseId));
-//    }
+    @RequestMapping(value = "/{caseId}")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Report> getReportById (@PathVariable Integer caseId) {
+        return ResponseEntity.ok(reportService.getReportById(caseId));
+    }
 
 
     //TO GET DELETE A REPORT
