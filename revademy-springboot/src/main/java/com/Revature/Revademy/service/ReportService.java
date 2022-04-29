@@ -35,10 +35,14 @@ public class ReportService {
 
 
     //TO GET A REPORT BY ID
-//    public Report getReportById(Integer caseId) {
-//        Optional<Report> report = reportRepository.findById(caseId);
-//            return report.orElse(null);
-//    }
+    public Report getReportById(Integer caseId) {
+        Optional<Report> report = reportRepository.findById(caseId);
+            if(report.isPresent()) {
+                return report.get();
+            } else {
+                throw new NoReportFoundException("Can't match and find caseId");
+            }
+    }
 
 
     //TO GET DELETE A REPORT

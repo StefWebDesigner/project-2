@@ -1,6 +1,8 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom"
 import {Button, Card} from "react-bootstrap";
+import axios from "axios";
+
 
 const RegisterFinal = ({values, prevStep}) => {
 
@@ -17,6 +19,11 @@ const RegisterFinal = ({values, prevStep}) => {
 
     const registerUserFinalSubmit = (e) => {
         e.preventDefault();
+
+            //Work on hooking this up
+            // const data = axios.post("http://localhost:8080/user", values);
+            // console.log(data);
+            // setFormData(data);
 
         //To navigate to login page
         navigate("/login")

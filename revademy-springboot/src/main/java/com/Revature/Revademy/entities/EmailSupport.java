@@ -9,12 +9,25 @@ public class EmailSupport {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer emailId;
+<<<<<<< HEAD
     private String emailSubject;
     private String emailBody;
     private String recpiantId;
+=======
+    private String fromEmail;
+    private String recipient;
+    private String subject;
+    private String body;
+    private Integer previousMailId;
+>>>>>>> main
 
-    @OneToOne
-    User user;
+    public Integer getPreviousMailId() {
+        return previousMailId;
+    }
+
+    public void setPreviousMailId(Integer previousMailId) {
+        this.previousMailId = previousMailId;
+    }
 
     public Integer getEmailId() {
         return emailId;
@@ -24,35 +37,35 @@ public class EmailSupport {
         this.emailId = emailId;
     }
 
-    public String getEmailSubject() {
-        return emailSubject;
+    public String getFromEmail() {
+        return fromEmail;
     }
 
-    public void setEmailSubject(String emailSubject) {
-        this.emailSubject = emailSubject;
+    public void setFromEmail(String fromEmail) {
+        this.fromEmail = fromEmail;
     }
 
-    public String getEmailBody() {
-        return emailBody;
+    public String getRecipient() {
+        return recipient;
     }
 
-    public void setEmailBody(String emailBody) {
-        this.emailBody = emailBody;
+    public void setRecipient(String recipient) {
+        this.recipient = recipient;
     }
 
-    public String getRecpiantId() {
-        return recpiantId;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setRecpiantId(String recpiantId) {
-        this.recpiantId = recpiantId;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public User getUser() {
-        return user;
+    public String getBody() {
+        return body;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setBody(String body) {
+        this.body = body;
     }
 }
