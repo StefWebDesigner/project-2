@@ -107,6 +107,15 @@
 }
 
 
+
+.middown-space-picture {
+    z-index: -5;
+    right: 500px;
+
+    background-image: url("../src/kid_images/astronaut_duck.png");
+}
+
+
 /*  Welcome & Search*/
 
 .welcome-container {
