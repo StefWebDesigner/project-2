@@ -1,0 +1,186 @@
+Project 2 Research Notes : 
+
+Things to bring up:
+- (For Monitoring data)=>>> make montior more narrow -> to general to make a table on it
+- Specify admin content
+- We got some time I will look up how to make the chat
+https://www.section.io/engineering-education/creating-a-simple-chat-app-in-react-using-the-chat-engine-api/
+https://www.section.io/engineering-education/creating-a-simple-chat-app-in-react-using-the-chat-engine-api/
+I added react the project
+
+
+Working with screen readers: 
+- Include title tags and make them effectent and clear
+- Ensure it is navigation friendly
+* Focus on headers styling as an order and not stylying thing
+* Example : there should be a H1 > h2 > h3 -- no h3 should be above the h2
+- Use A list of of link -- those with visual imparement can scroll throught and skip
+unnesary content 
+* avoid using "read more" as this is redudant info for them
+* Link text should match content it is connected to
+* Use landmarks (<header>, <footer>, <main>, <aside>, ect...) -> they can scroll through these
+* Also include aria-label on these landmarks 
+* Example : <nav aria-label=”Primary Menu”>
+- Every image needs an alt
+* Don't include "Image of..." just get to the point
+- Avoud click events on listerns <div> elements
+* it provides general feedback of where to click as it is div
+* use button for click events
+- With react, use Fragment tags instead of divs
+* This can be applied to lists...avoid <ul> and use Fragments instead
+-------------------------------
+function Glossary(props) {
+  return (
+    <dl>
+      {props.items.map(item => (
+        // Fragments should also have a `key` prop when mapping collections
+        <Fragment key={item.id}>
+          <dt>{item.term}</dt>
+          <dd>{item.description}</dd>
+        </Fragment>
+      ))}
+    </dl>
+  );
+}
+-------------------------------
+- Use keyboard focus and focus outline
+* So button should be using css that has--- outline: 0; -- on it
+
+
+Attributes to use: 
+https://benrobertson.io/accessibility/principles-getting-started-website-accessibility#aria-attributes
+- aria-labels 
+* they are used on all HTML elements and tell what an element is
+-------------------------------
+(Forms Example)
+<label htmlFor="namedInput">Name:</label>
+<input id="namedInput" type="text" name="name"/>
++++++ 
+Input Example)
+<input
+  type="text"
+  aria-label={labelText}
+  aria-required="true"
+  onChange={onchangeHandler}
+  value={inputValue}
+  name="name"
+/>
+-------------------------------
+
+- aria-labelledby 
+* Used to label a group of text noded and will identify one or more ID referenvces
+* often used with labels --> it requires ID's
+-------------------------------
+<p id="sample-id">Some Text</p>
+<input aria-labelledby="sample-id another-id" value="" />
+<p id="another id">That defines this input.</p>
+-------------------------------
+- aria-expanded Att
+* It tells readers if a hamburger is closed or open and reqires an id
+-------------------------------
+<button class="list-expander" aria-expanded="false" aria-controls="expandable-list-1">Expand List</button>
+<ul id="expandable-list-1">
+    <li><a href="http://example.com">Sample Link</a></li>
+    <li><a href="http://example.com">Sample Link 2</a></li>
+    <li><a href="http://example.com">Sample Link 3</a></li>
+</ul>
+-------------------------------
+- Aria-describedby
+* This is pointds to an element that described the curretn element (with error/error emails statements)
+-------------------------------
+<label for="example-input">Email</label>
+<input type="email" id="example-input" aria-describedby="email-error" />
+<div id="email-error">
+    <p>The email address is in an invalid format.</p>
+</div>
+-------------------------------
+- Have them skip information do this:
+-------------------------------
+
+<body>
+<a href="#maincontent" class="sr-only">Skip to main content</a>
+...
+<main id="maincontent">
+<h1>Heading</h1>
+<p>This is the first paragraph</p>
+-------------------------------
+
+Other Ways to optimize a site for accessibilities
+https://webaim.org/techniques/keyboard/
+
+
+Questions for Screen readers: 
+- How to create the title tags?
+
+
+Admin Content:
+monitor progress by user
+report function for bugs
+Email functionality for assistance
+
+
+
+Tables:
+
+(Search Bar) -> will use other tables / doesn't need its own
+userid
+firstname
+email
+lastname
+username
+location
+account Accountyp (enum) -> client, admin, students, trainers
+ect...
+
+(Categories) => for Menu bar with routes (show demo)
+categoryid
+categoryTitle
+categoryMainBody
+ect....to adapt to what we want
+
+(For Monitoring data)=>>> make montior more narrow?
+--- it depends on the information you want
+
+
+Progress
+
+(Reports)
+some id referring to the area
+caseid
+casetitle
+comment
+
+
+(Email) => if you want to make it an simple email
+emailId
+emailSubject
+emailCC
+emailTitle 
+emailBody
+
+
+
+
+Other Notes:
+-Making a game
+https://javascript.plainenglish.io/building-a-card-memory-game-in-react-e6400b226b8f
+https://github.com/mayankshubham/memory-card-game/blob/main/src/App.js
+
+Other games:
+- Guess the word
+- Word scrammble
+grade and drop game
+- hangman
+
+
+
+
+
+
+
+
+
+
+
+
+
