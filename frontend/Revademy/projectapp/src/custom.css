@@ -25,7 +25,55 @@
 }
 
 
-.home-main-card-shadow {
+/*BUTTON*/
+
+.button-report {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 125px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button-report span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.button-report span:after {
+    content : '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .05s;
+}
+
+.button-report:hover span {
+    padding-right: 25px;
+}
+
+.button-report:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+.home-main-card-shadow, .button-report {
     box-shadow: 0 4px 1rem -4px #000;
 }
 
