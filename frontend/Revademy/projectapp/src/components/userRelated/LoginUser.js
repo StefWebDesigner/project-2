@@ -76,6 +76,7 @@ const LoginUser = () => {
                 </Form>
 
                 <Link to="/register" className="login-link"> Create an Account</Link>
+                <Link to="/forgotPassword" className="login-link"> Forgot Password?</Link>
                 </Container>
             </section>
 
