@@ -24,6 +24,10 @@ import ResetPassword from './components/userRelated/ResetPassword';
 
 import Opening from "./components/opening/Opening";
 import KidPortal from "./components/kidPortal/KidPortal";
+import AdminEmailSupport from "./components/admin/adminSubgroups/adminEmailSupport";
+import AdminReport from "./components/admin/adminSubgroups/AdminReport";
+import AdminDashBoard from "./components/admin/adminSubgroups/adminDashBoard";
+import AdminEvent from "./components/admin/adminSubgroups/AdminEvent";
 
 
 
@@ -53,6 +57,12 @@ function App() {
 
                   <Route path="/events" element={<Events/>}/>
                   <Route path="/adminportal" element={<AdminMain/>}/>
+
+                  {/*ADMIN PORTAL*/}
+                  <Route path="/emailsupport" element={<AdminEmailSupport/>}/>
+                  <Route path="/reports" element={<AdminReport/>}/>
+                  <Route path="/dashboard" element={<AdminDashBoard/>}/>
+                  <Route path="/adminevents" element={<AdminEvent/>}/>
 
                   {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>

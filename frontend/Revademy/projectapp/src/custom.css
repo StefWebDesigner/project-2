@@ -24,6 +24,32 @@
     }
 }
 
+/* Register Form*/
+
+.progressBar{
+    margin-top:20px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.progress-step{
+    width:100%;
+    flex:1;
+    border: 2px solid #0b4c78;
+}
+.first-step{
+ background: #5eacff;
+}
+
+.filled-step{
+    background: #5eacff;
+}
+
+.second-step {
+
+}
+
+
 
 /*BUTTON*/
 
@@ -150,8 +176,9 @@
 }
 
 .background-header-image {
-    background-image: url("../src/kid_images/space_web_page_length.svg");
+    background-image: url("../src/kid_images/space_web_page_length-home.svg");
 }
+
 
 .home-header-title,
 .home-header-title-subtitle,
@@ -315,15 +342,57 @@
 .offer-card-items {
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+/* overlay  */
+.overlay-container{
+    position: relative;
+}
+.overlay-container img{
+    transition: all 250ms ease-in-out;
+}
+.overlay-container:hover img{
+    opacity: .2;
+}
+
+.overlay{
+    width:100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    top:0;
+    left:0;
+    transition: all 250ms ease-in-out;
+
+}
+.overlay-container:hover .overlay{
+    opacity: 1;
+}
+.overlay-text{
+
+}
+.overlay-text p{
+
+}
+.overlay-link{
 
 }
 
-/*.offer-container {*/
-/*    padding-left: 2%;*/
-/*    padding-right: 2;*/
-/*}*/
+.overlay-link a{
+    text-decoration: none;
+    color: black;
+    background-: white;
+    padding:4px 14px;
+    border-radius: 4px;
+}
 
-.offer-backgound {
+
+.offer-backgound, .overlay-link a {
     /*https://colorhunt.co/palette/f7f7f7ffbc97ff7800ffe300*/
     background: linear-gradient(-45deg, #F6E7D8, #F68989, #C65D7B, #874356);
 
