@@ -1,4 +1,7 @@
 import React from 'react';
+import AdminDashBoard from "./adminSubgroups/adminDashBoard";
+import AdminEmailSupport from "./adminSubgroups/adminEmailSupport";
+import AdminReport from "./adminSubgroups/AdminReport";
 
 const AdminMain = () => {
     return (
@@ -6,6 +9,9 @@ const AdminMain = () => {
 
 
             <h1>Admin Portal</h1>
+            <AdminDashBoard/>
+            <AdminEmailSupport/>
+            <AdminReport/>
 
         </>
     );
