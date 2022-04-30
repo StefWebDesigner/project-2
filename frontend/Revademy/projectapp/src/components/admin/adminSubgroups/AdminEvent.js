@@ -1,15 +1,15 @@
 import React from 'react';
 import AdminNav from "./AdminNav";
 
-const AdminEmailSupport = () => {
+const AdminEvent = () => {
     return (
         <>
             <AdminNav/>
-            <h1>Email Support</h1>
+            <h1>Events</h1>
 
 
         </>
     );
 };
 
-export default AdminEmailSupport;
+export default AdminEvent;
