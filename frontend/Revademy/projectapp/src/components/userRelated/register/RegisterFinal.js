@@ -4,15 +4,16 @@ import {Button, Card} from "react-bootstrap";
 import axios from "axios";
 
 
-const RegisterFinal = ({values, prevStep}) => {
+const RegisterFinal = ({values, prevStep ,setFormData}) => {
 
    const navigate = useNavigate();
 
     const {
-        firstName,
-        lastName,
-        account,
-        age,
+        firstname,
+        lastname,
+        username,
+        accountTypes,
+        ageType,
         email,
         password} = values;
 
@@ -21,9 +22,9 @@ const RegisterFinal = ({values, prevStep}) => {
         e.preventDefault();
 
             //Work on hooking this up
-            // const data = axios.post("http://localhost:8080/user", values);
-            // console.log(data);
-            // setFormData(data);
+            const data = axios.post("http://localhost:8080/user", values);
+            console.log(data);
+            setFormData(data);
 
         //To navigate to login page
         navigate("/login")
@@ -38,19 +39,22 @@ const RegisterFinal = ({values, prevStep}) => {
                 <Card style={{ marginTop: 100, textAlign: "left" }}>
                     <Card.Body>
                         <p>
-                            <strong> First Name : </strong> {JSON.stringify(firstName)}
+                            <strong> First Name : </strong> {firstname}
                         </p>
                         <p>
-                            <strong> Last Name : </strong> {lastName}
+                            <strong> Last Name : </strong> {lastname}
+                        </p>
+                        <p>
+                            <strong> Username : </strong> {username}
                         </p>
                         <p>
                             <strong> Account : </strong>
-                            {account}
+                            {accountTypes}
 
                         </p>
                         <p>
                             <strong> Age : </strong>
-                            {age}
+                            {ageType}
 
                         </p>
                         <p>

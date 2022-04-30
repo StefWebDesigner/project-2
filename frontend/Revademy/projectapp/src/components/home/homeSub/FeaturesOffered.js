@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
 import gameIcon from '../../../kid_images/gamer_bot_badge.svg'
+import {Link} from "react-router-dom";
 
 const FeaturesOffered = () => {
     return (
@@ -20,7 +21,18 @@ const FeaturesOffered = () => {
                                 <Container>
                                     <Card className="offer-card-items">
                                         <Card.Body>
-                                            <img src={gameIcon}/>
+                                            <div className="overlay-container">
+                                                <img src={gameIcon}/>
+                                                <div className="overlay">
+                                                    <div className="overlay-text">
+                                                        <p className="text-center">Checkout out the latest Games</p>
+                                                    </div>
+                                                    <div className="overlay-link">
+                                                        <Link to="/activites">Games</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </Card.Body>
                                     </Card>
                                 </Container>
@@ -31,7 +43,18 @@ const FeaturesOffered = () => {
                                 <Container>
                                     <Card className="offer-card-items">
                                         <Card.Body>
+                                            <div className="overlay-container">
                                             <img src={gameIcon}/>
+                                            <div className="overlay">
+                                                <div className="overlay-text">
+                                                    <p className="text-center">Got Some Exciting Event Lined up</p>
+                                                    <p className="text-center">SIGN UP NOW!</p>
+                                                </div>
+                                                <div className="overlay-link">
+                                                    <Link to="/events">Events</Link>
+                                                </div>
+                                            </div>
+                                        </div>
                                         </Card.Body>
                                     </Card>
                                 </Container>
@@ -41,7 +64,17 @@ const FeaturesOffered = () => {
                                 <Container>
                                     <Card className="offer-card-items">
                                         <Card.Body>
-                                            <img src={gameIcon}/>
+                                            <div className="overlay-container">
+                                                <img src={gameIcon}/>
+                                                <div className="overlay">
+                                                    <div className="overlay-text">
+                                                        <p className="text-center">View Your progress!</p>
+                                                    </div>
+                                                    <div className="overlay-link">
+                                                        <Link to="/learningportal">Learning Portal</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </Card.Body>
                                     </Card>
                                 </Container>

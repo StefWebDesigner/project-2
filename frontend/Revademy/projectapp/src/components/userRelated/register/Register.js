@@ -12,10 +12,11 @@ const Register = () => {
     const [step, setStep] = useState(1);
     //STATE FOR THE FORMS
     const [formData, setFormData] = useState({
-        firstName : "",
-        lastName : "",
-        account : "",
-        age : "",
+        firstname : "",
+        lastname : "",
+        username:"",
+        accountTypes : "",
+        ageType : "",
         email : "",
         password : ""
     })
@@ -30,7 +31,25 @@ const Register = () => {
         setStep(step - 1);
     }
 
+    const ProgressBar=({step})=>{
+        return(
+            <div className="progressBar" >
+                <div className="first-step progress-step">
 
+                </div>
+                <div className={step==2||step==3||step==4?"filled-step second-step progress-step":"second-step progress-step"}>
+
+                </div>
+                <div  className={step==3 ||step==4?"filled-step second-step progress-step":"second-step progress-step"}>
+
+                </div>
+                <div  className={step==4?"filled-step second-step progress-step":"second-step progress-step"}>
+                </div>
+
+            </div>
+        )
+
+    }
 
     //HANDLING THE DATA INFO
     const loginHandler = input => e => {
@@ -55,9 +74,11 @@ const Register = () => {
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
                                 <RegisterStepOne nextStep={nextStep} handleFormData={loginHandler} values={formData}/>
+                                <ProgressBar step={step}/>
                             </Col>
                         </Row>
                     </Container>
+
                 </section>
             );
         case 2:
@@ -67,6 +88,7 @@ const Register = () => {
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
                                 <RegisterStepTwo nextStep={nextStep} prevStep={prevStep} handleFormData={loginHandler} values={formData}/>
+                                <ProgressBar step={step}/>
                             </Col>
                         </Row>
                     </Container>
@@ -79,6 +101,7 @@ const Register = () => {
                         <Row>
                             <Col md={{span: 6,offset: 3}}>
                                 <RegisterStepThree nextStep={nextStep} prevStep={prevStep} handleFormData={loginHandler} values={formData}/>
+                                <ProgressBar step={step}/>
                             </Col>
                         </Row>
                     </Container>
@@ -90,7 +113,8 @@ const Register = () => {
                     <Container>
                         <Row>
                             <Col md={{span: 6,offset: 3}}>
-                                <RegisterFinal prevStep={prevStep} values={formData}/>
+                                <RegisterFinal prevStep={prevStep} values={formData} setFormData={setFormData}/>
+                                <ProgressBar step={step}/>
                             </Col>
                         </Row>
                     </Container>

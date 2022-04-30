@@ -10,9 +10,10 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
         e.preventDefault();
 
         if(
-            validator.isEmpty(values.account) ||
-            validator.isEmpty(values.age) ||
-            validator.isEmpty(values.email)
+            validator.isEmpty(values.accountTypes) ||
+            validator.isEmpty(values.ageType) ||
+            validator.isEmpty(values.email) ||
+            validator.isEmpty(values.username)
         ) {
             setError(true)
         } else {
@@ -39,13 +40,13 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
                                     size="lg"
-                                    name="account"
-                                    onChange={handleFormData("account")}
+                                    name="accountTypes"
+                                    onChange={handleFormData("accountTypes")}
                                 >
                                     <option value="">Open this select menu</option>
-                                    <option value="user">User</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="teacher">Teacher</option>
+                                    <option value="USER">User</option>
+                                    <option value="ADMIN">Admin</option>
+                                    {/*<option value="teacher">Teacher</option>*/}
                                 </Form.Select>
                             {/* ERROR SECTION    */}
                                 {
@@ -63,11 +64,11 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                     style={{border: error ? "2px solid red" : ""}}
                                     size="lg"
                                     name="age"
-                                    onChange={handleFormData("age")}
+                                    onChange={handleFormData("ageType")}
                                 >
                                     <option value="">Open this select menu</option>
-                                    <option value="overAge">Above 18</option>
-                                    <option value="underAge">Under 18</option>
+                                    <option value="OVERAGE">Above 18</option>
+                                    <option value="UNDERAGE">Under 18</option>
                                 </Form.Select>
                                 {/* ERROR SECTION    */}
                                 {
@@ -78,9 +79,6 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                             </Form.Group>
                             {/*FOR EMAIL*/}
                             <Form.Group>
-                                <Form.Label>
-                                    Age
-                                </Form.Label>
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
@@ -89,6 +87,23 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                     value={values.email}
                                     placeholder="Email"
                                     onChange={handleFormData("email")}
+                                />
+                                {/* ERROR SECTION    */}
+                                {
+                                    error ? (
+                                        <Form.text> This is required</Form.text>
+                                    ) : ""
+                                }
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Username</Form.Label>
+                                <Form.Control
+                                    style={{border: error ? "2px solid red" : ""}}
+                                    name="username"
+                                    type="text"
+                                    value={values.username}
+                                    placeholder="Username"
+                                    onChange={handleFormData("username")}
                                 />
                                 {/* ERROR SECTION    */}
                                 {

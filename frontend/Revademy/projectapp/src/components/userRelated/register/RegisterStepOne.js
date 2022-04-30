@@ -12,8 +12,8 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
         e.preventDefault();
 
         if(
-            validator.isEmpty(values.firstName) ||
-            validator.isEmpty(values.lastName)
+            validator.isEmpty(values.firstname) ||
+            validator.isEmpty(values.lastname)
         ) {
             setError(true)
         } else {
@@ -34,10 +34,10 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="firstName"
-                                    defaultValue={values.firstName}
+                                    defaultValue={values.firstname}
                                     type="text"
                                     placeholder="Firstname"
-                                    onChange={handleFormData("firstName")}
+                                    onChange={handleFormData("firstname")}
                                 />
                             {/* ERROR MESSAGE   */}
                                 {
@@ -57,9 +57,9 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="lastName"
                                     type="text"
-                                    defaultValue={values.lastName}
+                                    defaultValue={values.lastname}
                                     placeholder="Last name"
-                                    onChange={handleFormData("lastName")}
+                                    onChange={handleFormData("lastname")}
                                 />
                             </Form.Group>
                         {/* BUTTON SECTION */}
