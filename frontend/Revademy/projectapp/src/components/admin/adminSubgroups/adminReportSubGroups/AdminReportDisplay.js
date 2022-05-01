@@ -3,32 +3,35 @@ import {Container, Row, Table} from "react-bootstrap";
 import axios from "axios";
 
 
-
-
 const AdminReportDisplay = () => {
 
-    const [avaiableContent, setAvailableContent] = useState(false)
+    // const [NotAvaiableContent, setNotAvailableContent] = useState(false)
     //FOR PENDING REPORTS
-    const [showPendingReports, setShowPendingReports ] = useState([]);
+    const [showPendingReports, setShowPendingReports] = useState([]);
 
 
     //SHOW ALL PENDING CONTENT
-    async function showAllPendingReports(e) {
-        e.preventDefault()
+    async function showAllPendingReports() {
+        // e.preventDefault()
 
         axios.get("http://localhost:8080/report/all")
-            .then( response => {
+            .then(response => {
                 console.log(response.data)
                 setShowPendingReports(response.data)
             })
     }
 
+    // function contentAvailable() {
+    //     if (showAllPendingReports() == 0) {
+    //         setNotAvailableContent(true)
+    //     }
+    //
+    // }
+
     useEffect(() => {
         showAllPendingReports();
 
     }, []);
-
-
 
 
     return (
@@ -43,36 +46,51 @@ const AdminReportDisplay = () => {
                     {/*SHOW PENDING COLUMNS */}
                     <Row>
                         {
+                            showPendingReports ?
 
-                            showPendingReports.map((pendingReports, index) => {
-                                // <div key={pendingReports.caseId}>
-                                return (
-                                    <div key={pendingReports.caseId}>
+                                //SHOW REPORTS
+                                showPendingReports.map((pendingReports, index) => {
+                                    // <div key={pendingReports.caseId}>
+                                    return (
+                                        <div key={pendingReports.caseId}>
 
-                                    <Table>
-                                        <thead>
-                                            <tr>
-                                                <th>Case Id</th>
+                                            <Table striped bordered hover>
+                                                <thead>
+                                                <tr>
+                                                    <th>Case Id</th>
+                                                    <th>Location</th>
+                                                    <th>Subject</th>
+                                                    <th>Issue</th>
+                                                    <th>Ignore</th>
+                                                    <th>Resolved</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td> {pendingReports.caseId}</td>
+                                                    <td> {pendingReports.locationTypes}</td>
+                                                    <td> {pendingReports.bugTitle}</td>
+                                                    <td> {pendingReports.bugDescription}</td>
+                                                    <td> button</td>
+                                                    <td> button</td>
+                                                </tr>
+                                                </tbody>
+                                            </Table>
+                                        </div>
+                                    )
+                                })
 
-                                            </tr>
-                                        </thead>
+                                //IF NO REPORTS PENDING
+                                :
 
-                                    </Table>
-
-                                    </div>
-
-                                )
-
-
-                            })
+                                <aside>
+                                    <p> No Pending Reports</p>
+                                </aside>
 
                         }
 
 
                     </Row>
-
-
-
 
 
                 </Container>
