@@ -7,9 +7,9 @@ const AdminReportFacts = () => {
 
             <Row>
                 <Col>
-                    <Card>
+                    <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container">
+                            <div className="fact-container flex-md-row">
                                 <h7 className="fact-title">Total Reports Pending :</h7>
                                 <p className="fact-number">#</p>
                             </div>
@@ -18,9 +18,9 @@ const AdminReportFacts = () => {
                 </Col>
 
                 <Col>
-                    <Card>
+                    <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container">
+                            <div className="fact-container flex-md-row">
                                 <h7 className="fact-title">Most Reported Location :</h7>
                                 <p className="fact-number">#</p>
                             </div>
@@ -36,9 +36,9 @@ const AdminReportFacts = () => {
                 {/*</Col>*/}
 
                 <Col>
-                    <Card>
+                    <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container">
+                            <div className="fact-container flex-md-row">
                                 <h7 className="fact-title">Total Fixed Bugs :</h7>
                                 <p className="fact-number">#</p>
                             </div>

@@ -563,6 +563,14 @@
 
 /*GENERAL*/
 
+.fact-card {
+    border: dodgerblue solid 2px;
+    box-shadow: 0 4px 1rem -4px #000;
+
+
+
+}
+
 .fact-title,
 .fact-number{
     text-align: center;
