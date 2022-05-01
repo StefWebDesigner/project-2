@@ -1,5 +1,5 @@
 package com.Revature.Revademy.service;
 
 public interface EmailSenderService {
-	void sendEmail(String to, String subject, String message);
+	public void sendEmail(String to, String subject, String message);
 }
