@@ -15,7 +15,7 @@ function ResetPassword() {
     const passwordChange = (e) =>{
         let path = '/login';
         e.preventDefault();
-        if(password1 === password2 && password1 != ''){
+        if(password1 === password2 && password1 !== ''){
             axios.post(`http://localhost:8080/forgot/reset?password=${password1}&token=${token}`)
             .then(({data}) => {
                 console.log(data);

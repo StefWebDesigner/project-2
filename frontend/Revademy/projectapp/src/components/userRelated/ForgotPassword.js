@@ -15,7 +15,7 @@ export default function ForgotPassword() {
       axios.post(`http://localhost:8080/forgot?email=${email}`)
       .then(({data}) => {
               
-               if(data==="No User Matches This Email" || email==""){
+               if(data==="No User Matches This Email" || email===""){
                    alert("No User Matches This Email")
                } else{
                tempData = data.token;
