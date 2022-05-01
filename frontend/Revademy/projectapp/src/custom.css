@@ -447,7 +447,7 @@
 
 .login-input-1,
 .login-input {
-    transition: .9s;
+    transition: .5s;
     border: #5534A5 solid 1px;
 }
 
@@ -459,6 +459,12 @@
 .login-input-1:hover,
 .login-input:hover {
     background-color: lightgrey;
+}
+
+.login-input-1:focus,
+.login-input:focus {
+    background-color: lightgrey;
+    border: solid mediumorchid 2px;
 }
 
 .login-input-1:hover::placeholder,
@@ -551,6 +557,102 @@
         background-position: 0% 50%;
     }
 }
+
+
+/* ADMMIN */
+
+/*GENERAL*/
+
+.fact-card {
+    border: dodgerblue solid 2px;
+    box-shadow: 0 4px 1rem -4px #000;
+
+
+
+}
+
+.fact-title,
+.fact-number{
+    text-align: center;
+}
+
+.fact-title {
+    font-size: 15px;
+}
+
+
+.color-line {
+    color: #8479E1;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    border-bottom: #8479E1 solid 3px;
+    width: 95%;
+    margin: auto;
+
+}
+
+.fact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*ADMIN REPORT*/
+
+.admin-main-title,
+.admin-sub-title {
+    text-align: center;
+}
+
+.admin-main-title {
+    margin-bottom: 5%;
+
+}
+
+.admin-sub-title {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 20px;
+
+
+}
+
+.report-td {
+    font-size: 12px;
+}
+
+/*.color-line:hover {*/
+/*    transition: transform .3s ease-in-out;*/
+/*    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;*/
+/*    !*-webkit-transform: scale(1.1);*!*/
+/*    !*transform: scale(1.1);*!*/
+
+/*}*/
+
+
+/*.color-verticle {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-direction: column-reverse;*/
+/*    color: #8479E1;*/
+/*    padding-top: 15px;*/
+/*    padding-bottom: 1px;*/
+/*    border-bottom: #8479E1 solid 3px;*/
+/*    width: 95%;*/
+/*    !*margin: auto;*!*/
+/*    transform: rotate(270deg);*/
+/*}*/
+/*.color-verticle:hover {*/
+/*    transition: transform .3s ease-in-out;*/
+/*    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;*/
+/*    !*-webkit-transform: scale(1.1);*!*/
+/*    !*transform: scale(1.1);*!*/
+
+/*}*/
+
+
+
 
 
 
