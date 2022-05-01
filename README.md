@@ -7,7 +7,7 @@ The frontend was created in React and styling and animations were added using Bo
 
 Tech stack: Javascript, React, Node.js, HTML, CSS, Bootstrap, Java, Maven, Spring Boot, PostgreSQL and Git 
 
-To get Started: Clone the git repository to your local machine. Open the project in your preferred IDE and add the metainfo for application.properties to the backend. Build the maven project from the pom.xml and then run it from the main class. On the frontend do a 'npm install' from the Revademy folder and then 'npm start' to run the React app. Once the React webpage has started, you can go to login and create a new user. Once done you are free to explore the features of the website. Have fun.
+To get Started: Clone the git repository to your local machine. Open the project in your preferred IDE and add the metainfo for application.properties to the backend. Build the maven project from the pom.xml and then run it from the RevademyApplication class. On the frontend do a 'npm install' from the Revademy folder and then 'npm start' to run the React app. Once the React webpage has started, you can go to login and create a new user. Once done you are free to explore the features of the website. Have fun.
 
 Usage of the website is to help teach kids English in a fun and informative way.
 
