@@ -40,11 +40,11 @@ function ResetPassword() {
             <Form className="login-form-container">
                 <h1 className="login-title">Reset Password</h1>
                 <Form.Group>
-                    <Form.Label className="login-label">Enter New Password:</Form.Label>
+                    <Form.Label className="login-label"><h4>Enter New Password</h4></Form.Label>
                     <Form.Control className="login-input" type='password' placeholder='password' value={password1} onChange={e => setPassword1(e.target.value)}/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label className="login-label">Confirm New Password:</Form.Label>
+                    <Form.Label className="login-label"><h4>Confirm New Password</h4></Form.Label>
                     <Form.Control className="login-input" type='password' placeholder='password' value={password2} onChange={e => setPassword2(e.target.value)}/>
                 </Form.Group>
                 <div className="button-login-container">
