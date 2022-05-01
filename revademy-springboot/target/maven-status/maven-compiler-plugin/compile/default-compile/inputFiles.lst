@@ -1,5 +1,7 @@
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\repository\UserStatsRepository.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\controller\ReportController.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\resource\EmailMessage.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\controller\ForgotPasswordController.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\repository\UserRepository.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\service\EmailSupportService.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\exception\NoReportFoundException.java
@@ -8,14 +10,19 @@ C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revadem
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\service\ReportService.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\repository\EmailSupportRepository.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\LocationTypes.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\repository\ForgotRepository.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\exception\NoUserExistToDeleteException.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\exception\NoEmailIdFoundExceptions.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\service\UserStatsService.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\impl\EmailSenderServiceImpl.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\service\EmailSenderService.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\controller\EmailSenderController.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\EmailSupport.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\exception\GlobalExceptionHandler.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\BackgroundTypes.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\Report.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\service\UserService.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\ResetTokens.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\RevademyApplication.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\UserStats.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\AvatarTypes.java
@@ -26,4 +33,5 @@ C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revadem
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\repository\ReportRepository.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\entities\AgeType.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\exception\NonExistingUserException.java
+C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\service\ForgotService.java
 C:\Users\makott\project-2\revademy-springboot\src\main\java\com\Revature\Revademy\controller\UserController.java

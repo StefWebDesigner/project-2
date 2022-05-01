@@ -32,5 +32,10 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handlerNoEmailIdFoundExceptions(NoEmailIdFoundExceptions e){
         return ResponseEntity.ok(e.getMessage());
     }
+    
+    @ExceptionHandler(GeneralPasswordResetException.class)
+    public ResponseEntity<String> handleGeneralPasswordResetException(GeneralPasswordResetException e){
+        return ResponseEntity.ok(e.getMessage());
+    }
 
 }
