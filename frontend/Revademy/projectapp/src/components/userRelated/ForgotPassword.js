@@ -52,7 +52,7 @@ export default function ForgotPassword() {
             <Form ref={form} className="login-form-container" onSubmit={sendEmail}>
                 <h1 className="login-title">Forgot Password</h1>
                 <Form.Group>
-                <Form.Label className="login-label">Enter Email:</Form.Label>
+                <Form.Label className="login-label"> <h4>Enter Email</h4></Form.Label>
                     <Form.Control className="login-input" type='email' placeholder='Email Address' name='email' onChange={e => setEmail(e.target.value)}/>
                 </Form.Group>
                 <div className="button-login-container">
