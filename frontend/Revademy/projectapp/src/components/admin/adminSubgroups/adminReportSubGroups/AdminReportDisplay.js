@@ -5,9 +5,9 @@ import axios from "axios";
 
 const AdminReportDisplay = () => {
 
-    // const [NotAvaiableContent, setNotAvailableContent] = useState(false)
     //FOR PENDING REPORTS
     const [showPendingReports, setShowPendingReports] = useState([]);
+
 
 
     //SHOW ALL PENDING CONTENT
@@ -21,18 +21,10 @@ const AdminReportDisplay = () => {
             })
     }
 
-    // function contentAvailable() {
-    //     if (showAllPendingReports() == 0) {
-    //         setNotAvailableContent(true)
-    //     }
-    //
-    // }
-
     useEffect(() => {
         showAllPendingReports();
 
     }, []);
-
 
     return (
         <>
@@ -55,25 +47,25 @@ const AdminReportDisplay = () => {
                                         <div key={pendingReports.caseId}>
 
                                             <Table striped bordered hover>
-                                                    <thead>
-                                                    <tr>
-                                                        <th  className="report-td">View</th>
-                                                        <th  className="report-td">Case Id</th>
-                                                        <th  className="report-td">Location</th>
-                                                        <th  className="report-td">Subject</th>
-                                                        <th  className="report-td">Issue</th>
-                                                        <th  className="report-td">Resolved</th>
-                                                    </tr>
-                                                    </thead>
+                                                <thead>
+                                                <tr>
+                                                    <th className="report-td">View</th>
+                                                    <th className="report-td">Case Id</th>
+                                                    <th className="report-td">Location</th>
+                                                    <th className="report-td">Subject</th>
+                                                    <th className="report-td">Issue</th>
+                                                    <th className="report-td">Resolved</th>
+                                                </tr>
+                                                </thead>
 
                                                 <tbody>
                                                 <tr>
-                                                    <td  className="report-td"> view</td>
+                                                    <td className="report-td"> view</td>
                                                     <td className="report-td"> {pendingReports.caseId}</td>
-                                                    <td  className="report-td"> {pendingReports.locationTypes}</td>
-                                                    <td  className="report-td"> {pendingReports.bugTitle}</td>
-                                                    <td  className="report-td"> {pendingReports.bugDescription}</td>
-                                                    <td  className="report-td"> button</td>
+                                                    <td className="report-td"> {pendingReports.locationTypes}</td>
+                                                    <td className="report-td"> {pendingReports.bugTitle}</td>
+                                                    <td className="report-td"> {pendingReports.bugDescription}</td>
+                                                    <td className="report-td"> button</td>
                                                 </tr>
                                                 </tbody>
                                             </Table>
@@ -87,16 +79,10 @@ const AdminReportDisplay = () => {
                                 <aside>
                                     <p> No Pending Reports</p>
                                 </aside>
-
                         }
-
-
                     </Row>
-
-
                 </Container>
             </section>
-
         </>
     );
 };
