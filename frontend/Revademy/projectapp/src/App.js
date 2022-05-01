@@ -53,7 +53,7 @@ function App() {
                   <Route path="/register" element={<Register/>}/>
                   <Route path="/activities" element={<Activities/>}/>
                   <Route path="/forgotPassword" element={<ForgotPassword/>}/>
-                  <Route path="/resetPassword" element={<ResetPassword/>}/>
+                  <Route path="/resetPassword/:id" element={<ResetPassword/>}/>
 
                   <Route path="/events" element={<Events/>}/>
                   <Route path="/adminportal" element={<AdminMain/>}/>
