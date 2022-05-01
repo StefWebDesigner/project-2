@@ -40,39 +40,40 @@ const AdminReportDisplay = () => {
                 <Container>
 
                     <Row>
-                        <h7>All Pending reports</h7>
+                        <h7 className="admin-sub-title">All Pending reports</h7>
                     </Row>
 
                     {/*SHOW PENDING COLUMNS */}
                     <Row>
+
                         {
                             showPendingReports ?
 
                                 //SHOW REPORTS
                                 showPendingReports.map((pendingReports, index) => {
-                                    // <div key={pendingReports.caseId}>
                                     return (
                                         <div key={pendingReports.caseId}>
 
                                             <Table striped bordered hover>
-                                                <thead>
-                                                <tr>
-                                                    <th>Case Id</th>
-                                                    <th>Location</th>
-                                                    <th>Subject</th>
-                                                    <th>Issue</th>
-                                                    <th>Ignore</th>
-                                                    <th>Resolved</th>
-                                                </tr>
-                                                </thead>
+                                                    <thead>
+                                                    <tr>
+                                                        <th  className="report-td">View</th>
+                                                        <th  className="report-td">Case Id</th>
+                                                        <th  className="report-td">Location</th>
+                                                        <th  className="report-td">Subject</th>
+                                                        <th  className="report-td">Issue</th>
+                                                        <th  className="report-td">Resolved</th>
+                                                    </tr>
+                                                    </thead>
+
                                                 <tbody>
                                                 <tr>
-                                                    <td> {pendingReports.caseId}</td>
-                                                    <td> {pendingReports.locationTypes}</td>
-                                                    <td> {pendingReports.bugTitle}</td>
-                                                    <td> {pendingReports.bugDescription}</td>
-                                                    <td> button</td>
-                                                    <td> button</td>
+                                                    <td  className="report-td"> view</td>
+                                                    <td className="report-td"> {pendingReports.caseId}</td>
+                                                    <td  className="report-td"> {pendingReports.locationTypes}</td>
+                                                    <td  className="report-td"> {pendingReports.bugTitle}</td>
+                                                    <td  className="report-td"> {pendingReports.bugDescription}</td>
+                                                    <td  className="report-td"> button</td>
                                                 </tr>
                                                 </tbody>
                                             </Table>

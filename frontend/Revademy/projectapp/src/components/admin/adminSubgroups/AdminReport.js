@@ -16,7 +16,7 @@ const AdminReport = () => {
 
             <section>
                 <Row>
-                    <h1 className="report-title">Admin Report</h1>
+                    <h1 className="admin-main-title">Admin Report</h1>
                 </Row>
                     <AdminReportFacts/>
                     <AdminReportDisplay/>

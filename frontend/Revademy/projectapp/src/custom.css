@@ -600,8 +600,26 @@
 
 /*ADMIN REPORT*/
 
-.report-title {
+.admin-main-title,
+.admin-sub-title {
     text-align: center;
+}
+
+.admin-main-title {
+    margin-bottom: 5%;
+
+}
+
+.admin-sub-title {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 20px;
+
+
+}
+
+.report-td {
+    font-size: 12px;
 }
 
 /*.color-line:hover {*/
