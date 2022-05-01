@@ -28,7 +28,7 @@ const FeaturesOffered = () => {
                                                         <p className="text-center">Checkout out the latest Games</p>
                                                     </div>
                                                     <div className="overlay-link">
-                                                        <Link to="/activites">Games</Link>
+                                                        <Link to="/activities">Games</Link>
                                                     </div>
                                                 </div>
                                             </div>

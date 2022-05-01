@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-
+import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 
 function ResetPassword() {
     const [password1, setPassword1] = useState('');
@@ -34,18 +34,26 @@ function ResetPassword() {
     }
   return (
     <>
-            <form>
-                <h3>Reset Password</h3>
-                <div>
-                    <label>Enter New Password:</label>
-                    <input type='password' placeholder='password' value={password1} onChange={e => setPassword1(e.target.value)}/>
+    <section className="fade-in-animation login-backgound">
+                <Container className="login-container ">
+                    <Card className="login-card">
+            <Form className="login-form-container">
+                <h1 className="login-title">Reset Password</h1>
+                <Form.Group>
+                    <Form.Label className="login-label">Enter New Password:</Form.Label>
+                    <Form.Control className="login-input" type='password' placeholder='password' value={password1} onChange={e => setPassword1(e.target.value)}/>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label className="login-label">Confirm New Password:</Form.Label>
+                    <Form.Control className="login-input" type='password' placeholder='password' value={password2} onChange={e => setPassword2(e.target.value)}/>
+                </Form.Group>
+                <div className="button-login-container">
+                <button className="button-login" onClick={passwordChange}>Submit</button>
                 </div>
-                <div>
-                    <label>Confirm New Password:</label>
-                    <input type='password' placeholder='password' value={password2} onChange={e => setPassword2(e.target.value)}/>
-                </div>
-                <button onClick={passwordChange}>Submit</button>
-            </form>
+                </Form>
+            </Card>
+            </Container>
+            </section>
             </>
   )
 }

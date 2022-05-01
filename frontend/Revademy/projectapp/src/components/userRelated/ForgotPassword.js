@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from "emailjs-com"
 import axios from 'axios';
 import ExperimentalNav from '../navbar/ExperimentalNav';
+import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 
 export default function ForgotPassword() {
     const form = useRef();
@@ -44,15 +45,27 @@ export default function ForgotPassword() {
     
         return(
             <>
+            <section className="fade-in-animation login-backgound">
             <ExperimentalNav/>
-            <form ref={form} onSubmit={sendEmail}>
-                <h3>Forgot Password</h3>
-                <div>
-                    <label>Enter Email:</label>
-                    <input type='email' placeholder='Email Address' name='email' onChange={e => setEmail(e.target.value)}/>
+            <Container className="login-container ">
+            <Card className="login-card">
+            <Form ref={form} className="login-form-container" onSubmit={sendEmail}>
+                <h1 className="login-title">Forgot Password</h1>
+                <Form.Group>
+                <Form.Label className="login-label">Enter Email:</Form.Label>
+                    <Form.Control className="login-input" type='email' placeholder='Email Address' name='email' onChange={e => setEmail(e.target.value)}/>
+                </Form.Group>
+                <div className="button-login-container">
+                <button className="button-login">
+                <span>
+                    <h4>Submit</h4>
+                </span>
+                </button>
                 </div>
-                <button>Submit</button>
-            </form>
+            </Form>
+            </Card>
+            </Container>
+            </section>
             </>
         )
    
