@@ -21,7 +21,7 @@ const AdminUserAllUsers = () => {
             })
     }
 
-    const deleteReport = (id) => {
+    const deleteUserFuntion = (id) => {
 
         axios.delete(`http://localhost:8080/user/delete?id=${id}`)
             .then(response => {
@@ -87,12 +87,12 @@ const AdminUserAllUsers = () => {
                                         </td>
                                         <td className="report-td"> {allUsers.id}</td>
                                         <td className="report-td"> {allUsers.firstname}{allUsers.lastname}</td>
-                                        <td className="report-td"> {allUsers.Username}</td>
-                                        <td className="report-td"> {allUsers.Account}</td>
+                                        <td className="report-td"> {allUsers.username}</td>
+                                        <td className="report-td"> {allUsers.accountTypes}</td>
                                         <td className="report-td">
                                             <button
                                                 className="table-button"
-                                                onClick={() => {deleteUser(allUsers.id)}}
+                                                onClick={() => {deleteUserFuntion(allUsers.id)}}
                                             >
                                                 <BsDash/>
                                             </button>

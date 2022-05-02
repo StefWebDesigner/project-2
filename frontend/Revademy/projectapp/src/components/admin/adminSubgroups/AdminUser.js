@@ -1,6 +1,10 @@
 import React from 'react';
 import AdminNav from "./AdminNav";
 import AdminUserAllUsers from "./adminUserSubGroup/AdminUserAllUsers";
+import {Container, Row} from "react-bootstrap";
+import AdminReportFacts from "./adminReportSubGroups/adminReportFacts";
+import AdminReportDisplay from "./adminReportSubGroups/AdminReportDisplay";
+import AdminUserAdd from "./adminUserSubGroup/AdminUserAdd";
 
 const AdminUser = () => {
 
@@ -10,15 +14,33 @@ const AdminUser = () => {
 
     return (
         <>
-            <AdminNav/>
 
-            <h1 className="admin-main-title"> User Panel</h1>
+            <section className="admin-backgound">
+                <Container>
 
-            <h2 className="admin-sub-title"> User Details</h2>
+                    <section>
+                        <AdminNav/>
+                    </section>
 
-            <h2 className="admin-sub-title"> Show All User</h2>
+                    <section>
+                        <Row>
+                            <h1 className="admin-main-title"> User Panel</h1>
+                        </Row>
+                        <AdminUserAllUsers/>
+                        <p>Add view User here</p>
+                        <AdminUserAdd/>
 
-            <AdminUserAllUsers/>
+
+                    </section>
+
+                </Container>
+            </section>
+
+
+
+
+
+
 
 
 
