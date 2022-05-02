@@ -1,46 +1,83 @@
-/* .float-in-animation {
-    width: 100vw;
-    height: 100vw;
-} */
+.float-in-animation {
+    display: flex;
+    bleed: 0;
+    margin: 0;
+    padding: 0;
+}
 
 .img-space {
-    position: relative;
     width: 100vw;
     height: 100vh;
-    z-index: -5;
 }
 
 .img-astronaut {
     position: absolute;
-    height: 40vh;
-    background-color: none;
-    top: 350px;
-    left: 800px;
-    animation: slideInRight 4s;
-
+    display: flex;
+    height: 45vh;
+    top: 25%;
+    left: 35%;
+    animation: fadeIn 3s;
 }
 
 .company-name {
-    font-size: 120px;
-    color: red;
     position: absolute;
-    top: 350px;
-    left: 450px;
+    display: flex;
+    font-size: 10vh;
+    color: red;
+    top: 35%;
+    left: 20%;
     animation: fadeIn 2s;
-  
+
 }
 
 .enter-button {
-    font-size: 60px;
-    padding: 5px;;
+    position: absolute;
+    display: flex;
+    font-size: 6vh;
+    padding: none;
     color: black;
+    box-sizing: border-box;
     border: 1px solid rgb(226, 190, 30);
     background-color: rgb(226, 190, 30);
-    box-sizing: border-box;
-    border-radius: 10px;
     border-color: rgb(226, 190, 30);
-    position: absolute;
-    top: 550px;
-    left: 650px;
+    border-radius: 10px;
+    top: 50%;
+    left: 28%;
     animation: fadeIn 3s;
+
+}
+
+@media (min-width: 600px) {
+
+    .img-astronaut {
+        animation: slideInRight 4s;
+    }
+    
+}
+
+@media screen and (orientation: portrait) {
+
+    .float-in-animation {
+        justify-content: center;
+    }
+
+    .img-astronaut {
+        height: 65vw;
+        animation: fadeIn 2s;
+        left: auto;
+        top: 49%;
+    }
+
+    .company-name {
+        font-size: 15vw;
+        left: auto;
+        top: 35%;
+    }
+
+    .enter-button {
+        font-size:  10vw;
+        left: auto;
+        top: 50%;
+    
+    }
 }

@@ -1,0 +1,15 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    border-radius: 15px;
+    height: 55vh;
+    width: 50vw;
+}
+
+.submit-button {
+ margin: 0;
+}
