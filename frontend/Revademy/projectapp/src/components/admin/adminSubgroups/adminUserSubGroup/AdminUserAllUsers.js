@@ -55,6 +55,8 @@ const AdminUserAllUsers = () => {
                 PASSWORD
             */}
 
+            <h1 className="admin-sub-title">All Users</h1>
+
             <Row>
                 <Table striped bordered hover className="admin-tables">
                     <thead>
