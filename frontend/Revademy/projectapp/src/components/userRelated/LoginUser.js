@@ -72,13 +72,7 @@ const LoginUser = () => {
                                 />
                             </Form.Group>
                             <div className="button-login-container">
-                                <button className="button-login"
-                                        onClick={login}
-                                >
-                            <span className="submit-button">
-                            <h4>Sumbit</h4>
-                            </span>
-                                </button>
+                                <button className="button-login"onClick={login}> Submit </button>
                             </div>
                         </Form>
                         <div className="button-login-container">
