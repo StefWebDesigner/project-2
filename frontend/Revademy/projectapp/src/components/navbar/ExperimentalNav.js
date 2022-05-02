@@ -1,15 +1,17 @@
 import React, {useContext} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {Col, Container, Row} from "react-bootstrap";
 import DataStore from "../../dataStore/dataStore";
 
 const ExperimentalNav = () => {
 
     const {user, setUser} = useContext(DataStore)
+    let navigate = useNavigate();
 
     function logout() {
         setUser(null);
         localStorage.removeItem("user");
+        navigate('/');
     }
 
     return (
