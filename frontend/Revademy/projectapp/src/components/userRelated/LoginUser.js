@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
 import axios from "axios";
 import DataContext from "../../dataStore/dataStore";
+import './user.css';
 
 const LoginUser = () => {
 
@@ -74,7 +75,7 @@ const LoginUser = () => {
                                 <button className="button-login"
                                         onClick={login}
                                 >
-                            <span>
+                            <span className="submit-button">
                             <h4>Sumbit</h4>
                             </span>
                                 </button>
