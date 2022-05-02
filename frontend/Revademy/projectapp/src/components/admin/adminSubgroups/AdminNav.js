@@ -11,8 +11,9 @@ const AdminNav = () => {
                 <Link to="/emailsupport">Email Support</Link>
                 <Link to="/adminevents">Event</Link>
                 <Link to="/reports">Report</Link>
-                <Link to="/adminhomepanel">Home</Link>
+                <Link to="/adminhomepanel">Content</Link>
                 <Link to="/adminuserpannel">User</Link>
+                <Link to="/adminmonitor">Monitoring</Link>
             </Fragment>
 
         </>

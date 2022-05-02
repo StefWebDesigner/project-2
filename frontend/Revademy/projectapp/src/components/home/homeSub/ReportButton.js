@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody, ModalFooter} from "react-bootstrap";
-import useModal from "./reportSection/useModal";
 import axios from "axios";
 import validator from "validator";
 const ReportButton = () => {
