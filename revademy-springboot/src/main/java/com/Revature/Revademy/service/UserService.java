@@ -2,7 +2,9 @@ package com.Revature.Revademy.service;
 
 import com.Revature.Revademy.entities.AccountTypes;
 import com.Revature.Revademy.entities.AgeType;
+import com.Revature.Revademy.entities.ResetTokens;
 import com.Revature.Revademy.entities.User;
+import com.Revature.Revademy.exception.GeneralPasswordResetException;
 import com.Revature.Revademy.exception.NoUserExistToDeleteException;
 import com.Revature.Revademy.exception.NonExistingUserException;
 import com.Revature.Revademy.exception.UnderAgeException;
@@ -65,5 +67,15 @@ public class UserService {
     public List<User> getAllUser() {
         return userRepository.findAll();
     }
+    
+    //GET A USER BY USERNAME
+    public User getUserByUsername(String username) {
+		Optional<User> userOptional = userRepository.findByUsername(username);
+		if(userOptional.isPresent()) {
+			return userOptional.get();
+		}else {
+			throw new NonExistingUserException("User Doesn't Exist.");
+		}
+	}
 
 }

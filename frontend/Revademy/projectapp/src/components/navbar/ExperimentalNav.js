@@ -46,7 +46,7 @@ const ExperimentalNav = () => {
 
                             <Col className="background-credentials">
                         <div className="link-container">
-                            <Link className="activites-link" to="/learningportal">Learning Portal</Link>
+                            <Link className="activites-link" to="/userportal">User Portal</Link>
                         </div>
                     </Col>
                     ) : (

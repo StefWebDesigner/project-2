@@ -28,6 +28,7 @@ import AdminEmailSupport from "./components/admin/adminSubgroups/adminEmailSuppo
 import AdminReport from "./components/admin/adminSubgroups/AdminReport";
 import AdminDashBoard from "./components/admin/adminSubgroups/adminDashBoard";
 import AdminEvent from "./components/admin/adminSubgroups/AdminEvent";
+import UserPortal from './components/userRelated/UserPortal';
 
 
 
@@ -54,6 +55,7 @@ function App() {
                   <Route path="/activities" element={<Activities/>}/>
                   <Route path="/forgotPassword" element={<ForgotPassword/>}/>
                   <Route path="/resetPassword/:id" element={<ResetPassword/>}/>
+                  <Route path="/userportal" element={<UserPortal/>}/>
 
                   <Route path="/events" element={<Events/>}/>
                   <Route path="/adminportal" element={<AdminMain/>}/>
