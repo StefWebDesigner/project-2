@@ -7,6 +7,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import ExperimentalNav from "../navbar/ExperimentalNav";
 
 
 const locales = {
@@ -48,6 +49,8 @@ function Recalendar() {
     }
 
     return (
+        <>
+        <ExperimentalNav/>
         <div className="App">
             <h1><img src='././astronaut_duck.png' alt='Revademy Event Calendar'></img></h1>
             <h2>Add A New Event</h2>
@@ -61,6 +64,7 @@ function Recalendar() {
             </div>
             <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
         </div>
+        </>
     );
 }
 
