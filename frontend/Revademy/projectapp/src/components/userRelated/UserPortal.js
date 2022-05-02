@@ -3,6 +3,7 @@ import ExperimentalNav from '../navbar/ExperimentalNav'
 import DataStore from "../../dataStore/dataStore";
 import DataContext from "../../dataStore/dataStore";
 import axios from 'axios'
+import './UserPortal.css'
 
 function UserPortal() {
     const [firstName, setFirstName] = useState("")
@@ -73,7 +74,7 @@ function UserPortal() {
             "createdDate": createdDate
         }
         
-    if(firstName && lastName && userName && email){
+    if(firstName && lastName && userName && email && userPassword){
        axios.put(`http://localhost:8080/user/update?id=${userId}`, values)
        .then(({data}) => {
            console.log(data)
@@ -96,36 +97,44 @@ function UserPortal() {
   return (
       <>
       <ExperimentalNav/>
-    <form>
+    <form className='user-update-form'>
+    <h2 className='user-update-title'>User Info</h2>
     <div>
     <label>First Name:</label> 
-    <input placeholder={firstName} onChange={e => setFirstName(e.target.value)} readOnly = {readonly}/>
+    <input className='user-update-input' placeholder={firstName} onChange={e => setFirstName(e.target.value)} readOnly = {readonly}/>
     </div>
     <div>
     <label>Last Name:</label> 
-    <input placeholder={lastName} onChange={e => setLastName(e.target.value)}  readOnly = {readonly}/>
+    <input className='user-update-input' placeholder={lastName} onChange={e => setLastName(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
     <label>Username:</label> 
-    <input placeholder={userName}  onChange={e => setUserName(e.target.value)} readOnly = {readonly}/>
+    <input className='user-update-input' placeholder={userName}  onChange={e => setUserName(e.target.value)} readOnly = {readonly}/>
     </div>
     <div>
     <label>Email:</label> 
-    <input placeholder={email} onChange={e => setEmail(e.target.value)}  readOnly = {readonly}/>
+    <input className='user-update-input' type="email" placeholder={email} onChange={e => setEmail(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
-    <label>Account Type: {accountType}</label> 
+    <label>Password:</label> 
+    <input className='user-update-input' type="password" placeholder={userPassword} onChange={e => setUserPassword(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
-    <label>Age Type: {ageType}</label> 
+    <label>Account Type: </label> 
+    <p>{accountType}</p>
     </div>
     <div>
-    <label>Date Joined: {createdDate}</label> 
+    <label>Age Type: </label> 
+    <p>{ageType}</p>
+    </div>
+    <div>
+    <label>Date Joined: </label> 
+    <p>{createdDate}</p>
     </div>
     {showButton ? 
-    <button onClick = {changeInfo} disabled={disabledInfo}>Click to Edit Info</button>
+    <button className='user-update-btn' onClick = {changeInfo} disabled={disabledInfo}>Click to Edit Info</button>
     :
-    <button onClick = {submit} disabled={disabledSubmit}>submit</button>
+    <button className='user-update-btn' onClick = {submit} disabled={disabledSubmit}>submit</button>
     }
     </form>
     </>
