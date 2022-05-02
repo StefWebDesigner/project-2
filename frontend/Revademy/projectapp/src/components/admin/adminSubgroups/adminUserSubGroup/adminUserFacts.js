@@ -1,9 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import {Card, Col, Row} from "react-bootstrap";
 import AdminReportDisplay from "../adminReportSubGroups/AdminReportDisplay";
+import axios from "axios";
 
 const AdminReportFacts = () => {
 
+    const [allUsersFact, setAllUsersFact] = useState([]);
+
+    const getAllUserFact = () => {
+        axios.get("http://localhost:8080/user/all")
+            .then(response => {
+                setAllUsersFact(response.data);
+            })
+    }
+
+    useEffect(() => {
+
+        getAllUserFact();
+
+    })
 
 
     return (
@@ -14,8 +29,8 @@ const AdminReportFacts = () => {
                     <Card className="fact-card">
                         <Card.Body>
                             <div className="fact-container flex-md-row">
-                                <h7 className="fact-title">Total Reports Pending :</h7>
-                                <p className="fact-number">#</p>
+                                <h7 className="fact-title">Total Users :</h7>
+                                <p className="fact-number">{allUsersFact.length}</p>
                             </div>
                         </Card.Body>
                     </Card>
@@ -25,8 +40,8 @@ const AdminReportFacts = () => {
                     <Card className="fact-card">
                         <Card.Body>
                             <div className="fact-container flex-md-row">
-                                <h7 className="fact-title">Most Reported Location :</h7>
-                                <p className="fact-number">#</p>
+                                <h7 className="fact-title">Total Admin :</h7>
+                                <p className="fact-number">{allUsersFact.accountry}</p>
                             </div>
                         </Card.Body>
 
@@ -43,7 +58,7 @@ const AdminReportFacts = () => {
                     <Card className="fact-card">
                         <Card.Body>
                             <div className="fact-container flex-md-row">
-                                <h7 className="fact-title">Total Fixed Bugs :</h7>
+                                <h7 className="fact-title">Total User :</h7>
                                 <p className="fact-number">#</p>
                             </div>
                         </Card.Body>
