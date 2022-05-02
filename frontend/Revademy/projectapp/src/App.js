@@ -28,6 +28,8 @@ import AdminEmailSupport from "./components/admin/adminSubgroups/adminEmailSuppo
 import AdminReport from "./components/admin/adminSubgroups/AdminReport";
 import AdminDashBoard from "./components/admin/adminSubgroups/adminDashBoard";
 import AdminEvent from "./components/admin/adminSubgroups/AdminEvent";
+import AdminUser from "./components/admin/adminSubgroups/AdminUser";
+import AdminHomePanel from "./components/admin/adminSubgroups/AdminHomePanel";
 
 
 
@@ -63,6 +65,8 @@ function App() {
                   <Route path="/reports" element={<AdminReport/>}/>
                   <Route path="/dashboard" element={<AdminDashBoard/>}/>
                   <Route path="/adminevents" element={<AdminEvent/>}/>
+                  <Route path="/adminhomepanel" element={<AdminHomePanel/>}/>
+                  <Route path="/adminuserpannel" element={<AdminUser/>}/>
 
                   {/* GAME ROUTES */}
                   <Route path="/matchingGame" element={<MatchingGame/>}/>
