@@ -1,7 +1,11 @@
 package com.Revature.Revademy.service;
 
 import com.Revature.Revademy.entities.AgeType;
+import com.Revature.Revademy.entities.EmailSupport;
+import com.Revature.Revademy.entities.ResetTokens;
 import com.Revature.Revademy.entities.User;
+import com.Revature.Revademy.exception.GeneralPasswordResetException;
+import com.Revature.Revademy.exception.NoEmailIdFoundExceptions;
 import com.Revature.Revademy.exception.NoUserExistToDeleteException;
 import com.Revature.Revademy.exception.NonExistingUserException;
 import com.Revature.Revademy.exception.UnderAgeException;
@@ -61,6 +65,27 @@ public class UserService {
     //GET ALL USERS
     public List<User> getAllUser() {
         return userRepository.findAll();
+    }
+    
+    //GET A USER BY USERNAME
+    public User getUserByUsername(String username) {
+		Optional<User> userOptional = userRepository.findByUsername(username);
+		if(userOptional.isPresent()) {
+			return userOptional.get();
+		}else {
+			throw new NonExistingUserException("User Doesn't Exist.");
+		}
+	}
+    
+    //UPDATE A USER 
+    public String updateUser(User user, Integer id) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if(userOptional.isPresent()) {
+        	 userRepository.save(user);
+        	 return "User info updated.";
+        } else {
+        	throw new NonExistingUserException("User Doesn't Exist.");
+        }
     }
 
 

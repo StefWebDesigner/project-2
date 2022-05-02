@@ -14,7 +14,7 @@ const HomeHeader = () => {
             <section className="background-header-image">
                 {/*<Container className="background-header-image">*/}
                 <Row>
-                    <h1 className="home-header-title">Welcome to Revedamy!</h1>
+                    <h1 className="home-header-title">Welcome to Revadamy!</h1>
                 </Row>
 
                     <Row>

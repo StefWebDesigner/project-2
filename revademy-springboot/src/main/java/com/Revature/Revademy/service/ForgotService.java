@@ -28,6 +28,7 @@ public class ForgotService {
         this.userRepository = userRepository;
     }
 	
+	//Checks if user exists by email and then creates a random token and adds the email and token to forgotRepository
 	 public ResetTokens forgot(String email) {
 //		 Optional<User> user = userRepository.findById(id);
 //		 	if (user.isPresent()) {
@@ -51,7 +52,7 @@ public class ForgotService {
 	    }
 
 	
-	
+	//get a user by token id
 	public ResetTokens getResetTokensById(Integer tokenId) {
 		Optional<ResetTokens> tokenOptional = forgotRepository.findById(tokenId);
 		if(tokenOptional.isPresent()) {
@@ -61,6 +62,7 @@ public class ForgotService {
 		}
 	}
 	
+	//Finds the token and then email and changes password of user corresponding to that email
 	public String resetPassword(String password, String token) {
 		Optional<ResetTokens> tokenOptional = forgotRepository.findByToken(token);
 		if(tokenOptional.isPresent()) {

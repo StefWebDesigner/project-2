@@ -1,0 +1,52 @@
+.kid-page-main {
+    background-color: Color;
+}
+
+
+.kid-header {
+    width:100vw;
+    height: 10vh;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kid-welcome {
+    font-size: xx-large;
+    margin: 0;
+}
+
+.kid-avatar {
+    height: 8vh;
+    margin: 0;
+    padding: 0;
+}
+
+.kid-page-body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.games-button img{
+    width: 30vw; 
+}
+
+.quizzes-button img {
+    width: 25vw;
+}
+
+.music-button img {
+    width: 25vw;
+}
+
+.storytelling-button img {
+    width: 25vw;
+}

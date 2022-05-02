@@ -1,15 +1,17 @@
 import React, {useContext} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {Col, Container, Row} from "react-bootstrap";
 import DataStore from "../../dataStore/dataStore";
 
 const ExperimentalNav = () => {
 
     const {user, setUser} = useContext(DataStore)
+    let navigate = useNavigate();
 
     function logout() {
         setUser(null);
         localStorage.removeItem("user");
+        navigate('/');
     }
 
     return (
@@ -46,7 +48,7 @@ const ExperimentalNav = () => {
 
                             <Col className="background-credentials">
                         <div className="link-container">
-                            <Link className="activites-link" to="/learningportal">Learning Portal</Link>
+                            <Link className="activites-link" to="/userportal">User Portal</Link>
                         </div>
                     </Col>
                     ) : (
@@ -63,7 +65,7 @@ const ExperimentalNav = () => {
 
                     <Col className="background-events">
                         <div className="link-container">
-                            <Link className="credentials-link" to="/">Events</Link>
+                            <Link className="credentials-link" to="/events">Events</Link>
                         </div>
                     </Col>
 

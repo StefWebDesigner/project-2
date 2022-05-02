@@ -8,7 +8,6 @@ import {useState} from "react";
 import Home from "./components/home/Home";
 
 import Activities from "./components/games/Activities";
-import Events from "./components/events/Events";
 import Register from "./components/userRelated/register/Register";
 import LoginUser from "./components/userRelated/LoginUser";
 import ForgotPassword from './components/userRelated/ForgotPassword';
@@ -31,6 +30,9 @@ import AdminEvent from "./components/admin/adminSubgroups/AdminEvent";
 import AdminUser from "./components/admin/adminSubgroups/AdminUser";
 import AdminHomePanel from "./components/admin/adminSubgroups/AdminHomePanel";
 import AdminMonitoring from "./components/admin/adminSubgroups/AdminMonitoring";
+import UserPortal from './components/userRelated/UserPortal';
+import Recalendar from './components/events/Recalendar';
+
 
 
 
@@ -57,8 +59,9 @@ function App() {
                   <Route path="/activities" element={<Activities/>}/>
                   <Route path="/forgotPassword" element={<ForgotPassword/>}/>
                   <Route path="/resetPassword/:id" element={<ResetPassword/>}/>
-
-                  <Route path="/events" element={<Events/>}/>
+                  <Route path="/userportal" element={<UserPortal/>}/>
+                  
+                  <Route path="/events" element={<Recalendar/>}/>
                   <Route path="/adminportal" element={<AdminMain/>}/>
 
                   {/*ADMIN PORTAL*/}
