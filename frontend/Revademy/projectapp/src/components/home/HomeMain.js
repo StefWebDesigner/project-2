@@ -24,9 +24,9 @@ const HomeMain = () => {
                 <Announcement/>
             </section>
 
-            <section className="mt-4 home-main-card-shadow">
-                <OurTechinque/>
-            </section>
+            {/*<section className="mt-4 home-main-card-shadow">*/}
+            {/*    <OurTechinque/>*/}
+            {/*</section>*/}
 
             <section className="mt-4 home-main-card-shadow">
                 <FeaturesOffered/>
