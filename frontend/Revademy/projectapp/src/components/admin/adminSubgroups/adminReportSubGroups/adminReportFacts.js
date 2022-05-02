@@ -1,10 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import {Card, Col, Row} from "react-bootstrap";
 import AdminReportDisplay from "./AdminReportDisplay";
+import axios from "axios";
 
 const AdminReportFacts = () => {
 
+    const [allReport, setAllReport] = useState([]);
 
+    const getAllReportFact = () => {
+        axios.get("http://localhost:8080/report/all")
+            .then(response => {
+                setAllReport(response.data);
+            })
+    }
+
+    useEffect(() => {
+
+        getAllReportFact();
+
+    })
 
     return (
         <>
@@ -15,7 +29,7 @@ const AdminReportFacts = () => {
                         <Card.Body>
                             <div className="fact-container flex-md-row">
                                 <h7 className="fact-title">Total Reports Pending :</h7>
-                                <p className="fact-number">#</p>
+                                <p className="fact-number">{allReport.length}</p>
                             </div>
                         </Card.Body>
                     </Card>

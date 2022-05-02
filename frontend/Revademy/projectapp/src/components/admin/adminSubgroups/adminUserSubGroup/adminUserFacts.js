@@ -3,7 +3,7 @@ import {Card, Col, Row} from "react-bootstrap";
 import AdminReportDisplay from "../adminReportSubGroups/AdminReportDisplay";
 import axios from "axios";
 
-const AdminReportFacts = () => {
+const AdminUserFacts = () => {
 
     const [allUsersFact, setAllUsersFact] = useState([]);
 
@@ -75,4 +75,4 @@ const AdminReportFacts = () => {
     );
 };
 
-export default AdminReportFacts;
+export default AdminUserFacts;
