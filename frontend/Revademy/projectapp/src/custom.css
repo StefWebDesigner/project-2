@@ -563,12 +563,13 @@
 
 /*GENERAL*/
 
-.fact-card {
+.admin-backgound {
+    /*background-color: lightgrey;*/
+}
+
+.fact-card, .admin-tables {
     border: dodgerblue solid 2px;
     box-shadow: 0 4px 1rem -4px #000;
-
-
-
 }
 
 .fact-title,
@@ -598,8 +599,6 @@
     flex-direction: column;
 }
 
-/*ADMIN REPORT*/
-
 .admin-main-title,
 .admin-sub-title {
     text-align: center;
@@ -614,42 +613,31 @@
     margin-top: 5%;
     margin-bottom: 5%;
     font-size: 20px;
-
-
 }
+
+/*.admin-tables {*/
+/*    border: dodgerblue solid 2px;*/
+/*}*/
+
+/*ADMIN REPORT */
+
 
 .report-td {
     font-size: 12px;
+    text-align: center;
 }
 
-/*.color-line:hover {*/
-/*    transition: transform .3s ease-in-out;*/
-/*    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;*/
-/*    !*-webkit-transform: scale(1.1);*!*/
-/*    !*transform: scale(1.1);*!*/
+.table-button {
+    background-color: #4B7BE5;
+    color: white;
+    border: navy solid 1px;
+    border-radius: 4px;
 
-/*}*/
+}
 
 
-/*.color-verticle {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    flex-direction: column-reverse;*/
-/*    color: #8479E1;*/
-/*    padding-top: 15px;*/
-/*    padding-bottom: 1px;*/
-/*    border-bottom: #8479E1 solid 3px;*/
-/*    width: 95%;*/
-/*    !*margin: auto;*!*/
-/*    transform: rotate(270deg);*/
-/*}*/
-/*.color-verticle:hover {*/
-/*    transition: transform .3s ease-in-out;*/
-/*    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;*/
-/*    !*-webkit-transform: scale(1.1);*!*/
-/*    !*transform: scale(1.1);*!*/
 
-/*}*/
+
 
 
 
@@ -1037,6 +1025,9 @@
             50% 10%, 61% 45%, 98% 45%, 68% 67%, 79% 99%, 50% 80%, 21% 99%, 32% 67%, 2% 45%, 39% 45%);
 }
 
+.stars{
+
+}
 
 
 

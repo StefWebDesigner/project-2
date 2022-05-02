@@ -30,7 +30,7 @@ public class ReportController {
 
     //TO GET ALL REPORTS
 //    http://localhost:8080/report/all
-    @RequestMapping(value = "/all", method=RequestMethod.GET)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<List<Report>> getAllReports() {
         return ResponseEntity.ok(reportService.getAllReport());
@@ -39,7 +39,7 @@ public class ReportController {
     //TO GET A REPORT BY ID
     @RequestMapping(value = "/{caseId}")
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<Report> getReportById (@PathVariable Integer caseId) {
+    public ResponseEntity<Report> getReportById(@PathVariable Integer caseId) {
         return ResponseEntity.ok(reportService.getReportById(caseId));
     }
 
@@ -48,9 +48,8 @@ public class ReportController {
 //    http://localhost:8080/report/delete?caseId=9
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity <String> deleteReport(@RequestParam Integer caseId) {
+    public ResponseEntity<String> deleteReport(@RequestParam Integer caseId) {
         return ResponseEntity.ok(reportService.deleteReport(caseId));
     }
-
 
 }
