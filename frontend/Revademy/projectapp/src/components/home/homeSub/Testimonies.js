@@ -1,7 +1,18 @@
 import React from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
+import Slider from "react-slick";
+
 
 const Testimonies = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 3500
+    };
 
 
     //PLANNING ON COLLECTIN TESTIMONREIS IN TEH DATABSE AND GETING THEM
@@ -10,16 +21,12 @@ const Testimonies = () => {
 
     return (
         <>
-            <section>
-                    {/*<Card>*/}
-                    {/*<h1 className="text-center">Testimonies</h1>*/}
-                    {/*</Card>*/}
-
-
-                    <Row>
+            <section style={{marginBottom:"80px"}}>
 
                     {/*TESTIMONY #1*/}
+                        <Slider {...settings}>
                 <Col xs={12} sm={6} md={4}>
+
                     <Card className="testimony-card">
                         <Card.Header className="testimony-backgound">
                         </Card.Header>
@@ -73,9 +80,11 @@ const Testimonies = () => {
                     </Card>
                 </Col>
 
+                        </Slider>
 
 
-                    </Row>
+
+
 
             </section>
 

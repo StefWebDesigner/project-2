@@ -39,7 +39,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 </Form.Label>
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
-                                    size="lg"
+                                    size="md"
                                     name="accountTypes"
                                     onChange={handleFormData("accountTypes")}
                                 >
@@ -62,7 +62,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 </Form.Label>
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
-                                    size="lg"
+                                    size="md"
                                     name="age"
                                     onChange={handleFormData("ageType")}
                                 >
@@ -82,7 +82,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
-                                    name="lastName"
+                                    name="email"
                                     type="text"
                                     value={values.email}
                                     placeholder="Email"

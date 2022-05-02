@@ -1,7 +1,5 @@
 import React from 'react';
 import Announcement from "./homeSub/Announcement";
-import OurTechinque from "./homeSub/OurTechinque";
-import MeetTheTeam from "./homeSub/MeetTheTeam";
 import Testimonies from "./homeSub/Testimonies";
 import FeaturesOffered from "./homeSub/FeaturesOffered";
 import HomeHeader from "./HomeHeader";
@@ -25,25 +23,13 @@ const HomeMain = () => {
             </section>
 
             <section className="mt-4 home-main-card-shadow">
-                <OurTechinque/>
-            </section>
-
-            <section className="mt-4 home-main-card-shadow">
                 <FeaturesOffered/>
             </section>
-
-            {/*<section className="mt-5">*/}
-            {/*    <MeetTheTeam/>*/}
-            {/*</section>*/}
 
             <section className="mt-4 ">
                 <Testimonies/>
             </section>
             </Container>
-
-            {/*<section>*/}
-            {/*    <Album/>*/}
-            {/*</section>*/}
 
         </>
     );

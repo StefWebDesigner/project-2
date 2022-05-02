@@ -9,7 +9,7 @@ const Announcement = () => {
             <section>
                     <Card>
 
-                        <Card.Header className="accouncment-backgound">
+                        <Card.Header className="custom-backgound">
                             <h2 className="announce-title">Announcement</h2>
                         </Card.Header>
                         <Card.Body>
@@ -24,7 +24,7 @@ const Announcement = () => {
                                 </Fragment>
                         </h4>
                         </Card.Body>
-                        <Card.Footer className="accouncment-backgound">
+                        <Card.Footer className="custom-backgound">
 
                         </Card.Footer>
 
