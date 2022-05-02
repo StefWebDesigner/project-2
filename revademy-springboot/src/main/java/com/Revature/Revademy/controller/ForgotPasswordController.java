@@ -38,7 +38,7 @@ public class ForgotPasswordController {
 	
 	
 	//Get by tokenid
-	//http://localhost:8080/forgot/1
+	//http://localhost:8080/forgot/{tokenid}
 	@RequestMapping(value = "/{tokenId}", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
 	public ResponseEntity<ResetTokens> getResetTokensById(@PathVariable Integer tokenId){

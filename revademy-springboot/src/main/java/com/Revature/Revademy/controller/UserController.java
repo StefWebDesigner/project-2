@@ -55,5 +55,12 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUser());
     }
 
+    //GET CURRENT USER INFO
+    //http://localhost:8080/user/{username}
+    @RequestMapping(value="/{username}", method=RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<User> getUserByUsername(@PathVariable String username){
+    	return ResponseEntity.ok(userService.getUserByUsername(username));
+    }
 
 }
