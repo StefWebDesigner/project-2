@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import ExperimentalNav from '../navbar/ExperimentalNav'
 import DataStore from "../../dataStore/dataStore";
+import DataContext from "../../dataStore/dataStore";
 import axios from 'axios'
 
 function UserPortal() {
@@ -11,13 +12,15 @@ function UserPortal() {
     const [ageType, setAgeType] = useState("")
     const [email, setEmail] = useState("")
     const [createdDate, setCreatedDate] = useState("")
+    const [userId, setUserId] = useState(0)
+    const [userPassword, setUserPassword] = useState("")
     const [disabledSubmit, setDisabledSubmit] = useState(true)
     const [disabledInfo, setDisabledInfo] = useState(false)
     const [readonly, setReadOnly] = useState(true)
     const [showButton, setShowButton] = useState(true)
 
     const {user} = useContext(DataStore)
-
+    const {setUser} = useContext(DataContext);
 
     const getUserInfo = () =>{
         axios.get(`http://localhost:8080/user/${user.username}`)
@@ -30,6 +33,9 @@ function UserPortal() {
             setAgeType(data.ageType)
             setEmail(data.email)
             setCreatedDate(data.createdDate)
+            setUserId(data.id)
+            setUserPassword(data.password)
+           
         }
 
         ).catch(
@@ -37,9 +43,13 @@ function UserPortal() {
                console.log(err)
             }
         )
+        
     }
 
-    useEffect( () => getUserInfo())
+    useEffect( () => { 
+        getUserInfo()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const changeInfo = (e) => {
         e.preventDefault();
@@ -50,8 +60,38 @@ function UserPortal() {
     }
 
     const submit = (e) => {
-       
+        e.preventDefault();
+        const values = {
+            "id": userId,
+            "firstname": firstName,
+            "lastname": lastName,
+            "username": userName,
+            "accountTypes": accountType,
+            "ageType": ageType,
+            "email": email,
+            "password": userPassword,
+            "createdDate": createdDate
+        }
+        
+    if(firstName && lastName && userName && email){
+       axios.put(`http://localhost:8080/user/update?id=${userId}`, values)
+       .then(({data}) => {
+           console.log(data)
+       }
+       ).catch(
+        err => {
+            console.log(err)
+         }
+     )
+     setUser(values)
+     setDisabledSubmit(true)
+     setDisabledInfo(false)
+     setReadOnly(true)
+     setShowButton(true)
+     alert("User Info Updated.")
+    } else{alert("Please fill out all sections.")}
     }
+    
 
   return (
       <>
@@ -59,19 +99,19 @@ function UserPortal() {
     <form>
     <div>
     <label>First Name:</label> 
-    <input placeholder={firstName} readOnly = {readonly}/>
+    <input placeholder={firstName} onChange={e => setFirstName(e.target.value)} readOnly = {readonly}/>
     </div>
     <div>
     <label>Last Name:</label> 
-    <input placeholder={lastName}  readOnly = {readonly}/>
+    <input placeholder={lastName} onChange={e => setLastName(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
     <label>Username:</label> 
-    <input placeholder={userName}  readOnly = {readonly}/>
+    <input placeholder={userName}  onChange={e => setUserName(e.target.value)} readOnly = {readonly}/>
     </div>
     <div>
     <label>Email:</label> 
-    <input placeholder={email}  readOnly = {readonly}/>
+    <input placeholder={email} onChange={e => setEmail(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
     <label>Account Type: {accountType}</label> 
@@ -83,7 +123,7 @@ function UserPortal() {
     <label>Date Joined: {createdDate}</label> 
     </div>
     {showButton ? 
-    <button onClick = {changeInfo} disabled={disabledInfo}>Change Info</button>
+    <button onClick = {changeInfo} disabled={disabledInfo}>Click to Edit Info</button>
     :
     <button onClick = {submit} disabled={disabledSubmit}>submit</button>
     }

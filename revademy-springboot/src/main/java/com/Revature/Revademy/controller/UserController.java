@@ -2,6 +2,7 @@ package com.Revature.Revademy.controller;
 
 import com.Revature.Revademy.entities.AccountTypes;
 import com.Revature.Revademy.entities.AgeType;
+import com.Revature.Revademy.entities.EmailSupport;
 import com.Revature.Revademy.entities.User;
 import com.Revature.Revademy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +62,14 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<User> getUserByUsername(@PathVariable String username){
     	return ResponseEntity.ok(userService.getUserByUsername(username));
+    }
+    
+    //UPDATE USER 
+    //http://localhost:8080/user/update?id=2
+    @RequestMapping(value="/update", method=RequestMethod.PUT)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<String> updateUser(@RequestBody User user, @RequestParam  Integer id){
+        return ResponseEntity.ok(userService.updateUser(user, id));
     }
 
 }
