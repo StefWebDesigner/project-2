@@ -3,14 +3,14 @@ import {Card, Col, Row} from "react-bootstrap";
 import AdminReportDisplay from "./AdminReportDisplay";
 import axios from "axios";
 
-const AdminReportFacts = () => {
+const AdminEmailFacts = () => {
 
-    const [allReport, setAllReport] = useState([]);
+    const [allEmailFact, setAllEmailFact] = useState([]);
 
     const getAllReportFact = () => {
-        axios.get("http://localhost:8080/report/all")
+        axios.get("http://localhost:8080/emailsupport/all")
             .then(response => {
-                setAllReport(response.data);
+                setAllEmailFact(response.data);
             })
     }
 
@@ -29,7 +29,7 @@ const AdminReportFacts = () => {
                         <Card.Body>
                             <div className="fact-container flex-md-row">
                                 <h7 className="fact-title">Total Reports Pending :</h7>
-                                <p className="fact-number">{allReport.length}</p>
+                                <p className="fact-number">{allEmailFact.length}</p>
                             </div>
                         </Card.Body>
                     </Card>
@@ -74,4 +74,4 @@ const AdminReportFacts = () => {
     );
 };
 
-export default AdminReportFacts;
+export default AdminEmailFacts;

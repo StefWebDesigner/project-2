@@ -8,7 +8,7 @@ import AdminReportReportViewer from "./adminReportSubGroups/AdminReportReportVie
 const AdminReport = () => {
     return (
         <>
-        <section>
+        <section className="admin-backgound">
             <Container>
 
             <section>
@@ -20,8 +20,8 @@ const AdminReport = () => {
                     <h1 className="admin-main-title">Admin Report</h1>
                 </Row>
                     <AdminReportFacts/>
+                    {/*<AdminReportReportViewer/>*/}
                     <AdminReportDisplay/>
-                    <AdminReportReportViewer/>
 
             </section>
 

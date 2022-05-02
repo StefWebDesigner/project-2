@@ -1,6 +1,5 @@
 package com.Revature.Revademy.service;
 
-import com.Revature.Revademy.entities.AccountTypes;
 import com.Revature.Revademy.entities.AgeType;
 import com.Revature.Revademy.entities.EmailSupport;
 import com.Revature.Revademy.entities.ResetTokens;
@@ -13,10 +12,8 @@ import com.Revature.Revademy.exception.UnderAgeException;
 import com.Revature.Revademy.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,13 +53,13 @@ public class UserService {
 
     //DETELE USER
     public String deleteUser(Integer id) {
-                Optional<User> userOptional = userRepository.findById(id);
-                if (userOptional.isPresent()) {
-                    userRepository.deleteById(id);
-                    return "User Successfully deleted";
-                } else {
-                    throw new NoUserExistToDeleteException("No user to delete");
-                }
+        Optional<User> userOptional = userRepository.findById(id);
+        if (userOptional.isPresent()) {
+            userRepository.deleteById(id);
+            return "User Successfully deleted";
+        } else {
+            throw new NoUserExistToDeleteException("No user to delete");
+        }
     }
 
     //GET ALL USERS
@@ -90,5 +87,16 @@ public class UserService {
         	throw new NonExistingUserException("User Doesn't Exist.");
         }
     }
+
+
+    public List<User> getTotalAdmin() {
+        List<User> adminTotal = userRepository.totalAdmin();
+        return adminTotal;
+//        log.info("totalAdmin results" + adminTotal.get(0).toString());
+
+    }
+
+
+
 
 }
