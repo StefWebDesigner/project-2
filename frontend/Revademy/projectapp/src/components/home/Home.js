@@ -5,6 +5,7 @@ import Header from "../navbar/Header";
 import ExperimentalNav from "../navbar/ExperimentalNav";
 import HomeHeader from "./HomeHeader";
 import HeaderFooter from "./HeaderFooter";
+import Messaging from "./Messaging";
 
 const Home = () => {
     return (

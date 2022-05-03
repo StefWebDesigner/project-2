@@ -4,6 +4,10 @@ import {Col, Row, Card} from "react-bootstrap";
 const AdminEmailViewer = ({emailViewer}) => {
     console.log(emailViewer)
 
+
+
+
+
     return (
         <>
             <section>
@@ -34,7 +38,9 @@ const AdminEmailViewer = ({emailViewer}) => {
                         </Card.Body>
                         <Card.Footer className="admin-email-footer">
                             <button
-                                className="table-button">
+                                className="table-button"
+                                onClick=""
+                            >
                                 Rely
                             </button>
                         </Card.Footer>
@@ -47,7 +53,7 @@ const AdminEmailViewer = ({emailViewer}) => {
                 <aside>
                     <Row>
                         <Col xs={12}>
-                            <p className="text-center"> No Pending Email viewed</p>
+                            <p className="text-center"> No Email Selected</p>
                         </Col>
                     </Row>
                 </aside>

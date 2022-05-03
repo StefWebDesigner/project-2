@@ -53,19 +53,32 @@
 
 /*BUTTON*/
 
+
+.button-report {
+    background-color: #f4511e;
+    color: #FFFFFF;
+}
+.button-support {
+    background-color: green;
+    color: #FFFFFF;
+}
+
 /*PULSING AND ARROW HOVER ANIAMTION EFFECT*/
-.button-report-container {
+.button-report-container,
+.button-support-container
+{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button-report {
+.button-report,
+.button-support {
     /*THIS IS FOR THE ARROW MOVMENT*/
     border-radius: 4px;
-    background-color: #f4511e;
+    /*background-color: #f4511e;*/
     border: none;
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
     text-align: center;
     font-size: 20px;
     padding: 20px;
@@ -96,14 +109,17 @@
 
 }
 
-.button-report span {
+.button-report span,
+.button-support span
+{
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: .5s;
 }
 
-.button-report span:after {
+.button-report span:after,
+.button-support span:after{
     content : '\00bb';
     position: absolute;
     opacity: 0;
@@ -112,20 +128,16 @@
     transition: .05s;
 }
 
-.button-report:hover span {
+.button-report:hover span,
+.button-support:hover span {
     padding-right: 25px;
 }
 
-.button-report:hover span:after {
+.button-report:hover span:after,
+.button-support:hover span:after {
     opacity: 1;
     right: 0;
 }
-
-
-
-
-
-
 
 
 .home-main-card-shadow, .button-report {

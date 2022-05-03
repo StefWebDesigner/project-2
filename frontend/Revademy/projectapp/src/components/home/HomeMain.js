@@ -5,6 +5,8 @@ import FeaturesOffered from "./homeSub/FeaturesOffered";
 import HomeHeader from "./HomeHeader";
 import WelcomeAndSearchBar from "./homeSub/WelcomeAndSearchBar";
 import {Container} from "react-bootstrap";
+import Messaging from "./Messaging";
+import InboxButton from "./homeSub/InboxButton";
 
 const HomeMain = () => {
     return (
@@ -29,6 +31,7 @@ const HomeMain = () => {
             <section className="mt-4 ">
                 <Testimonies/>
             </section>
+
             </Container>
 
         </>
