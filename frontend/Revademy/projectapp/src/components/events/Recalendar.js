@@ -8,7 +8,8 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ExperimentalNav from "../navbar/ExperimentalNav";
-
+import GirlAvatar from "../avatars/girl_avatar.png";
+import './Recalendar.css';
 
 const locales = {
     "en-US": require("date-fns/locale/en-US"),
@@ -52,7 +53,7 @@ function Recalendar() {
         <>
         <ExperimentalNav/>
         <div className="App">
-            <h1><img src='././astronaut_duck.png' alt='Revademy Event Calendar'></img></h1>
+            <h1><img src={GirlAvatar} className="kid-avatar" alt='Revademy Event Calendar'></img></h1>
             <h2>Add A New Event</h2>
             <div>
                 <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
