@@ -42,12 +42,6 @@ const AdminReportReportViewer = ({viewer}) => {
 
                 }
 
-
-
-
-            {/*    column of the type and when pressin button*/}
-
-
             </section>
 
 

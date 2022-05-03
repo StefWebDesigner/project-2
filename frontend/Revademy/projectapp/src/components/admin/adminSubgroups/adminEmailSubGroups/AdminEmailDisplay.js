@@ -4,6 +4,7 @@ import axios from "axios";
 import {Col, Container, Row, Table} from "react-bootstrap";
 import AdminReportReportViewer from "../adminReportSubGroups/AdminReportReportViewer";
 import {BsDash} from "react-icons/bs";
+import AdminEmailViewer from "./AdminEmailViewer";
 
 const AdminEmailDisplay = () => {
 
@@ -38,7 +39,7 @@ const AdminEmailDisplay = () => {
 
 
     async function viewEmailId(emailId) {
-        axios.get(`http://localhost:8080/report/${emailId}`)
+        axios.get(`http://localhost:8080/emailsupport/${emailId}`)
             .then(response => {
                 setEmailViewer(response.data)
             })
@@ -53,7 +54,7 @@ const AdminEmailDisplay = () => {
             <section>
                 <Container>
 
-                    <AdminReportReportViewer viewer={viewEmailId}/>
+                    <AdminEmailViewer emailViewer={emailViewer}/>
 
                     {/*SHOW PENDING COLUMNS */}
                     <Row>
