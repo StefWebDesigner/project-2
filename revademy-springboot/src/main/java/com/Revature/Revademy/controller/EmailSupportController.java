@@ -55,4 +55,14 @@ public class EmailSupportController {
         return ResponseEntity.ok(emailSupportService.updateEmail(emailSupport));
     }
 
+    //TO GET EMAIL BY ID
+//    http://localhost:8080/emailsupport/{emailid}
+    @RequestMapping(value = "/{emailId}", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<EmailSupport>getEmailbyId(@PathVariable Integer emailId){
+        return ResponseEntity.ok(emailSupportService.getEmailbyId(emailId));
+    }
+
+
+
 }

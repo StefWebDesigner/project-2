@@ -1,62 +1,51 @@
-import React, {useEffect, useState} from 'react';
-import {Col, Container, Row, Table} from "react-bootstrap";
+import React from 'react';
+import {useEffect, useState} from "react";
 import axios from "axios";
-import AdminReportReportViewer from "./AdminReportReportViewer";
+import {Col, Container, Row, Table} from "react-bootstrap";
+import AdminReportReportViewer from "../adminReportSubGroups/AdminReportReportViewer";
 import {BsDash} from "react-icons/bs";
 
-
-const AdminReportDisplay = () => {
+const AdminEmailDisplay = () => {
 
     //FOR PENDING REPORTS
-    const [showPendingReports, setShowPendingReports] = useState([]);
-    const [deteteReport, setDeleteReport] = useState([])
-    const [pendingReports, setPendingReports] = useState([])
-    const [viewer, setViewer] = useState(null)
+    const [showAllEmails, setShowAllEmails] = useState([]);
+    const [deteteEmail, setDeteteEmail] = useState([])
+    const [emailViewer, setEmailViewer] = useState(null)
 
 
 
     //SHOW ALL PENDING CONTENT
-    const showAllPendingReports = () => {
+    const showAllEmailsFunction = () => {
         // e.preventDefault()
-        axios.get("http://localhost:8080/report/all")
+        axios.get("http://localhost:8080/emailsupport/all")
             .then(response => {
                 const reports = response.data
                 console.log(reports)
-                setShowPendingReports(response.data)
+                setShowAllEmails(response.data)
             })
     }
 
-    const deleteReport = (caseId) => {
+    const deleteEmails = (emailId) => {
 
-        axios.delete(`http://localhost:8080/report/delete?caseId=${caseId}`)
+        axios.delete(`http://localhost:8080/emailsupport/delete?emailId=${emailId}`)
             .then(response => {
-                setDeleteReport(response.data)
+                setDeteteEmail(response.data)
             })
 
         alert("Successfully deleted")
-        showAllPendingReports()
+        showAllEmailsFunction()
     }
 
 
-    async function viewCaseId(caseId) {
-        axios.get(`http://localhost:8080/report/${caseId}`)
+    async function viewEmailId(emailId) {
+        axios.get(`http://localhost:8080/report/${emailId}`)
             .then(response => {
-                setViewer(response.data)
+                setEmailViewer(response.data)
             })
     }
 
-
-    // const viewButton = (case_id) => {
-    //     console.log(case_id)
-    //
-    //     axios.get(`http://localhost:8080/report/${caseId}`)
-    //         .then(response => {
-    //             setViewer(response.data)
-    //         })
-    // }
-
     useEffect(() => {
-        showAllPendingReports();
+        showAllEmailsFunction();
     }, []);
 
     return (
@@ -64,11 +53,11 @@ const AdminReportDisplay = () => {
             <section>
                 <Container>
 
-                    <AdminReportReportViewer viewer={viewer}/>
+                    <AdminReportReportViewer viewer={viewEmailId}/>
 
                     {/*SHOW PENDING COLUMNS */}
                     <Row>
-                        <h7 className="admin-sub-title"> All Pending Reports</h7>
+                        <h7 className="admin-sub-title"> All Emails</h7>
                     </Row>
 
                     <Row>
@@ -76,10 +65,10 @@ const AdminReportDisplay = () => {
                             <thead>
                             <tr>
                                 <th className="report-td">View</th>
-                                <th className="report-td">Case Id</th>
-                                <th className="report-td">Location</th>
+                                <th className="report-td">Id</th>
+                                <th className="report-td">From</th>
+                                <th className="report-td">Recipient</th>
                                 <th className="report-td">Subject</th>
-                                <th className="report-td">Issue</th>
                                 <th className="report-td">Resolved</th>
                             </tr>
                             </thead>
@@ -87,12 +76,12 @@ const AdminReportDisplay = () => {
                             <tbody>
 
                             {
-                                showPendingReports.length !== 0 ?
+                                showAllEmails.length !== 0 ?
 
                                     //SHOW REPORTS
-                                    showPendingReports.map((pendingReports, index) => {
+                                    showAllEmails.map((emails, index) => {
                                         return (
-                                            <tr key={pendingReports.caseId}>
+                                            <tr key={emails.emailId}>
                                                 <td className="report-td">
                                                     {/*<button className="table-button" onClick={() => {*/}
                                                     {/*    viewButton(pendingReports.caseId)*/}
@@ -100,18 +89,18 @@ const AdminReportDisplay = () => {
                                                     {/*</button>*/}
                                                     <button
                                                         className="table-button"
-                                                        onClick={() => viewCaseId(pendingReports.caseId)}
+                                                        onClick={() => viewEmailId(emails.emailId)}
                                                     >view
                                                     </button>
                                                 </td>
-                                                <td className="report-td"> {pendingReports.caseId}</td>
-                                                <td className="report-td"> {pendingReports.locationTypes}</td>
-                                                <td className="report-td"> {pendingReports.bugTitle}</td>
-                                                <td className="report-td"> {pendingReports.bugDescription}</td>
+                                                <td className="report-td"> {emails.emailId}</td>
+                                                <td className="report-td"> {emails.fromEmail}</td>
+                                                <td className="report-td"> {emails.recipient}</td>
+                                                <td className="report-td"> {emails.subject}</td>
                                                 <td className="report-td">
                                                     <button
                                                         className="table-button"
-                                                        onClick={() => {deleteReport(pendingReports.caseId)}}
+                                                        onClick={() => {deleteEmails(emails.emailId)}}
                                                     >
                                                         <BsDash/>
                                                     </button>
@@ -141,4 +130,4 @@ const AdminReportDisplay = () => {
     );
 };
 
-export default AdminReportDisplay;
+export default AdminEmailDisplay;

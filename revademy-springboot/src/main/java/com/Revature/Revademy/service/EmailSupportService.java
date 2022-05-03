@@ -57,4 +57,18 @@ public class EmailSupportService {
             throw  new NoEmailIdFoundExceptions("Invalid email ID");
         }
     }
+
+
+    //TO GET EMAIL BY ID
+    public EmailSupport getEmailbyId(Integer emailId) {
+        Optional<EmailSupport> emailSupport = emailSupportRepository.findById(emailId);
+        if(emailSupport.isPresent()){
+            return emailSupport.get();
+        } else {
+            throw new NoEmailIdFoundExceptions("No email Id found");
+        }
+    }
+
+
+
 }
