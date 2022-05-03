@@ -2,7 +2,6 @@ import React from 'react';
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Col, Container, Row, Table} from "react-bootstrap";
-import AdminReportReportViewer from "../adminReportSubGroups/AdminReportReportViewer";
 import {BsDash} from "react-icons/bs";
 import AdminEmailViewer from "./AdminEmailViewer";
 
@@ -62,7 +61,7 @@ const AdminEmailDisplay = () => {
                     </Row>
 
                     <Row>
-                        <Table striped bordered hover className="admin-tables">
+                        <Table striped bordered hover className="email-admin-tables">
                             <thead>
                             <tr>
                                 <th className="report-td">View</th>
@@ -110,13 +109,13 @@ const AdminEmailDisplay = () => {
                                         )
                                     })
 
-                                    //IF NO REPORTS PENDING
+                                    //IF NO EMAIL PENDING
                                     :
 
                                     <aside>
                                         <Row>
                                             <Col xs={12}>
-                                                <p className="text-center"> No Pending Reports</p>
+                                                <p className="text-center"> No Emails</p>
                                             </Col>
                                         </Row>
                                     </aside>

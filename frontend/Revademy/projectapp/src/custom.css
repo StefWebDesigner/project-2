@@ -604,7 +604,7 @@
     /*background-color: lightgrey;*/
 }
 
-.fact-card, .admin-tables {
+.fact-card, .admin-tables, .admin-email-card, .email-admin-tables {
     border: dodgerblue solid 2px;
     box-shadow: 0 4px 1rem -4px #000;
 }
@@ -649,7 +649,7 @@
 .admin-sub-title {
     margin-top: 5%;
     margin-bottom: 5%;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /*.admin-tables {*/
@@ -669,7 +669,39 @@
     color: white;
     border: navy solid 1px;
     border-radius: 4px;
+}
 
+/*ADMIN EMAIL*/
+
+
+.admin-email-subject {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.admin-email-from,
+.admin-email-recipient,
+.admin-email-body{
+    font-size: 15px;
+}
+
+.admin-email-card {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.admin-email-body {
+
+}
+
+.email-admin-tables {
+    /*margin-left: 2%;*/
+    /*margin-right: 2%;*/
+}
+
+.admin-email-footer {
+    display: flex;
+    justify-content: center;
 }
 
 

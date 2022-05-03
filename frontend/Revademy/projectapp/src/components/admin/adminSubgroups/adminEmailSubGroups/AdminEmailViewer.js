@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Col, Row} from "react-bootstrap";
+import {Col, Row, Card} from "react-bootstrap";
 
 const AdminEmailViewer = ({emailViewer}) => {
     console.log(emailViewer)
@@ -15,10 +15,30 @@ const AdminEmailViewer = ({emailViewer}) => {
             { emailViewer ?
 
                 <Fragment>
-                    <h3>{emailViewer.fromEmail}</h3>
-                    <h3>{emailViewer.recipient}</h3>
-                    <h3>{emailViewer.subject}</h3>
-                    <h3>{emailViewer.body}</h3>
+                    <Card className="admin-email-card">
+                        <Card.Header>
+                            <Row>
+                            <h3 className="admin-email-subject">{emailViewer.subject}</h3>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h3 className="admin-email-from">From :{emailViewer.fromEmail}</h3>
+                                </Col>
+                                <Col>
+                                    <h3 className="admin-email-recipient"> To: {emailViewer.recipient}</h3>
+                                </Col>
+                            </Row>
+                        </Card.Header>
+                        <Card.Body>
+                            <h3 className="admin-email-body">{emailViewer.body}</h3>
+                        </Card.Body>
+                        <Card.Footer className="admin-email-footer">
+                            <button
+                                className="table-button">
+                                Rely
+                            </button>
+                        </Card.Footer>
+                    </Card>
                 </Fragment>
 
             :
@@ -27,7 +47,7 @@ const AdminEmailViewer = ({emailViewer}) => {
                 <aside>
                     <Row>
                         <Col xs={12}>
-                            <p className="text-center"> No Pending Email viewwed</p>
+                            <p className="text-center"> No Pending Email viewed</p>
                         </Col>
                     </Row>
                 </aside>

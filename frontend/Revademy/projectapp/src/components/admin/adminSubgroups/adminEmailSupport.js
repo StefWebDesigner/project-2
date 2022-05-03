@@ -6,7 +6,7 @@ const AdminEmailSupport = () => {
     return (
         <>
             <AdminNav/>
-            <h1>Email Support</h1>
+            <h1 className="admin-main-title">Email Support</h1>
 
             <AdminEmailDisplay/>
 
