@@ -33,8 +33,8 @@ public class GlobalExceptionHandler {
         return ResponseEntity.ok(e.getMessage());
     }
     
-    @ExceptionHandler(GeneralPasswordResetException.class)
-    public ResponseEntity<String> handleGeneralPasswordResetException(GeneralPasswordResetException e){
+    @ExceptionHandler(GeneralException.class)
+    public ResponseEntity<String> handleGeneralPasswordResetException(GeneralException e){
         return ResponseEntity.ok(e.getMessage());
     }
 

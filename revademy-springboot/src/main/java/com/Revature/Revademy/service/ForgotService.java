@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.Revature.Revademy.entities.ResetTokens;
 import com.Revature.Revademy.entities.User;
-import com.Revature.Revademy.exception.GeneralPasswordResetException;
+import com.Revature.Revademy.exception.GeneralException;
 import com.Revature.Revademy.exception.NonExistingUserException;
 import com.Revature.Revademy.repository.ForgotRepository;
 import com.Revature.Revademy.repository.UserRepository;
@@ -58,7 +58,7 @@ public class ForgotService {
 		if(tokenOptional.isPresent()) {
 			return tokenOptional.get();
 		}else {
-			throw new GeneralPasswordResetException("Invalid Token.");
+			throw new GeneralException("Invalid Token.");
 		}
 	}
 	
@@ -77,7 +77,7 @@ public class ForgotService {
 				throw new NonExistingUserException("User Doesn't Exist.");
 			}
 		} else {
-			throw new GeneralPasswordResetException("Invalid Token.");
+			throw new GeneralException("Invalid Token.");
 		}
 	}
 	 
