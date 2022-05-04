@@ -4,7 +4,7 @@ import com.Revature.Revademy.entities.AgeType;
 import com.Revature.Revademy.entities.EmailSupport;
 import com.Revature.Revademy.entities.ResetTokens;
 import com.Revature.Revademy.entities.User;
-import com.Revature.Revademy.exception.GeneralPasswordResetException;
+import com.Revature.Revademy.exception.GeneralException;
 import com.Revature.Revademy.exception.NoEmailIdFoundExceptions;
 import com.Revature.Revademy.exception.NoUserExistToDeleteException;
 import com.Revature.Revademy.exception.NonExistingUserException;
@@ -30,8 +30,16 @@ public class UserService {
 
     //REGISTER A NEW USER
     public User registerUser(User user) {
+    	Optional<User> userOptional = userRepository.findByUsername(user.getUsername());
+    	Optional<User> userOptional2 = userRepository.findByEmail(user.getEmail());
         if (user.getAgeType() == AgeType.UNDERAGE) {
             throw new UnderAgeException("User is underage. Hence cannot register");
+        }
+        else if (userOptional.isPresent()) {
+        	throw new GeneralException("Username already exists");
+        }
+        else if(userOptional2.isPresent()) {
+        	throw new GeneralException("Email already exists");
         }
         user.setCreatedDate(LocalDate.now());
         return userRepository.save(user);
@@ -51,7 +59,7 @@ public class UserService {
         throw new NonExistingUserException("User Doesn't Exist.");
     }
 
-    //DETELE USER
+    //DELETE USER
     public String deleteUser(Integer id) {
         Optional<User> userOptional = userRepository.findById(id);
         if (userOptional.isPresent()) {
