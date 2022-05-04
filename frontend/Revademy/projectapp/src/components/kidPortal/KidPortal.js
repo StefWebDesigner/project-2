@@ -15,13 +15,28 @@ import BackgroundColor from './BackgroundColor';
 import Color from './BackgroundColor';
 
 
-const Portal = (color) => {
+class Portal extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+          color: "white"
+        };
+    }
+    setColor(input) {
+        this.setState({
+            color: input
+          });
+    }
+
+    render () {
 
     return (
-        <div className="kid-page-main">
+        <div style={{backgroundColor: this.state.color, height: '100vh', width: '100vw' } }>
+            
             <div className='kid-header'>
                 <h3 className='kid-welcome'>Hello</h3>
-                <BackgroundColor />
+                <BackgroundColor setColor={this.setColor.bind(this)} />
                 { <img src={GirlAvatar} className="kid-avatar" />  }
             </div>
             <div className='kid-page-body'>
@@ -33,5 +48,5 @@ const Portal = (color) => {
         </div>
     );
 };
-
+};
 export default Portal;
