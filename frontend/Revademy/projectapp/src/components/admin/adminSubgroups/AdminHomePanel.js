@@ -6,18 +6,18 @@ import axios from "axios";
 const AdminHomePanel = () => {
 
     const [content, setContent] = useState({
-        announcementBody : ""
+        contentBody : ""
     })
 
     const announcementSubmitHander = async(e) => {
         e.preventDefault()
 
-        await axios.post("", content)
+        await axios.post("http://localhost:8080/announcement/update", content)
             .then(response => {
                 setContent(response.data);
             })
                 setContent({
-                    announcementBody : ""
+                    contentBody : ""
                 })
     }
 
@@ -53,8 +53,8 @@ const AdminHomePanel = () => {
                                     className="admin-content-textarea"
                                     as="textarea"
                                     type="text"
-                                    name="announcementBody"
-                                    value={content.announcementBody}
+                                    name="contentBody"
+                                    value={content.contentBody}
                                     onChange={announcementChangeHandler}
                                  />
                              </Form>
