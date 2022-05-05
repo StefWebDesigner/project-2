@@ -170,17 +170,18 @@ useEffect( () => {
 
   return (
       <>
+      <div className='sound-quiz-title'>
       <ExperimentalNav/>
-    <div className = "sound-quiz fade-in-animation">
+    <div className = "sound-quiz">
         
-        <h1>Sound Quiz</h1>
+        <h1 className="sound-quiz-h1">Sound Quiz</h1>
         
-        <h2>Current Score: {score}</h2>
+        <h2 className="sound-quiz-h2">Current Score: {score}</h2>
         
         {showFinalResults ? (
 
         
-        <div className="final-results">
+        <div className="final-results-sound">
             <h1>Final Results</h1>
             <h2>
                 {score} out of {questions.length} correct!{score>4 ? " 😃": ""}
@@ -201,7 +202,7 @@ useEffect( () => {
         ):(
 
          
-        <div className="question-card">
+        <div className="question-card-sound">
             <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
             <h3 className="question-text" >{questions[currentQuestion].text}</h3>
             <button className="sound-quiz-play-btn" onClick={() => callSound(questions[currentQuestion].soundSrc)}>Click to play sound</button>
@@ -214,6 +215,7 @@ useEffect( () => {
             </ul>
         </div>
         )}
+    </div>
     </div>
     </>
   )
