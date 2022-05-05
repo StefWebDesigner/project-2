@@ -188,6 +188,11 @@
     animation: button-pulsing 2s infinite;
 }
 
+.header-background-glow-slower {
+    transform: scale(1);
+    animation: button-pulsing 3s infinite;
+}
+
 @keyframes button-pulsing {
     0% {
         transform: scale(0.95);
