@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ExperimentalNav from '../../../navbar/ExperimentalNav';
 import './AnimalQuiz.css'
+import axios from 'axios'
 
 function AnimalQuiz() {
     const [showFinalResults, setFinalResults] = useState(false);
@@ -126,10 +127,36 @@ const optionClicked = (iscorrect) => {
 }
 
 const restartGame = () => {
+    axios.get(`http://localhost:8080/gameplays/animalquiz?animalQuizPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
     setScore(0);
     setCurrentQuestion(0);
     setFinalResults(false);
 }
+
+const updatePlayTotal = () => {
+    axios.get(`http://localhost:8080/gameplays/animalquiz?animalQuizPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
+}
+
+useEffect( () => { 
+    updatePlayTotal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+},[])
 
 
   return (

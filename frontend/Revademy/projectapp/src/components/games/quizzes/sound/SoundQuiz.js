@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ExperimentalNav from '../../../navbar/ExperimentalNav';
 import { Howl } from "howler";
 import './SoundQuiz.css'
-
+import axios from 'axios'
 
 function SoundQuiz() {
     const [showFinalResults, setFinalResults] = useState(false);
@@ -137,11 +137,36 @@ const optionClicked = (iscorrect) => {
 }
 
 const restartGame = () => {
+    axios.get(`http://localhost:8080/gameplays/soundquiz?soundQuizPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
     setScore(0);
     setCurrentQuestion(0);
     setFinalResults(false);
 }
 
+const updatePlayTotal = () => {
+    axios.get(`http://localhost:8080/gameplays/soundquiz?soundQuizPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
+}
+
+useEffect( () => { 
+    updatePlayTotal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+},[])
 
   return (
       <>
