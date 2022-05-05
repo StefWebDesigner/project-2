@@ -4,7 +4,7 @@ import Figure from "./Figure";
 import WrongLetters from "./WrongLetters";
 import Word from "./Word";
 import Popup from "./Popup";
-
+import axios from 'axios';
 import './Hangman.css'
 import ExperimentalNav from "../../navbar/ExperimentalNav";
 
@@ -45,6 +45,15 @@ useEffect(() => {
 }, [correctLetters, wrongLetters, playable]);
 
 function playAgain(){
+    axios.get(`http://localhost:8080/gameplays/hangman?hangmanPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
     setPlayable(true);
 
     //Empty Arrays
@@ -55,6 +64,22 @@ function playAgain(){
     selectedWord = words[random];
 }
 
+const updatePlayTotal = () => {
+    axios.get(`http://localhost:8080/gameplays/hangman?hangmanPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
+}
+
+useEffect( () => { 
+    updatePlayTotal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+},[])
 
     return(
         <>

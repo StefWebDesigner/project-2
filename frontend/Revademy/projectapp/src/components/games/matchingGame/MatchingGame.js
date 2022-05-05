@@ -3,6 +3,7 @@ import './MatchingGame.css'
 import SingleCard from './SingleCard'
 import ExperimentalNav from '../../navbar/ExperimentalNav';
 import Confetti from 'react-confetti';
+import axios from 'axios'
 
 const cardImages=[
   {"src": "/img/apple.png", matched: false, pair: 1 },
@@ -34,6 +35,16 @@ export default function MatchingGame() {
 
   //shuffle cards
   const shuffleCards = () => {
+    axios.get(`http://localhost:8080/gameplays/matching?matchingPlays=1`)
+    .then(({data}) => {
+      // console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
+
     const shuffledCards = [...cardImages]
      .sort(() => Math.random() - 0.5)
      .map((card) => ({ ...card, id:Math.random() }))
