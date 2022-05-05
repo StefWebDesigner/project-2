@@ -715,6 +715,30 @@
 }
 
 
+/* Content pannel*/
+
+.admin-content-announcement {
+    text-align: center;
+    color: navy;
+    font-size: 20px;
+}
+
+.admin-content-textarea {
+    padding-bottom: 200px;
+}
+
+.admin-content-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
 /*Report */
 
 .report-modal-backgound {
