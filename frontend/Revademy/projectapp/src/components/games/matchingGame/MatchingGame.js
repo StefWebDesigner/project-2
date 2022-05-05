@@ -102,17 +102,20 @@ useEffect(() => {
 //Confetti
 useEffect(() => {
   setHeight(1000);
-  setWidth(confettiRef.current.clientWidth);
+  setWidth(1300);
 }, [])
 
 
   return (
     <>
+    <div className='matching-game-title'>
     <div ref={confettiRef}>
     <ExperimentalNav/>
     
-    <div className="MatchingGame fade-in-animation" ref={confettiRef} >
-      <h1>Matching Game</h1>
+    <div className="MatchingGame" ref={confettiRef} >
+      
+      <h1 className='matching-game-h1'>Matching Game</h1>
+      
       <button className="MatchingGameBtn" onClick={shuffleCards}>New Game</button>
       
       <div className="card-grid" ref={confettiRef}>
@@ -126,8 +129,10 @@ useEffect(() => {
            />
         ))}
       </div>
-      <p>Turns: {turns}</p>
-      <p>{pairs===allPairsMatched ? "You Won! 😃" : ""}</p>
+      <p className='matching-game-p'>Turns: {turns}</p>
+      <p className='matching-game-p'>{pairs===allPairsMatched ? "You Won! 😃" : ""}</p>
+    </div>
+    
     </div>
     {pairs===allPairsMatched ?
     <Confetti
@@ -139,6 +144,7 @@ useEffect(() => {
      ""
     } 
     </div>
+    
     </>
   );
 }

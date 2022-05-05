@@ -153,17 +153,16 @@ useEffect( () => {
 
   return (
       <>
+      <div className='color-quiz-title'>
       <ExperimentalNav/>
-    <div className = "color-quiz fade-in-animation">
+    <div className = "color-quiz">
         
-        <h1>Color Quiz</h1>
+        <h1 className='color-quiz-h1'>Color Quiz</h1>
         
-        <h2>Current Score: {score}</h2>
+        <h2 className='color-quiz-h2'>Current Score: {score}</h2>
         
         {showFinalResults ? (
-
-        
-        <div className="final-results">
+        <div className="final-results-color">
             <h1>Final Results</h1>
             <h2>
                 {score} out of {questions.length} correct!{score>4 ? " 😃": ""}
@@ -175,16 +174,13 @@ useEffect( () => {
                     return(
                         <li className='color-quiz-li' key={index}>{index + 1}.{questions[index].color}</li>
                     ) 
-                })}
-                
-                    
+                })}  
             </ul>
         </div>
 
         ):(
 
-         
-        <div className="question-card">
+        <div className="question-card-color">
             <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
             <h3 className="question-text" style={{color:`${questions[currentQuestion].color}`}}>{questions[currentQuestion].text}</h3>
             <ul className="color-quiz-ul">
@@ -196,6 +192,7 @@ useEffect( () => {
             </ul>
         </div>
         )}
+    </div>
     </div>
     </>
   )

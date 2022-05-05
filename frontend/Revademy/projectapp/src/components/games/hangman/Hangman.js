@@ -83,9 +83,13 @@ useEffect( () => {
 
     return(
         <>
+        
+        
+        <div className="hangman-body">
+        <div className='hangman-title'>
         <ExperimentalNav/>
-        <div className="hangman-body fade-in-animation">
         <Header/>
+        </div>
         <div className="game-container">
             <Figure wrongLetters={wrongLetters}/>
             <WrongLetters wrongLetters={wrongLetters}/>
@@ -93,6 +97,7 @@ useEffect( () => {
         </div>
         <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} 
         setPlayable={setPlayable} playAgain={playAgain} />
+        
         </div>
         </>
     )

@@ -161,17 +161,18 @@ useEffect( () => {
 
   return (
       <>
+      <div className='animal-quiz-title'>
       <ExperimentalNav/>
-    <div className = "animal-quiz fade-in-animation">
+    <div className = "animal-quiz">
         
-        <h1>Animal Quiz</h1>
+        <h1 className='animal-quiz-h1'>Animal Quiz</h1>
         
-        <h2>Current Score: {score}</h2>
+        <h2 className='animal-quiz-h2'>Current Score: {score}</h2>
         
         {showFinalResults ? (
 
         
-        <div className="final-results">
+        <div className="final-results-animal">
             <h1>Final Results</h1>
             <h2>
                 {score} out of {questions.length} correct!{score>4 ? " 😃": ""}
@@ -192,7 +193,7 @@ useEffect( () => {
         ):(
 
          
-        <div className="question-card">
+        <div className="question-card-animal">
             <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
             <h3 className="question-text" >{questions[currentQuestion].text}</h3>
             <img className="animal-quiz-img" src={questions[currentQuestion].src} alt="Animal"/>
@@ -205,6 +206,7 @@ useEffect( () => {
             </ul>
         </div>
         )}
+    </div>
     </div>
     </>
   )

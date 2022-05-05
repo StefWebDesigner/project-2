@@ -21,11 +21,12 @@
     width: 450px;
     box-sizing: border-box;
     color: black;
-   
-    
-    
     
   }
   
-  
-  
+  .hangman-title{
+    background-image: url("../../../kid_images/space_medium_long_rectangle.png");
+      background-size: contain;
+      width: 100%;
+      text-align: center;
+  }
