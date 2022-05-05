@@ -28,9 +28,6 @@ public class ReportService {
     //TO POST A REPORT
 //    http://localhost:8080/report/postreport
     public Report generateReport(Report report) {
-
-        report.setStatusTypes(StatusTypes.PENDING);
-
         return reportRepository.save(report);
     }
 
