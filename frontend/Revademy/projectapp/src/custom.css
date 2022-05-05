@@ -53,19 +53,36 @@
 
 /*BUTTON*/
 
+/*.header-footer-container {*/
+
+/*}*/
+
+
+.button-report {
+    background-color: #f4511e;
+    color: #FFFFFF;
+}
+.button-support {
+    background-color: green;
+    color: #FFFFFF;
+}
+
 /*PULSING AND ARROW HOVER ANIAMTION EFFECT*/
-.button-report-container {
+.button-report-container,
+.button-support-container
+{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button-report {
+.button-report,
+.button-support {
     /*THIS IS FOR THE ARROW MOVMENT*/
-    border-radius: 4px;
-    background-color: #f4511e;
+    border-radius: 50%;
+    /*background-color: #f4511e;*/
     border: none;
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
     text-align: center;
     font-size: 20px;
     padding: 20px;
@@ -96,14 +113,17 @@
 
 }
 
-.button-report span {
+.button-report span,
+.button-support span
+{
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: .5s;
 }
 
-.button-report span:after {
+.button-report span:after,
+.button-support span:after{
     content : '\00bb';
     position: absolute;
     opacity: 0;
@@ -112,27 +132,21 @@
     transition: .05s;
 }
 
-.button-report:hover span {
+.button-report:hover span,
+.button-support:hover span {
     padding-right: 25px;
 }
 
-.button-report:hover span:after {
+.button-report:hover span:after,
+.button-support:hover span:after {
     opacity: 1;
     right: 0;
 }
 
 
-
-
-
-
-
-
 .home-main-card-shadow, .button-report {
     box-shadow: 0 4px 1rem -4px #000;
 }
-
-
 
 .middown-space-picture {
     z-index: -5;
@@ -141,43 +155,61 @@
     background-image: url("../src/kid_images/astronaut_duck.png");
 }
 
-
-/*  Welcome & Search*/
-
-.welcome-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.top-search-button {
-    border: black 1px solid;
-}
-
-.searchIcon {
-    width: 25px;
-    height: 25px;
-}
-
-
-
-
-
 /* HOME HEADER*/
 
 .logo{
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 330px;
     margin: auto;
     /*border: white 1px solid;*/
 
 }
 
-.background-header-image {
-    background-image: url("../src/kid_images/space_web_page_length-home.svg");
+.header-intro-content {
+    margin-top: -420px;
+    /*margin-top: -400px;*/
+
+
 }
+
+
+
+.svg-container {
+    max-height: 600px;
+    height: 488px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-background-glow {
+    transform: scale(1);
+    animation: button-pulsing 2s infinite;
+}
+
+.header-background-glow-slower {
+    transform: scale(1);
+    animation: button-pulsing 3s infinite;
+}
+
+@keyframes button-pulsing {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+}
+
 
 
 .home-header-title,
@@ -199,19 +231,19 @@
 
 .home-header-card-values-1,
 .home-header-card-values-3{
-    margin-top: 10%;
+    margin-top: 10px;
 }
 
 .home-header-card-values-1 {
-    margin-left: 5%;
+    margin-left: 10px;
 }
 .home-header-card-values-3 {
-    margin-right: 5%;
+    margin-right: 10px;
 }
 
 .home-header-card-values-2 {
-    margin-top: 16%;
-    margin-bottom: 10%;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .home-header-values-1 {
@@ -563,22 +595,33 @@
 
 /*GENERAL*/
 
+.admin-nav-background {
+    background-color: lightblue;
+    border-radius: 10px;
+    color: navy;
+}
+
 .admin-backgound {
     /*background-color: lightgrey;*/
 }
 
-.fact-card, .admin-tables {
+.fact-card, .admin-tables, .admin-email-card, .email-admin-tables {
     border: dodgerblue solid 2px;
     box-shadow: 0 4px 1rem -4px #000;
+    border-radius: 10px;
 }
 
 .fact-title,
 .fact-number{
     text-align: center;
+    color: navy;
 }
 
 .fact-title {
     font-size: 15px;
+    color: navy;
+    font-weight: bold;
+
 }
 
 
@@ -602,17 +645,21 @@
 .admin-main-title,
 .admin-sub-title {
     text-align: center;
+    color: navy;
 }
 
 .admin-main-title {
     margin-bottom: 5%;
+    color: navy;
 
 }
 
 .admin-sub-title {
     margin-top: 5%;
     margin-bottom: 5%;
-    font-size: 20px;
+    font-size: 30px;
+    color: navy;
+
 }
 
 /*.admin-tables {*/
@@ -625,14 +672,64 @@
 .report-td {
     font-size: 12px;
     text-align: center;
+
 }
 
 .table-button {
     background-color: #4B7BE5;
     color: white;
     border: navy solid 1px;
-    border-radius: 4px;
+    border-radius: 10px;
+}
 
+/*ADMIN EMAIL*/
+
+
+.admin-email-subject {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.admin-email-from,
+.admin-email-recipient,
+.admin-email-body{
+    font-size: 15px;
+}
+
+.admin-email-card {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.admin-email-body {
+
+}
+
+.email-admin-tables {
+    border-radius: 10px;
+}
+
+.admin-email-footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Content pannel*/
+
+.admin-content-announcement {
+    text-align: center;
+    color: navy;
+    font-size: 20px;
+}
+
+.admin-content-textarea {
+    padding-bottom: 200px;
+}
+
+.admin-content-button-container {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -642,6 +739,74 @@
 
 
 
+/*Report */
+
+.report-modal-backgound {
+    /*https://colorhunt.co/palette/f76e11ff9f45ffbc80fc4f4f*/
+    /*height: 100vh;*/
+    background: linear-gradient(-45deg, #F76E11, #FF9F45, #FFBC80, #FC4F4F);
+    background-size: 400% 400%;
+    animation: report-modal-backgound-animation 15s ease infinite;
+}
+
+@keyframes report-modal-backgound-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.modal-labels {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Feedback*/
+
+.feedback-title,
+.report-title {
+    text-align: center;
+    color: white;
+}
+
+.feedback-input,
+.feedback-textarea {
+    animation: .5s ease-in-out;
+}
+
+.feedback-input:hover,
+.feedback-textarea:hover {
+    border: #4CAF50 solid 1px;
+}
+
+
+
+.feedback-backgound {
+    /*https://colorhunt.co/palette/1e6f5c28967229bb89e6dd3b    */
+        /*height: 100vh;*/
+    background: linear-gradient(-45deg, #E6DD3B, #29BB89, #289672, #1E6F5C);
+    background-size: 400% 400%;
+    animation: feedback-backgound-animation 15s ease infinite;
+}
+
+@keyframes feedback-backgound-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 /* EXPERIMENTAL STUFF*/
@@ -671,7 +836,6 @@
     position: relative;
     z-index: 0;
 }
-
 
 
 /*HOME LINK*/

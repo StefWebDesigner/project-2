@@ -8,6 +8,10 @@ const AdminUserAllUsers = () => {
 
     const [showAllUser, setShowAllUser] = useState([]);
     const [deleteUser, setDeleteUser] = useState([])
+    const [sortId, setSortId] = useState([])
+    const [sortRole, setSortRole] = useState([])
+    const [sortUsername, setSortUsername] = useState([])
+
 
 
     //SHOW ALL PENDING CONTENT
@@ -42,52 +46,52 @@ const AdminUserAllUsers = () => {
     //         })
     // }
 
-    //SORTING
-    //
-    // const sortById = () => {
-    //
-    //     const sortedIdData = showAllUser.sort((a, b) => {
-    //         if(a.id > b.id) {
-    //             return 1;
-    //         }
-    //         if(a.id < b.id) {
-    //             return -1;
-    //         }
-    //         return 0;
-    //
-    //     });
-    //
-    //     setShowAllUser(sortedIdData);
-    //     sortById(prevId => !prevId);
-    // }
-    //
-    // const sortByRole = () => {
-    //     const sortByRoleData = showAllUser.sort((a,b) => {
-    //         if(a.accountTypes > b.accountTypes) {
-    //             return 1;
-    //         }
-    //         if(a.accountTypes < b.accountTypes) {
-    //             return -1;
-    //         }
-    //         return 0;
-    //     });
-    //
-    //     setShowAllUser(sortByRoleData);
-    //     sortByRole(prevRole => !prevRole);
-    // }
-    //
-    // const sortByUsername = () => {
-    //     const sortByUsernameData = showAllUser.sort((a,b) => {
-    //         if(a.username > b.username) {
-    //             return 1;
-    //         }
-    //         if(a.username < b.username) {
-    //             return -1;
-    //         }
-    //     });
-    //     setShowAllUser(sortByUsernameData);
-    //     sortByUsername(prevUsername => !prevUsername);
-    // }
+    // SORTING
+
+    const sortById = () => {
+
+        const sortedIdData = showAllUser.sort((a, b) => {
+            if(a.id > b.id) {
+                return 1;
+            }
+            if(a.id < b.id) {
+                return -1;
+            }
+            return 0;
+
+        });
+
+        setShowAllUser(sortedIdData);
+        setSortId(prevId => !prevId);
+    }
+
+    const sortByRole = () => {
+        const sortByRoleData = showAllUser.sort((a,b) => {
+            if(a.accountTypes > b.accountTypes) {
+                return 1;
+            }
+            if(a.accountTypes < b.accountTypes) {
+                return -1;
+            }
+            return 0;
+        });
+
+        setShowAllUser(sortByRoleData);
+        setSortRole(prevRole => !prevRole);
+    }
+
+    const sortByUsername = () => {
+        const sortByUsernameData = showAllUser.sort((a,b) => {
+            if(a.username > b.username) {
+                return 1;
+            }
+            if(a.username < b.username) {
+                return -1;
+            }
+        });
+        setShowAllUser(sortByUsernameData);
+         setSortUsername(prevUsername => !prevUsername);
+    }
 
     useEffect(() => {
         getAllUser();
@@ -105,21 +109,21 @@ const AdminUserAllUsers = () => {
             <h1 className="admin-sub-title">All Users</h1>
 
 
-            {/*<button*/}
-            {/*    onClick={sortById}*/}
-            {/*>*/}
-            {/*    ID*/}
-            {/*</button>*/}
-            {/*<button*/}
-            {/*    onClick={sortByRole}*/}
-            {/*>*/}
-            {/*    Role*/}
-            {/*</button>*/}
-            {/*<button*/}
-            {/*    onClick={sortByUsername}*/}
-            {/*>*/}
-            {/*    Username*/}
-            {/*</button>*/}
+            <button
+                onClick={sortById}
+            >
+                ID
+            </button>
+            <button
+                onClick={sortByRole}
+            >
+                Role
+            </button>
+            <button
+                onClick={sortByUsername}
+            >
+                Username
+            </button>
 
             <Row>
                 <Table striped bordered hover className="admin-tables">

@@ -1,12 +1,11 @@
 package com.Revature.Revademy.controller;
 
-import com.Revature.Revademy.entities.UserStats;
+
+import com.Revature.Revademy.entities.UserStatsDto;
 import com.Revature.Revademy.service.UserStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "",maxAge =3600)
@@ -20,13 +19,9 @@ public class UserStatsController {
         this.userStatsService = userStatsService;
     }
 
-    //ATTEMPT TO TRACK TOTAL TIME ONLINE
-    @RequestMapping(value = "/lifelongtimer")
-    @CrossOrigin(origins = "http://localHost:3000")
-    public ResponseEntity<UserStats> TotalTimeOnlineTimer(){
-
-        return null;
+    @GetMapping
+    public ResponseEntity<UserStatsDto> getUserStat(@RequestParam String  username) {
+        return ResponseEntity.ok(userStatsService.getUserStats(username));
     }
-
 
 }

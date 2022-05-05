@@ -3,6 +3,7 @@ import {FaSmileBeam} from "react-icons/fa";
 import DataStore from "../../dataStore/dataStore";
 import {Card, Col, Container, Row} from "react-bootstrap";
 import Logo from "./homeSub/Logo";
+import HomeHeaderBackground from "./homeSub/HomeHeaderBackground";
 
 
 const HomeHeader = () => {
@@ -12,7 +13,8 @@ const HomeHeader = () => {
     return (
         <>
             <section className="background-header-image">
-                {/*<Container className="background-header-image">*/}
+                    <HomeHeaderBackground/>
+                <div className="header-intro-content">
                 <Row>
                     <h1 className="home-header-title">Welcome to Revadamy!</h1>
                 </Row>
@@ -50,10 +52,8 @@ const HomeHeader = () => {
                             </Card.Footer>
                         </Card>
                     </Col>
-
-
                 </Row>
-
+                </div>
 
 
 

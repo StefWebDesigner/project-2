@@ -1,19 +1,21 @@
 package com.Revature.Revademy.service;
 
 import com.Revature.Revademy.entities.AgeType;
-import com.Revature.Revademy.entities.EmailSupport;
-import com.Revature.Revademy.entities.ResetTokens;
 import com.Revature.Revademy.entities.User;
+import com.Revature.Revademy.entities.UserStats;
 import com.Revature.Revademy.exception.GeneralException;
 import com.Revature.Revademy.exception.NoEmailIdFoundExceptions;
 import com.Revature.Revademy.exception.NoUserExistToDeleteException;
 import com.Revature.Revademy.exception.NonExistingUserException;
 import com.Revature.Revademy.exception.UnderAgeException;
 import com.Revature.Revademy.repository.UserRepository;
+import com.Revature.Revademy.repository.UserStatsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,14 +23,14 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final UserStatsRepository userStatsRepository;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, UserStatsRepository userStatsRepository) {
         this.userRepository = userRepository;
+        this.userStatsRepository = userStatsRepository;
     }
 
-
-    //REGISTER A NEW USER
     public User registerUser(User user) {
     	Optional<User> userOptional = userRepository.findByUsername(user.getUsername());
     	Optional<User> userOptional2 = userRepository.findByEmail(user.getEmail());
@@ -45,18 +47,38 @@ public class UserService {
         return userRepository.save(user);
     }
 
-
-    //LOGIN AN EXISITING USER
     public User loginUser(String username, String password) {
-        Optional<User> user = userRepository.findByUsername(username);
+        Optional<User> user = userRepository.findByUsernameAndPassword(username, password);
         if (user.isPresent()) {
-            if (user.get().getPassword().equals(password)) {
-                return user.get();
+            UserStats userStats = new UserStats();
+            userStats.setUser(user.get());
+            userStats.setFromDateTime(LocalDateTime.now());
+            userStatsRepository.save(userStats);
 
-            }
-            //add the tracking
+            return user.get();
         }
         throw new NonExistingUserException("User Doesn't Exist.");
+    }
+
+    public void logoutUser(String username) {
+        Optional<User> user = userRepository.findByUsername(username);
+        if(!user.isPresent()) {
+            throw  new NonExistingUserException("User Doesn't Exist");
+        }
+        List<UserStats> userStats = userStatsRepository.findByUser(user.get());
+        userStats.sort(Comparator.comparing(UserStats::getFromDateTime).reversed());
+
+        for (int i = 0; i < userStats.size(); i++) {
+            if(i == 0) {
+                userStats.get(i).setToDateTime(LocalDateTime.now());
+                continue;
+            }
+            if(userStats.get(i).getToDateTime() == null) {
+                LocalDateTime fromDateTime = userStats.get(i).getFromDateTime();
+                userStats.get(i).setToDateTime(fromDateTime.plusMinutes(15));
+            }
+            userStatsRepository.saveAll(userStats);
+        }
     }
 
     //DELETE USER
@@ -70,12 +92,10 @@ public class UserService {
         }
     }
 
-    //GET ALL USERS
     public List<User> getAllUser() {
         return userRepository.findAll();
     }
     
-    //GET A USER BY USERNAME
     public User getUserByUsername(String username) {
 		Optional<User> userOptional = userRepository.findByUsername(username);
 		if(userOptional.isPresent()) {
@@ -85,7 +105,6 @@ public class UserService {
 		}
 	}
     
-    //UPDATE A USER 
     public String updateUser(User user, Integer id) {
         Optional<User> userOptional = userRepository.findById(id);
         if(userOptional.isPresent()) {
@@ -96,15 +115,13 @@ public class UserService {
         }
     }
 
-
-    public List<User> getTotalAdmin() {
-        List<User> adminTotal = userRepository.totalAdmin();
-        return adminTotal;
-//        log.info("totalAdmin results" + adminTotal.get(0).toString());
+    public Integer getTotalAdmin() {
+        return userRepository.totalAdmin();
 
     }
 
-
-
+    public Integer getTotalUsers() {
+        return userRepository.totalUsers();
+    }
 
 }

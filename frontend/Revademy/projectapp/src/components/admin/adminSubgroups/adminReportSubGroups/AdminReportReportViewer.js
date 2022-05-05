@@ -2,16 +2,8 @@ import React, {Fragment, useEffect, useState} from 'react';
 import axios from "axios";
 import {Col, Row} from "react-bootstrap";
 
-const AdminReportReportViewer = (caseId) => {
-
-    const [viewer, setViewer] = useState([])
-
-    async function viewCaseId(caseId) {
-        axios.get(`http://localhost:8080/report/{caseId}`)
-            .then(response => {
-                setViewer(response.data)
-            })
-    }
+const AdminReportReportViewer = ({viewer}) => {
+    console.log(viewer)
     //
     //     useEffect((caseId) => {
     //
@@ -30,18 +22,13 @@ const AdminReportReportViewer = (caseId) => {
 
 
                 {
-                    viewer.length!==0 ?
-                        viewer.map((view, index) =>  {
-                            return(
-                                <div key={view.caseId}>
-                                    <p>{view.caseId} </p>
-                                    <p>{view.locationTypes} </p>
-                                    <p>{view.bugTitle}</p>
-                                    <p>{view.bugDescription}</p>
-                                </div>
-                            )
-                        })
-
+                    viewer ?
+                                <Fragment>
+                                    <p>{viewer.caseId} </p>
+                                    <p>{viewer.locationTypes} </p>
+                                    <p>{viewer.bugTitle}</p>
+                                    <p>{viewer.bugDescription}</p>
+                                </Fragment>
                         :
 
                         <aside>
@@ -54,12 +41,6 @@ const AdminReportReportViewer = (caseId) => {
 
 
                 }
-
-
-
-
-            {/*    column of the type and when pressin button*/}
-
 
             </section>
 

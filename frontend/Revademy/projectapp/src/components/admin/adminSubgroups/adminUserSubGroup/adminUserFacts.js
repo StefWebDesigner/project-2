@@ -6,6 +6,10 @@ import axios from "axios";
 const AdminUserFacts = () => {
 
     const [allUsersFact, setAllUsersFact] = useState([]);
+    const [totalAdmin, setTotalAdmin] = useState([]);
+    const [totalUsers, setTotalUsers] = useState([]);
+
+
 
     const getAllUserFact = () => {
         axios.get("http://localhost:8080/user/all")
@@ -14,9 +18,31 @@ const AdminUserFacts = () => {
             })
     }
 
+
+    const getTotalAdmin = () => {
+        axios.get("http://localhost:8080/user/admin")
+            .then(response => {
+                setTotalAdmin(response.data);
+            })
+    }
+
+    const getTotaUsers = () => {
+        axios.get(" http://localhost:8080/user/userCount")
+            .then(response => {
+                setTotalUsers(response.data);
+            })
+    }
+
+
+
+
+
+
     useEffect(() => {
 
         getAllUserFact();
+        getTotalAdmin();
+        getTotaUsers();
 
     })
 
@@ -28,7 +54,7 @@ const AdminUserFacts = () => {
                 <Col>
                     <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container flex-md-row">
+                            <div className="fact-container ">
                                 <h7 className="fact-title">Total Users :</h7>
                                 <p className="fact-number">{allUsersFact.length}</p>
                             </div>
@@ -39,35 +65,26 @@ const AdminUserFacts = () => {
                 <Col>
                     <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container flex-md-row">
+                            <div className="fact-container">
                                 <h7 className="fact-title">Total Admin :</h7>
-                                <p className="fact-number">{allUsersFact.accountry}</p>
+                                <p className="fact-number">{totalAdmin}</p>
                             </div>
                         </Card.Body>
 
                     </Card>
                 </Col>
-
-                {/*<Col>*/}
-                {/*    <div className="color-verticle">*/}
-                {/*        <span className=""></span>*/}
-                {/*    </div>*/}
-                {/*</Col>*/}
 
                 <Col>
                     <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container flex-md-row">
+                            <div className="fact-container">
                                 <h7 className="fact-title">Total User :</h7>
-                                <p className="fact-number">#</p>
+                                <p className="fact-number">{totalUsers}</p>
                             </div>
                         </Card.Body>
                     </Card>
                 </Col>
 
-                {/*<div className="color-line">*/}
-                {/*    <span></span>*/}
-                {/*</div>*/}
             </Row>
 
 

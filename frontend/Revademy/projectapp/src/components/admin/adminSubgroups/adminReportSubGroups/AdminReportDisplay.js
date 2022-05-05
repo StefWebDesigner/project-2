@@ -5,12 +5,14 @@ import AdminReportReportViewer from "./AdminReportReportViewer";
 import {BsDash} from "react-icons/bs";
 
 
-const AdminReportDisplay = ({setViewer}) => {
+const AdminReportDisplay = () => {
 
     //FOR PENDING REPORTS
     const [showPendingReports, setShowPendingReports] = useState([]);
     const [deteteReport, setDeleteReport] = useState([])
     const [pendingReports, setPendingReports] = useState([])
+    const [viewer, setViewer] = useState(null)
+
 
 
     //SHOW ALL PENDING CONTENT
@@ -36,6 +38,14 @@ const AdminReportDisplay = ({setViewer}) => {
     }
 
 
+    async function viewCaseId(caseId) {
+        axios.get(`http://localhost:8080/report/${caseId}`)
+            .then(response => {
+                setViewer(response.data)
+            })
+    }
+
+
     // const viewButton = (case_id) => {
     //     console.log(case_id)
     //
@@ -54,7 +64,7 @@ const AdminReportDisplay = ({setViewer}) => {
             <section>
                 <Container>
 
-                    <AdminReportReportViewer setViewer={setViewer}/>
+                    <AdminReportReportViewer viewer={viewer}/>
 
                     {/*SHOW PENDING COLUMNS */}
                     <Row>
@@ -88,7 +98,10 @@ const AdminReportDisplay = ({setViewer}) => {
                                                     {/*    viewButton(pendingReports.caseId)*/}
                                                     {/*}}>view*/}
                                                     {/*</button>*/}
-                                                    <button className="table-button">view
+                                                    <button
+                                                        className="table-button"
+                                                        onClick={() => viewCaseId(pendingReports.caseId)}
+                                                    >view
                                                     </button>
                                                 </td>
                                                 <td className="report-td"> {pendingReports.caseId}</td>

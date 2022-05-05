@@ -10,4 +10,5 @@ public class RevademyApplication {
 		SpringApplication.run(RevademyApplication.class, args);
 	}
 
+
 }
