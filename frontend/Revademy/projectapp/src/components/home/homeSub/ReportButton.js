@@ -65,13 +65,13 @@ const ReportButton = () => {
                 centered
             >
                 <Form  onSubmit={reportFormSubmit}>
-                    <Modal.Header>
-                        <h3> Report Issue : </h3>
+                    <Modal.Header className="report-modal-backgound">
+                        <h3 className="report-title"> Report Issue : </h3>
                     </Modal.Header>
                     <Modal.Body>
                         {/*ENTER SUBJECT TITLE*/}
                         <Form.Group>
-                            <Form.Label>
+                            <Form.Label className="modal-labels">
                                 Enter issue subject:
                             </Form.Label>
                             <Form.Control
@@ -91,12 +91,12 @@ const ReportButton = () => {
                         </Form.Group>
                         {/*ENTER LOCATION SLECTION */}
                         <Form.Group>
-                            <Form.Label>
+                            <Form.Label className="modal-labels">
                                 Select the location of the issue
                             </Form.Label>
                             <Form.Select
                                 style={{border: error ? "2px solid red" : ""}}
-                                size="lg"
+                                size="md"
                                 name="locationTypes"
                                 value={reportForm.locationTypes}
                                 onChange={reportFormHandler}
@@ -119,10 +119,12 @@ const ReportButton = () => {
                         </Form.Group>
                         {/* REPORT ISSUE CONTENT*/}
                         <Form.Group>
-                            <Form.Label>
+                            <Form.Label className="modal-labels">
                                 Describe the issue:
                             </Form.Label>
                             <Form.Control
+                                as="textarea"
+                                className="pt-2 pb-7"
                                 type="text"
                                 name="bugDescription"
                                 value={reportForm.bugDescription}
@@ -137,14 +139,19 @@ const ReportButton = () => {
                                 ) : ""
                             }
                         </Form.Group>
-                    </Modal.Body>
-                    <Modal.Footer>
+
+                        <div className="d-flex justify-content-center">
                         <button
                             type="submit"
                             className="button-report"
                         >
                             Submit
                         </button>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer
+                    className="report-modal-backgound">
+
                     </Modal.Footer>
                 </Form>
             </Modal>

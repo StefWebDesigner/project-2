@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
 import Slider from "react-slick";
+import {ImQuotesLeft, ImQuotesRight} from "react-icons/im";
 
 
 const Testimonies = () => {
@@ -32,7 +33,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>John</h3>
-                            <p>"My children loved the classes and meet new freinds too!</p>
+                            <p><ImQuotesLeft/>My children loved the classes and meet new freinds too!<ImQuotesRight/></p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>
@@ -46,7 +47,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>Maria</h3>
-                            <p>"My child was so excited learning in class we signed for their event too!"</p>
+                            <p><ImQuotesLeft/>My child was so excited learning in class we signed for their event too!<ImQuotesRight/></p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>
@@ -60,7 +61,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>Mark</h3>
-                            <p>"The teachers were so nice and engaging with the students. Great materailks "</p>
+                            <p><ImQuotesLeft/>The teachers were so nice and engaging with the students. Great materailks<ImQuotesRight/></p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>
@@ -73,7 +74,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>Alejandra</h3>
-                            <p>"Hands downs best on english platfrom ever! AKA not bias at ALL!!! "</p>
+                            <p><ImQuotesLeft/>Hands downs best on english platfrom ever! AKA not bias at ALL!!!<ImQuotesRight/></p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>

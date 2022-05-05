@@ -176,10 +176,6 @@
     height: 25px;
 }
 
-
-
-
-
 /* HOME HEADER*/
 
 .logo{
@@ -736,12 +732,74 @@
 }
 
 
+/*Report */
+
+.report-modal-backgound {
+    /*https://colorhunt.co/palette/f76e11ff9f45ffbc80fc4f4f*/
+    /*height: 100vh;*/
+    background: linear-gradient(-45deg, #F76E11, #FF9F45, #FFBC80, #FC4F4F);
+    background-size: 400% 400%;
+    animation: report-modal-backgound-animation 15s ease infinite;
+}
+
+@keyframes report-modal-backgound-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.modal-labels {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Feedback*/
+
+.feedback-title,
+.report-title {
+    text-align: center;
+    color: white;
+}
+
+.feedback-input,
+.feedback-textarea {
+    animation: .5s ease-in-out;
+}
+
+.feedback-input:hover,
+.feedback-textarea:hover {
+    border: #4CAF50 solid 1px;
+}
 
 
 
+.feedback-backgound {
+    /*https://colorhunt.co/palette/1e6f5c28967229bb89e6dd3b    */
+        /*height: 100vh;*/
+    background: linear-gradient(-45deg, #E6DD3B, #29BB89, #289672, #1E6F5C);
+    background-size: 400% 400%;
+    animation: feedback-backgound-animation 15s ease infinite;
+}
 
-
-
+@keyframes feedback-backgound-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 /* EXPERIMENTAL STUFF*/
@@ -771,7 +829,6 @@
     position: relative;
     z-index: 0;
 }
-
 
 
 /*HOME LINK*/

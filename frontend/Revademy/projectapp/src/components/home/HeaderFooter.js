@@ -1,9 +1,7 @@
 import React, {Fragment} from 'react';
-import {Button} from "react-bootstrap";
+import {Button, Col, Row} from "react-bootstrap";
 import ReportButton from "./homeSub/ReportButton";
-import Messaging from "./Messaging";
 import InboxButton from "./homeSub/InboxButton";
-import {Col, Row} from "antd";
 
 const HeaderFooter = () => {
     return (
