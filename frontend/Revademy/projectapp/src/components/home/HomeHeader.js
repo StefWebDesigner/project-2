@@ -13,9 +13,7 @@ const HomeHeader = () => {
     return (
         <>
             <section className="background-header-image">
-                {/*<Container className="background-header-image">*/}
                     <HomeHeaderBackground/>
-                {/*margin-top: -700px;*/}
                 <div className="header-intro-content">
                 <Row>
                     <h1 className="home-header-title">Welcome to Revadamy!</h1>

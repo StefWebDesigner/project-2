@@ -148,8 +148,6 @@
     box-shadow: 0 4px 1rem -4px #000;
 }
 
-
-
 .middown-space-picture {
     z-index: -5;
     right: 500px;
@@ -157,45 +155,25 @@
     background-image: url("../src/kid_images/astronaut_duck.png");
 }
 
-
-/*  Welcome & Search*/
-
-.welcome-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.top-search-button {
-    border: black 1px solid;
-}
-
-.searchIcon {
-    width: 25px;
-    height: 25px;
-}
-
 /* HOME HEADER*/
 
 .logo{
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 330px;
     margin: auto;
     /*border: white 1px solid;*/
 
 }
 
-/*.background-header-image {*/
-/*    background-image: url("../src/kid_images/space_web_page_length-home.svg");*/
-/*    transform: scale(1);*/
-/*    animation: button-pulsing 2s infinite;*/
-/*}*/
-
 .header-intro-content {
-    margin-top: -500px
+    margin-top: -420px;
+    /*margin-top: -400px;*/
+
+
 }
+
+
 
 .svg-container {
     max-height: 600px;
@@ -248,19 +226,19 @@
 
 .home-header-card-values-1,
 .home-header-card-values-3{
-    margin-top: 10%;
+    margin-top: 10px;
 }
 
 .home-header-card-values-1 {
-    margin-left: 5%;
+    margin-left: 10px;
 }
 .home-header-card-values-3 {
-    margin-right: 5%;
+    margin-right: 10px;
 }
 
 .home-header-card-values-2 {
-    margin-top: 16%;
-    margin-bottom: 10%;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .home-header-values-1 {
