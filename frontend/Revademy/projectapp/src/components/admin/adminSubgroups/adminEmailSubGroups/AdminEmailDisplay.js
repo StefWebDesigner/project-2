@@ -4,6 +4,7 @@ import axios from "axios";
 import {Col, Container, Row, Table} from "react-bootstrap";
 import {BsDash} from "react-icons/bs";
 import AdminEmailViewer from "./AdminEmailViewer";
+import AdminEmailFacts from "../adminReportSubGroups/adminEmailFacts";
 
 const AdminEmailDisplay = () => {
 
@@ -53,11 +54,13 @@ const AdminEmailDisplay = () => {
             <section>
                 <Container>
 
+                    <AdminEmailFacts/>
+
                     <AdminEmailViewer emailViewer={emailViewer}/>
 
                     {/*SHOW PENDING COLUMNS */}
                     <Row>
-                        <h7 className="admin-sub-title"> All Emails</h7>
+                        <h7 className="admin-sub-title"> All Feedback Forms</h7>
                     </Row>
 
                     <Row>
@@ -83,10 +86,7 @@ const AdminEmailDisplay = () => {
                                         return (
                                             <tr key={emails.emailId}>
                                                 <td className="report-td">
-                                                    {/*<button className="table-button" onClick={() => {*/}
-                                                    {/*    viewButton(pendingReports.caseId)*/}
-                                                    {/*}}>view*/}
-                                                    {/*</button>*/}
+
                                                     <button
                                                         className="table-button"
                                                         onClick={() => viewEmailId(emails.emailId)}

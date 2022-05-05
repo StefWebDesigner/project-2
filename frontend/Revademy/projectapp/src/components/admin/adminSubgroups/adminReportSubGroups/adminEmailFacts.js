@@ -7,7 +7,7 @@ const AdminEmailFacts = () => {
 
     const [allEmailFact, setAllEmailFact] = useState([]);
 
-    const getAllReportFact = () => {
+    const getAllEmailFact = () => {
         axios.get("http://localhost:8080/emailsupport/all")
             .then(response => {
                 setAllEmailFact(response.data);
@@ -16,7 +16,7 @@ const AdminEmailFacts = () => {
 
     useEffect(() => {
 
-        getAllReportFact();
+        getAllEmailFact();
 
     })
 
@@ -27,8 +27,8 @@ const AdminEmailFacts = () => {
                 <Col>
                     <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container flex-md-row">
-                                <h7 className="fact-title">Total Reports Pending :</h7>
+                            <div className="fact-container">
+                                <h7 className="fact-title">Total Feedback :</h7>
                                 <p className="fact-number">{allEmailFact.length}</p>
                             </div>
                         </Card.Body>
@@ -38,7 +38,7 @@ const AdminEmailFacts = () => {
                 <Col>
                     <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container flex-md-row">
+                            <div className="fact-container">
                                 <h7 className="fact-title">Most Reported Location :</h7>
                                 <p className="fact-number">#</p>
                             </div>
@@ -47,16 +47,10 @@ const AdminEmailFacts = () => {
                     </Card>
                 </Col>
 
-                {/*<Col>*/}
-                {/*    <div className="color-verticle">*/}
-                {/*        <span className=""></span>*/}
-                {/*    </div>*/}
-                {/*</Col>*/}
-
                 <Col>
                     <Card className="fact-card">
                         <Card.Body>
-                            <div className="fact-container flex-md-row">
+                            <div className="fact-container">
                                 <h7 className="fact-title">Total Fixed Bugs :</h7>
                                 <p className="fact-number">#</p>
                             </div>
@@ -64,11 +58,7 @@ const AdminEmailFacts = () => {
                     </Card>
                 </Col>
 
-                {/*<div className="color-line">*/}
-                {/*    <span></span>*/}
-                {/*</div>*/}
             </Row>
-
 
         </>
     );

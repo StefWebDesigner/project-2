@@ -20,43 +20,30 @@ public class EmailSupportController {
         this.emailSupportService = emailSupportService;
     }
 
-//    CREATE EMAIL
-//    http://localhost:8080/emailsupport/create
     @RequestMapping (value = "/create", method = RequestMethod.POST)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<EmailSupport> createEmail(@RequestBody EmailSupport emailSupport) {
         return ResponseEntity.ok(emailSupportService.createEmail(emailSupport));
     }
 
-    //GET ALL EMAILS
-//    http://localhost:8080/emailsupport/all
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<List<EmailSupport>> getAllEmails() {
         return ResponseEntity.ok(emailSupportService.getAllEmails());
 }
 
-    //TO SELECT EMAIL BY ID
-//
-
-    //TO DETELE AN EMAIL
-//    http://localhost:8080/emailsupport/delete?emailId=13
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<String> deleteEmail(@RequestParam Integer emailId) {
         return ResponseEntity.ok(emailSupportService.deleteEmail(emailId));
     }
 
-    //TO UPDATE A EMAIL
-//    http://localhost:8080/emailsupport/update
     @RequestMapping(value="/update", method=RequestMethod.PUT)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<EmailSupport> updateEmail(@RequestBody EmailSupport emailSupport){
         return ResponseEntity.ok(emailSupportService.updateEmail(emailSupport));
     }
 
-    //TO GET EMAIL BY ID
-//    http://localhost:8080/emailsupport/{emailid}
     @RequestMapping(value = "/{emailId}", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<EmailSupport>getEmailbyId(@PathVariable Integer emailId){

@@ -27,26 +27,20 @@ public class ForgotPasswordController {
         this.forgotService = forgotService;
     }
 	
-	
-	//Post by email
-	//http://localhost:8080/forgot?email=email@email.com
+
 	@RequestMapping(method = RequestMethod.POST)
     @CrossOrigin(origins = "http://localhost:3000")
 	public ResponseEntity<ResetTokens> forgot(@RequestParam String email){
 		return ResponseEntity.ok(forgotService.forgot(email));
 	}
 	
-	
-	//Get by tokenid
-	//http://localhost:8080/forgot/{tokenid}
+
 	@RequestMapping(value = "/{tokenId}", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
 	public ResponseEntity<ResetTokens> getResetTokensById(@PathVariable Integer tokenId){
 		return ResponseEntity.ok(forgotService.getResetTokensById(tokenId));
 	}
-	
-	//Post new Password
-	//http://localhost:8080/forgot/reset?password=new&token=xA3LxBKbGL
+
 	@RequestMapping(value = "/reset", method = RequestMethod.POST)
 	@CrossOrigin(origins = "http://localhost:3000")
 	public ResponseEntity<String> resetPassword(@RequestParam String password, @RequestParam String token){

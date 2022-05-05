@@ -15,6 +15,8 @@ public class Report {
     private LocationTypes locationTypes;
     private String bugTitle;
     private String bugDescription;
+    private StatusTypes statusTypes;
+
 
     public Integer getCaseId() {
         return caseId;
@@ -46,6 +48,14 @@ public class Report {
 
     public void setBugDescription(String bugDescription) {
         this.bugDescription = bugDescription;
+    }
+
+    public StatusTypes getStatusTypes() {
+        return statusTypes;
+    }
+
+    public void setStatusTypes(StatusTypes statusTypes) {
+        this.statusTypes = statusTypes;
     }
 }
 

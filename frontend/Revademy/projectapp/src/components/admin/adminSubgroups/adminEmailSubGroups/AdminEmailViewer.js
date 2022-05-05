@@ -13,7 +13,7 @@ const AdminEmailViewer = ({emailViewer}) => {
             <section>
 
                 <Row>
-                    <h7 className="admin-sub-title"> Email Viewer</h7>
+                    <h7 className="admin-sub-title"> View Feedback</h7>
                 </Row>
 
             { emailViewer ?

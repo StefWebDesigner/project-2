@@ -1,6 +1,5 @@
 package com.Revature.Revademy.entities;
 
-
 import javax.persistence.*;
 
 @Entity
