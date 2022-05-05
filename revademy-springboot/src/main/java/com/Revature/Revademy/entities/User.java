@@ -13,15 +13,17 @@ public class User {
     private Integer id;
     private String firstname;
     private String lastname;
+    @Column(unique = true)
     private String username;
     @Enumerated(EnumType.STRING)
     private AccountTypes accountTypes;
     @Enumerated(EnumType.STRING)
     private AgeType ageType;
+    @Column(unique = true)
     private String email;
     private String password;
     private LocalDate createdDate;
-
+    
     public Integer getId() {
         return id;
     }

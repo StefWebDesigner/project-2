@@ -96,6 +96,7 @@ function UserPortal() {
 
   return (
       <>
+      <div className='user-portal-body'>
       <ExperimentalNav/>
     <form className='user-update-form'>
     <h2 className='user-update-title'>User Info</h2>
@@ -134,9 +135,10 @@ function UserPortal() {
     {showButton ? 
     <button className='user-update-btn' onClick = {changeInfo} disabled={disabledInfo}>Click to Edit Info</button>
     :
-    <button className='user-update-btn' onClick = {submit} disabled={disabledSubmit}>submit</button>
+    <button className='user-update-btn' onClick = {submit} disabled={disabledSubmit}>Submit</button>
     }
     </form>
+    </div>
     </>
   )
 }

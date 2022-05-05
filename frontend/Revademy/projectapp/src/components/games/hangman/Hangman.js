@@ -4,7 +4,7 @@ import Figure from "./Figure";
 import WrongLetters from "./WrongLetters";
 import Word from "./Word";
 import Popup from "./Popup";
-
+import axios from 'axios';
 import './Hangman.css'
 import ExperimentalNav from "../../navbar/ExperimentalNav";
 
@@ -45,6 +45,15 @@ useEffect(() => {
 }, [correctLetters, wrongLetters, playable]);
 
 function playAgain(){
+    axios.get(`http://localhost:8080/gameplays/hangman?hangmanPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
     setPlayable(true);
 
     //Empty Arrays
@@ -55,12 +64,32 @@ function playAgain(){
     selectedWord = words[random];
 }
 
+const updatePlayTotal = () => {
+    axios.get(`http://localhost:8080/gameplays/hangman?hangmanPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
+}
+
+useEffect( () => { 
+    updatePlayTotal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+},[])
 
     return(
         <>
+        
+        
+        <div className="hangman-body">
+        <div className='hangman-title'>
         <ExperimentalNav/>
-        <div className="hangman-body fade-in-animation">
         <Header/>
+        </div>
         <div className="game-container">
             <Figure wrongLetters={wrongLetters}/>
             <WrongLetters wrongLetters={wrongLetters}/>
@@ -68,6 +97,7 @@ function playAgain(){
         </div>
         <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} 
         setPlayable={setPlayable} playAgain={playAgain} />
+        
         </div>
         </>
     )

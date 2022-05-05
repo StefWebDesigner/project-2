@@ -1,0 +1,14 @@
+.App {
+display:content;
+align-items: flex;
+justify-content: flex;
+padding: 20px;
+background:#fff8f8;
+position: relative;
+height: 300px;
+margin:auto;
+width: 90%;
+border: 3px solid antiquewhite;
+text-align: center;
+}
+

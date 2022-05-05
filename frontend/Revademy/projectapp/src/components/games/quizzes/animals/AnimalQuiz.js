@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ExperimentalNav from '../../../navbar/ExperimentalNav';
 import './AnimalQuiz.css'
+import axios from 'axios'
 
 function AnimalQuiz() {
     const [showFinalResults, setFinalResults] = useState(false);
@@ -126,25 +127,52 @@ const optionClicked = (iscorrect) => {
 }
 
 const restartGame = () => {
+    axios.get(`http://localhost:8080/gameplays/animalquiz?animalQuizPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
     setScore(0);
     setCurrentQuestion(0);
     setFinalResults(false);
 }
 
+const updatePlayTotal = () => {
+    axios.get(`http://localhost:8080/gameplays/animalquiz?animalQuizPlays=1`)
+    .then(({data}) => {
+    //   console.log(data)
+    }
+    ).catch(
+           err => {
+               console.log(err)
+            }
+        )
+}
+
+useEffect( () => { 
+    updatePlayTotal()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+},[])
+
 
   return (
       <>
+      <div className='animal-quiz-title'>
       <ExperimentalNav/>
-    <div className = "animal-quiz fade-in-animation">
+    <div className = "animal-quiz">
         
-        <h1>Animal Quiz</h1>
+        <h1 className='animal-quiz-h1'>Animal Quiz</h1>
         
-        <h2>Current Score: {score}</h2>
+        <h2 className='animal-quiz-h2'>Current Score: {score}</h2>
         
         {showFinalResults ? (
 
         
-        <div className="final-results">
+        <div className="final-results-animal">
             <h1>Final Results</h1>
             <h2>
                 {score} out of {questions.length} correct!{score>4 ? " 😃": ""}
@@ -165,7 +193,7 @@ const restartGame = () => {
         ):(
 
          
-        <div className="question-card">
+        <div className="question-card-animal">
             <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
             <h3 className="question-text" >{questions[currentQuestion].text}</h3>
             <img className="animal-quiz-img" src={questions[currentQuestion].src} alt="Animal"/>
@@ -178,6 +206,7 @@ const restartGame = () => {
             </ul>
         </div>
         )}
+    </div>
     </div>
     </>
   )
