@@ -12,9 +12,11 @@ const AdminHomePanel = () => {
     const announcementSubmitHander = async(e) => {
         e.preventDefault()
 
-        await axios.post("http://localhost:8080/announcement/update", content)
+        await axios.post("http://localhost:8080/announcement/create", content)
             .then(response => {
                 setContent(response.data);
+
+                alert("Announcement posted")
             })
                 setContent({
                     contentBody : ""
@@ -46,7 +48,7 @@ const AdminHomePanel = () => {
                             <Card.Header
                                 className="admin-content-announcement"
                             >
-                                Update Accouncement Here :
+                                Add Accouncement Here :
                             </Card.Header>
                              <Form onSubmit={announcementSubmitHander}>
                                  <FormControl
