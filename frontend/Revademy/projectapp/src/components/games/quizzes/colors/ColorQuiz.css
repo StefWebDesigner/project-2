@@ -13,6 +13,7 @@
     height: auto;
     margin: 0 auto;
     box-shadow: 0 4px 1rem -4px #000;
+    
 }
 
 .color-quiz-ul{
@@ -22,7 +23,7 @@
 .color-quiz-title{
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
     background-size: contain;
-    
+    height: 100vh;
 }
 
 .color-quiz-h1{
