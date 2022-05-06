@@ -5,9 +5,10 @@
 
 .animal-quiz-title{
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
+    background-repeat: no-repeat;
     background-size: contain;
-    
-}
+    background-color: rgb(149, 205, 239);
+    }
 
 .animal-quiz-h1{
     color: white;
