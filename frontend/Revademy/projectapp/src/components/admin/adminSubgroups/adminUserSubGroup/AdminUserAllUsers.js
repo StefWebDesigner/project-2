@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row, Table} from "react-bootstrap";
+import {Card, Col, Row, Table} from "react-bootstrap";
 import {BsDash} from "react-icons/bs";
 import {useEffect, useState} from "react";
 import axios from "axios";
@@ -7,6 +7,7 @@ import axios from "axios";
 const AdminUserAllUsers = () => {
 
     const [showAllUser, setShowAllUser] = useState([]);
+    const [userViewWindow, setViewWindowWindow] = useState([])
     const [deleteUser, setDeleteUser] = useState([])
     const [sortId, setSortId] = useState([])
     const [sortRole, setSortRole] = useState([])
@@ -36,15 +37,16 @@ const AdminUserAllUsers = () => {
         getAllUser()
     }
 
+    const userViewer = (username) => {
+        axios.get(`http://localhost:8080/user/username/${username}`)
+            .then(response => {
+                setViewWindowWindow(response.data)
+                console.log(userViewWindow)
 
-    // const viewButton = (case_id) => {
-    //     console.log(case_id)
-    //
-    //     axios.get(`http://localhost:8080/report/${caseId}`)
-    //         .then(response => {
-    //             setViewer(response.data)
-    //         })
-    // }
+            })
+        console.log(userViewWindow)
+    }
+
 
     // SORTING
 
@@ -95,35 +97,35 @@ const AdminUserAllUsers = () => {
 
     useEffect(() => {
         getAllUser();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <>
 
-            {/*WHEN VIEWING THE USERS  i WILL EXPAND ON
-                EMAIL
-                AGE
-                PASSWORD
-            */}
 
             <h1 className="admin-sub-title">All Users</h1>
 
-
+            <div className="d-flex justify-content-center mb-3">
             <button
+                className="table-button"
                 onClick={sortById}
             >
                 ID
             </button>
             <button
+                className="table-button"
                 onClick={sortByRole}
             >
                 Role
             </button>
             <button
+                className="table-button"
                 onClick={sortByUsername}
             >
                 Username
             </button>
+            </div>
 
             <Row>
                 <Table striped bordered hover className="admin-tables">
@@ -152,11 +154,12 @@ const AdminUserAllUsers = () => {
                                 return (
                                     <tr key={allUsers.id}>
                                         <td className="report-td">
-                                            {/*<button className="table-button" onClick={() => {*/}
-                                            {/*    viewButton(pendingReports.caseId)*/}
-                                            {/*}}>view*/}
-                                            {/*</button>*/}
-                                            <button className="table-button">view
+                                            <button
+                                                className="table-button"
+                                                onClick={() => {
+                                                    userViewer(allUsers.username)
+                                                }}>
+                                                view
                                             </button>
                                         </td>
                                         <td className="report-td"> {allUsers.id}</td>
@@ -189,6 +192,197 @@ const AdminUserAllUsers = () => {
                     </tbody>
                 </Table>
             </Row>
+
+            <section>
+
+                <Row>
+                    <h7 className="admin-sub-title"> View User</h7>
+                </Row>
+
+                {
+
+                    // userViewWindow ?
+
+                    <div>
+                        <Card className="admin-email-card">
+
+                            <Card.Body>
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+                                            <p className="admin-user-labelName"> Full Name : </p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+
+                                        {
+                                            userViewWindow.length !== 0 ?
+
+                                                <section>
+
+                                                    <div className="d-flex justify-content-center flex-row">
+                                                        <p className="admin-user-fName">{userViewWindow.firstname}</p>
+                                                        <p className="admin-user-lName">{userViewWindow.lastname}</p>
+                                                    </div>
+
+                                                </section>
+
+                                             :
+
+                                                <aside>
+                                                    <Row>
+                                                        <Col xs={12}>
+                                                            <p className="text-center"> No User Selected</p>
+                                                        </Col>
+                                                    </Row>
+                                                </aside>
+
+                                        }
+
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+                                            <p className="admin-user-labelId"> ID : </p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+
+                                        {
+                                            userViewWindow.length !== 0 ?
+                                        <p className="admin-user-view-id">{userViewWindow.id}</p>
+                                                :
+                                                <aside>
+                                                    <Row>
+                                                        <Col xs={12}>
+                                                            <p className="text-center"> No User Selected</p>
+                                                        </Col>
+                                                    </Row>
+                                                </aside>
+                                        }
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+                                            <p className="admin-user-labelUserame"> Username : </p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+                                        {
+                                            userViewWindow.length !== 0 ?
+                                        <p className="admin-user-view-username">{userViewWindow.username}</p>
+                                                :
+                                                <aside>
+                                                    <Row>
+                                                        <Col xs={12}>
+                                                            <p className="text-center"> No User Selected</p>
+                                                        </Col>
+                                                    </Row>
+                                                </aside>
+                                        }
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+
+                                            <p className="admin-user-labelAccount"> Account : </p>
+
+                                        </div>
+                                    </Col>
+                                    {
+                                        userViewWindow.length !== 0 ?
+                                    <p className="admin-user-view-account">{userViewWindow.accountTypes}</p>
+                                    :
+                                    <aside>
+                                        <Row>
+                                            <Col xs={12}>
+                                                <p className="text-center"> No User Selected</p>
+                                            </Col>
+                                        </Row>
+                                    </aside>
+                                    }
+                                </Row>
+
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+                                            <p className="admin-user-labelEmail"> Email : </p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+                                        {
+                                            userViewWindow.length !== 0 ?
+                                        <p className="admin-user-view-email">{userViewWindow.email}</p>
+                                                :
+                                                <aside>
+                                                    <Row>
+                                                        <Col xs={12}>
+                                                            <p className="text-center"> No User Selected</p>
+                                                        </Col>
+                                                    </Row>
+                                                </aside>
+                                        }
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+                                            <p className="admin-user-labelPassword"> Password : </p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+                                        {
+                                            userViewWindow.length !== 0 ?
+                                        <p className="admin-user-view-password">{userViewWindow.password}</p>
+                                                :
+                                                <aside>
+                                                    <Row>
+                                                        <Col xs={12}>
+                                                            <p className="text-center"> No User Selected</p>
+                                                        </Col>
+                                                    </Row>
+                                                </aside>
+                                        }
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col xs={5}>
+                                        <div>
+                                            <p className="admin-user-labelPassword"> Date Created : </p>
+                                        </div>
+                                    </Col>
+                                    <Col>
+                                        {
+                                            userViewWindow.length !== 0 ?
+                                        <p className="admin-user-view-createdate">{userViewWindow.createdDate}</p>
+                                                :
+                                                <aside>
+                                                    <Row>
+                                                        <Col xs={12}>
+                                                            <p className="text-center"> No User Selected</p>
+                                                        </Col>
+                                                    </Row>
+                                                </aside>
+                                        }
+                                    </Col>
+                                </Row>
+
+                            </Card.Body>
+                            <Card.Footer className="admin-email-footer">
+
+                            </Card.Footer>
+                        </Card>
+                    </div>
+
+                }
+            </section>
 
         </>
     );

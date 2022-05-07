@@ -80,6 +80,7 @@ const AdminUserAdd = () => {
                                     <Form.Label>First Name</Form.Label>
                                     <Form.Control
                                         // style={{border: error ? "2px solid red" : ""}}
+                                        className="form-input"
                                         name="firstname"
                                         defaultValue={adminAdd.firstname}
                                         type="text"
@@ -102,6 +103,7 @@ const AdminUserAdd = () => {
                                     <Form.Label>Last Name</Form.Label>
                                     <Form.Control
                                         // style={{border: error ? "2px solid red" : ""}}
+                                        className="form-input"
                                         name="lastname"
                                         type="text"
                                         defaultValue={adminAdd.lastname}
@@ -161,6 +163,7 @@ const AdminUserAdd = () => {
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
                                         // style={{border: error ? "2px solid red" : ""}}
+                                        className="form-input"
                                         name="email"
                                         type="text"
                                         value={adminAdd.email}
@@ -179,6 +182,7 @@ const AdminUserAdd = () => {
                                     <Form.Label>Username</Form.Label>
                                     <Form.Control
                                         // style={{border: error ? "2px solid red" : ""}}
+                                        className="form-input"
                                         name="username"
                                         type="text"
                                         value={adminAdd.username}
@@ -197,6 +201,7 @@ const AdminUserAdd = () => {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
                                         // style={{border: error ? "2px solid red" : ""}}
+                                        className="form-input"
                                         name="password"
                                         type="password"
                                         defaultValue={adminAdd.password}

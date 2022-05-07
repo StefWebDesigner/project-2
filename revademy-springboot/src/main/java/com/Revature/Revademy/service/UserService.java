@@ -104,7 +104,17 @@ public class UserService {
 			throw new NonExistingUserException("User Doesn't Exist.");
 		}
 	}
-    
+
+//    public User getUserById(Integer id) {
+//        Optional<User> userOptional = userRepository.findById(id);
+//        if(userOptional.isPresent()) {
+//            return userOptional.get();
+//        }else {
+//            throw new NonExistingUserException("User Doesn't Exist.");
+//        }
+//    }
+
+
     public String updateUser(User user, Integer id) {
         Optional<User> userOptional = userRepository.findById(id);
         if(userOptional.isPresent()) {
@@ -123,5 +133,6 @@ public class UserService {
     public Integer getTotalUsers() {
         return userRepository.totalUsers();
     }
+
 
 }

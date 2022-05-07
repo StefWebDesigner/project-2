@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@CrossOrigin(maxAge = 3600, origins = "")
 @RequestMapping("/user")
 public class UserController {
 
@@ -26,12 +26,14 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<User> loginUser(@RequestParam String username, @RequestParam String password) {
         User user = userService.loginUser(username, password);
         return ResponseEntity.ok(user);
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<String> logoutUser(@RequestParam String username)
     {
         userService.logoutUser(username);
@@ -57,6 +59,11 @@ public class UserController {
     public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
         return ResponseEntity.ok(userService.getUserByUsername(username));
     }
+//    @RequestMapping(value = "/getuserbyIdrequestWorkplease/{id}", method = RequestMethod.GET)
+//    @CrossOrigin(origins = "http://localhost:3000")
+//    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
+//        return ResponseEntity.ok(userService.getUserById(id));
+//    }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
     @CrossOrigin(origins = "http://localhost:3000")
