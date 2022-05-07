@@ -1,0 +1,38 @@
+{
+    "firstname": "Prénom",
+    "lastname": "Nom de famille",
+    "continue": "Continuer",
+    "typeofaccount": "Type de compte",
+    "openthisselectmenu": "Ouvrez ce menu",
+    "user": "Utilisateur",
+    "admin": "Admin",
+    "thisisrequired": "Ceci est nécessaire",
+    "above18": "Au-dessus de 18 ans",
+    "under18": "en dessous de dix-huit ans",
+    "username": "Nom d'utilisateur",
+    "previous": "Précédent",
+    "password": "Mot de passe",
+
+    "login": "Ouverture de session",
+    "enterusername": "Entrez le nom d'utilisateur",
+    "enterpassword": "Entrez le mot de passe",
+    "createaccount": "Créer un compte",
+    "forgotpassword": "Mot de passe oublié",
+    "datejoined": "Date vous avez rejoint",
+    "clicktoeditinfo": "Cliquez pour modifier Info",
+
+    "enteremail": "Entrez Email",
+    "checkyouremail": "Vérifiez votre email",
+    "nousermatches": "Aucun correspondant utilisateur Ce courriel",
+    "emailaddress": "Adresse électronique",
+
+    "userinfo": "Informations sur l'utilisateur",
+    "accounttype": "Type de compte",
+    "agetype": "Type d'âge",
+
+    "resetpassword": "Réinitialiser le mot de passe",
+    "enternewpassword": "Entrez un nouveau mot de passe",
+    "confirmnewpassword": "Confirmer le nouveau mot de passe"
+    
+
+}

@@ -29,5 +29,16 @@
     "theteachers": "Los profesores eran tan agradables y atractivos con los estudiantes. Gran material.",
     "handsdown": "Fácilmente el mejor plataforma de aprendizaje de inglés nunca!",
 
-    "report": "Informa"
+    "report": "Informa",
+    "reportissue": "Informar de un problema",
+    "enterissuesubject": "Introducir asunto de problema:",
+    "thisisrequired": "Esto es necesario",
+    "selectlocation": "Seleccione la ubicación del problema",
+    "openmenu": "Abrir este menú de selección",
+    "homepage": "Página de inicio",
+    "gamepage": "Página del juego",
+    "eventpage": "Página de eventos",
+    "matchinggame": "Juego de cartas a juego",
+    "wordgame": "Juego de ahorcado",
+    "describeissue": "Describir el problema"
 }

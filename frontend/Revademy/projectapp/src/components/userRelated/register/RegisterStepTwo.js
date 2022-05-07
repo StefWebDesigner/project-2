@@ -1,8 +1,11 @@
 import React, {Fragment, useState} from 'react';
 import validator from "validator";
 import {Button, Card, Form} from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 
 const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
+
+    const {t}=useTranslation(["register"]);
 
     const [error, setError] = useState(false);
 
@@ -35,7 +38,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                             {/*FOR ACCOUNT*/}
                             <Form.Group>
                                 <Form.Label>
-                                    Type of account
+                                    {t("typeofaccount")}
                                 </Form.Label>
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
@@ -43,22 +46,22 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                     name="accountTypes"
                                     onChange={handleFormData("accountTypes")}
                                 >
-                                    <option value="">Open this select menu</option>
-                                    <option value="USER">User</option>
-                                    <option value="ADMIN">Admin</option>
+                                    <option value="">{t("openthisselectmenu")}</option>
+                                    <option value="USER">{t("user") } </option>
+                                    <option value="ADMIN">{t("admin")}</option>
                                     {/*<option value="teacher">Teacher</option>*/}
                                 </Form.Select>
                             {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> This is required</Form.text>
+                                        <Form.text> {t("thisisrequired")} </Form.text>
                                     ) : ""
                                 }
                             </Form.Group>
                             {/*FOR AGE*/}
                             <Form.Group>
                                 <Form.Label>
-                                    Age
+                                    {t("age")}
                                 </Form.Label>
                                 <Form.Select
                                     style={{border: error ? "2px solid red" : ""}}
@@ -66,20 +69,20 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                     name="age"
                                     onChange={handleFormData("ageType")}
                                 >
-                                    <option value="">Open this select menu</option>
-                                    <option value="OVERAGE">Above 18</option>
-                                    <option value="UNDERAGE">Under 18</option>
+                                    <option value="">{t("openthisselectmenu")}</option>
+                                    <option value="OVERAGE">{t("above18")}</option>
+                                    <option value="UNDERAGE">{t("under18")} </option>
                                 </Form.Select>
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> This is required</Form.text>
+                                        <Form.text> {t("thisisrequired")} </Form.text>
                                     ) : ""
                                 }
                             </Form.Group>
                             {/*FOR EMAIL*/}
                             <Form.Group>
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label>{t("email")} </Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="email"
@@ -91,12 +94,12 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> This is required</Form.text>
+                                        <Form.text> {t("thisisrequired")} </Form.text>
                                     ) : ""
                                 }
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label>Username</Form.Label>
+                                <Form.Label>{t("username")} </Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="username"
@@ -108,14 +111,14 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> This is required</Form.text>
+                                        <Form.text> {t("thisisrequired")} </Form.text>
                                     ) : ""
                                 }
                             </Form.Group>
 
                             <div style={{ display: "flex", justifyContent: "space-around" }}>
                                 <Button variant="primary" onClick={prevStep}>
-                                    Previous
+                                    {t("previous")}
                                 </Button>
 
                                 <Button
@@ -123,7 +126,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                     type="submit"
                                     onClick={submitFormData}
                                 >
-                                    Continue
+                                    {t("continue")}
                                 </Button>
                             </div>
                         </Form>

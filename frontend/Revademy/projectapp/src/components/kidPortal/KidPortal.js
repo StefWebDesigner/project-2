@@ -35,11 +35,11 @@ class Portal extends React.Component {
             <div className='kid-header'>
                 <h3 className='kid-welcome'>Hello</h3>
                 <BackgroundColor setColor={this.setColor.bind(this)} />
-                <div className='avatar-dropdown'>
-                
                 <AvatarSelector />
-                </div>
             </div>
+                <div>
+                <value />
+                </div>
             <div className='kid-page-body'>
                 <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
                 <a className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>

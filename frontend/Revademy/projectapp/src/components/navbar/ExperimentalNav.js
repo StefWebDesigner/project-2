@@ -84,6 +84,16 @@ const ExperimentalNav = () => {
                         </div>
                     </Col>
 
+                    {
+                        user && user.accountTypes === 'ADMIN' ? (
+                        <Col className="background-credentials">
+                            <div className="link-container">
+                                <Link className="activites-link" to="/adminportal">Admin</Link>
+                            </div>
+                        </Col>
+                        ) : ""
+                    }
+
                     <Col className="background-credentials">
                             <ul className='navbar-nav ml-auto'>
                                 <li className='nav-item'>

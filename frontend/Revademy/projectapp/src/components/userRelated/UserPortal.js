@@ -8,6 +8,9 @@ import {useTranslation} from 'react-i18next';
 
 
 function UserPortal() {
+
+    const {t}=useTranslation(["register", "common", "profile"]);
+
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [userName, setUserName] = useState("")
@@ -91,11 +94,10 @@ function UserPortal() {
      setDisabledInfo(false)
      setReadOnly(true)
      setShowButton(true)
-     alert("User Info Updated.")
-    } else{alert("Please fill out all sections.")}
+     alert(window.t("userinfoupdated"))
+    } else{alert(window.t("pleasefilloutallsections"))}
     }
     
-    const {t}=useTranslation(["register", "common", "profile"]);
 
   return (
       <>

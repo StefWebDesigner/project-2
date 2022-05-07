@@ -32,7 +32,16 @@
 
     "resetpassword": "Reset Password",
     "enternewpassword": "Enter New Password",
-    "confirmnewpassword": "Confirm New Password"
+    "confirmnewpassword": "Confirm New Password",
+
+    "account": "Account",
+    "age": "Age",
+    "email": "Email",
+    "submit": "Submit",
+    "yourloginwassuccessful": "Your login was successful",
+    "passwordsdonotmatch": "Passwords do not match",
+    "userinfoupdated": "User Info Updated",
+    "pleasefilloutallsections": "Please fill out all sections"
     
 
 }

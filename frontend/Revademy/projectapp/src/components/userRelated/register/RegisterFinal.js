@@ -2,9 +2,11 @@ import React from 'react';
 import {useNavigate} from "react-router-dom"
 import {Button, Card} from "react-bootstrap";
 import axios from "axios";
-
+import { useTranslation } from 'react-i18next';
 
 const RegisterFinal = ({values, prevStep ,setFormData}) => {
+
+    const {t}=useTranslation(["register"]);
 
    const navigate = useNavigate();
 
@@ -39,37 +41,37 @@ const RegisterFinal = ({values, prevStep ,setFormData}) => {
                 <Card style={{ marginTop: 100, textAlign: "left" }}>
                     <Card.Body>
                         <p>
-                            <strong> First Name : </strong> {firstname}
+                            <strong> {t("firstname")}: </strong> {firstname}
                         </p>
                         <p>
-                            <strong> Last Name : </strong> {lastname}
+                            <strong> {t("lastname")} : </strong> {lastname}
                         </p>
                         <p>
-                            <strong> Username : </strong> {username}
+                            <strong> {t("username")} : </strong> {username}
                         </p>
                         <p>
-                            <strong> Account : </strong>
+                            <strong> {t("account")} : </strong>
                             {accountTypes}
 
                         </p>
                         <p>
-                            <strong> Age : </strong>
+                            <strong> {t("age")} : </strong>
                             {ageType}
 
                         </p>
                         <p>
-                            <strong> Email : </strong> {email}
+                            <strong> {t("email")} : </strong> {email}
                         </p>
                         <p>
-                            <strong> Password : </strong> {password}
+                            <strong> {t("password")} : </strong> {password}
                         </p>
                         <div style={{ display: "flex", justifyContent: "space-around" }}>
                             <Button variant="primary" onClick={prevStep}>
-                                Previous
+                                {t("previous")}
                             </Button>
 
                             <Button variant="primary" type="submit" onClick={registerUserFinalSubmit}>
-                                Submit
+                                {t("submit")}
                             </Button>
                         </div>
                     </Card.Body>
