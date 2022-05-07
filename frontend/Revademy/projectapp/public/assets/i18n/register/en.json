@@ -1,0 +1,38 @@
+{
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "continue": "Continue",
+    "typeofaccount": "Type of Account",
+    "openthisselectmenu": "Open this select menu",
+    "user": "User",
+    "admin": "Admin",
+    "thisisrequired": "This is required",
+    "above18": "Above 18",
+    "under18": "Under 18",
+    "username": "Username",
+    "previous": "Previous",
+    "password": "Password",
+
+    "login": "Login",
+    "enterusername": "Enter Username",
+    "enterpassword": "Enter Password",
+    "createaccount": "Create an Account",
+    "forgotpassword": "Forgot Password",
+    "datejoined": "Date Joined",
+    "clicktoeditinfo": "Click to Edit Info",
+
+    "enteremail": "Enter Email",
+    "checkyouremail": "Check your email",
+    "nousermatches": "No User Matches This Email",
+    "emailaddress": "Email Address",
+
+    "userinfo": "User Info",
+    "accounttype": "Account Type",
+    "agetype": "Age Type",
+
+    "resetpassword": "Reset Password",
+    "enternewpassword": "Enter New Password",
+    "confirmnewpassword": "Confirm New Password"
+    
+
+}

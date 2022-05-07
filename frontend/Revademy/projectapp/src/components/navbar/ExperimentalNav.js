@@ -1,9 +1,23 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {Col, Container, Row} from "react-bootstrap";
 import DataStore from "../../dataStore/dataStore";
+import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
 
 const ExperimentalNav = () => {
+
+    const { i18n, t } = useTranslation(["home"]);
+
+    useEffect(() => {
+        if (localStorage.getItem("i18nextLng")?.length > 2) {
+            i18next.changeLanguage("en");
+        }
+    }, []);
+
+    const handleLanguageChange = (e) => {
+        i18n.changeLanguage(e.target.value)
+    }
 
     const {user, setUser} = useContext(DataStore)
     let navigate = useNavigate();
@@ -17,11 +31,11 @@ const ExperimentalNav = () => {
     return (
         <>
             <section>
-                <Container>
+                <Container className='navbar-container'>
                 <Row>
                     <Col className="background-home">
                         <div className="link-container">
-                            <Link className="home-link" to="/">Home</Link>
+                            <Link className="home-link" to="/">{t("home")}</Link>
                         </div>
                     </Col>
 
@@ -32,14 +46,14 @@ const ExperimentalNav = () => {
                     { user ? (
                         <Col className="background-credentials">
                             <div className="link-container">
-                                <li className="credentials-link" onClick={logout}>Logout</li>
+                                <li className="credentials-link" onClick={logout}>{t("logout")}</li>
                             </div>
                         </Col>
                         ) : (
 
                         <Col className="background-credentials">
                             <div className="link-container">
-                                <Link className="credentials-link" to="/login">Login</Link>
+                                <Link className="credentials-link" to="/login">{t("login")}</Link>
                             </div>
                         </Col>
                         )}
@@ -48,7 +62,7 @@ const ExperimentalNav = () => {
 
                             <Col className="background-credentials">
                         <div className="link-container">
-                            <Link className="activites-link" to="/userportal">User Portal</Link>
+                            <Link className="activites-link" to="/userportal">{t("userportal")}</Link>
                         </div>
                     </Col>
                     ) : (
@@ -59,26 +73,30 @@ const ExperimentalNav = () => {
 
                     <Col className="background-activities">
                         <div className="link-container">
-                            <Link className="home-link" to="/activities">Activities</Link>
+                            <Link className="home-link" to="/opening">{t("kidportal")}</Link>
                         </div>
                     </Col>
-
+                    
+                    
                     <Col className="background-events">
                         <div className="link-container">
-                            <Link className="credentials-link" to="/events">Events</Link>
+                            <Link className="credentials-link" to="/events">{t("events")}</Link>
                         </div>
                     </Col>
 
-                    {
-                        user && user.accountTypes === 'ADMIN' ? (
-                        <Col className="background-credentials">
-                            <div className="link-container">
-                                <Link className="activites-link" to="/adminportal">Admin</Link>
-                            </div>
-                        </Col>
-                        ) : ""
-                    }
-
+                    <Col className="background-credentials">
+                            <ul className='navbar-nav ml-auto'>
+                                <li className='nav-item'>
+                                    <select className='nav-link  border-0 ml-1 mr-2'
+                                    value={localStorage.getItem("i18nextLng")}
+                                    onChange={handleLanguageChange}>
+                                        <option value="en">English</option>
+                                        <option value="es">Español</option>
+                                        <option value="fr">Français</option>
+                                    </select>
+                                </li>    
+                            </ul>
+                    </Col>
                 </Row>
                 </Container>
             </section>

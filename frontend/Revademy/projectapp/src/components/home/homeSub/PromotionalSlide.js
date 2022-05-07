@@ -1,7 +1,10 @@
 import React from 'react';
 import {Carousel} from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
+
 
 const PromotionalSlide = () => {
+    const {t}= useTranslation(["home"]);
     return (
         <>
             <Carousel variant="dark">

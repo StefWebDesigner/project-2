@@ -3,8 +3,12 @@ import emailjs from "emailjs-com"
 import axios from 'axios';
 import ExperimentalNav from '../navbar/ExperimentalNav';
 import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 
 export default function ForgotPassword() {
+
+    const {t}=useTranslation(["register", "common"]);
+
     const form = useRef();
     const [email, setEmail] = useState("");
     
@@ -17,7 +21,7 @@ export default function ForgotPassword() {
       .then(({data}) => {
               
                if(data==="No User Matches This Email" || email===""){
-                   alert("No User Matches This Email")
+                   alert("No User Matches This Email ")
                } else{
                tempData = data.token;
                
@@ -50,15 +54,15 @@ export default function ForgotPassword() {
             <Container className="login-container ">
             <Card className="login-card">
             <Form ref={form} className="login-form-container" onSubmit={sendEmail}>
-                <h1 className="login-title">Forgot Password</h1>
+                <h1 className="login-title">{t("register:forgotpassword")}</h1>
                 <Form.Group>
-                <Form.Label className="login-label"> <h4>Enter Email</h4></Form.Label>
+                <Form.Label className="login-label"> <h4>{t("enteremail")}</h4></Form.Label>
                     <Form.Control className="login-input" type='email' placeholder='Email Address' name='email' onChange={e => setEmail(e.target.value)}/>
                 </Form.Group>
                 <div className="button-login-container">
                 <button className="button-login">
                 <span>
-                    <h4>Submit</h4>
+                    <h4>{t("common:submit")}</h4>
                 </span>
                 </button>
                 </div>

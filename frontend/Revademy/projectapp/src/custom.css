@@ -563,9 +563,6 @@
 
 /*GENERAL*/
 
-.admin-backgound {
-    /*background-color: lightgrey;*/
-}
 
 .fact-card, .admin-tables {
     border: dodgerblue solid 2px;
@@ -647,20 +644,16 @@
 /* EXPERIMENTAL STUFF*/
 
 /* FOR GENERAL ELEMENT OF NAV */
-.background-home {
-    background-color: #151515;
+.navbar-container {
+    background-color: #0c2b49 ;
+    
 }
 
-.background-credentials {
-    background-color: #151515;
+.nav-link {
+    background-color: #0c2b49 ;
 }
 
-.background-activities {
-    background-color: #151515;
-}
-.background-events {
-    background-color: #151515;
-}
+
 
 .link-container {
     display: flex;
@@ -670,6 +663,7 @@
     height: 100%;
     position: relative;
     z-index: 0;
+    background-color: #0c2b49;
 }
 
 

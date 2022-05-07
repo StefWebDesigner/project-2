@@ -1,9 +1,12 @@
 import React from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
 import Slider from "react-slick";
+import { useTranslation } from 'react-i18next';
+
 
 
 const Testimonies = () => {
+    
     const settings = {
         dots: true,
         infinite: true,
@@ -18,7 +21,7 @@ const Testimonies = () => {
     //PLANNING ON COLLECTIN TESTIMONREIS IN TEH DATABSE AND GETING THEM
     // AND NOT CARD CODE THEM IN
 
-
+    const {t} = useTranslation(["home"]);
     return (
         <>
             <section style={{marginBottom:"80px"}}>
@@ -32,7 +35,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>John</h3>
-                            <p>"My children loved the classes and meet new freinds too!</p>
+                            <p>{t("mychildren")}</p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>
@@ -46,7 +49,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>Maria</h3>
-                            <p>"My child was so excited learning in class we signed for their event too!"</p>
+                            <p>{t("mychild")}</p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>
@@ -60,7 +63,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>Mark</h3>
-                            <p>"The teachers were so nice and engaging with the students. Great materailks "</p>
+                            <p>{t("theteachers")}</p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>
@@ -73,7 +76,7 @@ const Testimonies = () => {
                         </Card.Header>
                         <Card.Body className="testimony-body">
                             <h3>Alejandra</h3>
-                            <p>"Hands downs best on english platfrom ever! AKA not bias at ALL!!! "</p>
+                            <p>{t("handsdown")}</p>
                         </Card.Body>
                         <Card.Footer className="testimony-backgound">
                         </Card.Footer>

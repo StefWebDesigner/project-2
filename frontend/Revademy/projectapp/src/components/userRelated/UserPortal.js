@@ -4,6 +4,8 @@ import DataStore from "../../dataStore/dataStore";
 import DataContext from "../../dataStore/dataStore";
 import axios from 'axios'
 import './UserPortal.css'
+import {useTranslation} from 'react-i18next';
+
 
 function UserPortal() {
     const [firstName, setFirstName] = useState("")
@@ -93,48 +95,49 @@ function UserPortal() {
     } else{alert("Please fill out all sections.")}
     }
     
+    const {t}=useTranslation(["register", "common", "profile"]);
 
   return (
       <>
       <ExperimentalNav/>
     <form className='user-update-form'>
-    <h2 className='user-update-title'>User Info</h2>
+    <h2 className='user-update-title'>{t("register:userinfo")}</h2>
     <div>
-    <label>First Name:</label> 
+    <label>{t("register:firstname")}:</label> 
     <input className='user-update-input' placeholder={firstName} onChange={e => setFirstName(e.target.value)} readOnly = {readonly}/>
     </div>
     <div>
-    <label>Last Name:</label> 
+    <label>{t("register:lastname")}:</label> 
     <input className='user-update-input' placeholder={lastName} onChange={e => setLastName(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
-    <label>Username:</label> 
+    <label>{t("register:username")}:</label> 
     <input className='user-update-input' placeholder={userName}  onChange={e => setUserName(e.target.value)} readOnly = {readonly}/>
     </div>
     <div>
-    <label>Email:</label> 
+    <label>{t("profile:email")}:</label> 
     <input className='user-update-input' type="email" placeholder={email} onChange={e => setEmail(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
-    <label>Password:</label> 
+    <label>{t("register:password")}:</label> 
     <input className='user-update-input' type="password" placeholder={userPassword} onChange={e => setUserPassword(e.target.value)}  readOnly = {readonly}/>
     </div>
     <div>
-    <label>Account Type: </label> 
+    <label>{t("register:accounttype")}: </label> 
     <p>{accountType}</p>
     </div>
     <div>
-    <label>Age Type: </label> 
+    <label>{t("register:agetype")}: </label> 
     <p>{ageType}</p>
     </div>
     <div>
-    <label>Date Joined: </label> 
+    <label>{t("register:datejoined")}: </label> 
     <p>{createdDate}</p>
     </div>
     {showButton ? 
-    <button className='user-update-btn' onClick = {changeInfo} disabled={disabledInfo}>Click to Edit Info</button>
+    <button className='user-update-btn' onClick = {changeInfo} disabled={disabledInfo}>{t("register:clicktoeditinfo")}</button>
     :
-    <button className='user-update-btn' onClick = {submit} disabled={disabledSubmit}>submit</button>
+    <button className='user-update-btn' onClick = {submit} disabled={disabledSubmit}>{t("common:submit")}</button>
     }
     </form>
     </>
