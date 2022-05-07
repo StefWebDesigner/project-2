@@ -29,7 +29,7 @@ const LoginUser = () => {
 
                 setUser(data);
                 localStorage.setItem("user", JSON.stringify(data));
-                alert(window.t("register:yourloginwassuccessful"))
+                // alert(window.t("register:yourloginwassuccessful"))
                 navigate("/");
             })
     }
