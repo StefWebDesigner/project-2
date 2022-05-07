@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import {Button, Card, Form, } from "react-bootstrap";
 import validator from "validator";
+import { useTranslation } from 'react-i18next';
 
 const RegisterStepOne = ({nextStep, handleFormData, values}) => {
+
+    const {t}=useTranslation(["register"]);
 
     //CREATING THE ERROR STATE FORM THE VALIDATION
     const [error, setError] = useState(false);
@@ -30,7 +33,7 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                         <Form onSubmit={submitFormData}>
                             {/*SECTION FOR FIRSNAME*/}
                             <Form.Group className="mb-3">
-                                <Form.Label>First Name</Form.Label>
+                                <Form.Label>{t("firstname")}</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="firstName"
@@ -43,7 +46,7 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                 {
                                     error ? (
                                         <Form.text style={{color: "red"}}>
-                                            This is a required field
+                                            {t("thisisrequired")}
                                         </Form.text>
                                     ) : (
                                         ""
@@ -52,7 +55,7 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                             </Form.Group>
                             {/*SECTION FOR LASTNAME*/}
                             <Form.Group>
-                                <Form.Label>Last Name</Form.Label>
+                                <Form.Label>{t("lastname")}</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="lastName"
@@ -67,7 +70,7 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                 variant="primary"
                                 type="submit"
                             >
-                                Continue
+                                {t("continue")}
                             </Button>
                         </Form>
                     </Card.Body>

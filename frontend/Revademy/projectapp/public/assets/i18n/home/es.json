@@ -1,0 +1,44 @@
+{
+    "home": "Hogar",
+    "login": "Acceso",
+    "logout":"Salida",
+    "userportal": "Portal de Usuarios", 
+    "kidportal": "Portal de Niños", 
+    "events": "Eventos",
+
+    "welcometorevademy": "Bienvenido a Revademy",
+    "learningsofunyoudontnotice": "¡Aprendiendo tan divertido que ni siquiera te das cuenta!",
+    "tailorenglishclasses": "Clases de inglés personalizadas",
+    "dynamicenglishlearning": "Aprendizaje dinámico de inglés",
+    "funandinteractive": "Divertido e interactivo",
+
+    "announcements": "Anuncios",
+    "neweventsadded": "Nueva excursión añadida a la página de eventos. ¡No te pierdas!",
+    "newsoundgame": "¡Echa un vistazo a las nuevas toneladas de divertidas pruebas de sonido!",
+    "nothingelsenew": "Nada más nuevo, sólo queríamos saludar!",
+
+    "getoutthereandlearn": "¡Sal de ahí y aprende!",
+    "checkoutthegames": "Echa un vistazo a los últimos juegos.",
+    "gotsomeevent": "Tengo algunos eventos emocionantes alineados.",
+    "signup": "¡Regístrate ahora!",
+    "viewyourprogress":"Ver su progreso",
+    "learningportal": "Portal de aprendizaje",
+
+    "mychildren": "Mis hijos amaban las clases y conocieron nuevos amigos también.",
+    "mychild": "Mi hijo estaba tan emocionado aprendiendo en clase. También nos inscribimos en los eventos.",
+    "theteachers": "Los profesores eran tan agradables y atractivos con los estudiantes. Gran material.",
+    "handsdown": "Fácilmente el mejor plataforma de aprendizaje de inglés nunca!",
+
+    "report": "Informa",
+    "reportissue": "Informar de un problema",
+    "enterissuesubject": "Introducir asunto de problema:",
+    "thisisrequired": "Esto es necesario",
+    "selectlocation": "Seleccione la ubicación del problema",
+    "openmenu": "Abrir este menú de selección",
+    "homepage": "Página de inicio",
+    "gamepage": "Página del juego",
+    "eventpage": "Página de eventos",
+    "matchinggame": "Juego de cartas a juego",
+    "wordgame": "Juego de ahorcado",
+    "describeissue": "Describir el problema"
+}

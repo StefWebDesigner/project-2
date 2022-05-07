@@ -3,12 +3,14 @@ import {Card, Col, Container, Row} from "react-bootstrap";
 import gameIcon from '../../../kid_images/gamer_bot_badge.svg'
 import eventIcon from '../../../kid_images/spaceCityLarger.png'
 import learningIcon from '../../../kid_images/alien.png'
+import { useTranslation } from 'react-i18next';
 
 // import gameIcon from '../../../kid_images/gamer_bot_badge.svg'
 
 import {Link} from "react-router-dom";
 
 const FeaturesOffered = () => {
+    const {t}=useTranslation(["home", "common"]);
     return (
         <>
             <section className="offer-container">
@@ -17,7 +19,7 @@ const FeaturesOffered = () => {
                         <Container>
                         <Row>
                             <Card.Header className="offer-backgound">
-                                <h2 className="offer-title">Get Out There & Learn!</h2>
+                                <h2 className="offer-title">{t("home:getoutthereandlearn")}</h2>
                             </Card.Header>
 
                             <Col xs={12} sm={12} md={4}>
@@ -30,10 +32,10 @@ const FeaturesOffered = () => {
                                                 <img src={gameIcon}/>
                                                 <div className="overlay">
                                                     <div className="overlay-text">
-                                                        <p className="text-center">Checkout out the latest Games</p>
+                                                        <p className="text-center">{t("home:checkoutthegames")}</p>
                                                     </div>
                                                     <div className="overlay-link">
-                                                        <Link to="/activities">Games</Link>
+                                                        <Link to="/activities">{t("common:games")}</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -52,11 +54,11 @@ const FeaturesOffered = () => {
                                             <img src={eventIcon}/>
                                             <div className="overlay">
                                                 <div className="overlay-text">
-                                                    <p className="text-center">Got Some Exciting Event Lined up</p>
-                                                    <p className="text-center">SIGN UP NOW!</p>
+                                                    <p className="text-center">{t("home:gotsomeevent")}</p>
+                                                    <p className="text-center">{t("home:signup")}</p>
                                                 </div>
                                                 <div className="overlay-link">
-                                                    <Link to="/events">Events</Link>
+                                                    <Link to="/events">{t("home:events")}</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,10 +75,10 @@ const FeaturesOffered = () => {
                                                 <img src={learningIcon}/>
                                                 <div className="overlay">
                                                     <div className="overlay-text">
-                                                        <p className="text-center">View Your progress!</p>
+                                                        <p className="text-center">{t("home:viewyourprogress")}</p>
                                                     </div>
                                                     <div className="overlay-link">
-                                                        <Link to="/learningportal">Learning Portal</Link>
+                                                        <Link to="/learningportal">{t("home:kidportal")}</Link>
                                                     </div>
                                                 </div>
                                             </div>

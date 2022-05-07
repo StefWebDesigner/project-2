@@ -1,25 +1,27 @@
 import React, {Fragment} from 'react';
 import {Card, Carousel, Container} from "react-bootstrap";
 import {FaSmileBeam} from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 const Announcement = () => {
 
+    const {t}=useTranslation(["home"]);
     return (
         <>
             <section>
                     <Card>
 
                         <Card.Header className="custom-backgound">
-                            <h2 className="announce-title">Announcement</h2>
+                            <h2 className="announce-title">{t("announcements")}</h2>
                         </Card.Header>
                         <Card.Body>
                         <h4 className="announce-content">
 
                                 {/****** TO ADD SOME SCALLING AND EXCITING HOVER EFFECT OVER SMILE FACE*******/}
                                 <Fragment>
-                                    <p><FaSmileBeam/>  New events added like a field trip the science museum</p>
-                                    <p><FaSmileBeam/>  5 Games added to the list to learning with a smile on your face</p>
-                                    <p><FaSmileBeam/>  This is just an outline...lots of styling to come</p>
+                                    <p><FaSmileBeam/>  {t("neweventsadded")}</p>
+                                    <p><FaSmileBeam/>  {t("newsoundgame")}</p>
+                                    <p><FaSmileBeam/>  {t("nothingelsenew")}</p>
                                 </Fragment>
 
                         </h4>

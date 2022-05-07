@@ -2,8 +2,11 @@ import React, {Fragment} from 'react';
 import {Button, Col, Row} from "react-bootstrap";
 import ReportButton from "./homeSub/ReportButton";
 import InboxButton from "./homeSub/InboxButton";
+import { useTranslation } from 'react-i18next';
+
 
 const HeaderFooter = () => {
+    const {t} = useTranslation(["common"]);
     return (
         <>
 
@@ -29,11 +32,11 @@ const HeaderFooter = () => {
 
 
             <section className="home-footer">
-                <cite > Copy @ Revatue</cite>
+                <cite > © {t("revademy")}</cite>
             </section>
 
         </>
     );
-};
 
+    }
 export default HeaderFooter;

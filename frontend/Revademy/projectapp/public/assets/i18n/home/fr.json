@@ -1,0 +1,44 @@
+{
+    "home": "Accueil",
+    "login": "Entrée des membres",
+    "logout":"Déconnexion",
+    "userportal": "Portail utilisateur", 
+    "kidportal": "Portail des enfants", 
+    "events": "Événements",
+
+    "welcometorevademy": "Bienvenue à Revademy",
+    "learningsofunyoudontnotice": "Apprendre si amusant que vous ne remarquez même pas!",
+    "tailorenglishclasses": "Cours d'anglais sur mesure",
+    "dynamicenglishlearning": "Apprentissage dynamique de l'anglais",
+    "funandinteractive": "Amusant et interactif",
+
+    "announcements": "Annonces",
+    "neweventsadded": "Nouveau voyage sur le terrain ajouté à la page des événements. Ne manquez pas!",
+    "newsoundgame": "Découvrez les nouvelles tonnes de quiz sonore amusant!",
+    "nothingelsenew": "Rien de nouveau, on voulait juste dire bonjour!",
+
+    "getoutthereandlearn": "Sortez-y et apprenez ",
+    "checkoutthegames": "Découvrez les derniers jeux.",
+    "gotsomeevent": "Découvrez les derniers jeux.",
+    "signup": "Inscrivez-vous maintenant!",
+    "viewyourprogress": "Voyez vos progrès",
+    "learningportal": "Portail d'apprentissage",
+
+    "mychildren": "Mes enfants ont adoré les cours et ont aussi rencontré de nouveaux amis.",
+    "mychild": "Mon enfant était tellement excité d'apprendre en classe. Nous nous sommes aussi inscrits pour les événements.",
+    "theteachers": "Les enseignants étaient si gentils et engageants avec les élèves. Grande matière.",
+    "handsdown": "Mains vers le bas meilleure plate-forme d'apprentissage de l'anglais jamais!",
+
+    "report": "Rapporte",
+    "reportissue": "Problema del informe",
+    "enterissuesubject": "Entrez le sujet du problème:",
+    "thisisrequired": "Ceci est nécessaire",
+    "selectlocation": "Sélectionnez l'emplacement du problème",
+    "openmenu": "Ouvrez ce menu",
+    "homepage": "Page d'accueil",
+    "gamepage": "Page du jeu",
+    "eventpage": "Page de l'événement",
+    "matchinggame": "Jeu de correspondance de cartes",
+    "wordgame": "Jeu de mots",
+    "describeissue": "Décrire le problème"
+}

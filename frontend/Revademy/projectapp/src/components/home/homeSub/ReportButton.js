@@ -2,7 +2,12 @@ import React, {useState} from 'react';
 import {Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody, ModalFooter} from "react-bootstrap";
 import axios from "axios";
 import validator from "validator";
+import { useTranslation } from 'react-i18next';
+
+
 const ReportButton = () => {
+
+    const {t}= useTranslation(["home"]);
 
     const [reportForm, setReportForm] = useState({
         bugTitle : "",
@@ -53,7 +58,7 @@ const ReportButton = () => {
                         className="button-report"
                         onClick={handleShow}
                     >
-                        <span>Report</span>
+                        <span>{t("report")}</span>
                     </button>
 
                 </div>
