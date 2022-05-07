@@ -24,9 +24,6 @@ const Announcement = () => {
         displayAnnouncement()
     }, [])
 
-
-    const Announcement = () => {
-
         const {t} = useTranslation(["home"]);
 
         return (
@@ -68,6 +65,6 @@ const Announcement = () => {
             </>
         );
     };
-}
+
 
 export default Announcement;
