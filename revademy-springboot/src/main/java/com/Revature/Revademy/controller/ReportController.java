@@ -1,7 +1,6 @@
 package com.Revature.Revademy.controller;
 
 import com.Revature.Revademy.entities.Report;
-import com.Revature.Revademy.entities.ReportStats;
 import com.Revature.Revademy.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -53,23 +52,11 @@ public class ReportController {
         return ResponseEntity.ok(reportService.getMostReportedLocation());
     }
 
-
     @RequestMapping(value = "/countlocation", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Integer> getCountForMostReportedLocation() {
         return ResponseEntity.ok(reportService.getCountForMostReportedLocation());
     }
-
-    //make a post of sumit fixed
-
-//    @RequestMapping(value = "/fixedBugs", method = RequestMethod.POST)
-//    @CrossOrigin(origins = "http://localhost:3000")
-//    public ResponseEntity<Report> getCountedFixedIssues(@RequestBody Report report) {
-//        return ResponseEntity.ok(reportService.getCountedFixedIssues(report));
-//    }
-
-
-    // make a get sumit fixed
 
 
 }

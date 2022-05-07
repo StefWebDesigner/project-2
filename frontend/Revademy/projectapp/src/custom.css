@@ -662,6 +662,29 @@
 
 }
 
+
+.form-input{
+transition: .5s ease-in-out;
+}
+
+
+.form-input:hover {
+    border: blue 1px solid;
+    background-color: #4B7BE5;
+    color: white;
+}
+.form-input::placeholder:hover {
+    color: white;
+}
+
+.form-input:focus {
+    border: blue 1px solid;
+    background-color: lightblue;
+    color: blue;
+}
+
+
+
 /*.admin-tables {*/
 /*    border: dodgerblue solid 2px;*/
 /*}*/
@@ -725,6 +748,19 @@
 
 .admin-content-textarea {
     padding-bottom: 200px;
+    transition: .5s ease-in-out;
+}
+
+.admin-content-textarea:hover {
+    border: blue 1px solid;
+    background-color: #4B7BE5;
+    color: white;
+}
+
+.admin-content-textarea:focus {
+    border: blue 1px solid;
+    background-color: lightblue;
+    color: blue;
 }
 
 .admin-content-button-container {

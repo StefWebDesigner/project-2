@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Container, Form, FormControl, FormLabel, Card} from "react-bootstrap";
 import AdminNav from "./AdminNav";
 import axios from "axios";
+import AdminHomeContentDisplay from "./adminHomeContentSubGroup/AdminHomeContentDisplay";
 
 const AdminHomePanel = () => {
 
@@ -12,7 +13,7 @@ const AdminHomePanel = () => {
     const announcementSubmitHander = async(e) => {
         e.preventDefault()
 
-        await axios.post("http://localhost:8080/announcement/create", content)
+         await axios.post("http://localhost:8080/announcement/create", content)
             .then(response => {
                 setContent(response.data);
 
@@ -41,10 +42,12 @@ const AdminHomePanel = () => {
 
                     <h1 className="admin-main-title">Content Panel</h1>
 
+                    <AdminHomeContentDisplay/>
+
                     <section>
                     <h3 className="admin-sub-title">Announcement Section</h3>
 
-                        <Card>
+                        <Card className="admin-tables">
                             <Card.Header
                                 className="admin-content-announcement"
                             >
@@ -56,26 +59,20 @@ const AdminHomePanel = () => {
                                     as="textarea"
                                     type="text"
                                     name="contentBody"
-                                    value={content.contentBody}
+                                    defaultValue={content.contentBody}
                                     onChange={announcementChangeHandler}
                                  />
+                                 <div className="admin-content-button-container">
+                                     <button
+                                         type="submit"
+                                         className="table-button"
+                                     >
+                                         Update Content
+                                     </button>
+                                 </div>
                              </Form>
-                            <Card.Footer>
-                                <div className="admin-content-button-container">
-                                    <button
-                                        type="submit"
-                                        className="table-button"
-                                    >
-                                        Update Content
-                                    </button>
-                                </div>
-                            </Card.Footer>
                         </Card>
-
-
                     </section>
-
-
 
                 </Container>
             </section>

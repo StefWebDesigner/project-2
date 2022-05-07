@@ -36,12 +36,16 @@ public class ContentService {
     }
 
     public String deleteContent(Integer contentId) {
-        Optional <Content> content = contentRepository.findById(contentId);
-            if (content.isPresent()) {
-                contentRepository.deleteById(contentId);
-                return "Successfull deleted";
-            } else {
-                throw new GeneralException("Can't find content id ");
-            }
+        Optional<Content> content = contentRepository.findById(contentId);
+        if (content.isPresent()) {
+            contentRepository.deleteById(contentId);
+            return "Successfull deleted";
+        } else {
+            throw new GeneralException("Can't find content id ");
+        }
+
     }
+
+
+
 }
