@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
 import validator from "validator";
 import {Button, Card, Form} from "react-bootstrap";
+import { useTranslation } from 'react-i18next';
 
 const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
+
+    const {t}=useTranslation(["register"]);
+
     const [error, setError] = useState(false);
 
     const submitFormData = (e) => {
@@ -25,7 +29,7 @@ const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
                         <Form onSubmit={submitFormData}>
                             {/*FOR EMAIL*/}
                             <Form.Group>
-                                <Form.Label>Password</Form.Label>
+                                <Form.Label>{t("password")}</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="password"
@@ -37,17 +41,17 @@ const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> This is required</Form.text>
+                                        <Form.text> {t("thisisrequired")}</Form.text>
                                     ) : ""
                                 }
                             </Form.Group>
                             <div style={{ display: "flex", justifyContent: "space-around" }}>
                                 <Button variant="primary" onClick={prevStep}>
-                                    Previous
+                                    {t("previous")}
                                 </Button>
 
                                 <Button variant="primary" type="submit">
-                                    Submit
+                                    {t("submit")}
                                 </Button>
                             </div>
                         </Form>

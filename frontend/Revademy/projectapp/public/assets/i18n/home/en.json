@@ -1,0 +1,47 @@
+{
+    "home": "Home",
+    "login": "Login",
+    "logout":"Logout",
+    "userportal": "User Portal", 
+    "kidportal": "Kids Portal", 
+    "events": "Events",
+
+    "welcometorevademy": "Welcome to Revademy",
+    "learningsofunyoudontnotice": "Learning so fun you don't even notice!",
+    "tailorenglishclasses": "Tailored English Classes",
+    "dynamicenglishlearning": "Dynamic English Learning",
+    "funandinteractive": "Fun & Interactive",
+
+    "announcements": "Announcements",
+    "neweventsadded": "New field trip added to the events page. Don't miss out!",
+    "newsoundgame": "Check out the new tons of fun sound quiz!",
+    "nothingelsenew": "Nothing else new, we just wanted to say hi!",
+
+    "getoutthereandlearn": "Get Out There & Learn!",
+    "checkoutthegames": "Check out the latest games.",
+    "gotsomeevent": "Got some exciting events lined up.",
+    "signup": "Sign up now!",
+    "viewyourprogress": "View Your Progress",
+    "learningportal": "Learning Portal",
+
+    "mychildren": "My children loved the classes and met new friends too.",
+    "mychild": "My child was so excited learning in class. We signed up for the events too.",
+    "theteachers": "The teachers were so nice and engaging with the students. Great material.",
+    "handsdown": "Hands down the best English learning platform ever!",
+
+    "report": "Report",
+    "reportissue": "Report issue",
+    "enterissuesubject": "Enter issue subject:",
+    "thisisrequired": "This is required",
+    "selectlocation": "Select the location of the issue",
+    "openmenu": "Open this select menu",
+    "homepage": "Homepage",
+    "gamepage": "Game Page",
+    "eventpage": "Event Page",
+    "matchinggame": "Matching Game",
+    "wordgame": "Hangman Game",
+    "describeissue": "Describe the issue"
+
+
+
+}

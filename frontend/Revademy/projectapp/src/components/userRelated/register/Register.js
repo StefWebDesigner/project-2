@@ -5,6 +5,7 @@ import RegisterStepOne from "./RegisterStepOne";
 import RegisterStepThree from "./RegisterStepThree";
 import RegisterFinal from "./RegisterFinal";
 import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 const Register = () => {
 

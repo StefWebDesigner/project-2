@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import DataStore from "./dataStore/dataStore";
-import {useState} from "react";
+import {useState, Suspense} from "react";
 
 //ALL IMPORTED COMPONENTS
 import Home from "./components/home/Home";
@@ -45,6 +45,8 @@ function App() {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 
   return (
+      <Suspense fallback={null}>
+
       <DataStore.Provider
         value={{user, setUser}}
       >
@@ -90,6 +92,7 @@ function App() {
               </Routes>
           </Router>
       </DataStore.Provider>
+      </Suspense>
   );
 }
 
