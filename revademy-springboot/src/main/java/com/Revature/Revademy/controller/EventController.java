@@ -5,7 +5,6 @@ import com.Revature.Revademy.service.EventsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sun.java2d.pipe.hw.AccelDeviceEventNotifier;
 
 import java.util.List;
 
