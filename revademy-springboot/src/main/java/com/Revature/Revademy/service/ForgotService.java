@@ -30,24 +30,24 @@ public class ForgotService {
 	
 	//Checks if user exists by email and then creates a random token and adds the email and token to forgotRepository
 	 public ResetTokens forgot(String email) {
-//		 Optional<User> user = userRepository.findById(id);
-//		 	if (user.isPresent()) {
+
 		 		Optional<User> userOptional = userRepository.findByEmail(email);
 		 		if(userOptional.isPresent()) {
+		 			Optional<ResetTokens> userOptional2 = forgotRepository.findByEmail(email);
+		 			if(userOptional2.isPresent()) {
+		 				String token = RandomStringUtils.randomAlphanumeric(10);
+		 				ResetTokens resetTokens = userOptional2.get();
+		 				resetTokens.setToken(token);
+		 				return forgotRepository.save(resetTokens);
+		 			} else {
 		 			String token = RandomStringUtils.randomAlphanumeric(10);
-		            ResetTokens resetToken = new ResetTokens(email, token);	
-		            //send email
-//		            String url = "http://localhost:3000/reset/token";
-//		            EmailSenderService.sendEmail(email, "Password Reset", "Click " + url + " to reset password");
+		            ResetTokens resetToken = new ResetTokens(email, token);
 		            return  forgotRepository.save(resetToken);
-		            
+		 			}
 		      
 		 		} else {
 		 			 throw new NonExistingUserException("No User Matches This Email"); //make general exception
 		 		}		 			            	             
-//		 	} else {
-//		 		 throw new NonExistingUserException("User Doesn't Exist.");
-//		 	}
 		 		
 	    }
 

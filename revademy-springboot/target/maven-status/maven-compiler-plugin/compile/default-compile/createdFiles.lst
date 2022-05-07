@@ -1,9 +1,9 @@
+com\Revature\Revademy\entities\AgeType.class
+com\Revature\Revademy\entities\User.class
 com\Revature\Revademy\controller\UserStatsController.class
 com\Revature\Revademy\entities\AccountTypes.class
-com\Revature\Revademy\entities\ResetTokens.class
-com\Revature\Revademy\entities\AgeType.class
-com\Revature\Revademy\service\UserStatsService.class
-com\Revature\Revademy\entities\User.class
-com\Revature\Revademy\exception\NoEmailIdFoundExceptions.class
 com\Revature\Revademy\entities\UserStats.class
 com\Revature\Revademy\repository\UserStatsRepository.class
+com\Revature\Revademy\service\UserStatsService.class
+com\Revature\Revademy\entities\ResetTokens.class
+com\Revature\Revademy\exception\NoEmailIdFoundExceptions.class
