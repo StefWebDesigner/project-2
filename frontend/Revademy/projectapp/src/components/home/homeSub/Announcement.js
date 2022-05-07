@@ -41,7 +41,7 @@ const Announcement = () => {
                                             <div
                                                 key={news.contentId}
                                             >
-                                                <p>{news.contentBody}</p>
+                                                <p className="home-announcement-items">{news.contentBody}</p>
 
                                             </div>
                                         )

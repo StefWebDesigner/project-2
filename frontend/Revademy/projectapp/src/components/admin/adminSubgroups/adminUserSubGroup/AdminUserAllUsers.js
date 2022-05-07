@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row, Table} from "react-bootstrap";
+import {Card, Col, Row, Table} from "react-bootstrap";
 import {BsDash} from "react-icons/bs";
 import {useEffect, useState} from "react";
 import axios from "axios";
@@ -7,6 +7,7 @@ import axios from "axios";
 const AdminUserAllUsers = () => {
 
     const [showAllUser, setShowAllUser] = useState([]);
+    const [userViewWindow, setViewWindowWindow] = useState([])
     const [deleteUser, setDeleteUser] = useState([])
     const [sortId, setSortId] = useState([])
     const [sortRole, setSortRole] = useState([])
@@ -36,15 +37,16 @@ const AdminUserAllUsers = () => {
         getAllUser()
     }
 
+    const userViewer = (username) => {
+        axios.get(`http://localhost:8080/user/username/${username}`)
+            .then(response => {
+                setViewWindowWindow(response.data)
+                console.log(userViewWindow)
 
-    // const viewButton = (case_id) => {
-    //     console.log(case_id)
-    //
-    //     axios.get(`http://localhost:8080/report/${caseId}`)
-    //         .then(response => {
-    //             setViewer(response.data)
-    //         })
-    // }
+            })
+        console.log(userViewWindow)
+    }
+
 
     // SORTING
 
@@ -95,35 +97,35 @@ const AdminUserAllUsers = () => {
 
     useEffect(() => {
         getAllUser();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <>
 
-            {/*WHEN VIEWING THE USERS  i WILL EXPAND ON
-                EMAIL
-                AGE
-                PASSWORD
-            */}
 
             <h1 className="admin-sub-title">All Users</h1>
 
-
+            <div className="d-flex justify-content-center mb-3">
             <button
+                className="table-button"
                 onClick={sortById}
             >
                 ID
             </button>
             <button
+                className="table-button"
                 onClick={sortByRole}
             >
                 Role
             </button>
             <button
+                className="table-button"
                 onClick={sortByUsername}
             >
                 Username
             </button>
+            </div>
 
             <Row>
                 <Table striped bordered hover className="admin-tables">
@@ -152,11 +154,12 @@ const AdminUserAllUsers = () => {
                                 return (
                                     <tr key={allUsers.id}>
                                         <td className="report-td">
-                                            {/*<button className="table-button" onClick={() => {*/}
-                                            {/*    viewButton(pendingReports.caseId)*/}
-                                            {/*}}>view*/}
-                                            {/*</button>*/}
-                                            <button className="table-button">view
+                                            <button
+                                                className="table-button"
+                                                onClick={() => {
+                                                    userViewer(allUsers.username)
+                                                }}>
+                                                view
                                             </button>
                                         </td>
                                         <td className="report-td"> {allUsers.id}</td>
@@ -189,6 +192,46 @@ const AdminUserAllUsers = () => {
                     </tbody>
                 </Table>
             </Row>
+
+            <section>
+
+                <Row>
+                    <h7 className="admin-sub-title"> View User</h7>
+                </Row>
+
+                {
+
+                    // userViewWindow ?
+
+                    <div>
+                        <Card className="admin-email-card">
+
+                            <Card.Body>
+                                <h3 className="admin-email-body">{userViewWindow.id}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.firstname}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.lastname}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.username}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.accountTypes}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.email}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.password}</h3>
+                                <h3 className="admin-email-body">{userViewWindow.createdDate}</h3>
+
+                            </Card.Body>
+                            <Card.Footer className="admin-email-footer">
+
+                            </Card.Footer>
+                        </Card>
+                    </div>
+                    // :
+                    // <aside>
+                    //     <Row>
+                    //         <Col xs={12}>
+                    //             <p className="text-center"> No User Selected</p>
+                    //         </Col>
+                    //     </Row>
+                    // </aside>
+                }
+            </section>
 
         </>
     );

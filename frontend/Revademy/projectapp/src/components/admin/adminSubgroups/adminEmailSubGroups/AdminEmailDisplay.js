@@ -39,7 +39,7 @@ const AdminEmailDisplay = () => {
 
 
     async function viewEmailId(emailId) {
-        axios.get(`http://localhost:8080/emailsupport/${emailId}`)
+        axios.get(`http://localhost:8080/emailsupport/id=${emailId}`)
             .then(response => {
                 setEmailViewer(response.data)
             })

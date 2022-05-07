@@ -59,6 +59,11 @@ public class UserController {
     public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
         return ResponseEntity.ok(userService.getUserByUsername(username));
     }
+//    @RequestMapping(value = "/getuserbyIdrequestWorkplease/{id}", method = RequestMethod.GET)
+//    @CrossOrigin(origins = "http://localhost:3000")
+//    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
+//        return ResponseEntity.ok(userService.getUserById(id));
+//    }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
     @CrossOrigin(origins = "http://localhost:3000")

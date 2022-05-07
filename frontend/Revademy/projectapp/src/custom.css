@@ -229,6 +229,12 @@
 }
 
 
+.home-announcement-items {
+    text-align: center;
+    font-size: 25px;
+}
+
+
 .home-header-card-values-1,
 .home-header-card-values-3{
     margin-top: 10px;
