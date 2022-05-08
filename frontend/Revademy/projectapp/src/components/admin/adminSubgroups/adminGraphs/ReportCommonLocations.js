@@ -1,81 +1,243 @@
-import React, {useEffect, useState} from "react";
-import {Chart, ArcElement,Tooltip,Legend} from 'chart.js'
-import { Doughnut} from "react-chartjs-2";
+
+
+import React, {useEffect, useState} from 'react';
+import {
+    Chart,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 import axios from "axios";
 
-Chart.register(ArcElement,Tooltip,Legend);
-export  default function ReportCommontLocations(){
+Chart.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
+
+export default function FeedbackOverallFeedback(){
+
+    const [great, setGreat] = useState([]);
+    const [solid, setSolid] = useState([]);
+    const [ok, setOk] = useState([]);
+    const [needsimprovement, setNeedsimprovement] = useState([]);
+    const [bad, setBad] = useState([]);
+
+    useEffect(() => {
+
+        // CALLING GET ALL USERS & DETAILS
+        getAllGreat();
+        getAllSolid();
+        getAllOk();
+        getAllImprovement();
+        getAllBad();
+
+    },[]);
+
+    async function getAllGreat() {
+        await axios.get('http://localhost:8080/emailsupport/totalgreat')
+            .then(response => {
+
+                setGreat(response.data);
+            })
+    }
+    async function getAllSolid() {
+
+        await axios.get('http://localhost:8080/emailsupport/totalsolid')
+            .then(response => {
+                setSolid(response.data);
+                // const amount = response.data[0].count;
+                // setSolid(amount);
+                // const amount = response.data[0].count;
+            })
+    }
+    async function getAllOk() {
+        await axios.get('http://localhost:8080/emailsupport/totalok')
+            .then(response => {
+                setOk(response.data);
+                // const amount = response.data[0].count;
+                // setOk(amount);
+            })
+        // const amount = response.data[0].count;
+        // setOk(amount);
+    }
+
+    async function getAllImprovement() {
+        await axios.get('http://localhost:8080/emailsupport/totalimprovement')
+            .then(response => {
+                setNeedsimprovement(response.data);
+            })
+    }
+
+    async function getAllBad() {
+        await axios.get('http://localhost:8080/emailsupport/totalbad')
+            .then(response => {
+                setBad(response.data);
+            })
+    }
 
 
-const [java, setJava] = useState([]);
-const [react, setReact] = useState([]);
-const [beginner, setBeginner] = useState([]);
-const [intermidate, setIntermidate] = useState([]);
-const [advanced, setAdvanced] = useState([]);
+    const data = {
+        labels:["Great","Solid","Ok", "Needs Improvement", "Bad"],
+        datasets: [{
+            label: 'Overall Feedback Evaluation',
+            data: [great, solid, ok, needsimprovement, bad],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'green',
+                'purple',
+                'orange'
 
-async function getAllJavaTips() {
-    const response = await axios.get('http://localhost:4000/categories/totaltips/java');
-    const amount = response.data[0].count;
-    setJava(amount);
+            ],
+            hoverOffset: 4
+        }]
+    }
+
+    return (
+        <div>
+            <Bar data={data} />
+        </div>
+    )
 }
 
-async function getAllReactTips() {
-    const response = await axios.get('http://localhost:4000/categories/totaltips/react');
-    const amount = response.data[0].count;
-    setReact(amount);
-}
-async function getAllBeginnerTips() {
-    const response = await axios.get('http://localhost:4000/categories/totaltips/beginner');
-    const amount = response.data[0].count;
-    setBeginner(amount);
-}
 
-async function getAllIntermediateTips() {
-    const response = await axios.get('http://localhost:4000/categories/totaltips/intermidate');
-    const amount = response.data[0].count;
-    setIntermidate(amount);
-}
 
-async function getAllAdvancedTips() {
-    const response = await axios.get('http://localhost:4000/categories/totaltips/advanced');
-    const amount = response.data[0].count;
-    setAdvanced(amount);
-}
 
-useEffect(() => {
 
-   // CALLING GET ALL USERS & DETAILS
-    getAllJavaTips();
-    getAllReactTips();
-    getAllBeginnerTips();
-    getAllIntermediateTips();
-    getAllAdvancedTips();
 
-},[]);
 
-//GOING TO MAKE ALL TOTAL GENRE FOR THE SUB CATEGORY BASED ON THEIR POST AND ADD IT HERE
 
-const data = {
-    // labels: ["Java","React", "Beginner", "Intermediate", "Advanced"],
-    labels:["red","greeen","re"],
-    datasets: [{
-        label: 'All Total Post Per Genre',
-        // data: [java, react, beginner, intermidate, advanced],
-        data:[10,20,40],
-        backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'green',
-            'purple',
-            'orange'
 
-        ],
-        hoverOffset: 4
-    }]
-}
-return (
-    <div>
-        <Doughnut data={data} />
-    </div>
-)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// import React, {useEffect, useState} from 'react';
+// import {
+//     Chart as ChartJS,
+//     CategoryScale,
+//     LinearScale,
+//     BarElement,
+//     Title,
+//     Tooltip,
+//     Legend,
+// } from 'chart.js';
+// import { Bar } from 'react-chartjs-2';
+// import axios from "axios";
+//
+// ChartJS.register(
+//     CategoryScale,
+//     LinearScale,
+//     BarElement,
+//     Title,
+//     Tooltip,
+//     Legend
+// );
+// export default function FeedbackOverallFeedback(){
+//
+//     const [great, setGreat] = useState([]);
+//     const [solid, setSolid] = useState([]);
+//     const [ok, setOk] = useState([]);
+//     const [needsimprovement, setNeedsimprovement] = useState([]);
+//     const [bad, setBad] = useState([]);
+//
+// useEffect(() => {
+//
+//     // CALLING GET ALL USERS & DETAILS
+//     getAllGreat();
+//     getAllSolid();
+//     getAllOk();
+//     getAllImprovement();
+//     getAllBad();
+//
+// },[]);
+//
+//     async function getAllGreat() {
+//         const response = await axios.get('http://localhost:8080/emailsupport/totalgreat')
+//             .then(response => {
+//                     const amount = response.data.count;
+//                     setGreat(amount);
+//                 })
+//     }
+//     async function getAllSolid() {
+//
+//         const response = await axios.get('http://localhost:8080/emailsupport/totalsolid')
+//             .then(response => {
+//                 const amount = response.data.count;
+//                 setSolid(amount);
+//         // const amount = response.data[0].count;
+//             })
+//     }
+//     async function getAllOk() {
+//         const response = await axios.get('http://localhost:8080/emailsupport/totalok')
+//             .then(response => {
+//                 const amount = response.data.count;
+//                 setOk(amount);
+//
+//             })
+//         // const amount = response.data[0].count;
+//         // setOk(amount);
+//     }
+//
+//     async function getAllImprovement() {
+//         const response = await axios.get('http://localhost:8080/emailsupport/totalimprovement')
+//     .then(response => {
+//             const amount = response.data.count;
+//             setNeedsimprovement(amount);
+//         })
+//     }
+//
+//     async function getAllBad() {
+//         const response = await axios.get('http://localhost:8080/emailsupport/totalbad')
+//     .then(response => {
+//             const amount = response.data.count;
+//             setBad(amount);
+//         })
+//     }
+//
+//
+// const data = {
+//         labels:["Great","Solid","Ok", "Needs Improvement", "Bad"],
+//         datasets: [{
+//             label: 'Overall Feedback Evaluation',
+//             data: [great, solid, ok, needsimprovement, bad],
+//             backgroundColor: [
+//                 'rgb(255, 99, 132)',
+//                 'rgb(54, 162, 235)',
+//                 'green',
+//                 'purple',
+//                 'orange'
+//
+//             ],
+//             hoverOffset: 4
+//         }]
+//     }
+//
+//     return (
+//         <div>
+// <Bar data={data} />
+//
+//         </div>
+//     )
+// }
+
