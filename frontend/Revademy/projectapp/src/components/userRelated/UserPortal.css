@@ -29,7 +29,7 @@
     border-radius: 20px;
       border: white 1px solid;
       box-shadow: 0 4px 1rem -4px #000;
-
+      margin-bottom: 50px;
   }
 
   .user-update-btn{
@@ -56,6 +56,8 @@
   }
 
   .user-portal-body{
-    background-image: url("../../kid_images/space_medium_long_rectangle.png");
-    background-size: contain;
+    /*background-image: url("../../kid_images/cloudsone.png");*/
+    /*  background-size: contain;*/
+      background-color: #0c2b49;
+      height: 100vh;
   }
