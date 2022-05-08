@@ -4,7 +4,6 @@ import Testimonies from "./homeSub/Testimonies";
 import FeaturesOffered from "./homeSub/FeaturesOffered";
 import HomeHeader from "./HomeHeader";
 import {Container} from "react-bootstrap";
-import InboxButton from "./homeSub/InboxButton";
 
 const HomeMain = () => {
     return (

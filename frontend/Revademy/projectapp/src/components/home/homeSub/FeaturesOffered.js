@@ -29,7 +29,7 @@ const FeaturesOffered = () => {
                                     <Card className="offer-card-items">
                                         <Card.Body>
                                             <div className="overlay-container">
-                                                <img src={gameIcon}/>
+                                                <img src={gameIcon} alt='game icon'/>
                                                 <div className="overlay">
                                                     <div className="overlay-text">
                                                         <p className="text-center">{t("home:checkoutthegames")}</p>
@@ -51,7 +51,7 @@ const FeaturesOffered = () => {
                                     <Card className="offer-card-items">
                                         <Card.Body>
                                             <div className="overlay-container">
-                                            <img src={eventIcon}/>
+                                            <img src={eventIcon} alt='event icon'/>
                                             <div className="overlay">
                                                 <div className="overlay-text">
                                                     <p className="text-center">{t("home:gotsomeevent")}</p>
@@ -72,7 +72,7 @@ const FeaturesOffered = () => {
                                     <Card className="offer-card-items">
                                         <Card.Body>
                                             <div className="overlay-container">
-                                                <img src={learningIcon}/>
+                                                <img src={learningIcon} alt='learning icon'/>
                                                 <div className="overlay">
                                                     <div className="overlay-text">
                                                         <p className="text-center">{t("home:viewyourprogress")}</p>

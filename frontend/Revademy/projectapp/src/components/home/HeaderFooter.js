@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Button, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import ReportButton from "./homeSub/ReportButton";
 import InboxButton from "./homeSub/InboxButton";
 import { useTranslation } from 'react-i18next';

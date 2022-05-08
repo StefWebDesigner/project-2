@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
-import {Link, Route} from "react-router-dom";
-import {ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarContent, SidebarFooter} from 'react-pro-sidebar';
+import {Link} from "react-router-dom";
+import {ProSidebar, Menu, MenuItem, SidebarHeader, SidebarContent, SidebarFooter} from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import 'react-pro-sidebar/dist/css/styles.css';
 
