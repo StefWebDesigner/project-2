@@ -13,6 +13,8 @@ public class EmailSupport {
     private String subject;
     private String body;
     private Integer previousMailId;
+    @Enumerated(EnumType.STRING)
+    private FeebackOptionsTypes feebackOptionsTypes;
 
     public Integer getPreviousMailId() {
         return previousMailId;
@@ -61,4 +63,13 @@ public class EmailSupport {
     public void setBody(String body) {
         this.body = body;
     }
+
+    public FeebackOptionsTypes getFeebackOptionsTypes() {
+        return feebackOptionsTypes;
+    }
+
+    public void setFeebackOptionsTypes(FeebackOptionsTypes feebackOptionsTypes) {
+        this.feebackOptionsTypes = feebackOptionsTypes;
+    }
+
 }

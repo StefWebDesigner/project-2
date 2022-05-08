@@ -11,23 +11,22 @@ const HeaderFooter = () => {
         <>
 
             <section className="header-footer-container">
-                    <Row>
-                    <Col>
-                        <div className="">
-                            <ReportButton/>
-                        </div>
-                    </Col>
-                    <Col xs={10} sm={10}>
-                    </Col>
-                    <Col>
-                        <div className="">
+                   <div style={{display:"flex",justifyContent:"space-around"}}>
 
-                        <InboxButton/>
-                        </div>
+                           <div className="">
+                               <ReportButton/>
+                           </div>
 
-                    </Col>
 
-                </Row>
+
+                           <div className="">
+
+                               <InboxButton/>
+                           </div>
+
+                   </div>
+
+
             </section>
 
 
