@@ -24,68 +24,116 @@ Chart.register(
 
 export default function FeedbackOverallFeedback(){
 
-    const [great, setGreat] = useState([]);
-    const [solid, setSolid] = useState([]);
-    const [ok, setOk] = useState([]);
-    const [needsimprovement, setNeedsimprovement] = useState([]);
-    const [bad, setBad] = useState([]);
+    const [homepage, setHomepage] = useState([]);
+    const [activitypage, setActivitypage] = useState([]);
+    const [eventpage, setEventpage] = useState([]);
+    const [matchinggame, setMatchinggame] = useState([]);
+    const [hangmangame, setHangmangame] = useState([]);
+    const [colorquiz, setColorquiz] = useState([]);
+    const [animalquiz, setAnimalquiz] = useState([]);
+    const [soundgame, setSoundgame] = useState([]);
+    const [userportal, setUserportal] = useState([]);
+    const [kidportal, setKidportal] = useState([]);
+
 
     useEffect(() => {
 
         // CALLING GET ALL USERS & DETAILS
-        getAllGreat();
-        getAllSolid();
-        getAllOk();
-        getAllImprovement();
-        getAllBad();
+        getAllHomepage();
+        getAllActivity();
+        getAllEvents();
+        getAllMatching();
+        getAllColor();
+        getAllHang();
+        getAllAnimal();
+        getAllSound();
+        getAllUserportal();
+        getAllKidportal();
 
     },[]);
 
-    async function getAllGreat() {
-        await axios.get('http://localhost:8080/emailsupport/totalgreat')
+    async function getAllHomepage() {
+        await axios.get('http://localhost:8080/report/counttotalhomepage')
             .then(response => {
 
-                setGreat(response.data);
-            })
-    }
-    async function getAllSolid() {
-
-        await axios.get('http://localhost:8080/emailsupport/totalsolid')
-            .then(response => {
-                setSolid(response.data);
-                // const amount = response.data[0].count;
-                // setSolid(amount);
-                // const amount = response.data[0].count;
-            })
-    }
-    async function getAllOk() {
-        await axios.get('http://localhost:8080/emailsupport/totalok')
-            .then(response => {
-                setOk(response.data);
-                // const amount = response.data[0].count;
-                // setOk(amount);
-            })
-        // const amount = response.data[0].count;
-        // setOk(amount);
-    }
-
-    async function getAllImprovement() {
-        await axios.get('http://localhost:8080/emailsupport/totalimprovement')
-            .then(response => {
-                setNeedsimprovement(response.data);
+                setHomepage(response.data);
             })
     }
 
-    async function getAllBad() {
-        await axios.get('http://localhost:8080/emailsupport/totalbad')
+    async function getAllActivity() {
+        await axios.get('http://localhost:8080/report/counttotalactivitypage')
             .then(response => {
-                setBad(response.data);
+
+                setActivitypage(response.data);
+            })
+    }
+
+    async function getAllEvents() {
+        await axios.get('http://localhost:8080/report/counttotaleventpage')
+            .then(response => {
+
+                setEventpage(response.data);
+            })
+    }
+
+    async function getAllMatching() {
+        await axios.get('http://localhost:8080/report/counttotalmatchinggame')
+            .then(response => {
+
+                setMatchinggame(response.data);
+            })
+    }
+
+    async function getAllColor() {
+        await axios.get('http://localhost:8080/report/counttotalcolorquizgame')
+            .then(response => {
+
+                setColorquiz(response.data);
+            })
+    }
+
+
+
+    async function getAllHang() {
+        await axios.get('http://localhost:8080/report/counttotalhangmangame')
+            .then(response => {
+
+                setHangmangame(response.data);
+            })
+    }
+
+    async function getAllAnimal() {
+        await axios.get('http://localhost:8080/report/counttotalanimalgame')
+            .then(response => {
+
+                setAnimalquiz(response.data);
+            })
+    }
+    async function getAllSound() {
+        await axios.get('http://localhost:8080/report/counttotalsoundgame')
+            .then(response => {
+
+                setSoundgame(response.data);
+            })
+    }
+    async function getAllUserportal() {
+        await axios.get('http://localhost:8080/report/counttotaluserportal')
+            .then(response => {
+
+                setUserportal(response.data);
+            })
+    }
+    async function getAllKidportal() {
+        await axios.get('http://localhost:8080/report/counttotalkidsportal')
+            .then(response => {
+
+                setKidportal(response.data);
             })
     }
 
 
     const data = {
-        labels:["Great","Solid","Ok", "Needs Improvement", "Bad"],
+        labels:["Homepage","Activity","Events", "Matching", "Hangman", "Color","Animal","Sound", "User Portal", "Kid Portal"],
         datasets: [{
             label: 'Overall Feedback Evaluation',
             data: [great, solid, ok, needsimprovement, bad],
