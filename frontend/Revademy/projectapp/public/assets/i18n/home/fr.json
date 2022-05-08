@@ -42,5 +42,9 @@
     "eventpage": "Page de l'événement",
     "matchinggame": "Jeu de correspondance de cartes",
     "wordgame": "Jeu de mots",
-    "describeissue": "Décrire le problème"
+    "describeissue": "Décrire le problème",
+    "submit": "Submit",
+
+    "subject": "Subject",
+    "body": "Body"
 }

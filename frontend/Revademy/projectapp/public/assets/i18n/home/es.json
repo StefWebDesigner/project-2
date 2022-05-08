@@ -42,5 +42,9 @@
     "eventpage": "Página de eventos",
     "matchinggame": "Juego de cartas a juego",
     "wordgame": "Juego de ahorcado",
-    "describeissue": "Describir el problema"
+    "describeissue": "Describir el problema",
+    "submit": "Submit",
+
+    "subject": "Subject",
+    "body": "Body"
 }

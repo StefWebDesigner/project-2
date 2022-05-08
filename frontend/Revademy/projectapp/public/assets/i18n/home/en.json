@@ -42,7 +42,11 @@
     "eventpage": "Event Page",
     "matchinggame": "Matching Game",
     "wordgame": "Hangman Game",
-    "describeissue": "Describe the issue"
+    "describeissue": "Describe the issue",
+    "submit": "Submit",
+
+    "subject": "Subject",
+    "body": "Body"
 
 
 

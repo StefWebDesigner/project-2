@@ -6,13 +6,25 @@ const Quizzes = () => {
 
     return (
         <>
-            <ExperimentalNav/>
+             <ExperimentalNav/>
+            <div>
             <h1>Quizzes</h1>
-            <Link to="/colorQuiz">Color Quiz</Link>
-            <p>---------------------------------------</p>
-            <Link to="/animalQuiz">Animal Quiz</Link>
-            <p>---------------------------------------</p>
-            <Link to="/soundQuiz">Sound Quiz</Link>
+            
+            <div> 
+            
+            <Link to="/soundquiz">Sound Quiz</Link>
+            </div>
+            
+            <div>
+            
+            <Link to="/colorquiz">Color Quiz</Link>
+            </div>
+            </div>
+
+            <div> 
+    
+            <Link to="/animalquiz">Animal Quiz</Link>
+            </div>
             
 
         </>

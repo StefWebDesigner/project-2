@@ -71,13 +71,13 @@ const ReportButton = () => {
             >
                 <Form  onSubmit={reportFormSubmit}>
                     <Modal.Header className="report-modal-backgound">
-                        <h3 className="report-title"> Report Issue : </h3>
+                        <h3 className="report-title"> {t("reportissue")} </h3>
                     </Modal.Header>
                     <Modal.Body>
                         {/*ENTER SUBJECT TITLE*/}
                         <Form.Group>
                             <Form.Label className="modal-labels">
-                                Enter issue subject:
+                                {t("enterissuesubject")}
                             </Form.Label>
                             <Form.Control
                                 type="text"
@@ -90,14 +90,14 @@ const ReportButton = () => {
                             {/* ERROR SECTION    */}
                             {
                                 error ? (
-                                    <Form.Text> This is required</Form.Text>
+                                    <Form.Text> {t("thisisrequired")}</Form.Text>
                                 ) : ""
                             }
                         </Form.Group>
                         {/*ENTER LOCATION SLECTION */}
                         <Form.Group>
                             <Form.Label className="modal-labels">
-                                Select the location of the issue
+                                {t("selectlocation")}
                             </Form.Label>
                             <Form.Select
                                 style={{border: error ? "2px solid red" : ""}}
@@ -107,25 +107,25 @@ const ReportButton = () => {
                                 onChange={reportFormHandler}
                                 // onChange={handleFormData("account")}
                             >
-                                <option value="">Open this select menu</option>
-                                <option value="homepage">Homepage</option>
-                                <option value="activitypage">Activity Page</option>
-                                <option value="eventpage">Event Page</option>
-                                <option value="matchingsection">Matching Section</option>
-                                <option value="wordsection"> Word Section</option>
-                                <option value="learningportal">Learning Portal</option>
+                                <option value="">{t("openmenu")}</option>
+                                <option value="homepage">{t("homepage")}</option>
+                                <option value="activitypage">{t("gamepage")}</option>
+                                <option value="eventpage">{t("eventpage")}</option>
+                                <option value="matchingsection">{t("matchinggame")}</option>
+                                <option value="wordsection"> {t("wordgame")}</option>
+                                <option value="learningportal">{t("kidportal")}</option>
                             </Form.Select>
                             {/* ERROR SECTION    */}
                             {
                                 error ? (
-                                    <Form.Text> This is required</Form.Text>
+                                    <Form.Text> {t("thisisrequired")}</Form.Text>
                                 ) : ""
                             }
                         </Form.Group>
                         {/* REPORT ISSUE CONTENT*/}
                         <Form.Group>
                             <Form.Label className="modal-labels">
-                                Describe the issue:
+                                {t("describeissue")}
                             </Form.Label>
                             <Form.Control
                                 as="textarea"
@@ -140,7 +140,7 @@ const ReportButton = () => {
                             {/* ERROR SECTION    */}
                             {
                                 error ? (
-                                    <Form.Text> This is required</Form.Text>
+                                    <Form.Text> {t("thisisrequired")}</Form.Text>
                                 ) : ""
                             }
                         </Form.Group>
@@ -150,7 +150,7 @@ const ReportButton = () => {
                             type="submit"
                             className="button-report"
                         >
-                            Submit
+                           {t("submit")}
                         </button>
                         </div>
                     </Modal.Body>
