@@ -68,4 +68,35 @@ public class ReportService {
         return  reportRepository.CountForMostReportedLocation();
     }
 
+    public Integer getTotalReport() { return reportRepository.countTotalReports();}
+
+    public Integer getTotalHomepage() { return reportRepository.countTotalHomepage();
+    }
+
+    public Integer getTotalActivity() { return reportRepository.countTotalActivitypage();
+    }
+
+    public Integer getTotalEventpage() { return reportRepository.countTotalEventpage();
+    }
+
+    public Integer getTotalMatchinggame() { return reportRepository.countTotalMatchinggame();
+    }
+
+    public Integer getTotalHangmangame() { return reportRepository.countTotalHangmangame();
+    }
+
+    public Integer getTotalColorquizgame() {return reportRepository.countTotalColorquizgame();
+    }
+
+    public Integer getTotalAnimalgame() { return reportRepository.countTotalAnimalgame();
+    }
+
+    public Integer getTotalSoundgame() { return reportRepository.countTotalSoundgame();
+    }
+
+    public Integer getTotalUserportale() { return reportRepository.countTotalUserportal();
+    }
+
+    public Integer getTotalKidsportal() { return reportRepository.countTotalKidsportal();
+    }
 }

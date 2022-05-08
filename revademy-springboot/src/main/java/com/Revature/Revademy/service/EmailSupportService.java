@@ -69,6 +69,37 @@ public class EmailSupportService {
         }
     }
 
+// FACTS
+
+
+    public Integer countTotalGreatScores() {
+        return emailSupportRepository.countGetTotalGreatScores();
+    }
+
+    public Integer countTotalSolidScores() {
+        return emailSupportRepository.countGetTotalSolidScores();
+
+    }
+
+    public Integer countTotalokScores() {
+        return emailSupportRepository.countGetTotalOkScores();
+
+    }
+
+    public Integer countTotalImprovementScores() {
+        return emailSupportRepository.countGetTotalNeedsImprovementScores();
+
+    }
+
+    public Integer countTotalBadScores() {
+        return emailSupportRepository.countGetTotalBadScores();
+    }
+
+
+//    public Integer getCountForMostReportedLocation() {
+//        return  reportRepository.CountForMostReportedLocation();
+//    }
+
 
 
 }

@@ -11,7 +11,7 @@ const AdminReportFacts = () => {
     const [countLocation, setCountLocation] = useState([]);
 
     const getAllReportFact = () => {
-        axios.get("http://localhost:8080/report/all")
+        axios.get("http://localhost:8080/report/counttotalreport")
             .then(response => {
                 setAllReport(response.data);
             })
@@ -33,7 +33,7 @@ const AdminReportFacts = () => {
 
 
     useEffect(() => {
-
+        getAllReportFact()
         getMostBugByLocation()
         getMostCount()
 
@@ -48,7 +48,7 @@ const AdminReportFacts = () => {
                         <Card.Body>
                             <div className="fact-container">
                                 <h7 className="fact-title">Total Reports Pending :</h7>
-                                <p className="fact-number">{allReport.length}</p>
+                                <p className="fact-number">{allReport}</p>
                             </div>
                         </Card.Body>
                     </Card>
