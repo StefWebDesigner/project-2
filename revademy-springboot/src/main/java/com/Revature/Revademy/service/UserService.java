@@ -60,6 +60,7 @@ public class UserService {
         throw new NonExistingUserException("User Doesn't Exist.");
     }
 
+
     public void logoutUser(String username) {
         Optional<User> user = userRepository.findByUsername(username);
         if(!user.isPresent()) {

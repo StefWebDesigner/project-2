@@ -25,14 +25,25 @@ const LoginUser = () => {
         await axios.get(`http://localhost:8080/user/login?username=${username}&password=${password}`)
             .then(({data}) => {
 
-                console.log(data);
+                console.log(data)
 
-                setUser(data);
-                localStorage.setItem("user", JSON.stringify(data));
-                // alert(window.t("register:yourloginwassuccessful"))
-                navigate("/");
-            })
+                if(data === "User Doesn't Exist."){
+                    alert("User Doesn't Exist.")
+                } else{
+
+                    console.log(data);
+
+                    setUser(data);
+                    localStorage.setItem("user", JSON.stringify(data));
+                    navigate("/");
+                }
+
+
+            });
     }
+
+
+
 
     return (
         <>

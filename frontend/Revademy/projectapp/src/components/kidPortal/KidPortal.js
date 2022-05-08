@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import 'antd/dist/antd.css';
-import { Avatar } from 'antd';
+import {Avatar, Row} from 'antd';
 import { UserOutlined } from '@ant-design/icons'; 
 import './kidportal.css';
 import AvatarSelector from './AvatarSelector';
@@ -11,6 +11,7 @@ import MusicIcon from "../icons/music_icon.png";
 import StoryIcon from "../icons/storytelling_icon.png";
 import BackgroundColor from './BackgroundColor';
 import Color from './BackgroundColor';
+import {Container, Col } from "react-bootstrap";
 
 
 class Portal extends React.Component {
@@ -30,7 +31,7 @@ class Portal extends React.Component {
     render () {
 
     return (
-        <div style={{backgroundColor: this.state.color, height: '100vh', width: '100vw' } }>
+        <div style={{backgroundColor: this.state.color} }>
             
             <div className='kid-header'>
                 <h3 className='kid-welcome'>Hello</h3>
@@ -41,10 +42,16 @@ class Portal extends React.Component {
                 <value />
                 </div>
             <div className='kid-page-body'>
-                <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
+                <Container>
+                    <Row>
+                        <Col>
+                            <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
+                        </Col>
                 <a className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>
                 <a className='music-button'><img src={ MusicIcon} alt="music button" /></a>
                 <a className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
+                    </Row>
+                </Container>
             </div>
         </div>
     );
