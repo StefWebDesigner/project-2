@@ -1,12 +1,11 @@
-section {
+.color-section {
     background-color: #0c2b49;
-    height: 4vh;
 }
+
 .color-quiz{
     text-align: center;
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
     height: 96vh;
-    width: 100vw;
     margin: 0;
     padding: 0;
     
@@ -21,8 +20,7 @@ section {
     width: 80%;
     height: auto;
     margin: 0 auto;
-    box-shadow: 0 4px 1rem -4px #000;
-    
+    box-shadow: 0 4px 1rem -4px #000; 
 }
 
 .color-quiz-ul{
@@ -46,6 +44,7 @@ section {
     font-size: 18px;
     margin-top: 6px;
 }
+
 .color-quiz-li:hover{
     background-color: rgb(83, 218, 228);
 }
@@ -56,13 +55,13 @@ section {
 }
 
 .final-results-color{
-    box-sizing: border-box;
     background-color: gray;
     padding:4px;
     padding-right: 24px;
     border-radius: 16px;
     color: black;
     width: 50%;
+    height: auto;
     margin: 0 auto;
     box-shadow: 0 4px 1rem -4px #000;
 }

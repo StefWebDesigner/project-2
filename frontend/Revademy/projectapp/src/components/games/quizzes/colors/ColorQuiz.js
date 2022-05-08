@@ -155,8 +155,8 @@ useEffect( () => {
   return (
       <>
       
-      {/* <div className='color-quiz-title'> */}
-          
+      <section className='color-section'>
+      <div className='color-quiz-title'>
       <ExperimentalNav/>
     <div className = "color-quiz">
         
@@ -196,8 +196,8 @@ useEffect( () => {
         </div>
         )}
     </div>
-    
-    {/* </div> */}
+    </div>
+    </section>
     
     </>
   )

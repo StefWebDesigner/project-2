@@ -1,4 +1,4 @@
-section {
+.sound-section {
     background-color: #0c2b49;
 }
 
@@ -9,14 +9,6 @@ section {
     margin: 0;
     padding: 0;
     
-}
-
-.sound-quiz-h1{
-    color: white;
-}
-
-.sound-quiz-h2{
-    color: white;
 }
 
 .question-card-sound{
@@ -34,6 +26,14 @@ section {
 
 .sound-quiz-ul{
     list-style: none;
+}
+
+.sound-quiz-h1{
+    color: white;
+}
+
+.sound-quiz-h2{
+    color: white;
 }
 
 .sound-quiz-li {
@@ -69,7 +69,7 @@ section {
     background-color: red;
     border: solid;
     color: black;
-    padding: 16px 24px;
+    padding: 14px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
