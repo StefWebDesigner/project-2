@@ -38,11 +38,13 @@
     border: 2px solid #0b4c78;
 }
 .first-step{
- background: #5eacff;
+ /* background: #5eacff; */
+ background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
 }
 
 .filled-step{
-    background: #5eacff;
+    /* background: #5eacff; */
+    background: linear-gradient(-45deg, #6FDFDF, #4B7BE5, #5534A5, #A85CF9);
 }
 
 .second-step {
