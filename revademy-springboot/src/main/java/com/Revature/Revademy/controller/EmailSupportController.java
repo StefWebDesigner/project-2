@@ -2,6 +2,7 @@ package com.Revature.Revademy.controller;
 
 import com.Revature.Revademy.entities.EmailSupport;
 import com.Revature.Revademy.service.EmailSupportService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,6 +49,38 @@ public class EmailSupportController {
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<EmailSupport>getEmailbyId(@PathVariable Integer emailId){
         return ResponseEntity.ok(emailSupportService.getEmailbyId(emailId));
+    }
+
+    // FACTS STUFF
+
+    @RequestMapping(value = "/totalgreat", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Integer>countTotalGreatScores(){
+        return ResponseEntity.ok(emailSupportService.countTotalGreatScores());
+    }
+
+    @RequestMapping(value = "/totalsolid", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Integer>countTotalSolidScores(){
+        return ResponseEntity.ok(emailSupportService.countTotalSolidScores());
+    }
+
+    @RequestMapping(value = "/totalok", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Integer>countTotalokScores(){
+        return ResponseEntity.ok(emailSupportService.countTotalokScores());
+    }
+
+    @RequestMapping(value = "/totalimprovement", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Integer>countTotalImprovementScores(){
+        return ResponseEntity.ok(emailSupportService.countTotalImprovementScores());
+    }
+
+    @RequestMapping(value = "/totalbad", method = RequestMethod.GET)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Integer>countTotalBadScores(){
+        return ResponseEntity.ok(emailSupportService.countTotalBadScores());
     }
 
 
