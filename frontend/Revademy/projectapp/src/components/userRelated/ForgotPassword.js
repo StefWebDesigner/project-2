@@ -21,7 +21,7 @@ export default function ForgotPassword() {
       .then(({data}) => {
               
                if(data==="No User Matches This Email" || email===""){
-                   alert(window.t("nousermatches"))
+                   alert("No user matches this email.")
                } else{
                tempData = data.token;
                
@@ -35,7 +35,7 @@ export default function ForgotPassword() {
             }, (error) => {
                 console.log(error.text);
             });
-               alert(window.t("checkyouremail"))
+               alert("Check your email.")
            }}
        ).catch(
            err => {
