@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 const HomeHeader = () => {
 
-    const {t} = useTranslation(["home", "common"]);
+    const {t} = useTranslation(["home"]);
 
     const {user} = useContext(DataStore)
 

@@ -1,15 +1,15 @@
-.kid-page-main {
-    background-color: Color;
+.root {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 
 .kid-header {
-    width:100vw;
-    height: 10vh;
+    width: auto;
+    height: 20vh;
     margin: 0;
-    top: 0;
-    left: 0;
-    display:flex;
+    padding: 0;
     justify-content: center;
     align-items: center;
 }
@@ -17,6 +17,11 @@
 .kid-welcome {
     font-size: xx-large;
     margin: 0;
+    padding: 0;
+}
+
+.color-box input {
+    width: 30vw;
 }
 
 .kid-avatar {
@@ -29,24 +34,31 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: 100vw;
-    height: 90vh;
-    justify-content: space-evenly;
+    height: 80vh;
+    justify-content: center;
     align-items: center;
 }
 
 .games-button img{
-    width: 30vw; 
+    width: 25vw; 
+    margin: 0;
+    padding: 0;
 }
 
 .quizzes-button img {
-    width: 25vw;
+    width: 20vw;
+    margin: 0;
+    padding: 0;
 }
 
 .music-button img {
-    width: 25vw;
+    width: 20vw;
+    margin: 0;
+    padding: 0;
 }
 
 .storytelling-button img {
-    width: 25vw;
+    width: 20vw;
+    margin: 0;
+    padding: 0;
 }

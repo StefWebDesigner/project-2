@@ -27,7 +27,7 @@ import './kidportal.css';
    
         <div className="avatar-selector">
                 <img src= {value} className="kid-avatar" />
-                <h3 className='avatar-header'></h3>
+
 
                   <select
                     value={value}
