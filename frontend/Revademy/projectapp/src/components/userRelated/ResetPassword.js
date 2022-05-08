@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import {Card, Container, Form} from "react-bootstrap";
 import {useTranslation} from 'react-i18next';
+import ExperimentalNav from '../navbar/ExperimentalNav';
 
 function ResetPassword() {
 
@@ -40,10 +41,11 @@ function ResetPassword() {
   return (
     <>
     <section className="fade-in-animation login-backgound">
+    <ExperimentalNav/>
                 <Container className="login-container ">
                     <Card className="login-card">
             <Form className="login-form-container">
-                <h1 className="login-title">{t("register:resetpassword")}</h1>
+                <h1 style={{textAlign: "center", color: "purple"}} >{t("register:resetpassword")}</h1>
                 <Form.Group>
                     <Form.Label className="login-label"><h4>{t("register:enternewpassword")}</h4></Form.Label>
                     <Form.Control className="login-input" type='password' placeholder='password' value={password1} onChange={e => setPassword1(e.target.value)}/>

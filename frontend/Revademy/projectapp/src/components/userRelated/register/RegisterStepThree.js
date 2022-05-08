@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import validator from "validator";
-import {Button, Card, Form} from "react-bootstrap";
+import {Button, Card, Form, Container} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 
 const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
@@ -21,17 +21,19 @@ const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
         }
     }
 
+    
     return (
         <>
             <section>
-                <Card style={{ marginTop: 100 }}>
+                <Card  style={{marginTop: 100, borderRadius: 15,}}>
                     <Card.Body>
-                        <Form onSubmit={submitFormData}>
+                        <Form className="login-form-container" onSubmit={submitFormData}>
                             {/*FOR EMAIL*/}
                             <Form.Group>
-                                <Form.Label>{t("password")}</Form.Label>
+                                <Form.Label className="input-label-username">{t("password")}</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
+                                    className="login-input"
                                     name="password"
                                     type="password"
                                     defaultValue={values.password}
@@ -47,12 +49,12 @@ const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
                                     ) : ""
                                 }
                             </Form.Group>
-                            <div style={{ display: "flex", justifyContent: "space-around" }}>
-                                <Button variant="primary" onClick={prevStep}>
+                            <div className="button-login-container" style={{ display: "flex", justifyContent: "space-around" }}>
+                                <Button className="button-login" variant="primary" onClick={prevStep}>
                                     {t("previous")}
                                 </Button>
 
-                                <Button variant="primary" type="submit">
+                                <Button className="button-login" variant="primary" type="submit">
                                     {t("submit")}
                                 </Button>
                             </div>

@@ -2,6 +2,7 @@
     background-color: #0c2b49;
 }
 
+
 .animal-quiz{
     text-align: center;
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
@@ -45,7 +46,8 @@
 }
 
 .animal-quiz-li:hover{
-    background-color: rgb(83, 218, 228);
+    background-color: #95CDEF;
+    box-shadow: 0 4px 1rem -4px #000;
 }
 
 .question-text{
@@ -119,3 +121,4 @@
    }
 
    }
+

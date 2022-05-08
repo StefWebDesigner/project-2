@@ -5,6 +5,7 @@ import axios from "axios";
 import DataContext from "../../dataStore/dataStore";
 import './user.css';
 import { useTranslation } from 'react-i18next';
+import ExperimentalNav from '../navbar/ExperimentalNav';
 
 const LoginUser = () => {
 
@@ -32,7 +33,7 @@ const LoginUser = () => {
                     alert("Incorrect Login Information")
                 } else{
 
-                    console.log(data);
+                    // console.log(data);
 
                     setUser(data);
                     localStorage.setItem("user", JSON.stringify(data));
@@ -50,6 +51,7 @@ const LoginUser = () => {
     return (
         <>
             <section className="fade-in-animation login-backgound">
+            <ExperimentalNav/>
                 <Container className="login-container ">
 
                     <Card className="login-card">

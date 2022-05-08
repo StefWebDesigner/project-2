@@ -40,39 +40,39 @@ const RegisterFinal = ({values, prevStep ,setFormData}) => {
 
 
 
-                <Card style={{ marginTop: 100, textAlign: "left" }}>
+                <Card style={{ marginTop: 100, textAlign: "left", borderRadius: 15 }}>
                     <Card.Body>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("firstname")}: </strong> {firstname}
                         </p>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("lastname")} : </strong> {lastname}
                         </p>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("username")} : </strong> {username}
                         </p>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("account")} : </strong>
                             {accountTypes}
 
                         </p>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("age")} : </strong>
                             {ageType}
 
                         </p>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("email")} : </strong> {email}
                         </p>
-                        <p>
+                        <p className="input-label-username">
                             <strong> {t("password")} : </strong> {password}
                         </p>
-                        <div style={{ display: "flex", justifyContent: "space-around" }}>
-                            <Button variant="primary" onClick={prevStep}>
+                        <div className="button-login-container" style={{ display: "flex", justifyContent: "space-around" }}>
+                            <Button className="button-login" variant="primary" onClick={prevStep}>
                                 {t("previous")}
                             </Button>
 
-                            <Button variant="primary" type="submit" onClick={registerUserFinalSubmit}>
+                            <Button className="button-login" variant="primary" type="submit" onClick={registerUserFinalSubmit}>
                                 {t("submit")}
                             </Button>
                         </div>

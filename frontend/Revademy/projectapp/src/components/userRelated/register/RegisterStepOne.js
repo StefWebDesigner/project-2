@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {Button, Card, Form, } from "react-bootstrap";
+import {Button, Card, Form} from "react-bootstrap";
 import validator from "validator";
 import { useTranslation } from 'react-i18next';
+
 
 const RegisterStepOne = ({nextStep, handleFormData, values}) => {
 
@@ -27,15 +28,17 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
 
     return (
         <>
-            <section className="fade-in-animation">
-                <Card>
+            <section>
+          
+                <Card style={{ marginTop: 100, borderRadius: 15 }}>
                     <Card.Body>
-                        <Form onSubmit={submitFormData}>
+                        <Form className="login-form-container" onSubmit={submitFormData}>
                             {/*SECTION FOR FIRSNAME*/}
                             <Form.Group className="mb-3">
-                                <Form.Label>{t("firstname")}</Form.Label>
+                                <Form.Label className="input-label-username">{t("firstname")}</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
+                                    className="login-input"
                                     name="firstName"
                                     defaultValue={values.firstname}
                                     type="text"
@@ -57,9 +60,10 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                             </Form.Group>
                             {/*SECTION FOR LASTNAME*/}
                             <Form.Group>
-                                <Form.Label>{t("lastname")}</Form.Label>
+                                <Form.Label className="login-label">{t("lastname")}</Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
+                                    className="login-input"
                                     name="lastName"
                                     type="text"
                                     defaultValue={values.lastname}
@@ -70,15 +74,19 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                 />
                             </Form.Group>
                         {/* BUTTON SECTION */}
+                        <div className="button-login-container">
                             <Button
+                            className="button-login"
                                 variant="primary"
                                 type="submit"
                             >
                                 {t("continue")}
                             </Button>
+                            </div>
                         </Form>
                     </Card.Body>
                 </Card>
+                
             </section>
         </>
 

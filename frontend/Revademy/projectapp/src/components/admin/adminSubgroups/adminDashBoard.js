@@ -4,6 +4,7 @@ import AdminReportFacts from "./adminReportSubGroups/adminReportFacts";
 import {Container} from "react-bootstrap";
 import AdminUserFacts from "./adminUserSubGroup/adminUserFacts";
 import AdminEmailFacts from "./adminReportSubGroups/adminEmailFacts";
+import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
 // import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
 
 const AdminDashBoard = () => {
@@ -14,16 +15,18 @@ const AdminDashBoard = () => {
                     <AdminNav/>
                     <h1 className="admin-main-title">DashBoard</h1>
 
+
                     {/* REPORT DASHBOARD*/}
                     <h2 className="admin-sub-title">Report DashBoard</h2>
                     <AdminReportFacts/>
+                    <ReportCommonLocations/>
 
                     {/*<ReportCommonLocations/>*/}
 
                     {/* REPORT DASHBOARD*/}
                     <h2 className="admin-sub-title">User DashBoard</h2>
                     <AdminUserFacts/>
-                    <p>Add grpahs here</p>
+                    <p>LineBar</p>
 
                     {/* REPORT DASHBOARD*/}
                     <h2 className="admin-sub-title">Email DashBoard</h2>

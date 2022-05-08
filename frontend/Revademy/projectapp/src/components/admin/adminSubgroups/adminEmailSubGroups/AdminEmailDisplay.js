@@ -111,17 +111,30 @@ const AdminEmailDisplay = () => {
 
                                     //IF NO EMAIL PENDING
                                     :
+                                    ""
 
-                                    <aside>
-                                        <Row>
-                                            <Col xs={12}>
-                                                <p className="text-center"> No Emails</p>
-                                            </Col>
-                                        </Row>
-                                    </aside>
+                                    // <aside>
+                                    //     <Row>
+                                    //         <Col xs={12}>
+                                    //             <p className="text-center"> No Emails</p>
+                                    //         </Col>
+                                    //     </Row>
+                                    // </aside>
                             }
                             </tbody>
                         </Table>
+                        { showAllEmails.length === 0?
+                            <aside>
+                                <Row>
+                                    <Col xs={12}>
+                                        <p className="text-center"> No Emails</p>
+                                    </Col>
+                                </Row>
+                            </aside>:
+                            ""
+
+                        }
+
                     </Row>
 
                 </Container>

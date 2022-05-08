@@ -44,6 +44,8 @@
     top: 50%;
     left: 28%;
     animation: fadeIn 3s;
+    text-decoration: none;
+    transition: .5s ease-in-out;
 
 }
 
