@@ -23,21 +23,22 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
             nextStep();
         }
     }
-
     return (
         <>
             <section>
-                <Card style={{ marginTop: 100 }}>
+            
+                <Card style={{ marginTop: 100, borderRadius: 15 }}>
                     <Card.Body>
-                        <Form>
+                        <Form className="login-form-container">
 
                         {/*<Form onSubmit={submitFormData}>*/}
                             {/*FOR ACCOUNT*/}
                             <Form.Group>
-                                <Form.Label>
+                                <Form.Label className="input-label-username">
                                     {t("typeofaccount")}
                                 </Form.Label>
                                 <Form.Select
+                                className="login-input"
                                     style={{border: error ? "2px solid red" : ""}}
                                     size="md"
                                     name="accountTypes"
@@ -56,10 +57,11 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                             </Form.Group>
                             {/*FOR AGE*/}
                             <Form.Group>
-                                <Form.Label>
+                                <Form.Label className="input-label-username">
                                     {t("age")}
                                 </Form.Label>
                                 <Form.Select
+                                className="login-input"
                                     style={{border: error ? "2px solid red" : ""}}
                                     size="md"
                                     name="age"
@@ -78,9 +80,10 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                             </Form.Group>
                             {/*FOR EMAIL*/}
                             <Form.Group>
-                                <Form.Label>{t("email")} </Form.Label>
+                                <Form.Label className="input-label-username">{t("email")} </Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
+                                    className="login-input"
                                     name="email"
                                     type="email"
                                     value={values.email}
@@ -95,9 +98,10 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 }
                             </Form.Group>
                             <Form.Group>
-                                <Form.Label>{t("username")} </Form.Label>
+                                <Form.Label className="input-label-username">{t("username")} </Form.Label>
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
+                                    className="login-input"
                                     name="username"
                                     type="text"
                                     value={values.username}
@@ -112,12 +116,13 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 }
                             </Form.Group>
 
-                            <div style={{ display: "flex", justifyContent: "space-around" }}>
-                                <Button variant="primary" onClick={prevStep}>
+                            <div className="button-login-container" style={{ display: "flex", justifyContent: "space-around" }}>
+                                <Button className="button-login" variant="primary" onClick={prevStep}>
                                     {t("previous")}
                                 </Button>
 
                                 <Button
+                                className="button-login"
                                     variant="primary"
                                     type="submit"
                                     onClick={submitFormData}
@@ -129,6 +134,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
 
                     </Card.Body>
                 </Card>
+                
             </section>
 
         </>

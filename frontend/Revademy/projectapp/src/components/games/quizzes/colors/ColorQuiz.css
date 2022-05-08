@@ -6,9 +6,12 @@
     /*    background-color: #95CDEF ;*/
 }
 
-/*section {*/
-/*    background-color: #195479;*/
-/*}*/
+/* section {
+    background-color: #195479;
+} 
+This messes with any section that doesn't have a class! Have to name it something specific!
+*/
+
 
 .question-card-color{
     background: rgb(186,186,186);
