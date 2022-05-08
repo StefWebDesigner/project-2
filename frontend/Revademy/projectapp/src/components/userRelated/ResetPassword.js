@@ -33,7 +33,7 @@ function ResetPassword() {
             )
             navigate(path);
            } else{
-            (alert)(window.t("passwordsdonotmatch"))
+            (alert("Passwords do not match."))
         }
     }
   return (
