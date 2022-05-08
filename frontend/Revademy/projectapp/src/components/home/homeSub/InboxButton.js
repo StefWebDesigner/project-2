@@ -11,10 +11,18 @@ const InboxButton = () => {
     const [showEmailModal, setShowEmailModal] = useState(false)
     const [feedback, setFeedback] = useState({
         subject : "",
+        feebackOptionsTypes : "",
         body : ""
     })
 
-    const handleCloseEmailModal = () => setShowEmailModal(false);
+    const handleCloseEmailModal = () => {
+        setShowEmailModal(false)
+        setFeedback({
+            subject : "",
+            feebackOptionsTypes : "",
+            body : ""
+        })
+    };
     const handleOpenEmailModal = () => setShowEmailModal(true);
 
 
@@ -23,14 +31,14 @@ const InboxButton = () => {
 
          axios.post("http://localhost:8080/emailsupport/create", feedback)
             .then(response => {
-                setFeedback(response.data)
                 alert("Thank you for you feedback")
+                setFeedback(response.data)
             })
+        console.log(feedback)
 
-            // setFeedback({
-            //     subject : "",
-            //     body : ""
-            // })
+
+      
+
     }
 
     const feedbackChangeHandler = (e) => {
@@ -43,7 +51,7 @@ const InboxButton = () => {
 
     return (
         <>
-        <section>
+        <section className="fade-in-animation">
         <div className="button-support-container">
             <button
                 className="button-support"
@@ -74,7 +82,7 @@ const InboxButton = () => {
                         <Form.Label
                             className="modal-labels"
                         >
-                            Subject
+                            Subject :
                         </Form.Label>
                         </Col>
                         <Col xs={2}>
@@ -91,10 +99,31 @@ const InboxButton = () => {
                         </Col>
                     </Form.Group>
                     </Row>
-                        <Form.Group>
 
+                    <Form.Group>
+                        <Form.Label className="modal-labels">
+                            Please select a description of your experience:
+                        </Form.Label>
+                        <Form.Select
+                            size="md"
+                            name="feebackOptionsTypes"
+                            defaultValue={feedback.feebackOptionsTypes}
+                            onChange={feedbackChangeHandler}
+                            required
+                            // onChange={handleFormData("account")}
+                        >
+                            <option value="">Open this select menu</option>
+                            <option value="GREAT">Great</option>
+                            <option value="SOLID">Solid</option>
+                            <option value="OK">Ok</option>
+                            <option value="NEEDSIMPROVEMENT">Needs Improvement</option>
+                            <option value="BAD"> Bad</option>
+                        </Form.Select>
+                    </Form.Group>
+
+                        <Form.Group>
                             <Form.Label className="modal-labels">
-                                Body
+                                Body :
                             </Form.Label>
                             <FormControl
                                 as="textarea"

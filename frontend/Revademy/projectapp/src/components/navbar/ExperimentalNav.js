@@ -1,11 +1,14 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {Col, Container, Row} from "react-bootstrap";
 import DataStore from "../../dataStore/dataStore";
 import { useTranslation } from "react-i18next";
 import i18next from 'i18next';
+import axios from "axios";
 
 const ExperimentalNav = () => {
+
+    const [logout, setLogout] = useState([])
 
     const { i18n, t } = useTranslation(["home"]);
 
@@ -22,10 +25,20 @@ const ExperimentalNav = () => {
     const {user, setUser} = useContext(DataStore)
     let navigate = useNavigate();
 
-    function logout() {
-        setUser(null);
-        localStorage.removeItem("user");
-        navigate('/');
+    // function logout() {
+    //     setUser(null);
+    //     localStorage.removeItem("user");
+    //     navigate('/');
+    // }
+
+    async function logoutUser(username){
+       await axios.get(`http://localhost:8080/user/logout?username=${user.username}`)
+            .then(response => {
+                setLogout(response.data);
+                setUser(null);
+                localStorage.removeItem("user")
+                alert("successfully logout out")
+            })
     }
 
     return (
@@ -46,7 +59,7 @@ const ExperimentalNav = () => {
                     { user ? (
                         <Col className="background-credentials">
                             <div className="link-container">
-                                <li className="credentials-link" onClick={logout}>{t("logout")}</li>
+                                <li className="credentials-link" onClick={logoutUser}>{t("logout")}</li>
                             </div>
                         </Col>
                         ) : (
