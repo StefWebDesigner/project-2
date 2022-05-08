@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Card, Container, Form} from "react-bootstrap";
 import {useTranslation} from 'react-i18next';
 
 function ResetPassword() {

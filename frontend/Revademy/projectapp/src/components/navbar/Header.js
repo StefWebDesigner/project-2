@@ -1,6 +1,4 @@
 import React from 'react';
-import {Col, Container, Navbar, Row} from "react-bootstrap";
-import {BsSearch} from "react-icons/bs";
 
 
 //THIS WILL BE THE HEADER

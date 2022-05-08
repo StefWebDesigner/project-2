@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from "emailjs-com"
 import axios from 'axios';
 import ExperimentalNav from '../navbar/ExperimentalNav';
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Card, Container, Form} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 
 export default function ForgotPassword() {

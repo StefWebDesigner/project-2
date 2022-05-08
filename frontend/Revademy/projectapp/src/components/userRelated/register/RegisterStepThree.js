@@ -41,7 +41,7 @@ const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> {t("thisisrequired")}</Form.text>
+                                        <Form.Text> {t("thisisrequired")}</Form.Text>
                                     ) : ""
                                 }
                             </Form.Group>

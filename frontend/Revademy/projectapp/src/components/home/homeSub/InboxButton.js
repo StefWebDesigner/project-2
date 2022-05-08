@@ -1,10 +1,9 @@
 import React from 'react';
-import {Col, Form, Row,FormControl, FormGroup, FormLabel, InputGroup, Modal} from "react-bootstrap";
+import {Col, Form, Row, FormControl, Modal} from "react-bootstrap";
 import {useState} from "react";
 import axios from "axios";
 // import TextArea from "antd/lib/input/TextArea";
 import '../../../custom.css'
-import TextArea from "antd/es/input/TextArea";
 
 
 const InboxButton = () => {

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Card, Col, Row} from "react-bootstrap";
-import AdminReportDisplay from "./AdminReportDisplay";
+// import AdminReportDisplay from "./AdminReportDisplay";
 import axios from "axios";
-import ReportCommonLocations from "../adminGraphs/ReportCommonLocations";
+// import ReportCommonLocations from "../adminGraphs/ReportCommonLocations";
 
 const AdminReportFacts = () => {
 
