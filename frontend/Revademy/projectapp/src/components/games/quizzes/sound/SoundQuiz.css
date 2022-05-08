@@ -46,8 +46,8 @@
     font-size: 20px;
     margin-top: 8px;
     transition: .5s ease-in-out;
-
 }
+
 .sound-quiz-li:hover{
     background-color: #95CDEF;
     box-shadow: 0 4px 1rem -4px #000;

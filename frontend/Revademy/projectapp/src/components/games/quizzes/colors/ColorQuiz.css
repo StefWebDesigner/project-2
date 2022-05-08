@@ -1,5 +1,13 @@
 .color-quiz{
     text-align: center;
+        background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
+        justify-content: center;
+    height: 100vh;
+    /*    background-color: #95CDEF ;*/
+}
+
+section {
+    background-color: #195479;
 }
 
 .question-card-color{
@@ -21,13 +29,13 @@
     list-style: none;
 }
 
-.color-quiz-title{
-    background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
-    background-size: contain;
-    background-repeat:no-repeat;
-    height: 100vh;
-    background-color: #95CDEF ;
-}
+/*.color-quiz-title{*/
+/*    background-image: url("../../../../kid_images/space_medium_long_rectangle.png");*/
+/*    background-size: contain;*/
+/*    background-repeat:no-repeat;*/
+/*    height: 100vh;*/
+/*    background-color: #95CDEF ;*/
+/*}*/
 
 .color-quiz-h1{
     color: white;
@@ -50,6 +58,7 @@
 .color-quiz-li:hover{
     background-color: #95CDEF;
     box-shadow: 0 4px 1rem -4px #000;
+    border: white 1px outset;
 }
 
 .question-text{
