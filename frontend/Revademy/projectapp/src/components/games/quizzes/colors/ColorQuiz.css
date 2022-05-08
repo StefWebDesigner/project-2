@@ -1,19 +1,20 @@
 .color-quiz{
     text-align: center;
-    
 }
 
 .question-card-color{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient( rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
+    /*background-color: gray;*/
     padding:16px;
     border-radius: 16px;
+    border: #5C94B6 solid 2px;
     color: black;
     /* border: 300px solid black; */
     width: 80%;
     height: auto;
     margin: 0 auto;
     box-shadow: 0 4px 1rem -4px #000;
-    
 }
 
 .color-quiz-ul{
@@ -23,7 +24,9 @@
 .color-quiz-title{
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
     background-size: contain;
+    background-repeat:no-repeat;
     height: 100vh;
+    background-color: #95CDEF ;
 }
 
 .color-quiz-h1{
@@ -37,13 +40,16 @@
 .color-quiz-li {
     background-color: darkgray;
     padding: 16px;
-    border: 3px solid black;
+    border: 3px solid navy;
     border-radius: 20px;
     font-size: 20px;
     margin-top: 8px;
+    transition: .5s ease-in-out;
 }
+
 .color-quiz-li:hover{
-    background-color: rgb(83, 218, 228);
+    background-color: #95CDEF;
+    box-shadow: 0 4px 1rem -4px #000;
 }
 
 .question-text{
@@ -52,7 +58,10 @@
 }
 
 .final-results-color{
-    background-color: gray;
+
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
+    /*background-color: gray;*/
     padding:16px;
     border-radius: 16px;
     color: black;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ExperimentalNav from '../../../navbar/ExperimentalNav';
 import './ColorQuiz.css'
 import axios from 'axios'
+import {Container} from "react-bootstrap";
 
 function ColorQuiz() {
     const[showFinalResults, setFinalResults] = useState(false);
@@ -154,6 +155,7 @@ useEffect( () => {
   return (
       <>
       <div className='color-quiz-title'>
+          <Container>
       <ExperimentalNav/>
     <div className = "color-quiz">
         
@@ -180,7 +182,7 @@ useEffect( () => {
 
         ):(
 
-        <div className="question-card-color">
+        <div className="question-card-color ">
             <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
             <h3 className="question-text" style={{color:`${questions[currentQuestion].color}`}}>{questions[currentQuestion].text}</h3>
             <ul className="color-quiz-ul">
@@ -193,6 +195,7 @@ useEffect( () => {
         </div>
         )}
     </div>
+          </Container>
     </div>
     </>
   )

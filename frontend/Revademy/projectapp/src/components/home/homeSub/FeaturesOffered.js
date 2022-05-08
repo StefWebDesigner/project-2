@@ -55,7 +55,7 @@ const FeaturesOffered = () => {
                                             <div className="overlay">
                                                 <div className="overlay-text">
                                                     <p className="text-center">{t("home:gotsomeevent")}</p>
-                                                    <p className="text-center">{t("home:signup")}</p>
+                                                    {/*<p className="text-center">{t("home:signup")}</p>*/}
                                                 </div>
                                                 <div className="overlay-link">
                                                     <Link to="/events">{t("home:events")}</Link>
@@ -78,7 +78,7 @@ const FeaturesOffered = () => {
                                                         <p className="text-center">{t("home:viewyourprogress")}</p>
                                                     </div>
                                                     <div className="overlay-link">
-                                                        <Link to="/learningportal">{t("home:kidportal")}</Link>
+                                                        <Link to="/opening">{t("home:opening")}</Link>
                                                     </div>
                                                 </div>
                                             </div>

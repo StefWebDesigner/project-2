@@ -6,6 +6,9 @@
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
     
     background-size: contain;
+    background-repeat:no-repeat;
+    height: 100vh;
+    background-color: #95CDEF ;
     
 }
 
@@ -18,7 +21,8 @@
 }
 
 .question-card-sound{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
     padding:16px;
     border-radius: 16px;
     color: black;
@@ -41,9 +45,12 @@
     border-radius: 20px;
     font-size: 20px;
     margin-top: 8px;
+    transition: .5s ease-in-out;
+
 }
 .sound-quiz-li:hover{
-    background-color: rgb(83, 218, 228);
+    background-color: #95CDEF;
+    box-shadow: 0 4px 1rem -4px #000;
 }
 
 .question-text{
@@ -52,7 +59,9 @@
 }
 
 .final-results-sound{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
+    /*background-color: gray;*/
     padding:16px;
     border-radius: 16px;
     color: black;
