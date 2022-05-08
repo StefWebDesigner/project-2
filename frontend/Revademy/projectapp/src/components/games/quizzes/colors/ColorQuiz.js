@@ -4,6 +4,7 @@ import './ColorQuiz.css'
 import axios from 'axios'
 import { Container } from 'react-bootstrap';
 
+
 function ColorQuiz() {
     const[showFinalResults, setFinalResults] = useState(false);
     const [score, setScore] = useState(0);
@@ -159,7 +160,7 @@ useEffect( () => {
       <div className='color-quiz-title'>
       <ExperimentalNav/>
     <div className = "color-quiz">
-        
+
         <h1 className='color-quiz-h1'>Color Quiz</h1>
         
         <h2 className='color-quiz-h2'>Current Score: {score}</h2>
@@ -183,7 +184,7 @@ useEffect( () => {
 
         ):(
 
-        <div className="question-card-color">
+        <div className="question-card-color ">
             <h2>Question {currentQuestion + 1} out of {questions.length}</h2>
             <h3 className="question-text" style={{color:`${questions[currentQuestion].color}`}}>{questions[currentQuestion].text}</h3>
             <ul className="color-quiz-ul">

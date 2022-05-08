@@ -52,7 +52,7 @@ const ReportButton = () => {
 
     return (
         <>
-            <section>
+            <section className="fade-in-animation">
                 <div className="button-report-container">
                     <button
                         className="button-report"

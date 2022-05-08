@@ -4,6 +4,7 @@ import RegisterStepTwo from "./RegisterStepTwo";
 import RegisterStepOne from "./RegisterStepOne";
 import RegisterStepThree from "./RegisterStepThree";
 import RegisterFinal from "./RegisterFinal";
+import ExperimentalNav from '../../navbar/ExperimentalNav';
 
 const Register = () => {
 
@@ -68,7 +69,8 @@ const Register = () => {
 
         case 1:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
+                    <ExperimentalNav/>
                     <Container>
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
@@ -82,7 +84,8 @@ const Register = () => {
             );
         case 2:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
+                    <ExperimentalNav/>
                     <Container>
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
@@ -95,7 +98,8 @@ const Register = () => {
             );
         case 3:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
+                    <ExperimentalNav/>
                     <Container>
                         <Row>
                             <Col md={{span: 6,offset: 3}}>
@@ -108,7 +112,8 @@ const Register = () => {
             );
         case 4:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
+                    <ExperimentalNav/>
                     <Container>
                         <Row>
                             <Col md={{span: 6,offset: 3}}>

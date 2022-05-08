@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 const HomeHeaderBackground = () => {
 
     const [starsGlowing, setStarsGlowing] = useState(false)
-    console.log("starsGlowing", starsGlowing)
+    // console.log("starsGlowing", starsGlowing)
 
     return (
         <>
@@ -12,7 +12,7 @@ const HomeHeaderBackground = () => {
                 <div className="svg-container">
 
             <svg onMouseOver={() => {
-                console.log("hover");
+                // console.log("hover");
                 setStarsGlowing(true)
             }}
                  onMouseOut={() => {

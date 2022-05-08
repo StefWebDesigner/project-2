@@ -101,7 +101,7 @@ function UserPortal() {
 
   return (
       <>
-      <div className='user-portal-body'>
+      <div className='user-portal-body fade-in-animation'>
       <ExperimentalNav/>
     <form className='user-update-form'>
     <h2 className='user-update-title'>{t("register:userinfo")}</h2>

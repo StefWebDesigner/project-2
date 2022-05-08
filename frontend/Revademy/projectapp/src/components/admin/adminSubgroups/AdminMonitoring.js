@@ -3,7 +3,13 @@ import React from 'react';
 const AdminMonitoring = () => {
     return (
         <>
-            <h1>Data Monitoring Panel</h1>
+            <section>
+                <h1>Data Monitoring Panel</h1>
+
+
+            </section>
+
+
 
         </>
     );

@@ -16,6 +16,7 @@
     padding:8px;
     padding-right: 24px;
     border-radius: 16px;
+    border: #5C94B6 solid 2px;
     color: black;
     width: 80%;
     height: auto;
@@ -46,7 +47,8 @@
 }
 
 .color-quiz-li:hover{
-    background-color: rgb(83, 218, 228);
+    background-color: #95CDEF;
+    box-shadow: 0 4px 1rem -4px #000;
 }
 
 .question-text{
