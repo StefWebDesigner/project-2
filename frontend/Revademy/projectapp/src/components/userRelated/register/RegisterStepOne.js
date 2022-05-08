@@ -27,7 +27,7 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
 
     return (
         <>
-            <section>
+            <section className="fade-in-animation">
                 <Card>
                     <Card.Body>
                         <Form onSubmit={submitFormData}>
@@ -41,6 +41,8 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                     type="text"
                                     placeholder="Firstname"
                                     onChange={handleFormData("firstname")}
+                                    required
+
                                 />
                             {/* ERROR MESSAGE   */}
                                 {
@@ -63,6 +65,8 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                                     defaultValue={values.lastname}
                                     placeholder="Last name"
                                     onChange={handleFormData("lastname")}
+                                    required
+
                                 />
                             </Form.Group>
                         {/* BUTTON SECTION */}

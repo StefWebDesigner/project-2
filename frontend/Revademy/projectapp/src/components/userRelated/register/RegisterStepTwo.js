@@ -22,9 +22,6 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
         } else {
             nextStep();
         }
-        console.log("From stepTwo")
-        console.log(values)
-        nextStep()
     }
 
     return (
@@ -48,7 +45,6 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 >
                                     <option value="">{t("openthisselectmenu")}</option>
                                     <option value="USER">{t("user") } </option>
-                                    <option value="ADMIN">{t("admin")}</option>
                                     {/*<option value="teacher">Teacher</option>*/}
                                 </Form.Select>
                             {/* ERROR SECTION    */}
@@ -86,7 +82,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 <Form.Control
                                     style={{border: error ? "2px solid red" : ""}}
                                     name="email"
-                                    type="text"
+                                    type="email"
                                     value={values.email}
                                     placeholder="Email"
                                     onChange={handleFormData("email")}

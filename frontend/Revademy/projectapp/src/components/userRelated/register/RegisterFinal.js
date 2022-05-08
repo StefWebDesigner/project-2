@@ -28,6 +28,8 @@ const RegisterFinal = ({values, prevStep ,setFormData}) => {
             console.log(data);
             setFormData(data);
 
+            alert("You have registered successfully!")
+
         //To navigate to login page
         navigate("/login")
     }

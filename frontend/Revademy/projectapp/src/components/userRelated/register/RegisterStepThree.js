@@ -37,6 +37,8 @@ const RegisterStepThree = ({nextStep, prevStep, handleFormData, values}) => {
                                     defaultValue={values.password}
                                     placeholder="password"
                                     onChange={handleFormData("password")}
+                                    required
+
                                 />
                                 {/* ERROR SECTION    */}
                                 {

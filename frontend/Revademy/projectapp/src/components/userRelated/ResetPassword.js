@@ -31,6 +31,7 @@ function ResetPassword() {
                     console.log(err)
                 }
             )
+            alert("Password has been changed successfully!")
             navigate(path);
            } else{
             (alert("Passwords do not match."))
