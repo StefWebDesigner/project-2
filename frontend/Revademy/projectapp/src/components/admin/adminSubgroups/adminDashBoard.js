@@ -6,6 +6,7 @@ import AdminUserFacts from "./adminUserSubGroup/adminUserFacts";
 import AdminEmailFacts from "./adminReportSubGroups/adminEmailFacts";
 import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
 import FeedbackOverallFeedback from "./adminGraphs/FeedbackOverallFeedback";
+import UserAcountGraph from "./adminGraphs/UserAcountGraph";
 
 const AdminDashBoard = () => {
     return (
@@ -23,10 +24,10 @@ const AdminDashBoard = () => {
 
                     {/*<ReportCommonLocations/>*/}
 
-                    {/* REPORT DASHBOARD*/}
+                    {/* User DASHBOARD*/}
                     <h2 className="admin-sub-title">User DashBoard</h2>
                     <AdminUserFacts/>
-                    <p>LineBar</p>
+                    <UserAcountGraph/>
 
                     {/* REPORT DASHBOARD*/}
                     <h2 className="admin-sub-title">Email DashBoard</h2>

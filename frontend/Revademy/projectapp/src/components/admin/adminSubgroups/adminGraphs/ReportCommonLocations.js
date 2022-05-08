@@ -79,20 +79,3 @@ return (
     </div>
 )
 }
-
-// const data = {
-//     labels: ["Java","React", "Beginner", "Intermediate", "Advanced"],
-//     datasets: [{
-//         label: 'All Total Post Per Genre',
-//         data: [java, react, beginner, intermidate, advanced],
-//         backgroundColor: [
-//             'rgb(255, 99, 132)',
-//             'rgb(54, 162, 235)',
-//             'green',
-//             'purple',
-//             'orange'
-//
-//         ],
-//         hoverOffset: 4
-//     }]
-// }

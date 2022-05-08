@@ -44,24 +44,26 @@ useEffect(() => {
     async function getAllGreat() {
         await axios.get('http://localhost:8080/emailsupport/totalgreat')
             .then(response => {
-                    const amount = response.data[0].count;
-                    setGreat(amount);
+
+                    setGreat(response.data);
                 })
     }
     async function getAllSolid() {
 
         await axios.get('http://localhost:8080/emailsupport/totalsolid')
             .then(response => {
-                const amount = response.data.count;
-                setSolid(amount);
+                setSolid(response.data);
+                // const amount = response.data[0].count;
+                // setSolid(amount);
         // const amount = response.data[0].count;
             })
     }
     async function getAllOk() {
         await axios.get('http://localhost:8080/emailsupport/totalok')
             .then(response => {
-                const amount = response.data.count;
-                setOk(amount);
+                setOk(response.data);
+                // const amount = response.data[0].count;
+                // setOk(amount);
             })
         // const amount = response.data[0].count;
         // setOk(amount);
@@ -70,16 +72,14 @@ useEffect(() => {
     async function getAllImprovement() {
         await axios.get('http://localhost:8080/emailsupport/totalimprovement')
     .then(response => {
-            const amount = response.data.count;
-            setNeedsimprovement(amount);
+            setNeedsimprovement(response.data);
         })
     }
 
     async function getAllBad() {
         await axios.get('http://localhost:8080/emailsupport/totalbad')
     .then(response => {
-            const amount = response.data.count;
-            setBad(amount);
+            setBad(response.data);
         })
     }
 
@@ -103,8 +103,7 @@ const data = {
 
     return (
         <div>
-<Bar data={data} />
-
+            <Bar data={data} />
         </div>
     )
 }
