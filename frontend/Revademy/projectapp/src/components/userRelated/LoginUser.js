@@ -17,13 +17,17 @@ const LoginUser = () => {
 
     const navigate = useNavigate();
 
-    const login = async (e) => {
+    const login = (e) => {
         e.preventDefault();
 
         //ADD VERIFICATION
 
-        await axios.get(`http://localhost:8080/user/login?username=${username}&password=${password}`)
+        axios.get(`http://localhost:8080/user/login?username=${username}&password=${password}`)
             .then(({data}) => {
+
+                if(data === "User Doesn't Exist."){
+                    alert("User Doesn't Exist.")
+                } else{
 
                 console.log(data);
 
@@ -31,6 +35,7 @@ const LoginUser = () => {
                 localStorage.setItem("user", JSON.stringify(data));
                 // alert(window.t("register:yourloginwassuccessful"))
                 navigate("/");
+                }
             })
     }
 
