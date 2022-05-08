@@ -170,6 +170,7 @@ useEffect( () => {
 
   return (
       <>
+      <section className='sound-section'>
       <div className='sound-quiz-title'>
       <ExperimentalNav/>
     <div className = "sound-quiz">
@@ -217,6 +218,7 @@ useEffect( () => {
         )}
     </div>
     </div>
+    </section>
     </>
   )
 }

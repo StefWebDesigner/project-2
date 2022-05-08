@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import ExperimentalNav from '../../../navbar/ExperimentalNav';
 import './ColorQuiz.css'
 import axios from 'axios'
-import {Container} from "react-bootstrap";
+import { Container } from 'react-bootstrap';
+
 
 function ColorQuiz() {
     const[showFinalResults, setFinalResults] = useState(false);
@@ -154,6 +155,8 @@ useEffect( () => {
 
   return (
       <>
+      
+      <section className='color-section'>
       <div className='color-quiz-title'>
       <ExperimentalNav/>
     <div className = "color-quiz">
@@ -195,6 +198,8 @@ useEffect( () => {
         )}
     </div>
     </div>
+    </section>
+    
     </>
   )
 }
