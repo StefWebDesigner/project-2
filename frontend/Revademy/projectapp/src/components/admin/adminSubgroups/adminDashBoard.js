@@ -33,6 +33,11 @@ const AdminDashBoard = () => {
                     <AdminEmailFacts/>
                     <p>Add grpahs here</p>
 
+                    {/* Game DASHBOARD*/}
+                    {/*<h2 className="admin-sub-title">Email DashBoard</h2>*/}
+                    {/*<AdminEmailFacts/>*/}
+                    <p>Add grpahs here</p>
+
 
                 </Container>
             </section>
