@@ -68,7 +68,7 @@ const Register = () => {
 
         case 1:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
                     <Container>
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
@@ -82,7 +82,7 @@ const Register = () => {
             );
         case 2:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
                     <Container>
                         <Row>
                             <Col md={{span: 6, offset: 3}}>
@@ -95,7 +95,7 @@ const Register = () => {
             );
         case 3:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
                     <Container>
                         <Row>
                             <Col md={{span: 6,offset: 3}}>
@@ -108,7 +108,7 @@ const Register = () => {
             );
         case 4:
             return (
-                <section>
+                <section className="fade-in-animation login-backgound">
                     <Container>
                         <Row>
                             <Col md={{span: 6,offset: 3}}>
