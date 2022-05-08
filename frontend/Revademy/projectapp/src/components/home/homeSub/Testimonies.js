@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card, Col} from "react-bootstrap";
 import Slider from "react-slick";
 import { useTranslation } from 'react-i18next';
 

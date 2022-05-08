@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import 'antd/dist/antd.css';
+<<<<<<< HEAD
 import {Avatar, Row} from 'antd';
 import { UserOutlined } from '@ant-design/icons'; 
+=======
+>>>>>>> e25555b4db8052a9d2394bc1e95a1009c5ecff73
 import './kidportal.css';
 import AvatarSelector from './AvatarSelector';
 import GameIcon from "../icons/game_icon.png";
@@ -10,8 +12,11 @@ import QuizIcon from "../icons/quiz_icon.png";
 import MusicIcon from "../icons/music_icon.png";
 import StoryIcon from "../icons/storytelling_icon.png";
 import BackgroundColor from './BackgroundColor';
+<<<<<<< HEAD
 import Color from './BackgroundColor';
 import {Container, Col } from "react-bootstrap";
+=======
+>>>>>>> e25555b4db8052a9d2394bc1e95a1009c5ecff73
 
 
 class Portal extends React.Component {

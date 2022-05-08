@@ -45,9 +45,9 @@ const RegisterStepOne = ({nextStep, handleFormData, values}) => {
                             {/* ERROR MESSAGE   */}
                                 {
                                     error ? (
-                                        <Form.text style={{color: "red"}}>
+                                        <Form.Text style={{color: "red"}}>
                                             {t("thisisrequired")}
-                                        </Form.text>
+                                        </Form.Text>
                                     ) : (
                                         ""
                                     )

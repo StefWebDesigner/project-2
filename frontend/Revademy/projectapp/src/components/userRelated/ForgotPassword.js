@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from "emailjs-com"
 import axios from 'axios';
 import ExperimentalNav from '../navbar/ExperimentalNav';
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Card, Container, Form} from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
 
 export default function ForgotPassword() {
@@ -21,7 +21,7 @@ export default function ForgotPassword() {
       .then(({data}) => {
               
                if(data==="No User Matches This Email" || email===""){
-                   alert(window.t("nousermatches"))
+                   alert("No user matches this email.")
                } else{
                tempData = data.token;
                
@@ -35,7 +35,7 @@ export default function ForgotPassword() {
             }, (error) => {
                 console.log(error.text);
             });
-               alert(window.t("checkyouremail"))
+               alert("Check your email.")
            }}
        ).catch(
            err => {

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Form, FormControl, FormGroup, FormLabel, Modal, ModalBody, ModalFooter} from "react-bootstrap";
+import {Form, Modal} from "react-bootstrap";
 import axios from "axios";
 import validator from "validator";
 import { useTranslation } from 'react-i18next';
@@ -90,7 +90,7 @@ const ReportButton = () => {
                             {/* ERROR SECTION    */}
                             {
                                 error ? (
-                                    <Form.text> This is required</Form.text>
+                                    <Form.Text> This is required</Form.Text>
                                 ) : ""
                             }
                         </Form.Group>
@@ -118,7 +118,7 @@ const ReportButton = () => {
                             {/* ERROR SECTION    */}
                             {
                                 error ? (
-                                    <Form.text> This is required</Form.text>
+                                    <Form.Text> This is required</Form.Text>
                                 ) : ""
                             }
                         </Form.Group>
@@ -140,7 +140,7 @@ const ReportButton = () => {
                             {/* ERROR SECTION    */}
                             {
                                 error ? (
-                                    <Form.text> This is required</Form.text>
+                                    <Form.Text> This is required</Form.Text>
                                 ) : ""
                             }
                         </Form.Group>
