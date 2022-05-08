@@ -136,13 +136,20 @@ export default function FeedbackOverallFeedback(){
         labels:["Homepage","Activity","Events", "Matching", "Hangman", "Color","Animal","Sound", "User Portal", "Kid Portal"],
         datasets: [{
             label: 'Overall Feedback Evaluation',
-            data: [great, solid, ok, needsimprovement, bad],
+            data: [homepage, activitypage, eventpage, matchinggame, hangmangame, colorquiz, animalquiz, soundgame, userportal, kidportal],
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
                 'green',
                 'purple',
-                'orange'
+                'orange',
+                'lightblue',
+                'lightgreen',
+                'blue',
+                'red',
+                'lightred'
+
+
 
             ],
             hoverOffset: 4
