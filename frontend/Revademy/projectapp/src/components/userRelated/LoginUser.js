@@ -26,7 +26,7 @@ const LoginUser = () => {
             .then(({data}) => {
 
                 if(data === "User Doesn't Exist."){
-                    alert("User Doesn't Exist.")
+                    alert("Incorrect Login Information")
                 } else{
 
                 console.log(data);
