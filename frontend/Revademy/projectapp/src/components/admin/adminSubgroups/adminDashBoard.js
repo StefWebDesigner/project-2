@@ -4,7 +4,7 @@ import AdminReportFacts from "./adminReportSubGroups/adminReportFacts";
 import {Container} from "react-bootstrap";
 import AdminUserFacts from "./adminUserSubGroup/adminUserFacts";
 import AdminEmailFacts from "./adminReportSubGroups/adminEmailFacts";
-import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
+// import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
 
 const AdminDashBoard = () => {
     return (

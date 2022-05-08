@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {Button, Card, Container, Form, FormControl, FormGroup, FormLabel} from "react-bootstrap";
+import {Button, Card, Container, Form} from "react-bootstrap";
 import axios from "axios";
-import validator from "validator";
+// import validator from "validator";
 
 const AdminUserAdd = () => {
 
@@ -14,7 +14,7 @@ const AdminUserAdd = () => {
         password : ""
     })
     // const [error, setError] = useState(false);
-    const [showPassword, setShowPassword] = useState(false);
+    // const [showPassword, setShowPassword] = useState(false);
 
 
     const submitAdminFormData = (e) => {

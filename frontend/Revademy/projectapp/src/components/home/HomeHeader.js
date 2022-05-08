@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {FaSmileBeam} from "react-icons/fa";
 import DataStore from "../../dataStore/dataStore";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card, Col, Row} from "react-bootstrap";
 import Logo from "./homeSub/Logo";
 import HomeHeaderBackground from "./homeSub/HomeHeaderBackground";
 import { useTranslation } from 'react-i18next';

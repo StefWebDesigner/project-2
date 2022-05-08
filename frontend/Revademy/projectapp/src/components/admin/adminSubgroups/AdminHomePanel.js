@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Container, Form, FormControl, FormLabel, Card} from "react-bootstrap";
+import {Container, Form, FormControl, Card} from "react-bootstrap";
 import AdminNav from "./AdminNav";
 import axios from "axios";
 import AdminHomeContentDisplay from "./adminHomeContentSubGroup/AdminHomeContentDisplay";

@@ -29,7 +29,7 @@ function UserPortal() {
     const {setUser} = useContext(DataContext);
 
     const getUserInfo = () =>{
-        axios.get(`http://localhost:8080/user/${user.username}`)
+        axios.get(`http://localhost:8080/user/username/${user.username}`)
         .then(({data}) => {
             
             setFirstName(data.firstname)
@@ -94,8 +94,8 @@ function UserPortal() {
      setDisabledInfo(false)
      setReadOnly(true)
      setShowButton(true)
-     alert(window.t("userinfoupdated"))
-    } else{alert(window.t("pleasefilloutallsections"))}
+     alert("User info updated.")
+    } else{alert("Please fill out all sections.")}
     }
     
 

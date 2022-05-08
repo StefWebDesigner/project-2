@@ -2,8 +2,8 @@ import React from 'react';
 import AdminNav from "./AdminNav";
 import AdminUserAllUsers from "./adminUserSubGroup/AdminUserAllUsers";
 import {Container, Row} from "react-bootstrap";
-import AdminReportFacts from "./adminReportSubGroups/adminReportFacts";
-import AdminReportDisplay from "./adminReportSubGroups/AdminReportDisplay";
+// import AdminReportFacts from "./adminReportSubGroups/adminReportFacts";
+// import AdminReportDisplay from "./adminReportSubGroups/AdminReportDisplay";
 import AdminUserAdd from "./adminUserSubGroup/AdminUserAdd";
 
 const AdminUser = () => {

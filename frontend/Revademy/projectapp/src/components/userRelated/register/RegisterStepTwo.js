@@ -54,7 +54,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                             {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> {t("thisisrequired")} </Form.text>
+                                        <Form.Text> {t("thisisrequired")} </Form.Text>
                                     ) : ""
                                 }
                             </Form.Group>
@@ -76,7 +76,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> {t("thisisrequired")} </Form.text>
+                                        <Form.Text> {t("thisisrequired")} </Form.Text>
                                     ) : ""
                                 }
                             </Form.Group>
@@ -94,7 +94,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> {t("thisisrequired")} </Form.text>
+                                        <Form.Text> {t("thisisrequired")} </Form.Text>
                                     ) : ""
                                 }
                             </Form.Group>
@@ -111,7 +111,7 @@ const RegisterStepTwo = ({nextStep, handleFormData, prevStep, values}) => {
                                 {/* ERROR SECTION    */}
                                 {
                                     error ? (
-                                        <Form.text> {t("thisisrequired")} </Form.text>
+                                        <Form.Text> {t("thisisrequired")} </Form.Text>
                                     ) : ""
                                 }
                             </Form.Group>

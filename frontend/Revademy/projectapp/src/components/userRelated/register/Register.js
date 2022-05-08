@@ -4,8 +4,6 @@ import RegisterStepTwo from "./RegisterStepTwo";
 import RegisterStepOne from "./RegisterStepOne";
 import RegisterStepThree from "./RegisterStepThree";
 import RegisterFinal from "./RegisterFinal";
-import axios from "axios";
-import { useTranslation } from 'react-i18next';
 
 const Register = () => {
 
@@ -38,13 +36,13 @@ const Register = () => {
                 <div className="first-step progress-step">
 
                 </div>
-                <div className={step==2||step==3||step==4?"filled-step second-step progress-step":"second-step progress-step"}>
+                <div className={step===2||step===3||step===4?"filled-step second-step progress-step":"second-step progress-step"}>
 
                 </div>
-                <div  className={step==3 ||step==4?"filled-step second-step progress-step":"second-step progress-step"}>
+                <div  className={step===3 ||step===4?"filled-step second-step progress-step":"second-step progress-step"}>
 
                 </div>
-                <div  className={step==4?"filled-step second-step progress-step":"second-step progress-step"}>
+                <div  className={step===4?"filled-step second-step progress-step":"second-step progress-step"}>
                 </div>
 
             </div>

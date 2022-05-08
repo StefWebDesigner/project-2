@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect} from 'react';
-import {Card, Carousel, Container} from "react-bootstrap";
-import {FaSmileBeam} from "react-icons/fa";
-import AdminHomeContentDisplay from "../../admin/adminSubgroups/adminHomeContentSubGroup/AdminHomeContentDisplay";
+import {Card} from "react-bootstrap";
+// import {FaSmileBeam} from "react-icons/fa";
+// import AdminHomeContentDisplay from "../../admin/adminSubgroups/adminHomeContentSubGroup/AdminHomeContentDisplay";
 import {useState} from "react";
 import axios from "axios";
 import { useTranslation } from 'react-i18next';
@@ -24,9 +24,6 @@ const Announcement = () => {
         displayAnnouncement()
     }, [])
 
-
-    const Announcement = () => {
-
         const {t} = useTranslation(["home"]);
 
         return (
@@ -39,7 +36,7 @@ const Announcement = () => {
                             <h2 className="announce-title">{t("announcements")}</h2>
                         </Card.Header>
                         <Card.Body>
-                            <h4 className="announce-content"></h4>
+                            {/* <h4 className="announce-content"></h4> */}
 
                             {
 
@@ -68,6 +65,6 @@ const Announcement = () => {
             </>
         );
     };
-}
+
 
 export default Announcement;

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Card, Col, Row} from "react-bootstrap";
-import AdminReportDisplay from "./AdminReportDisplay";
+// import AdminReportDisplay from "./AdminReportDisplay";
 import axios from "axios";
 
 const AdminEmailFacts = () => {

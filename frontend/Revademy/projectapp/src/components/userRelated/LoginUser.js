@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import {Button, Card, Col, Container, Form, Row} from "react-bootstrap";
+import {Card, Col, Container, Form, Row} from "react-bootstrap";
 import axios from "axios";
 import DataContext from "../../dataStore/dataStore";
 import './user.css';
@@ -17,22 +17,31 @@ const LoginUser = () => {
 
     const navigate = useNavigate();
 
-    const login = async (e) => {
+    const login = (e) => {
         e.preventDefault();
 
         //ADD VERIFICATION
 
-        await axios.get(`http://localhost:8080/user/login?username=${username}&password=${password}`)
+        axios.get(`http://localhost:8080/user/login?username=${username}&password=${password}`)
             .then(({data}) => {
 
-                console.log(data);
+                if(data === "User Doesn't Exist."){
+                    alert("Incorrect Login Information")
+                } else{
 
-                setUser(data);
-                localStorage.setItem("user", JSON.stringify(data));
-                alert(window.t("register:yourloginwassuccessful"))
-                navigate("/");
-            })
+                    console.log(data);
+
+                    setUser(data);
+                    localStorage.setItem("user", JSON.stringify(data));
+                    navigate("/");
+                }
+
+
+            });
     }
+
+
+
 
     return (
         <>

@@ -26,8 +26,6 @@ class Portal extends React.Component {
     render () {
 
     return (
-        
-
 
         <div style={{backgroundColor: this.state.color} }>
             <Container>
@@ -50,20 +48,22 @@ class Portal extends React.Component {
             
             
             <div className='kid-page-body'>
+
             <Row>
                 <Col xs={3}>
-                <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
+                  <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
                 </Col>
                 <Col xs={3}>
-                <a className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>
+                  <a className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>
                 </Col>
                 <Col xs={3}>
-                <a className='music-button'><img src={ MusicIcon} alt="music button" /></a>
+                  <a className='music-button'><img src={ MusicIcon} alt="music button" /></a>
                 </Col>
                 <Col xs={3}>
-                <a className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
+                  <a className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
                 </Col>
             </Row>
+
             </div>
             </Container>
         </div>
