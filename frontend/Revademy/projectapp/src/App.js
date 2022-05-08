@@ -8,17 +8,16 @@ import {useState, Suspense} from "react";
 import Home from "./components/home/Home";
 
 import Activities from "./components/games/Activities";
+import Quizzes from "./components/games/quizzes/Quizzes";
 import Register from "./components/userRelated/register/Register";
 import LoginUser from "./components/userRelated/LoginUser";
 import ForgotPassword from './components/userRelated/ForgotPassword';
 import MatchingGame from './components/games/matchingGame/MatchingGame';
 import Hangman from './components/games/hangman/Hangman';
-import Quizzes from './components/games/quizzes/Quizzes';
 import ColorQuiz from './components/games/quizzes/colors/ColorQuiz';
 import SoundQuiz from './components/games/quizzes/sound/SoundQuiz';
 import AnimalQuiz from './components/games/quizzes/animals/AnimalQuiz';
 import AdminMain from "./components/admin/AdminMain";
-
 import ResetPassword from './components/userRelated/ResetPassword';
 
 import Opening from "./components/opening/Opening";
@@ -62,7 +61,6 @@ function App() {
                   <Route path="/forgotPassword" element={<ForgotPassword/>}/>
                   <Route path="/resetPassword/:id" element={<ResetPassword/>}/>
                   <Route path="/userportal" element={<UserPortal/>}/>
-                  
                   <Route path="/events" element={<Recalendar/>}/>
                   <Route path="/adminportal" element={<AdminMain/>}/>
 

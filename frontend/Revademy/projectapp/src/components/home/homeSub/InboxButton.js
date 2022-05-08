@@ -2,11 +2,13 @@ import React from 'react';
 import {Col, Form, Row, FormControl, Modal} from "react-bootstrap";
 import {useState} from "react";
 import axios from "axios";
-// import TextArea from "antd/lib/input/TextArea";
 import '../../../custom.css'
+import { useTranslation } from 'react-i18next';
 
 
 const InboxButton = () => {
+
+    const {t}=useTranslation(["home"]);
 
     const [showEmailModal, setShowEmailModal] = useState(false)
     const [feedback, setFeedback] = useState({
@@ -57,7 +59,7 @@ const InboxButton = () => {
                 className="button-support"
                 onClick={handleOpenEmailModal}
             >
-                <span>Feedback</span>
+                <span>{t("feedback")}</span>
             </button>
 
         </div>
@@ -72,7 +74,7 @@ const InboxButton = () => {
         >
 
             <Modal.Header className="feedback-backgound">
-                <h4 className="feedback-title">Feedack</h4>
+                <h4 className="feedback-title">{t("feedback")}</h4>
             </Modal.Header>
             <Modal.Body>
                 <Form onSubmit={feedbackSubmitHandler}>
@@ -82,7 +84,7 @@ const InboxButton = () => {
                         <Form.Label
                             className="modal-labels"
                         >
-                            Subject :
+                            {t("subject")}:
                         </Form.Label>
                         </Col>
                         <Col xs={2}>
@@ -123,7 +125,7 @@ const InboxButton = () => {
 
                         <Form.Group>
                             <Form.Label className="modal-labels">
-                                Body :
+                                {t("body")}:
                             </Form.Label>
                             <FormControl
                                 as="textarea"
@@ -142,7 +144,7 @@ const InboxButton = () => {
                             type="submit"
                             className="button-support"
                         >
-                            Submit
+                            {t("submit")}
                         </button>
                     </div>
                 </Form>
