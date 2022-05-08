@@ -26,8 +26,10 @@ import './kidportal.css';
     return (
    
         <div className="avatar-selector">
+
                 <img src= {value} className="kid-avatar" alt='kid avatar' />
                 
+
                   <select
                     value={value}
                     onChange={handleChange}

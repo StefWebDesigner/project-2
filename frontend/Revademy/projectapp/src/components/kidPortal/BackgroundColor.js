@@ -17,11 +17,13 @@ class Color extends React.Component{
         
           <div  className="container" >
             <div className="color-box">
-              <p>What is your favorite color?</p>
+              <p>What is your favorite color? 
+                
               <input type='text'
                 // value={this.state.color}
                 onChange={this.changeColor.bind(this)}
               />
+              </p>
              
             </div>
           </div>

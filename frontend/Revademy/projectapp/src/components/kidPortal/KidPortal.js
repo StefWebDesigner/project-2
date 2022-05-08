@@ -1,10 +1,4 @@
 import React from 'react';
-import 'antd/dist/antd.css';
-<<<<<<< HEAD
-import {Avatar, Row} from 'antd';
-import { UserOutlined } from '@ant-design/icons'; 
-=======
->>>>>>> e25555b4db8052a9d2394bc1e95a1009c5ecff73
 import './kidportal.css';
 import AvatarSelector from './AvatarSelector';
 import GameIcon from "../icons/game_icon.png";
@@ -12,11 +6,7 @@ import QuizIcon from "../icons/quiz_icon.png";
 import MusicIcon from "../icons/music_icon.png";
 import StoryIcon from "../icons/storytelling_icon.png";
 import BackgroundColor from './BackgroundColor';
-<<<<<<< HEAD
-import Color from './BackgroundColor';
-import {Container, Col } from "react-bootstrap";
-=======
->>>>>>> e25555b4db8052a9d2394bc1e95a1009c5ecff73
+import {Container, Col, Row} from "react-bootstrap";
 
 
 class Portal extends React.Component {
@@ -36,29 +26,48 @@ class Portal extends React.Component {
     render () {
 
     return (
+
         <div style={{backgroundColor: this.state.color} }>
+            <Container>
             
+
             <div className='kid-header'>
-                <h3 className='kid-welcome'>Hello</h3>
-                <BackgroundColor setColor={this.setColor.bind(this)} />
-                <AvatarSelector />
+            <Row>
+                <Col xs={3}>
+                    <h3 className='kid-welcome'>Hello</h3>
+                </Col>
+                <Col xs={5}>
+                    <BackgroundColor setColor={this.setColor.bind(this)} />
+                </Col>
+                <Col xs={4}>
+                    <AvatarSelector />
+                </Col>
+            </Row>
+
             </div>
-                <div>
-                <value />
-                </div>
+            
+            
             <div className='kid-page-body'>
-                <Container>
-                    <Row>
-                        <Col>
-                            <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
-                        </Col>
-                <a className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>
-                <a className='music-button'><img src={ MusicIcon} alt="music button" /></a>
-                <a className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
-                    </Row>
-                </Container>
+
+            <Row>
+                <Col xs={3}>
+                  <a className='games-button'><img src={ GameIcon} alt="game button" /></a>
+                </Col>
+                <Col xs={3}>
+                  <a className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>
+                </Col>
+                <Col xs={3}>
+                  <a className='music-button'><img src={ MusicIcon} alt="music button" /></a>
+                </Col>
+                <Col xs={3}>
+                  <a className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
+                </Col>
+            </Row>
+
             </div>
+            </Container>
         </div>
+        
     );
 };
 };
