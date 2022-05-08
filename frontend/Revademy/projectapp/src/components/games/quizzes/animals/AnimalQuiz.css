@@ -1,13 +1,21 @@
+section {
+    background-color: #0c2b49;
+}
+
 .animal-quiz{
     text-align: center;
+    background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
+    height: 96vh;
+    margin: 0;
+    padding: 0;
     
 }
 
-.animal-quiz-title{
+/* .animal-quiz-title{
     background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
     background-size: contain;
     
-    }
+    } */
 
 .animal-quiz-h1{
     color: white;
@@ -19,10 +27,10 @@
 
 .question-card-animal{
     background-color: gray;
-    padding:16px;
+    padding:8px;
+    padding-right: 24px;
     border-radius: 16px;
     color: black;
-    /* border: 300px solid black; */
     width: 80%;
     height: auto;
     margin: 0 auto;
@@ -35,11 +43,11 @@
 
 .animal-quiz-li {
     background-color: darkgray;
-    padding: 16px;
+    padding: 14px;
     border: 3px solid black;
     border-radius: 20px;
-    font-size: 20px;
-    margin-top: 8px;
+    font-size: 18px;
+    margin-top: 6px;
 }
 .animal-quiz-li:hover{
     background-color: rgb(83, 218, 228);
@@ -52,13 +60,13 @@
 
 .final-results-animal{
     background-color: gray;
-    padding:16px;
+    padding:4px;
+    padding-right: 24px;
     border-radius: 16px;
     color: black;
     width: 50%;
     height: auto;
     margin: 0 auto;
-    /* border: 3px solid black; */
     box-shadow: 0 4px 1rem -4px #000;
 }
 .animal-quiz-btn{
@@ -77,3 +85,41 @@
     height: 200px;
     border-radius: 5px;
 }
+
+@media screen and (max-height: 970px ) {
+
+    .animal-quiz-h1 {
+        font-size: 3vh;
+    }
+
+    .animal-quiz-h2 {
+        font-size: 2vh;
+    }
+
+    .animal-quiz-li {
+        display: flex;
+        height: 5vh;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vh;
+
+    }
+
+    .final-results-animal h1{ 
+        font-size: 4vh;
+    }
+    .final-results-animal h2{ 
+       font-size: 2vh;
+   }
+
+   .animal-quiz-btn {
+       display: flex;
+       height: 3vh;
+       margin: auto;
+       margin-left: auto;
+       align-items: center;
+       font-size: 2vh;
+
+   }
+
+   }
