@@ -21,6 +21,9 @@ const LoginUser = () => {
         e.preventDefault();
 
         //ADD VERIFICATION
+        if(username === "" || password === ""){
+            alert("Enter All Fields.")
+        } else{
 
         axios.get(`http://localhost:8080/user/login?username=${username}&password=${password}`)
             .then(({data}) => {
@@ -39,6 +42,7 @@ const LoginUser = () => {
 
             });
     }
+}
 
 
 
