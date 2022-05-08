@@ -4,11 +4,7 @@
 }
 
 .animal-quiz-title{
-    background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
-    background-size: contain;
-    background-repeat:no-repeat;
-    height: 100vh;
-    background-color: #95CDEF ;
+    background-image: linear-gradient(#0c2b49,#195479,#95CDEF,white);
     }
 
 .animal-quiz-h1{
@@ -43,14 +39,11 @@
     border-radius: 20px;
     font-size: 20px;
     margin-top: 8px;
-    transition: .5s ease-in-out;
 
 }
 .animal-quiz-li:hover{
     background-color: #95CDEF;
     box-shadow: 0 4px 1rem -4px #000;
-    border: white 1px outset;
-
 }
 
 .question-text{

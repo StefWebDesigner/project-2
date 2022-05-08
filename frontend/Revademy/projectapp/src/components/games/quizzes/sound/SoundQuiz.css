@@ -3,13 +3,7 @@
     
 }
 .sound-quiz-title{
-    background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
-    
-    background-size: contain;
-    background-repeat:no-repeat;
-    height: 100vh;
-    background-color: #95CDEF ;
-    
+    background-image: linear-gradient(#0c2b49,#195479,#95CDEF,white);
 }
 
 .sound-quiz-h1{
@@ -45,7 +39,6 @@
     border-radius: 20px;
     font-size: 20px;
     margin-top: 8px;
-    transition: .5s ease-in-out;
 }
 
 .sound-quiz-li:hover{

@@ -1,16 +1,7 @@
 .color-quiz{
     text-align: center;
-        background-image: url("../../../../kid_images/space_medium_long_rectangle.png");
-        justify-content: center;
-    height: 100vh;
-    /*    background-color: #95CDEF ;*/
+       
 }
-
-/* section {
-    background-color: #195479;
-} 
-This messes with any section that doesn't have a class! Have to name it something specific!
-*/
 
 .question-card-color{
     background: rgb(186,186,186);
@@ -31,13 +22,9 @@ This messes with any section that doesn't have a class! Have to name it somethin
     list-style: none;
 }
 
-/*.color-quiz-title{*/
-/*    background-image: url("../../../../kid_images/space_medium_long_rectangle.png");*/
-/*    background-size: contain;*/
-/*    background-repeat:no-repeat;*/
-/*    height: 100vh;*/
-/*    background-color: #95CDEF ;*/
-/*}*/
+.color-quiz-title{
+  background-image: linear-gradient(#0c2b49,#195479,#95CDEF,white);
+}
 
 .color-quiz-h1{
     color: white;
@@ -50,17 +37,15 @@ This messes with any section that doesn't have a class! Have to name it somethin
 .color-quiz-li {
     background-color: darkgray;
     padding: 16px;
-    border: 3px solid navy;
+    border: 3px solid black;
     border-radius: 20px;
     font-size: 20px;
     margin-top: 8px;
-    transition: .5s ease-in-out;
 }
 
 .color-quiz-li:hover{
     background-color: #95CDEF;
     box-shadow: 0 4px 1rem -4px #000;
-    border: white 1px outset;
 }
 
 .question-text{

@@ -46,7 +46,6 @@
   }
 
   .user-update-btn:hover{
-    /*background-color: rgb(51, 51, 51);*/
       border: white 1px solid;
   }
 
@@ -56,8 +55,5 @@
   }
 
   .user-portal-body{
-    /*background-image: url("../../kid_images/cloudsone.png");*/
-    /*  background-size: contain;*/
-      background-color: #0c2b49;
-      height: 100vh;
+    background-image: linear-gradient(#0c2b49,#195479,#95CDEF,white);
   }
