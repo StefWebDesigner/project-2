@@ -69,7 +69,7 @@ public class GamePlaysController {
 	public ResponseEntity<Integer> getTotalAnimalQuiz() {
 		return ResponseEntity.ok(gamePlaysService.getTotalAnimalQuiz());
 	}
-	
+
 	@RequestMapping(value = "/totalcolorscore", method = RequestMethod.GET)
 	@CrossOrigin(origins = "http://localhost:3000")
 	public ResponseEntity<Integer> getTotalColorQuiz() {
