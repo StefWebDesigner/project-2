@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Card, Container, Form} from "react-bootstrap";
 import axios from "axios";
-// import validator from "validator";
+import validator from "validator";
 
 const AdminUserAdd = () => {
 
@@ -13,24 +13,24 @@ const AdminUserAdd = () => {
         email : "",
         password : ""
     })
-    // const [error, setError] = useState(false);
+    const [error, setError] = useState(false);
     // const [showPassword, setShowPassword] = useState(false);
 
 
     const submitAdminFormData = (e) => {
         e.preventDefault();
 
-        // if(
-        //     validator.isEmpty(adminAdd.firstname) ||
-        //     validator.isEmpty(adminAdd.lastname) ||
-        //     validator.isEmpty(adminAdd.username) ||
-        //     validator.isEmpty(adminAdd.accountTypes) ||
-        //     validator.isEmpty(adminAdd.ageType) ||
-        //     validator.isEmpty(adminAdd.email) ||
-        //     validator.isEmpty(adminAdd.password)
-        // ) {
-        //     setError(true)
-        // }
+        if(
+            validator.isEmpty(adminAdd.firstname) ||
+            validator.isEmpty(adminAdd.lastname) ||
+            validator.isEmpty(adminAdd.username) ||
+            validator.isEmpty(adminAdd.accountTypes) ||
+            validator.isEmpty(adminAdd.ageType) ||
+            validator.isEmpty(adminAdd.email) ||
+            validator.isEmpty(adminAdd.password)
+        ) {
+            setError(true)
+        }
 
         const mailformat =
             /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -72,14 +72,14 @@ const AdminUserAdd = () => {
                 <Container>
                     <h1 className="admin-sub-title"> Register Users</h1>
 
-                    <Card className="admin-tables">
+                    <Card className="admin-tables mb-4">
                         <Card.Body>
                             <Form onSubmit={submitAdminFormData}>
                                 {/*SECTION FOR FIRSNAME*/}
                                 <Form.Group className="mb-3">
                                     <Form.Label>First Name</Form.Label>
                                     <Form.Control
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
                                         name="firstname"
                                         defaultValue={adminAdd.firstname}
@@ -88,21 +88,21 @@ const AdminUserAdd = () => {
                                         onChange={handleAdminUserForm}
                                         required
                                     />
-                                    {/*{*/}
-                                    {/*    error ? (*/}
-                                    {/*        <Form.text style={{color: "red"}}>*/}
-                                    {/*            This is a required field*/}
-                                    {/*        </Form.text>*/}
-                                    {/*    ) : (*/}
-                                    {/*        ""*/}
-                                    {/*    )*/}
-                                    {/*}*/}
+                                    {
+                                        error ? (
+                                            <Form.text style={{color: "red"}}>
+                                                This is a required field
+                                            </Form.text>
+                                        ) : (
+                                            ""
+                                        )
+                                    }
                                 </Form.Group>
                                 {/*SECTION FOR LASTNAME*/}
                                 <Form.Group>
                                     <Form.Label>Last Name</Form.Label>
                                     <Form.Control
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
                                         name="lastname"
                                         type="text"
@@ -117,7 +117,7 @@ const AdminUserAdd = () => {
                                         Type of account
                                     </Form.Label>
                                     <Form.Select
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         size="md"
                                         name="accountTypes"
                                         onChange={handleAdminUserForm}
@@ -128,12 +128,12 @@ const AdminUserAdd = () => {
                                         <option value="ADMIN">Admin</option>
                                         {/*<option value="teacher">Teacher</option>*/}
                                     </Form.Select>
-                                    {/*/!* ERROR SECTION    *!/*/}
-                                    {/*{*/}
-                                    {/*    error ? (*/}
-                                    {/*        <Form.text> This is required</Form.text>*/}
-                                    {/*    ) : ""*/}
-                                    {/*}*/}
+                                    {/* ERROR SECTION    */}
+                                    {
+                                        error ? (
+                                            <Form.text> This is required</Form.text>
+                                        ) : ""
+                                    }
                                 </Form.Group>
                                 {/*FOR AGE*/}
                                 <Form.Group>
@@ -141,7 +141,7 @@ const AdminUserAdd = () => {
                                         Age
                                     </Form.Label>
                                     <Form.Select
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         size="md"
                                         name="ageType"
                                         onChange={handleAdminUserForm}
@@ -151,18 +151,18 @@ const AdminUserAdd = () => {
                                         <option value="OVERAGE">Above 18</option>
                                         <option value="UNDERAGE">Under 18</option>
                                     </Form.Select>
-                                    {/* ERROR SECTION    */}
-                                    {/*{*/}
-                                    {/*    error ? (*/}
-                                    {/*        <Form.text> This is required</Form.text>*/}
-                                    {/*    ) : ""*/}
-                                    {/*}*/}
+                                     {/*ERROR SECTION*/}
+                                    {
+                                        error ? (
+                                            <Form.text> This is required</Form.text>
+                                        ) : ""
+                                    }
                                 </Form.Group>
                                 {/*FOR EMAIL*/}
                                 <Form.Group>
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
                                         name="email"
                                         type="text"
@@ -171,17 +171,17 @@ const AdminUserAdd = () => {
                                         onChange={handleAdminUserForm}
                                         required
                                     />
-                                    {/* ERROR SECTION    */}
-                                    {/*{*/}
-                                    {/*    error ? (*/}
-                                    {/*        <Form.text> This is required</Form.text>*/}
-                                    {/*    ) : ""*/}
-                                    {/*}*/}
+                                     {/*ERROR SECTION*/}
+                                    {
+                                        error ? (
+                                            <Form.text> This is required</Form.text>
+                                        ) : ""
+                                    }
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Username</Form.Label>
                                     <Form.Control
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
                                         name="username"
                                         type="text"
@@ -190,17 +190,17 @@ const AdminUserAdd = () => {
                                         onChange={handleAdminUserForm}
                                         required
                                     />
-                                    {/* ERROR SECTION    */}
-                                    {/*{*/}
-                                    {/*    error ? (*/}
-                                    {/*        <Form.text> This is required</Form.text>*/}
-                                    {/*    ) : ""*/}
-                                    {/*}*/}
+                                     {/*ERROR SECTION*/}
+                                    {
+                                        error ? (
+                                            <Form.text> This is required</Form.text>
+                                        ) : ""
+                                    }
                                 </Form.Group>
                                 <Form.Group>
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
-                                        // style={{border: error ? "2px solid red" : ""}}
+                                        style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
                                         name="password"
                                         type="password"
@@ -208,24 +208,23 @@ const AdminUserAdd = () => {
                                         placeholder="password"
                                         onChange={handleAdminUserForm}
                                         required
-                                        // onChange={handleAdminUserForm("password")}
-
                                     />
                                     {/* ERROR SECTION    */}
-                                    {/*{*/}
-                                    {/*    error ? (*/}
-                                    {/*        <Form.text> This is required</Form.text>*/}
-                                    {/*    ) : ""*/}
-                                    {/*}*/}
+                                    {
+                                        error ? (
+                                            <Form.text> This is required</Form.text>
+                                        ) : ""
+                                    }
                                 </Form.Group>
 
-                                {/* BUTTON SECTION */}
-                                <Button
-                                    variant="primary"
-                                    type="submit"
-                                >
-                                    Register
-                                </Button>
+                                <div className="d-flex justify-content-center mt-4">
+                                    <Button
+                                        variant="primary"
+                                        type="submit"
+                                    >
+                                        Register
+                                    </Button>
+                                </div>
                             </Form>
                         </Card.Body>
                     </Card>

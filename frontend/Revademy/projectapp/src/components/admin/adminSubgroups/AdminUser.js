@@ -27,7 +27,7 @@ const AdminUser = () => {
                             <h1 className="admin-main-title"> User Panel</h1>
                         </Row>
                         <AdminUserAllUsers/>
-                        <p>Add view User here</p>
+
                         <AdminUserAdd/>
 
 
