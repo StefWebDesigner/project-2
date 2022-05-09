@@ -604,10 +604,16 @@
 /*GENERAL*/
 
 .admin-nav-background {
-    background-color: lightblue;
+    background-color: #0c2b49;
     border-radius: 10px;
-    /*color: navy;*/
+    color: white;
 }
+
+.admin-nav-brand {
+    color: #4B7BE5;
+    /*background-color: #4CAF50;*/
+}
+
 .admin-backgound
  {
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);

@@ -7,10 +7,11 @@ const AdminNav = () => {
         <>
 
             <Fragment>
-                <Navbar className="admin-nav-background" bg="blue" variant="light" expand="lg">
+                <Navbar className="admin-nav-background color-white"  variant="light" expand="lg">
                     <Container>
                         <Navbar.Brand
-                            to="/">Revademy</Navbar.Brand>
+                            className="admin-nav-brand"
+                            to="/"></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
