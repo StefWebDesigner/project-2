@@ -69,8 +69,8 @@ const AdminEmailDisplay = () => {
                             <tr>
                                 <th className="report-td">View</th>
                                 <th className="report-td">Id</th>
-                                <th className="report-td">From</th>
-                                <th className="report-td">Recipient</th>
+                                {/*<th className="report-td">From</th>*/}
+                                {/*<th className="report-td">Recipient</th>*/}
                                 <th className="report-td">Subject</th>
                                 <th className="report-td">Resolved</th>
                             </tr>
@@ -94,8 +94,8 @@ const AdminEmailDisplay = () => {
                                                     </button>
                                                 </td>
                                                 <td className="report-td"> {emails.emailId}</td>
-                                                <td className="report-td"> {emails.fromEmail}</td>
-                                                <td className="report-td"> {emails.recipient}</td>
+                                                {/*<td className="report-td"> {emails.fromEmail}</td>*/}
+                                                {/*<td className="report-td"> {emails.recipient}</td>*/}
                                                 <td className="report-td"> {emails.subject}</td>
                                                 <td className="report-td">
                                                     <button

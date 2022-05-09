@@ -28,7 +28,6 @@ import AdminDashBoard from "./components/admin/adminSubgroups/adminDashBoard";
 import AdminEvent from "./components/admin/adminSubgroups/AdminEvent";
 import AdminUser from "./components/admin/adminSubgroups/AdminUser";
 import AdminHomePanel from "./components/admin/adminSubgroups/AdminHomePanel";
-import AdminMonitoring from "./components/admin/adminSubgroups/AdminMonitoring";
 import UserPortal from './components/userRelated/UserPortal';
 import Recalendar from './components/events/Recalendar';
 
@@ -71,7 +70,6 @@ function App() {
                   <Route path="/adminevents" element={<AdminEvent/>}/>
                   <Route path="/adminhomepanel" element={<AdminHomePanel/>}/>
                   <Route path="/adminuserpannel" element={<AdminUser/>}/>
-                  <Route path="/adminmonitor" element={<AdminMonitoring/>}/>
 
 
                   {/* GAME ROUTES */}

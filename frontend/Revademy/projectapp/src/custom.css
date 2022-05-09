@@ -608,9 +608,10 @@
     border-radius: 10px;
     color: navy;
 }
-
-.admin-backgound {
-    /*background-color: lightgrey;*/
+admin-backgound
+. {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    height: 100vh;
 }
 
 .fact-card, .admin-tables, .admin-email-card, .email-admin-tables {

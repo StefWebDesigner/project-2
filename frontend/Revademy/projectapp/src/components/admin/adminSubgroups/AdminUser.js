@@ -15,7 +15,7 @@ const AdminUser = () => {
     return (
         <>
 
-            <section className="admin-backgound">
+            <section className="fade-in-animation admin-background">
                 <Container>
 
                     <section>

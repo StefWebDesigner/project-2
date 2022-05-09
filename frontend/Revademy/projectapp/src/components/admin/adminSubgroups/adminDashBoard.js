@@ -11,7 +11,7 @@ import UserAcountGraph from "./adminGraphs/UserAcountGraph";
 const AdminDashBoard = () => {
     return (
         <>
-            <section>
+            <section className="fade-in-animation admin-background">
                 <Container>
                     <AdminNav/>
                     <h1 className="admin-main-title">DashBoard</h1>

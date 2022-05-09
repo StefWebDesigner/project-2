@@ -8,7 +8,7 @@ import {Container} from "react-bootstrap";
 const HomeMain = () => {
     return (
         <>
-            <Container>
+            <Container  className="fade-in-animation admin-backgound">
             <section className="mt-4">
                 <HomeHeader/>
             </section>

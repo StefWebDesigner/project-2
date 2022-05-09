@@ -8,7 +8,7 @@ import AdminReportDisplay from "./adminReportSubGroups/AdminReportDisplay";
 const AdminReport = () => {
     return (
         <>
-        <section className="admin-backgound">
+        <section className="fade-in-animation admin-background">
             <Container>
 
             <section>

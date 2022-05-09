@@ -32,9 +32,6 @@ const AdminNav = () => {
                                 <Nav.Link>
                                     <Link to="/adminuserpannel">User</Link>
                                 </Nav.Link>
-                                <Nav.Link>
-                                    <Link to="/adminmonitor">Monitoring</Link>
-                                </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

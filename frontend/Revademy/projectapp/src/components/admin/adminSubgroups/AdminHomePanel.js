@@ -35,7 +35,7 @@ const AdminHomePanel = () => {
     return (
         <>
 
-            <section>
+            <section className="fade-in-animation admin-background">
 
                 <AdminNav/>
                 <Container>
