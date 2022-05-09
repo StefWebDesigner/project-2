@@ -17,13 +17,10 @@ const AdminDashBoard = () => {
                     <AdminNav/>
                     <h1 className="admin-main-title">DashBoard</h1>
 
-
                     {/* REPORT DASHBOARD*/}
                     <h2 className="admin-sub-title">Report DashBoard</h2>
                     <AdminReportFacts/>
                     <ReportCommonLocations/>
-
-                    {/*<ReportCommonLocations/>*/}
 
                     {/* User DASHBOARD*/}
                     <h2 className="admin-sub-title">User DashBoard</h2>
@@ -38,10 +35,6 @@ const AdminDashBoard = () => {
                     {/* Game DASHBOARD*/}
                     <h2 className="admin-sub-title">Game DashBoard</h2>
                     <AdminGameStats/>
-
-                    {/*<h2 className="admin-sub-title">Email DashBoard</h2>*/}
-                    {/*<AdminEmailFacts/>*/}
-
 
                 </Container>
             </section>
