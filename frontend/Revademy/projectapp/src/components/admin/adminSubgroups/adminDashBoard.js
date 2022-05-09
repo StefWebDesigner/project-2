@@ -7,6 +7,7 @@ import AdminEmailFacts from "./adminReportSubGroups/adminEmailFacts";
 import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
 import FeedbackOverallFeedback from "./adminGraphs/FeedbackOverallFeedback";
 import UserAcountGraph from "./adminGraphs/UserAcountGraph";
+import AdminGameStats from "../AdminGameStats";
 
 const AdminDashBoard = () => {
     return (
@@ -35,9 +36,11 @@ const AdminDashBoard = () => {
                     <FeedbackOverallFeedback/>
 
                     {/* Game DASHBOARD*/}
+                    <h2 className="admin-sub-title">Game DashBoard</h2>
+                    <AdminGameStats/>
+
                     {/*<h2 className="admin-sub-title">Email DashBoard</h2>*/}
                     {/*<AdminEmailFacts/>*/}
-                    <p>Add grpahs here</p>
 
 
                 </Container>

@@ -92,4 +92,18 @@ public class GamePlaysService {
 					
 				}
 
+	public Integer getTotalSoundQuiz() { return gamePlaysRepository.countTotalSoundquiz();
+	}
+
+	public Integer getTotalMatchingQuiz() { return gamePlaysRepository.countTotalMatchingquiz();
+	}
+
+	public Integer getTotalHangmanQuiz() { return gamePlaysRepository.countTotalHangmanquiz();
+	}
+
+	public Integer getTotalColorQuiz() { return gamePlaysRepository.countTotalColorquiz();
+	}
+
+	public Integer getTotalAnimalQuiz() { return gamePlaysRepository.countTotalAnimalquiz();
+	}
 }
