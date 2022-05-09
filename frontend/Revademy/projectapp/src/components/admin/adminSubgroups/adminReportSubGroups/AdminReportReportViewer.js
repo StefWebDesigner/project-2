@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 // import axios from "axios";
-import {Col, Row} from "react-bootstrap";
+import {Col, Row, Card} from "react-bootstrap";
+import CardHeader from "react-bootstrap/CardHeader";
 
 const AdminReportReportViewer = ({viewer}) => {
     console.log(viewer)
@@ -23,12 +24,19 @@ const AdminReportReportViewer = ({viewer}) => {
 
                 {
                     viewer ?
-                                <Fragment>
-                                    <p>{viewer.caseId} </p>
-                                    <p>{viewer.locationTypes} </p>
-                                    <p>{viewer.bugTitle}</p>
-                                    <p>{viewer.bugDescription}</p>
-                                </Fragment>
+
+                        <Card className="admin-email-card">
+                            <Card.Header>
+                                <p className="admin-report-viewer-item viewer-header">{viewer.locationTypes} </p>
+                            </Card.Header>
+                            <Card.Body>
+                                <p className="admin-report-viewer-item viewer-title">{viewer.bugTitle}</p>
+                                <p className="admin-report-viewer-item">{viewer.bugDescription}</p>
+                            </Card.Body>
+                            <Card.Footer></Card.Footer>
+
+                        </Card>
+
                         :
 
                         <aside>
