@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Music = ({ embedId }) => (
-  <div className="video-responsive">
+const Storytelling = ({ embedId }) => (
+  <div className="story-responsive">
     <iframe
       width="853"
       height="480"
@@ -10,13 +10,13 @@ const Music = ({ embedId }) => (
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
-      title="Music Channel"
+      title="Storytime Channel"
     />
   </div>
 );
 
-Music.propTypes = {
+Storytelling.propTypes = {
   embedId: PropTypes.string.isRequired
 };
 
-export default Music;
+export default Storytelling;

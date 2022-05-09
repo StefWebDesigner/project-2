@@ -1,0 +1,30 @@
+.Story {
+    font-family: sans-serif;
+    text-align: center;
+    background-image: url("../../kid_images/space_medium_long_rectangle.png");
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white
+  }
+  
+  .Story h1 {
+      margin-bottom: 2vh;
+      margin-top: 2vh;
+  }
+
+  
+.story-responsive {
+    overflow: hidden;
+    padding-bottom: 42.25%;
+    position: relative;
+    height: 0;
+  }
+  
+.story-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+  }
