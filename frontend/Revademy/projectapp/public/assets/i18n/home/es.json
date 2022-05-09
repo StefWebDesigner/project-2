@@ -4,7 +4,7 @@
     "logout":"Salida",
     "userportal": "Portal de Usuarios", 
     "kidportal": "Portal de Niños", 
-    "events": "Eventos",
+    "quizzes": "Cuestionarios",
     "welcome": "Bienvenidos",
 
     "welcometorevademy": "Bienvenido a Revademy",
@@ -20,9 +20,9 @@
 
     "getoutthereandlearn": "¡Sal de ahí y aprende!",
     "checkoutthegames": "Echa un vistazo a los últimos juegos.",
-    "gotsomeevent": "Echa un vistazo a nuestros eventos.",
+    "testyourknowledge": "Prueba tus conocimientos.",
     "signup": "¡Regístrate ahora!",
-    "viewyourprogress":"Ver su progreso",
+    "funforkids":"Diversión para niños.",
     "learningportal": "Portal de aprendizaje",
 
     "mychildren": "Mis hijos amaban las clases y conocieron nuevos amigos también.",
