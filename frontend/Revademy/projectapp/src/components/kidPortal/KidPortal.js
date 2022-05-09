@@ -30,9 +30,9 @@ class Portal extends React.Component {
         <div style={{backgroundColor: this.state.color} }>
             <Container>
             
-
-            <div className='kid-header'>
             <Row>
+            <div className='kid-header'>
+            
                 <Col xs={3}>
                     <h3 className='kid-welcome'>Hello</h3>
                 </Col>
@@ -42,9 +42,10 @@ class Portal extends React.Component {
                 <Col xs={4}>
                     <AvatarSelector />
                 </Col>
-            </Row>
+            
 
             </div>
+            </Row>
             
             
             <div className='kid-page-body'>

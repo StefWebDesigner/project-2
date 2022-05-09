@@ -20,7 +20,7 @@
 
     "getoutthereandlearn": "Sortez-y et apprenez ",
     "checkoutthegames": "Découvrez les derniers jeux.",
-    "gotsomeevent": "Découvrez les derniers jeux.",
+    "gotsomeevent": "Découvrez nos événements.",
     "signup": "Inscrivez-vous maintenant!",
     "viewyourprogress": "Voyez vos progrès",
     "learningportal": "Portail d'apprentissage",
@@ -43,8 +43,8 @@
     "matchinggame": "Jeu de correspondance de cartes",
     "wordgame": "Jeu de mots",
     "describeissue": "Décrire le problème",
-    "submit": "Submit",
+    "submit": "Se soumettre",
 
-    "subject": "Subject",
-    "body": "Body"
+    "subject": "Sujet",
+    "body": "Texte principal"
 }

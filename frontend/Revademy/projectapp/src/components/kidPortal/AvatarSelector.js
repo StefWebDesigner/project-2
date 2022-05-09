@@ -27,10 +27,11 @@ import './kidportal.css';
    
         <div className="avatar-selector">
 
-                <img src= {value} className="kid-avatar" alt='kid avatar' />
+                <img src= {value} className="kid-avatar" />
                 
 
                   <select
+                  defaultValue="Select Avatar"
                     value={value}
                     onChange={handleChange}
                   >

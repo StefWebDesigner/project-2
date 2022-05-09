@@ -1,0 +1,37 @@
+.activity-section {
+    background-image: url("../../kid_images/space_medium_long_rectangle.png");
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.activity-title {
+    color: white;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.activity-main {
+    margin-left: 5vw;
+    margin-right: 0;
+}
+
+.activity-main img {
+    border: solid white 4px;
+    border-radius: 10px;
+    height: 50vh;
+    width: 37vw;
+    margin: 0;
+    padding: 0;
+}
+
+.activity-main p {
+ color: white;
+ font-size: 4vh;
+
+}
+

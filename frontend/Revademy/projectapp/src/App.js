@@ -31,6 +31,7 @@ import AdminHomePanel from "./components/admin/adminSubgroups/AdminHomePanel";
 import AdminMonitoring from "./components/admin/adminSubgroups/AdminMonitoring";
 import UserPortal from './components/userRelated/UserPortal';
 import Recalendar from './components/events/Recalendar';
+import Music from './components/music/Music';
 
 
 
@@ -85,6 +86,9 @@ function App() {
                   {/* FLOAT IN ANIMATION TEST */}
                   <Route path="/opening" element={<Opening/>}/>
                   <Route path="/kidPortal" element={<KidPortal/>}/>
+
+                  {/* MUSIC AND SOUND CHANNELS */}
+                  <Route path="/music" element={<Music/>}/>
 
 
               </Routes>

@@ -1,0 +1,53 @@
+.quizzes-section {
+    background-image: url("../../../kid_images/space_medium_long_rectangle.png");
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.quizzes-title {
+    color: white;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.quizzes-main {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-right: 0;
+    align-items: center;
+}
+
+.quizzes-main img {
+    border: solid white 4px;
+    border-radius: 10px;
+    width: 25vw;
+    margin: 0;
+    padding: 0;
+}
+
+.quizzes-main p {
+ color: white;
+ font-size: 4vh;
+
+}
+
+ @media screen and (min-width: 0px) and (max-width: 1800px) {
+
+    .quizzes-main {
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+    }
+
+    .quizzes-main img {
+        width: 40vw;
+    } 
+    
+}
