@@ -95,7 +95,7 @@ const InboxButton = () => {
                             clasName="feedback-input"
                             type-="text"
                             name="subject"
-                            placeholder="Subject"
+                            placeholder={t("subject")}
                             value={feedback.subject}
                             onChange={feedbackChangeHandler}
                             required
@@ -106,7 +106,7 @@ const InboxButton = () => {
 
                     <Form.Group>
                         <Form.Label className="modal-labels">
-                            Please select a description of your experience:
+                            {t("pleaseselectadescription")}
                         </Form.Label>
                         <Form.Select
                             size="md"
@@ -116,8 +116,8 @@ const InboxButton = () => {
                             required
                             // onChange={handleFormData("account")}
                         >
-                            <option value="">Open this select menu</option>
-                            <option value="GREAT">Great</option>
+                            <option value="">{t("openmenu")}</option>
+                            <option value="GREAT">{t("great")}</option>
                             <option value="SOLID">Solid</option>
                             <option value="OK">Ok</option>
                             <option value="NEEDSIMPROVEMENT">Needs Improvement</option>
@@ -135,7 +135,7 @@ const InboxButton = () => {
                                 className="pt-2 pb-7"
                                 type-="text"
                                 name="body"
-                                placeholder="Description"
+                                placeholder={t("description")}
                                 value={feedback.body}
                                 onChange={feedbackChangeHandler}
                                 required

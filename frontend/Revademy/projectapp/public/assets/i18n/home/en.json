@@ -4,7 +4,7 @@
     "logout":"Logout",
     "userportal": "User Portal", 
     "kidportal": "Kids Portal", 
-    "events": "Events",
+    "quizzes": "Quizzes",
     "welcome": "Welcome",
 
     "welcometorevademy": "Welcome to Revademy",
@@ -20,9 +20,9 @@
 
     "getoutthereandlearn": "Get Out There & Learn!",
     "checkoutthegames": "Check out the latest games.",
-    "gotsomeevent": "Check out our events.",
+    "testyourknowledge": "Test Your Knowledge.",
     "signup": "Sign up now!",
-    "viewyourprogress": "View Your Progress",
+    "funforkids": "Fun For Kids.",
     "learningportal": "Learning Portal",
 
     "mychildren": "My children loved the classes and met new friends too.",
@@ -46,7 +46,16 @@
     "submit": "Submit",
 
     "subject": "Subject",
-    "body": "Body"
+    "body": "Body",
+    "issuesubject": "Issue Subject",
+    "pleaseselectadescription": "Please select a description of your experience",
+    "description": "Description",
+    "great": "Great",
+    "solid": "Solid",
+    "okay": "Okay",
+    "needsimprovement": "Needs Improvement",
+    "bad": "Bad"
+
 
 
 

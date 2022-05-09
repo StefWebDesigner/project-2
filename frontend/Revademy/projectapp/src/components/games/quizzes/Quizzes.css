@@ -1,6 +1,5 @@
 .quizzes-section {
     background-image: url("../../../kid_images/space_medium_long_rectangle.png");
-    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -16,11 +15,12 @@
 }
 
 .quizzes-main {
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     margin: 0;
     margin-right: 0;
+    margin-left: 5vh;
     align-items: center;
 }
 
@@ -38,7 +38,14 @@
 
 }
 
- @media screen and (min-width: 0px) and (max-width: 1800px) {
+@media (min-width: 615px) {
+    .quizzes-section {
+        height: 100vh;
+    }
+    
+}
+
+ @media (orientation: portrait) {
 
     .quizzes-main {
         flex-direction: column;
@@ -47,7 +54,17 @@
     }
 
     .quizzes-main img {
-        width: 40vw;
+        width: 35vw;
     } 
     
 }
+
+@media (orientation: landscape) and (min-width: 600px) and (max-width: 1785px) {
+
+   /* .quizzes-section {
+       height: 120vh;
+   } */
+    
+}
+
+

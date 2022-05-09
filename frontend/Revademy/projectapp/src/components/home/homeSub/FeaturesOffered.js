@@ -54,11 +54,11 @@ const FeaturesOffered = () => {
                                             <img src={eventIcon} alt='event icon'/>
                                             <div className="overlay">
                                                 <div className="overlay-text">
-                                                    <p className="text-center">{t("home:gotsomeevent")}</p>
+                                                    <p className="text-center">{t("home:testyourknowledge")}</p>
                                                     {/*<p className="text-center">{t("home:signup")}</p>*/}
                                                 </div>
                                                 <div className="overlay-link">
-                                                    <Link to="/events">{t("home:events")}</Link>
+                                                    <Link to="/quizzes">{t("home:quizzes")}</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,10 +75,10 @@ const FeaturesOffered = () => {
                                                 <img src={learningIcon} alt='learning icon'/>
                                                 <div className="overlay">
                                                     <div className="overlay-text">
-                                                        <p className="text-center">{t("home:viewyourprogress")}</p>
+                                                        <p className="text-center">{t("home:funforkids")}</p>
                                                     </div>
                                                     <div className="overlay-link">
-                                                        <Link to="/opening">{t("home:opening")}</Link>
+                                                        <Link to="/opening">{t("home:kidportal")}</Link>
                                                     </div>
                                                 </div>
                                             </div>

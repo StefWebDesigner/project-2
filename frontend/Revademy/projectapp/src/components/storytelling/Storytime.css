@@ -1,8 +1,7 @@
 .Story {
     font-family: sans-serif;
     text-align: center;
-    background-image: url("../../kid_images/space_medium_long_rectangle.png");
-    height: 100vh;
+    background-image: linear-gradient(#0c2b49,#195479,#95CDEF,white);
     margin: 0;
     padding: 0;
     color: white
@@ -16,7 +15,7 @@
   
 .story-responsive {
     overflow: hidden;
-    padding-bottom: 42.25%;
+    padding-bottom: 54.25%;
     position: relative;
     height: 0;
   }
@@ -27,4 +26,10 @@
     height: 80%;
     width: 100%;
     position: absolute;
+  }
+
+  @media (orientation: portrait) {
+    .Story {
+      height: 200vh;
+    }
   }
