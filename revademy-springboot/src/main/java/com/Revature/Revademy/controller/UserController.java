@@ -53,23 +53,17 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUser());
     }
 
-
+//    http://localhost:8080/user/username/maria
     @RequestMapping(value = "/username/{username}", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
         return ResponseEntity.ok(userService.getUserByUsername(username));
     }
-//    @RequestMapping(value = "/getuserbyIdrequestWorkplease/{id}", method = RequestMethod.GET)
-//    @CrossOrigin(origins = "http://localhost:3000")
-//    public ResponseEntity<User> getUserById(@PathVariable Integer id) {
-//        return ResponseEntity.ok(userService.getUserById(id));
-//    }
 
     @RequestMapping(value = "/update", method = RequestMethod.PUT)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<String> updateUser(@RequestBody User user, @RequestParam Integer id) {
         return ResponseEntity.ok(userService.updateUser(user, id));
-
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
@@ -83,6 +77,16 @@ public class UserController {
     public ResponseEntity<Integer> getTotalUsers() {
         return ResponseEntity.ok(userService.getTotalUsers());
     }
+
+
+//    http://localhost:8080/user/avatar?avatarTypes=BOY&id=2104
+    @RequestMapping(value = "/avatar", method = RequestMethod.PUT)
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<User> setAvatar(@RequestBody User user, @RequestParam AvatarTypes avatarTypes, @RequestParam Integer id) {
+        return ResponseEntity.ok(userService.setAvatar(user, avatarTypes, id));
+    }
+
+
 
 
 }

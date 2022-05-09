@@ -1,6 +1,7 @@
 package com.Revature.Revademy.service;
 
 import com.Revature.Revademy.entities.AgeType;
+import com.Revature.Revademy.entities.AvatarTypes;
 import com.Revature.Revademy.entities.User;
 import com.Revature.Revademy.entities.UserStats;
 import com.Revature.Revademy.exception.GeneralException;
@@ -44,6 +45,7 @@ public class UserService {
         	throw new GeneralException("Email already exists");
         }
         user.setCreatedDate(LocalDate.now());
+        user.setAvatarTypes(AvatarTypes.DUCK);
         return userRepository.save(user);
     }
 
@@ -134,6 +136,21 @@ public class UserService {
     public Integer getTotalUsers() {
         return userRepository.totalUsers();
     }
+
+    public User setAvatar(User user, AvatarTypes avatarTypes, Integer id) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if(userOptional.isPresent()){
+            userOptional.get().setAvatarTypes(avatarTypes);
+            return userRepository.save(user);
+        } else {
+            throw new NonExistingUserException("No user found");
+        }
+    }
+
+
+
+
+
 
 
 }

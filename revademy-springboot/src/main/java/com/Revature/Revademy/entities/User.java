@@ -19,6 +19,8 @@ public class User {
     private AccountTypes accountTypes;
     @Enumerated(EnumType.STRING)
     private AgeType ageType;
+    @Enumerated(EnumType.STRING)
+    private AvatarTypes avatarTypes;
     @Column(unique = true)
     private String email;
     private String password;
@@ -94,5 +96,13 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public AvatarTypes getAvatarTypes() {
+        return avatarTypes;
+    }
+
+    public void setAvatarTypes(AvatarTypes avatarTypes) {
+        this.avatarTypes = avatarTypes;
     }
 }
