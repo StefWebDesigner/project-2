@@ -12,7 +12,8 @@
 }
 
 .question-card-color{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
     padding:8px;
     padding-right: 24px;
     border-radius: 16px;
@@ -38,7 +39,7 @@
 }
 
 .color-quiz-li {
-    background-color: darkgray;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     padding: 14px;
     border: 3px solid black;
     border-radius: 20px;
@@ -49,6 +50,7 @@
 .color-quiz-li:hover{
     background-color: #95CDEF;
     box-shadow: 0 4px 1rem -4px #000;
+    transition: 0.2s ease-in-out;
 }
 
 .question-text{
@@ -57,7 +59,8 @@
 }
 
 .final-results-color{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
     padding:4px;
     padding-right: 24px;
     border-radius: 16px;
@@ -85,11 +88,11 @@
 @media screen and (max-height: 970px ) {
 
      .color-quiz-h1 {
-         font-size: 3vh;
+         font-size: 5vh;
      }
 
      .color-quiz-h2 {
-         font-size: 2vh;
+         font-size: 3vh;
      }
 
      .color-quiz-li {
@@ -97,7 +100,7 @@
          height: 5vh;
          justify-content: center;
          align-items: center;
-         font-size: 2vh;
+         font-size: 3vh;
 
      }
 

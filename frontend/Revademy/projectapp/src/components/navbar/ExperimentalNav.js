@@ -37,6 +37,7 @@ const ExperimentalNav = () => {
                 setLogout(response.data);
                 setUser(null);
                 localStorage.removeItem("user")
+                navigate('/');
                 alert("successfully logout out")
             })
     }
