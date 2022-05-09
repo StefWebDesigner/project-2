@@ -102,7 +102,9 @@ const data = {
     }
 
     return (
-        <div>
+        <div className="admin-user-graph"
+             style={{  maxWidth:"900px",  marginBottom:"1%", padding:"1%"}}
+        >
             <Bar data={data} />
         </div>
     )

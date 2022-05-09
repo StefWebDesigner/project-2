@@ -7,6 +7,7 @@ import AdminEmailFacts from "./adminReportSubGroups/adminEmailFacts";
 import ReportCommonLocations from "./adminGraphs/ReportCommonLocations";
 import FeedbackOverallFeedback from "./adminGraphs/FeedbackOverallFeedback";
 import UserAcountGraph from "./adminGraphs/UserAcountGraph";
+import AdminGameStats from "../AdminGameStats";
 
 const AdminDashBoard = () => {
     return (
@@ -16,13 +17,10 @@ const AdminDashBoard = () => {
                     <AdminNav/>
                     <h1 className="admin-main-title">DashBoard</h1>
 
-
                     {/* REPORT DASHBOARD*/}
                     <h2 className="admin-sub-title">Report DashBoard</h2>
                     <AdminReportFacts/>
                     <ReportCommonLocations/>
-
-                    {/*<ReportCommonLocations/>*/}
 
                     {/* User DASHBOARD*/}
                     <h2 className="admin-sub-title">User DashBoard</h2>
@@ -30,15 +28,13 @@ const AdminDashBoard = () => {
                     <UserAcountGraph/>
 
                     {/* REPORT DASHBOARD*/}
-                    <h2 className="admin-sub-title">Email DashBoard</h2>
+                    <h2 className="admin-sub-title">Feedback DashBoard</h2>
                     <AdminEmailFacts/>
                     <FeedbackOverallFeedback/>
 
                     {/* Game DASHBOARD*/}
-                    {/*<h2 className="admin-sub-title">Email DashBoard</h2>*/}
-                    {/*<AdminEmailFacts/>*/}
-                    <p>Add grpahs here</p>
-
+                    <h2 className="admin-sub-title">Game DashBoard</h2>
+                    <AdminGameStats/>
 
                 </Container>
             </section>

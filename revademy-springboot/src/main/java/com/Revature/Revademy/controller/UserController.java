@@ -41,7 +41,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<String> deleteUser(@RequestParam Integer id) {
         return ResponseEntity.ok(userService.deleteUser(id));
     }

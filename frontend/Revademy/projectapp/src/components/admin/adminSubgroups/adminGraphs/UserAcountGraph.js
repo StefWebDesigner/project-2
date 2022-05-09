@@ -46,8 +46,13 @@ const data = {
     }]
 }
 return (
-    <div>
-        <Doughnut data={data} />
+    <div className="admin-user-graph"
+         style={{  maxWidth:"600px",  marginBottom:"1%", padding:"1%"}}
+    >
+    {/*<div style={{  maxWidth:"500px",  marginBottom:"1%", padding:"1%"}}>*/}
+        <Doughnut
+          data={data}
+        />
     </div>
 )
 }

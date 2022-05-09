@@ -28,19 +28,20 @@ const InboxButton = () => {
     const handleOpenEmailModal = () => setShowEmailModal(true);
 
 
-    const feedbackSubmitHandler = (e) => {
+    async function feedbackSubmitHandler(e) {
         e.preventDefault()
 
-         axios.post("http://localhost:8080/emailsupport/create", feedback)
+         await axios.post("http://localhost:8080/emailsupport/create", feedback)
             .then(response => {
-                alert("Thank you for you feedback")
                 setFeedback(response.data)
+                alert("Thank you for you feedback")
             })
-        console.log(feedback)
 
-
-
-
+        setFeedback({
+            subject : "",
+            feebackOptionsTypes : "",
+            body : ""
+        })
     }
 
     const feedbackChangeHandler = (e) => {
@@ -94,7 +95,8 @@ const InboxButton = () => {
                             clasName="feedback-input"
                             type-="text"
                             name="subject"
-                            defaultValue={feedback.subject}
+                            placeholder="Subject"
+                            value={feedback.subject}
                             onChange={feedbackChangeHandler}
                             required
                         />
@@ -109,7 +111,7 @@ const InboxButton = () => {
                         <Form.Select
                             size="md"
                             name="feebackOptionsTypes"
-                            defaultValue={feedback.feebackOptionsTypes}
+                            value={feedback.feebackOptionsTypes}
                             onChange={feedbackChangeHandler}
                             required
                             // onChange={handleFormData("account")}
@@ -133,7 +135,8 @@ const InboxButton = () => {
                                 className="pt-2 pb-7"
                                 type-="text"
                                 name="body"
-                                defaultValue={feedback.body}
+                                placeholder="Description"
+                                value={feedback.body}
                                 onChange={feedbackChangeHandler}
                                 required
                             />

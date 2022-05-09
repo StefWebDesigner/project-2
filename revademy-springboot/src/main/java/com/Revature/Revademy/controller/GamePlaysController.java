@@ -63,4 +63,42 @@ public class GamePlaysController {
 	        return ResponseEntity.ok(gamePlaysService.updateMatchingPlays(matchingPlays));
 	    }
 
+
+	@RequestMapping(value = "/totalanimalscore", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<Integer> getTotalAnimalQuiz() {
+		return ResponseEntity.ok(gamePlaysService.getTotalAnimalQuiz());
+	}
+
+	@RequestMapping(value = "/totalcolorscore", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<Integer> getTotalColorQuiz() {
+		return ResponseEntity.ok(gamePlaysService.getTotalColorQuiz());
+	}
+
+	@RequestMapping(value = "/totalhangmanscore", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<Integer> getTotalHangmanQuiz() {
+		return ResponseEntity.ok(gamePlaysService.getTotalHangmanQuiz());
+	}
+
+	@RequestMapping(value = "/totalmatchingscore", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<Integer> getTotalMatchingQuiz() {
+		return ResponseEntity.ok(gamePlaysService.getTotalMatchingQuiz());
+	}
+
+	@RequestMapping(value = "/totalsoundscore", method = RequestMethod.GET)
+	@CrossOrigin(origins = "http://localhost:3000")
+	public ResponseEntity<Integer> getTotalSoundQuiz() {
+		return ResponseEntity.ok(gamePlaysService.getTotalSoundQuiz());
+	}
+
+
+
+
+
+
+
+
 }

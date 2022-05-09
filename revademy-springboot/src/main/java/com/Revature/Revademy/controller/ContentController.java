@@ -2,6 +2,7 @@ package com.Revature.Revademy.controller;
 
 import com.Revature.Revademy.entities.Content;
 import com.Revature.Revademy.service.ContentService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +20,6 @@ public class ContentController {
     public ContentController(ContentService contentService) {
         this.contentService = contentService;
     }
-
-
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @CrossOrigin(origins = "http://localhost:3000")

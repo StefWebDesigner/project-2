@@ -17,7 +17,16 @@ const ReportButton = () => {
     const [error, setError] = useState(false);
     const [showModal, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false);
+
+        setReportForm({
+            bugTitle : "",
+            locationTypes : "",
+            bugDescription : ""
+        })
+
+    }
     const handleShow = () => setShow(true);
 
     async function reportFormSubmit(e) {
@@ -31,9 +40,10 @@ const ReportButton = () => {
             setError(true)
         }
 
-        const data = axios.post("http://localhost:8080/report/postreport", reportForm)
+        await axios.post("http://localhost:8080/report/postreport", reportForm)
             .then(data => {
                 setReportForm(data.data)
+                alert("Report was successful")
             })
         setReportForm({
             bugTitle : "",

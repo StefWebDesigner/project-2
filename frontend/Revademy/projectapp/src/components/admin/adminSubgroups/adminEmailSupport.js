@@ -7,7 +7,7 @@ const AdminEmailSupport = () => {
         <>
             <section className="fade-in-animation admin-background">
             <AdminNav/>
-            <h1 className="admin-main-title">Email Support</h1>
+            <h1 className="admin-main-title">Feedback</h1>
 
             <AdminEmailDisplay/>
         </section>

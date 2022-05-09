@@ -608,8 +608,8 @@
     border-radius: 10px;
     color: navy;
 }
-admin-backgound
-. {
+.admin-backgound
+ {
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     height: 100vh;
 }
@@ -666,9 +666,13 @@ admin-backgound
 .admin-sub-title {
     margin-top: 5%;
     margin-bottom: 5%;
-    font-size: 30px;
+    font-size: 22px;
     color: navy;
 
+}
+
+.admin-user-graph {
+    margin: auto;
 }
 
 
@@ -701,9 +705,26 @@ transition: .5s ease-in-out;
 /*ADMIN REPORT */
 
 
+
+.admin-report-viewer-item {
+    text-align: center;
+    color: navy;
+}
+
+.viewer-title {
+    font-size: 17px;
+}
+
+.viewer-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 .report-td {
     font-size: 12px;
     text-align: center;
+    color: navy;
 
 }
 
@@ -714,16 +735,39 @@ transition: .5s ease-in-out;
     border-radius: 10px;
 }
 
-/*ADMIN EMAIL*/
+/*Admin user*/
 
+
+.admin-user-fName,
+
+
+.admin-user-fName,
+.admin-user-lName {
+    color:navy;
+    font-size: 20px;
+}
+.admin-user-fName {
+    margin-right: 10px;
+}
+
+.admin-user-view-item {
+    color: navy;
+}
+
+
+/*ADMIN EMAIL*/
+.admin-email-subject,
+.admin-email-body {
+    text-align: center;
+    color: navy;;
+}
 
 .admin-email-subject {
     font-size: 18px;
     font-weight: bold;
+
 }
 
-.admin-email-from,
-.admin-email-recipient,
 .admin-email-body{
     font-size: 15px;
 }

@@ -19,7 +19,7 @@ public class UserStatsController {
         this.userStatsService = userStatsService;
     }
 
-    @GetMapping
+    @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<UserStatsDto> getUserStat(@RequestParam String  username) {
         return ResponseEntity.ok(userStatsService.getUserStats(username));
     }
