@@ -2,6 +2,7 @@ package com.Revature.Revademy.controller;
 
 import com.Revature.Revademy.entities.Content;
 import com.Revature.Revademy.service.ContentService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,7 +37,7 @@ public class ContentController {
 
     @RequestMapping(value = "/deletePost", method = RequestMethod.DELETE)
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<String> deleteContent(@RequestParam Integer contentId) {
+    public ResponseEntity<String> deleteContent(@PathVariable Integer contentId) {
         return ResponseEntity.ok(contentService.deleteContent(contentId));
     }
 

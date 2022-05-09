@@ -1,6 +1,5 @@
 import React from 'react';
 import {Col, Container, Row, Table} from "react-bootstrap";
-// import AdminReportReportViewer from "../adminReportSubGroups/AdminReportReportViewer";
 import {BsDash} from "react-icons/bs";
 import {useEffect, useState} from "react";
 import axios from "axios";
@@ -9,10 +8,6 @@ const AdminHomeContentDisplay = () => {
 
     const [showAnnouncements, setShowAnnouncements] = useState([]);
     const [deteteAnnouncement, setDeteteAnnouncement] = useState([])
-    // const [pendingReports, setPendingReports] = useState([])
-    // const [viewer, setViewer] = useState(null)
-
-
 
     //SHOW ALL PENDING CONTENT
     const showAllAnnouncement = () => {
@@ -24,13 +19,12 @@ const AdminHomeContentDisplay = () => {
             })
     }
 
-    const deleteAccouncementFunction = (contentId) => {
-        axios.delete(`http://localhost:8080/announcement/delete/contentId=${contentId}`)
+    async function deleteAccouncementFunction (contentId) {
+      await axios.delete(`http://localhost:8080/announcement/delete/${contentId}`)
             .then(response => {
                 setDeteteAnnouncement(response.data)
+                alert("Successfully deleted")
             })
-
-        alert("Successfully deleted")
         showAllAnnouncement()
     }
 
