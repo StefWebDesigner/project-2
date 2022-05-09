@@ -91,13 +91,15 @@ const ExperimentalNav = () => {
                         </div>
                     </Col>
                     
-                    
+                    {
+                        user && user.accountTypes === 'ADMIN' ? (
                     <Col className="background-events">
                         <div className="link-container">
                             <Link className="credentials-link" to="/events">{t("events")}</Link>
                         </div>
                     </Col>
-
+                    ) : ""
+                    }
                     {
                         user && user.accountTypes === 'ADMIN' ? (
                         <Col className="background-credentials">
