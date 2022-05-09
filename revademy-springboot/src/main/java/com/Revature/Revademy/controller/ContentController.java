@@ -21,8 +21,6 @@ public class ContentController {
         this.contentService = contentService;
     }
 
-
-
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<Content> createAnnouncement(@RequestBody Content content) {
@@ -37,7 +35,7 @@ public class ContentController {
 
     @RequestMapping(value = "/deletePost", method = RequestMethod.DELETE)
     @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<String> deleteContent(@PathVariable Integer contentId) {
+    public ResponseEntity<String> deleteContent(@RequestParam Integer contentId) {
         return ResponseEntity.ok(contentService.deleteContent(contentId));
     }
 

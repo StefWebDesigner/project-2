@@ -83,7 +83,7 @@ const AdminUserAdd = () => {
                                         style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
                                         name="firstname"
-                                        defaultValue={adminAdd.firstname}
+                                        value={adminAdd.firstname}
                                         type="text"
                                         placeholder="Firstname"
                                         onChange={handleAdminUserForm}
@@ -108,7 +108,7 @@ const AdminUserAdd = () => {
                                         className="form-input"
                                         name="lastname"
                                         type="text"
-                                        defaultValue={adminAdd.lastname}
+                                        value={adminAdd.lastname}
                                         placeholder="Last name"
                                         onChange={handleAdminUserForm}
                                         required
@@ -122,6 +122,7 @@ const AdminUserAdd = () => {
                                         style={{border: error ? "2px solid red" : ""}}
                                         size="md"
                                         name="accountTypes"
+                                        value={adminAdd.accountTypes}
                                         onChange={handleAdminUserForm}
                                         required
                                     >
@@ -146,6 +147,7 @@ const AdminUserAdd = () => {
                                         style={{border: error ? "2px solid red" : ""}}
                                         size="md"
                                         name="ageType"
+                                        value={adminAdd.ageType}
                                         onChange={handleAdminUserForm}
                                         required
                                     >
@@ -209,7 +211,7 @@ const AdminUserAdd = () => {
                                         className="form-input"
                                         name="password"
                                         type="password"
-                                        defaultValue={adminAdd.password}
+                                        value={adminAdd.password}
                                         placeholder="password"
                                         onChange={handleAdminUserForm}
                                         required

@@ -96,7 +96,7 @@ const InboxButton = () => {
                             type-="text"
                             name="subject"
                             placeholder="Subject"
-                            defaultValue={feedback.subject}
+                            value={feedback.subject}
                             onChange={feedbackChangeHandler}
                             required
                         />
@@ -111,7 +111,7 @@ const InboxButton = () => {
                         <Form.Select
                             size="md"
                             name="feebackOptionsTypes"
-                            defaultValue={feedback.feebackOptionsTypes}
+                            value={feedback.feebackOptionsTypes}
                             onChange={feedbackChangeHandler}
                             required
                             // onChange={handleFormData("account")}
@@ -136,7 +136,7 @@ const InboxButton = () => {
                                 type-="text"
                                 name="body"
                                 placeholder="Description"
-                                defaultValue={feedback.body}
+                                value={feedback.body}
                                 onChange={feedbackChangeHandler}
                                 required
                             />

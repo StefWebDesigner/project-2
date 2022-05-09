@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Container, Form, FormControl, Card} from "react-bootstrap";
 import AdminNav from "./AdminNav";
 import axios from "axios";
@@ -10,19 +10,48 @@ const AdminHomePanel = () => {
         contentBody : ""
     })
 
-    const announcementSubmitHander = async(e) => {
+    const [showAnnouncements, setShowAnnouncements] = useState([]);
+    const [deteteAnnouncement, setDeteteAnnouncement] = useState([])
+
+    const showAllAnnouncement = () => {
+        axios.get("http://localhost:8080/announcement/all")
+            .then(response => {
+                const reports = response.data
+                console.log(reports)
+                setShowAnnouncements(response.data)
+            })
+    }
+
+    async function deleteAccouncementFunction (contentId) {
+        await axios.delete(`http://localhost:8080/announcement/deletePost/contentId=${contentId}`)
+            .then(response => {
+                setDeteteAnnouncement(response.data)
+                alert("Successfully deleted")
+            })
+        showAllAnnouncement()
+    }
+
+
+    useEffect(() => {
+        showAllAnnouncement();
+    }, []);
+
+
+    async function announcementSubmitHander(e) {
         e.preventDefault()
 
          await axios.post("http://localhost:8080/announcement/create", content)
             .then(response => {
                 setContent(response.data);
-
                 alert("Announcement posted")
             })
                 setContent({
                     contentBody : ""
                 })
+
+        showAllAnnouncement()
     }
+
 
     const announcementChangeHandler = (e) => {
         setContent({
@@ -42,7 +71,7 @@ const AdminHomePanel = () => {
 
                     <h1 className="admin-main-title">Content Panel</h1>
 
-                    <AdminHomeContentDisplay/>
+                    <AdminHomeContentDisplay showAnnouncements={showAnnouncements} deleteAccouncementFunction={deleteAccouncementFunction}/>
 
                     <section>
                     <h3 className="admin-sub-title">Announcement Section</h3>
@@ -59,7 +88,7 @@ const AdminHomePanel = () => {
                                     as="textarea"
                                     type="text"
                                     name="contentBody"
-                                    defaultValue={content.contentBody}
+                                    value={content.contentBody}
                                     onChange={announcementChangeHandler}
                                  />
                                  <div className="admin-content-button-container">

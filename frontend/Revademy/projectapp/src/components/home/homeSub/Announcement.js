@@ -36,7 +36,6 @@ const Announcement = () => {
                             <h2 className="announce-title">{t("announcements")}</h2>
                         </Card.Header>
                         <Card.Body>
-                            {/* <h4 className="announce-content"></h4> */}
 
                             {
 

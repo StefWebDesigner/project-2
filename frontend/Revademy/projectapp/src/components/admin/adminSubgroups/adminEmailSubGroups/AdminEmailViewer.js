@@ -22,12 +22,6 @@ const AdminEmailViewer = ({emailViewer}) => {
                             <h3 className="admin-email-body">{emailViewer.body}</h3>
                         </Card.Body>
                         <Card.Footer className="admin-email-footer">
-                            <button
-                                className="table-button"
-                                onClick=""
-                            >
-                                Rely
-                            </button>
                         </Card.Footer>
                     </Card>
                 </Fragment>

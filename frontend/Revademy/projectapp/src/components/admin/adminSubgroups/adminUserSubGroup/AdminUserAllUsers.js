@@ -8,6 +8,7 @@ const AdminUserAllUsers = () => {
 
     const [showAllUser, setShowAllUser] = useState([]);
     const [userViewWindow, setViewWindowWindow] = useState([])
+    // const [timeOnline, setTimeOnline] = useState([])
     const [deleteUser, setDeleteUser] = useState([])
     const [sortId, setSortId] = useState([])
     const [sortRole, setSortRole] = useState([])
@@ -25,6 +26,15 @@ const AdminUserAllUsers = () => {
                 setShowAllUser(response.data)
             })
     }
+
+    // async function getTotalTimeOnline(username) {
+    //     await axios.get(`http://localhost:8080/userStats?username=${username}`)
+    //         .then(response => {
+    //             const reports = response.data
+    //             console.log(reports)
+    //             setTimeOnline(response.data)
+    //         })
+    // }
 
     async function deleteUserFuntion(id) {
 
@@ -158,6 +168,7 @@ const AdminUserAllUsers = () => {
                                                 className="table-button"
                                                 onClick={() => {
                                                     userViewer(allUsers.username)
+                                                    // getTotalTimeOnline(allUsers.username)
                                                 }}>
                                                 view
                                             </button>
@@ -353,6 +364,27 @@ const AdminUserAllUsers = () => {
                                         }
                                     </Col>
                                 </Row>
+                                {/*<Row>*/}
+                                {/*    <Col xs={5}>*/}
+                                {/*        <div>*/}
+                                {/*            <p className="admin-user-view-item"> Date Created : </p>*/}
+                                {/*        </div>*/}
+                                {/*    </Col>*/}
+                                {/*    <Col>*/}
+                                {/*        {*/}
+                                {/*            userViewWindow.length !== 0 ?*/}
+                                {/*                <p className="admin-user-view-item">{timeOnline.loggedInTime}</p>*/}
+                                {/*                :*/}
+                                {/*                <aside>*/}
+                                {/*                    <Row>*/}
+                                {/*                        <Col xs={12}>*/}
+                                {/*                            <p className="text-center"> No User Selected</p>*/}
+                                {/*                        </Col>*/}
+                                {/*                    </Row>*/}
+                                {/*                </aside>*/}
+                                {/*        }*/}
+                                {/*    </Col>*/}
+                                {/*</Row>*/}
 
                             </Card.Body>
                             <Card.Footer className="admin-email-footer">
