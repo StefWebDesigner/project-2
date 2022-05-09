@@ -28,19 +28,20 @@ const InboxButton = () => {
     const handleOpenEmailModal = () => setShowEmailModal(true);
 
 
-    const feedbackSubmitHandler = (e) => {
+    async function feedbackSubmitHandler(e) {
         e.preventDefault()
 
-         axios.post("http://localhost:8080/emailsupport/create", feedback)
+         await axios.post("http://localhost:8080/emailsupport/create", feedback)
             .then(response => {
-                alert("Thank you for you feedback")
                 setFeedback(response.data)
+                alert("Thank you for you feedback")
             })
-        console.log(feedback)
 
-
-
-
+        setFeedback({
+            subject : "",
+            feebackOptionsTypes : "",
+            body : ""
+        })
     }
 
     const feedbackChangeHandler = (e) => {
@@ -94,6 +95,7 @@ const InboxButton = () => {
                             clasName="feedback-input"
                             type-="text"
                             name="subject"
+                            placeholder="Subject"
                             defaultValue={feedback.subject}
                             onChange={feedbackChangeHandler}
                             required
@@ -133,6 +135,7 @@ const InboxButton = () => {
                                 className="pt-2 pb-7"
                                 type-="text"
                                 name="body"
+                                placeholder="Description"
                                 defaultValue={feedback.body}
                                 onChange={feedbackChangeHandler}
                                 required
