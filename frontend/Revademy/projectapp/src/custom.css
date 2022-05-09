@@ -671,6 +671,10 @@ admin-backgound
 
 }
 
+.admin-user-graph {
+    margin: auto;
+}
+
 
 .form-input{
 transition: .5s ease-in-out;
