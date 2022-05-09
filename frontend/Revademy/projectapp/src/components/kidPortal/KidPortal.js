@@ -58,10 +58,10 @@ class Portal extends React.Component {
                   <a href='/quizzes' className='quizzes-button'><img src={ QuizIcon } alt="quiz button" /></a>
                 </Col>
                 <Col xs={3}>
-                  <a className='music-button'><img src={ MusicIcon} alt="music button" /></a>
+                  <a href='musicChannel' className='music-button'><img src={ MusicIcon} alt="music button" /></a>
                 </Col>
                 <Col xs={3}>
-                  <a className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
+                  <a href='storytime' className='storytelling-button'><img src={ StoryIcon} alt="story button" /></a>
                 </Col>
             </Row>
 

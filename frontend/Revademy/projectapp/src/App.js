@@ -30,7 +30,8 @@ import AdminUser from "./components/admin/adminSubgroups/AdminUser";
 import AdminHomePanel from "./components/admin/adminSubgroups/AdminHomePanel";
 import UserPortal from './components/userRelated/UserPortal';
 import Recalendar from './components/events/Recalendar';
-import Music from './components/music/Music';
+import MusicChannel from './components/music/MusicChannel';
+import Storytime from './components/storytelling/Storytime';
 
 
 
@@ -86,7 +87,8 @@ function App() {
                   <Route path="/kidPortal" element={<KidPortal/>}/>
 
                   {/* MUSIC AND SOUND CHANNELS */}
-                  <Route path="/music" element={<Music/>}/>
+                  <Route path="/musicChannel" element={<MusicChannel/>}/>
+                  <Route path="/storytime" element={<Storytime/>}/>
 
 
               </Routes>
