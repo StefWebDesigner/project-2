@@ -28,11 +28,11 @@
     grid-gap: 20px;
   }
   .matching-game-title{
-    background-image: url("../../../kid_images/space_medium_long_rectangle.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-color: rgb(149, 205, 239);
-      height: 100vh;
+    background-image: linear-gradient(#0c2b49,#195479,#95CDEF,white);
+     
+      
+     
+    
       
   }
   .matching-game-h1{

@@ -13,7 +13,8 @@
 }
 
 .question-card-animal{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
     padding:8px;
     padding-right: 24px;
     border-radius: 16px;
@@ -37,7 +38,7 @@
 }
 
 .animal-quiz-li {
-    background-color: darkgray;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     padding: 14px;
     border: 3px solid black;
     border-radius: 20px;
@@ -48,6 +49,7 @@
 .animal-quiz-li:hover{
     background-color: #95CDEF;
     box-shadow: 0 4px 1rem -4px #000;
+    transition: 0.2s ease-in-out;
 }
 
 .question-text{
@@ -56,7 +58,8 @@
 }
 
 .final-results-animal{
-    background-color: gray;
+    background: rgb(186,186,186);
+    background: linear-gradient(rgba(186,186,186,1) 58%, rgba(255,255,255,1) 100%);
     padding:4px;
     padding-right: 24px;
     border-radius: 16px;
@@ -82,16 +85,17 @@
 .animal-quiz-img{
     height: 200px;
     border-radius: 5px;
+    box-shadow: 0 4px 1rem -4px #000;
 }
 
 @media screen and (max-height: 970px ) {
 
     .animal-quiz-h1 {
-        font-size: 3vh;
+        font-size: 5vh;
     }
 
     .animal-quiz-h2 {
-        font-size: 2vh;
+        font-size: 3vh;
     }
 
     .animal-quiz-li {
@@ -99,7 +103,7 @@
         height: 5vh;
         justify-content: center;
         align-items: center;
-        font-size: 2vh;
+        font-size: 3vh;
 
     }
 
