@@ -1,17 +1,19 @@
 .root {
-    width: 100vw;
+    /* width: 100vw; */
     margin: 0;
     padding: 0;
 }
 
 
 .kid-header {
-    width: auto;
+
     height: 20vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items:center
 }
 
 .kid-welcome {
@@ -19,46 +21,52 @@
     margin: 0;
     padding: 0;
 }
+.color-box {
+    font-size: 2vh;
+}
 
 .color-box input {
-    width: 30vw;
+    size: 8vh;
 }
 
 .kid-avatar {
     height: 8vh;
-    margin: 0;
+    margin: 2vh;
     padding: 0;
 }
+/* .kid-avatar-img {
+    height: 8vh;
+} */
 
 .kid-page-body {
-    margin: 0;
+    margin-right: 2vh;
+    margin-left: 0;
     padding: 0;
     display: flex;
     height: 80vh;
-    justify-content: center;
     align-items: center;
 }
 
 .games-button img{
-    width: 25vw; 
+    height: 30vh;
     margin: 0;
     padding: 0;
 }
 
 .quizzes-button img {
-    width: 20vw;
+    height: 27vh;
     margin: 0;
     padding: 0;
 }
 
 .music-button img {
-    width: 20vw;
+    height: 27vh;
     margin: 0;
     padding: 0;
 }
 
 .storytelling-button img {
-    width: 20vw;
+    height: 27vh;
     margin: 0;
     padding: 0;
 }
