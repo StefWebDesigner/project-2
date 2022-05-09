@@ -724,6 +724,7 @@ transition: .5s ease-in-out;
 .report-td {
     font-size: 12px;
     text-align: center;
+    color: navy;
 
 }
 
@@ -733,6 +734,27 @@ transition: .5s ease-in-out;
     border: navy solid 1px;
     border-radius: 10px;
 }
+
+/*Admin user*/
+
+
+.admin-user-fName,
+
+
+.admin-user-fName,
+.admin-user-lName {
+    color:navy;
+    font-size: 20px;
+}
+.admin-user-fName {
+    margin-right: 10px;
+}
+
+.admin-user-view-item {
+    color: navy;
+}
+
+
 
 /*ADMIN EMAIL*/
 

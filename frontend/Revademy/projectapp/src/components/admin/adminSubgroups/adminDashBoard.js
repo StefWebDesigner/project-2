@@ -28,7 +28,7 @@ const AdminDashBoard = () => {
                     <UserAcountGraph/>
 
                     {/* REPORT DASHBOARD*/}
-                    <h2 className="admin-sub-title">Email DashBoard</h2>
+                    <h2 className="admin-sub-title">Feedback DashBoard</h2>
                     <AdminEmailFacts/>
                     <FeedbackOverallFeedback/>
 

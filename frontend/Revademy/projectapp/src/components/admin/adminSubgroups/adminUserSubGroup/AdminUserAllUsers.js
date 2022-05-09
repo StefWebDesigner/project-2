@@ -16,9 +16,9 @@ const AdminUserAllUsers = () => {
 
 
     //SHOW ALL PENDING CONTENT
-    const getAllUser = () => {
+    async function getAllUser() {
         // e.preventDefault()
-        axios.get("http://localhost:8080/user/all")
+        await axios.get("http://localhost:8080/user/all")
             .then(response => {
                 const reports = response.data
                 console.log(reports)
@@ -26,19 +26,19 @@ const AdminUserAllUsers = () => {
             })
     }
 
-    const deleteUserFuntion = (id) => {
+    async function deleteUserFuntion(id) {
 
-        axios.delete(`http://localhost:8080/user/delete?id=${id}`)
+      await axios.delete(`http://localhost:8080/user/delete?id=${id}`)
             .then(response => {
                 setDeleteUser(response.data)
+                alert("Successfully deleted")
             })
 
-        alert("Successfully deleted")
         getAllUser()
     }
 
-    const userViewer = (username) => {
-        axios.get(`http://localhost:8080/user/username/${username}`)
+    async function userViewer (username) {
+       await axios.get(`http://localhost:8080/user/username/${username}`)
             .then(response => {
                 setViewWindowWindow(response.data)
                 console.log(userViewWindow)
@@ -206,53 +206,31 @@ const AdminUserAllUsers = () => {
                     <div>
                         <Card className="admin-email-card">
 
+                            <Card.Header>
+                                <section>
+
+                                    <div className="d-flex justify-content-center flex-row ">
+                                        <p className="admin-user-fName ml-3">{userViewWindow.firstname}</p>
+                                        <p className="admin-user-lName">{userViewWindow.lastname}</p>
+                                    </div>
+                                </section>
+
+                            </Card.Header>
                             <Card.Body>
+
+
+
                                 <Row>
                                     <Col xs={5}>
                                         <div>
-                                            <p className="admin-user-labelName"> Full Name : </p>
+                                            <p className="admin-user-view-item"> ID : </p>
                                         </div>
                                     </Col>
                                     <Col>
 
                                         {
                                             userViewWindow.length !== 0 ?
-
-                                                <section>
-
-                                                    <div className="d-flex justify-content-center flex-row">
-                                                        <p className="admin-user-fName">{userViewWindow.firstname}</p>
-                                                        <p className="admin-user-lName">{userViewWindow.lastname}</p>
-                                                    </div>
-
-                                                </section>
-
-                                             :
-
-                                                <aside>
-                                                    <Row>
-                                                        <Col xs={12}>
-                                                            <p className="text-center"> No User Selected</p>
-                                                        </Col>
-                                                    </Row>
-                                                </aside>
-
-                                        }
-
-                                    </Col>
-                                </Row>
-
-                                <Row>
-                                    <Col xs={5}>
-                                        <div>
-                                            <p className="admin-user-labelId"> ID : </p>
-                                        </div>
-                                    </Col>
-                                    <Col>
-
-                                        {
-                                            userViewWindow.length !== 0 ?
-                                        <p className="admin-user-view-id">{userViewWindow.id}</p>
+                                        <p className="admin-user-view-item">{userViewWindow.id}</p>
                                                 :
                                                 <aside>
                                                     <Row>
@@ -268,13 +246,13 @@ const AdminUserAllUsers = () => {
                                 <Row>
                                     <Col xs={5}>
                                         <div>
-                                            <p className="admin-user-labelUserame"> Username : </p>
+                                            <p className="admin-user-view-item"> Username : </p>
                                         </div>
                                     </Col>
                                     <Col>
                                         {
                                             userViewWindow.length !== 0 ?
-                                        <p className="admin-user-view-username">{userViewWindow.username}</p>
+                                        <p className="admin-user-view-item">{userViewWindow.username}</p>
                                                 :
                                                 <aside>
                                                     <Row>
@@ -291,13 +269,14 @@ const AdminUserAllUsers = () => {
                                     <Col xs={5}>
                                         <div>
 
-                                            <p className="admin-user-labelAccount"> Account : </p>
+                                            <p className="admin-user-view-item"> Account : </p>
 
                                         </div>
                                     </Col>
+                                    <Col>
                                     {
                                         userViewWindow.length !== 0 ?
-                                    <p className="admin-user-view-account">{userViewWindow.accountTypes}</p>
+                                    <p className="admin-user-view-item">{userViewWindow.accountTypes}</p>
                                     :
                                     <aside>
                                         <Row>
@@ -307,18 +286,19 @@ const AdminUserAllUsers = () => {
                                         </Row>
                                     </aside>
                                     }
+                                    </Col>
                                 </Row>
 
                                 <Row>
                                     <Col xs={5}>
                                         <div>
-                                            <p className="admin-user-labelEmail"> Email : </p>
+                                            <p className="admin-user-view-item"> Email : </p>
                                         </div>
                                     </Col>
                                     <Col>
                                         {
                                             userViewWindow.length !== 0 ?
-                                        <p className="admin-user-view-email">{userViewWindow.email}</p>
+                                        <p className="admin-user-view-item">{userViewWindow.email}</p>
                                                 :
                                                 <aside>
                                                     <Row>
@@ -334,13 +314,13 @@ const AdminUserAllUsers = () => {
                                 <Row>
                                     <Col xs={5}>
                                         <div>
-                                            <p className="admin-user-labelPassword"> Password : </p>
+                                            <p className="admin-user-view-item"> Password : </p>
                                         </div>
                                     </Col>
                                     <Col>
                                         {
                                             userViewWindow.length !== 0 ?
-                                        <p className="admin-user-view-password">{userViewWindow.password}</p>
+                                        <p className="admin-user-view-item">{userViewWindow.password}</p>
                                                 :
                                                 <aside>
                                                     <Row>
@@ -355,13 +335,13 @@ const AdminUserAllUsers = () => {
                                 <Row>
                                     <Col xs={5}>
                                         <div>
-                                            <p className="admin-user-labelPassword"> Date Created : </p>
+                                            <p className="admin-user-view-item"> Date Created : </p>
                                         </div>
                                     </Col>
                                     <Col>
                                         {
                                             userViewWindow.length !== 0 ?
-                                        <p className="admin-user-view-createdate">{userViewWindow.createdDate}</p>
+                                        <p className="admin-user-view-item">{userViewWindow.createdDate}</p>
                                                 :
                                                 <aside>
                                                     <Row>

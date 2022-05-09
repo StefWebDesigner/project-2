@@ -13,12 +13,16 @@ const AdminEmailDisplay = () => {
     const [deteteEmail, setDeteteEmail] = useState([])
     const [emailViewer, setEmailViewer] = useState(null)
 
+    useEffect(() => {
+
+        showAllEmailsFunction();
+
+    }, []);
 
 
     //SHOW ALL PENDING CONTENT
-    const showAllEmailsFunction = () => {
-        // e.preventDefault()
-        axios.get("http://localhost:8080/emailsupport/all")
+    async function showAllEmailsFunction() {
+      await axios.get("http://localhost:8080/emailsupport/all")
             .then(response => {
                 const reports = response.data
                 console.log(reports)
@@ -39,15 +43,13 @@ const AdminEmailDisplay = () => {
 
 
     async function viewEmailId(emailId) {
-        axios.get(`http://localhost:8080/emailsupport/id=${emailId}`)
+      await axios.get(`http://localhost:8080/emailsupport/${emailId}`)
             .then(response => {
                 setEmailViewer(response.data)
+                console.log(emailId)
             })
     }
 
-    useEffect(() => {
-        showAllEmailsFunction();
-    }, []);
 
     return (
         <>
@@ -69,10 +71,8 @@ const AdminEmailDisplay = () => {
                             <tr>
                                 <th className="report-td">View</th>
                                 <th className="report-td">Id</th>
-                                {/*<th className="report-td">From</th>*/}
-                                {/*<th className="report-td">Recipient</th>*/}
                                 <th className="report-td">Subject</th>
-                                <th className="report-td">Resolved</th>
+                                <th className="report-td">Remove</th>
                             </tr>
                             </thead>
 

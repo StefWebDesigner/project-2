@@ -17,7 +17,7 @@ const AdminUserAdd = () => {
     // const [showPassword, setShowPassword] = useState(false);
 
 
-    const submitAdminFormData = (e) => {
+    async function submitAdminFormData(e) {
         e.preventDefault();
 
         if(
@@ -39,11 +39,11 @@ const AdminUserAdd = () => {
             alert("Please enter valid email address");
         }
 
-        axios.post("http://localhost:8080/user", adminAdd)
+        await axios.post("http://localhost:8080/user", adminAdd)
             .then(response => {
                 console.log(response.data)
                 setAdminAdd(response.data);
-
+                alert("Successfully added user!")
             })
 
         setAdminAdd({
@@ -77,7 +77,8 @@ const AdminUserAdd = () => {
                             <Form onSubmit={submitAdminFormData}>
                                 {/*SECTION FOR FIRSNAME*/}
                                 <Form.Group className="mb-3">
-                                    <Form.Label>First Name</Form.Label>
+                                    <Form.Label className="admin-user-view-item">
+                                        First Name</Form.Label>
                                     <Form.Control
                                         style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
@@ -100,7 +101,8 @@ const AdminUserAdd = () => {
                                 </Form.Group>
                                 {/*SECTION FOR LASTNAME*/}
                                 <Form.Group>
-                                    <Form.Label>Last Name</Form.Label>
+                                    <Form.Label className="admin-user-view-item">
+                                        Last Name</Form.Label>
                                     <Form.Control
                                         style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
@@ -113,7 +115,7 @@ const AdminUserAdd = () => {
                                     />
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>
+                                    <Form.Label className="admin-user-view-item">
                                         Type of account
                                     </Form.Label>
                                     <Form.Select
@@ -137,7 +139,7 @@ const AdminUserAdd = () => {
                                 </Form.Group>
                                 {/*FOR AGE*/}
                                 <Form.Group>
-                                    <Form.Label>
+                                    <Form.Label className="admin-user-view-item">
                                         Age
                                     </Form.Label>
                                     <Form.Select
@@ -160,7 +162,8 @@ const AdminUserAdd = () => {
                                 </Form.Group>
                                 {/*FOR EMAIL*/}
                                 <Form.Group>
-                                    <Form.Label>Email</Form.Label>
+                                    <Form.Label className="admin-user-view-item">
+                                        Email</Form.Label>
                                     <Form.Control
                                         style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
@@ -179,7 +182,8 @@ const AdminUserAdd = () => {
                                     }
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>Username</Form.Label>
+                                    <Form.Label className="admin-user-view-item">
+                                        Username</Form.Label>
                                     <Form.Control
                                         style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
@@ -198,7 +202,8 @@ const AdminUserAdd = () => {
                                     }
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>Password</Form.Label>
+                                    <Form.Label className="admin-user-view-item">
+                                        Password</Form.Label>
                                     <Form.Control
                                         style={{border: error ? "2px solid red" : ""}}
                                         className="form-input"
