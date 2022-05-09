@@ -18,7 +18,7 @@ const AdminNav = () => {
                                     <Link to="/">Home</Link>
                                 </Nav.Link>
                                 <Nav.Link>
-                                    <Link to="/dashboard">Admin Home</Link>
+                                    <Link to="/dashboard">Dashboad</Link>
                                 </Nav.Link>
                                 <Nav.Link>
                                     <Link to="/reports">Report</Link>
