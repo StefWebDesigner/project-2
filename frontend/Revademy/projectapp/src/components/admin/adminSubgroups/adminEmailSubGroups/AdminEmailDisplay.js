@@ -30,14 +30,14 @@ const AdminEmailDisplay = () => {
             })
     }
 
-    const deleteEmails = (emailId) => {
+    async function deleteEmails(emailId) {
 
-        axios.delete(`http://localhost:8080/emailsupport/delete?emailId=${emailId}`)
+       await axios.delete(`http://localhost:8080/emailsupport/delete?emailId=${emailId}`)
             .then(response => {
                 setDeteteEmail(response.data)
+                alert("Successfully deleted")
             })
 
-        alert("Successfully deleted")
         showAllEmailsFunction()
     }
 

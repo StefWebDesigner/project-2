@@ -757,15 +757,18 @@ transition: .5s ease-in-out;
 
 
 /*ADMIN EMAIL*/
-
+.admin-email-subject,
+.admin-email-body {
+    text-align: center;
+    color: navy;;
+}
 
 .admin-email-subject {
     font-size: 18px;
     font-weight: bold;
+
 }
 
-.admin-email-from,
-.admin-email-recipient,
 .admin-email-body{
     font-size: 15px;
 }

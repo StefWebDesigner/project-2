@@ -16,9 +16,7 @@ const AdminEmailViewer = ({emailViewer}) => {
                 <Fragment>
                     <Card className="admin-email-card">
                         <Card.Header>
-                            <Row>
                             <h3 className="admin-email-subject">{emailViewer.subject}</h3>
-                            </Row>
                         </Card.Header>
                         <Card.Body>
                             <h3 className="admin-email-body">{emailViewer.body}</h3>
