@@ -46,5 +46,13 @@
     "submit": "Rendirse",
 
     "subject": "Sujeto",
-    "body": "Texto"
+    "body": "Texto",
+    "issuesubject": "Asunto de problema",
+    "pleaseselectadescription": "Seleccione una descripción de su experiencia",
+    "description": "Descripción",
+    "great": "Grande",
+    "solid": "Bien",
+    "okay": "Más o menos",
+    "needsimprovement": "Mejora de las necesidades",
+    "bad": "Mal"
 }

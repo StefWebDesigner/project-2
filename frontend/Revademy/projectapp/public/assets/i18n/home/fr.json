@@ -46,5 +46,13 @@
     "submit": "Se soumettre",
 
     "subject": "Sujet",
-    "body": "Texte principal"
+    "body": "Texte principal",
+    "issuesubject": "Sujet de la question",
+    "pleaseselectadescription": "Veuillez sélectionner une description de votre expérience",
+    "description": "Description",
+    "great": "Grand",
+    "solid": "Bon",
+    "okay": "Bien",
+    "needsimprovement": "Besoins à améliorer",
+    "bad": "Mal"
 }
