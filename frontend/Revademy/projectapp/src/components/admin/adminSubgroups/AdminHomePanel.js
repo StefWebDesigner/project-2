@@ -23,7 +23,7 @@ const AdminHomePanel = () => {
     }
 
     async function deleteAccouncementFunction (contentId) {
-        await axios.delete(`http://localhost:8080/announcement/deletePost/contentId=${contentId}`)
+        await axios.delete(`http://localhost:8080/announcement/deletePost?contentId=${contentId}`)
             .then(response => {
                 setDeteteAnnouncement(response.data)
                 alert("Successfully deleted")
@@ -80,7 +80,7 @@ const AdminHomePanel = () => {
                             <Card.Header
                                 className="admin-content-announcement"
                             >
-                                Add Accouncement Here :
+                                Add Announcement Here :
                             </Card.Header>
                              <Form onSubmit={announcementSubmitHander}>
                                  <FormControl
