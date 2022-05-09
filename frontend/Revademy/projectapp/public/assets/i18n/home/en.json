@@ -46,7 +46,16 @@
     "submit": "Submit",
 
     "subject": "Subject",
-    "body": "Body"
+    "body": "Body",
+    "issuesubject": "Issue Subject",
+    "pleaseselectadescription": "Please select a description of your experience",
+    "description": "Description",
+    "great": "Great",
+    "solid": "Solid",
+    "okay": "Okay",
+    "needsimprovement": "Needs Improvement",
+    "bad": "Bad"
+
 
 
 

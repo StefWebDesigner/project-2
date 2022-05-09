@@ -94,7 +94,7 @@ const ReportButton = () => {
                                 name="bugTitle"
                                 value={reportForm.bugTitle}
                                 onChange={reportFormHandler}
-                                placeholder="Issue Subject"
+                                placeholder={t("issuesubject")}
                                 required
                             />
                             {/* ERROR SECTION    */}
@@ -144,7 +144,7 @@ const ReportButton = () => {
                                 name="bugDescription"
                                 value={reportForm.bugDescription}
                                 onChange={reportFormHandler}
-                                placeholder="Issue Subject"
+                                placeholder={t("issuesubject")}
                                 required
                             />
                             {/* ERROR SECTION    */}
